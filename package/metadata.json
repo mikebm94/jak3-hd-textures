@@ -1,0 +1,9 @@
+{
+    "name": "Jak 3 HD Texture Pack by UTurn94",
+    "version": "1.0.0",
+    "author": "uturn94",
+    "releaseDate": "2026-04-12",
+    "supportedGames": ["jak3"],
+    "description": "Upscaled textures for Jak 3 using the 4xLSDIRplusN pre-trained Real-ESRGAN model.",
+    "tags": ["jak3", "overhaul", "hd", "texture"]
+}
