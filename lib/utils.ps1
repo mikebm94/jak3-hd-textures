@@ -143,7 +143,7 @@ function Get-OpenGoalInstallDir {
 	throw "Failed to find OpenGOAL installation directory."
 }
 
-function Get-Jak3TexturesDir {
+function Get-GameTexturesDir {
 	[CmdletBinding()]
 	[OutputType([string])]
 	param(

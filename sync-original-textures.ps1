@@ -125,7 +125,7 @@ function Main {
 		Sync-ExistingTexturesWithOptions $dest_dir $upscale_options -Verbose:$VerbosePreference
 	}
 	
-	$src_dir = Get-Jak3TexturesDir $OpenGoalDir -Verbose:$VerbosePreference
+	$src_dir = Get-GameTexturesDir $OpenGoalDir -Verbose:$VerbosePreference
 	$texture_paths = Copy-OriginalTextures $src_dir $dest_dir $upscale_options -Verbose:$VerbosePreference
 	
 	$manifest_path = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'manifest.txt'
