@@ -32,6 +32,7 @@ For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` wil
 #>
 
 using namespace System.Collections.Generic
+using namespace System.IO
 
 [CmdletBinding(SupportsShouldProcess)]
 param(
@@ -55,51 +56,49 @@ class Texture {
 	# The name of the model used to upscale this texture.
 	[string] $UpscaleModel
 
-	# The full paths to all copies of this texture in the game files.
-	[List[string]] $Paths
+	# All files found under this textures name.
+	[List[FileInfo]] $Files
 
-	# The set of unique file hashes of this texture. Used for de-duplication.
+	# All unique hashes of the files found under this textures name. Used for de-duplication.
     [HashSet[string]] $Hashes
 
-    Texture([string] $Path, [string] $UpscaleModel) {
+
+    Texture([FileInfo] $File, [string] $UpscaleModel) {
+		$this.Files = [List[FileInfo]]::new()
         $this.Hashes = [HashSet[string]]::new()
-        $this.Paths = [List[string]]::new()
-		$this.AddPath($Path)
+		$this.AddFile($File)
 		$this.UpscaleModel = $UpscaleModel
     }
 
-	# Adds a full file path to an occurence of this texture in the Jak 3 game textures directory.
-	# The file hash will be computed and add
-	[void] AddPath([string] $Path) {
-		$this.Hashes.Add((Get-FileHash -LiteralPath $Path -Algorithm SHA1).Hash)
-		$this.Paths.Add($Path)
+	# Adds a file that was found under this textures name, computes its hash and stores it.
+	[void] AddFile([FileInfo] $File) {
+		$this.Files.Add($File)
+		$this.Hashes.Add((Get-FileHash -LiteralPath $File.FullName -Algorithm SHA1).Hash)
 	}
 
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) in the source directory
 	# to the destination directory. Returns the copied texture paths relative to the destination
 	# for writing to the texture manifest file.
-	[string[]] CopyTexture([string] $SourceDir, [string] $DestinationDir, [bool] $WhatIfPreference) {
+	[string[]] CopyTexture([string] $DestinationDir, [bool] $WhatIfPreference) {
 		$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
 		Initialize-Directory $DestinationDir -WhatIf:$WhatIfPreference
 
-		$should_deduplicate = ($this.Hashes.Count -le 1) -and ($this.Paths.Count -gt 1)
+		$should_deduplicate = ($this.Hashes.Count -le 1) -and ($this.Files.Count -gt 1)
 
-		$dest_paths = foreach ($src_path in $this.Paths) {
-			$relative_path = Get-PathWithoutPrefix $src_path -Prefix $SourceDir
-
-			$subdir = if ($should_deduplicate) { '_all' } else { Split-Path $relative_path -Parent }
-			$filename = Split-Path $relative_path -Leaf
-			$dest_path = Join-Path $DestinationDir "${subdir}%${filename}"
+		$manifest_entries = foreach ($file in $this.Files) {
+			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
+			$new_filename = "${subdir_name}%$($file.Name)"
+			$dest_path = Join-Path $DestinationDir $new_filename
 
 			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
-				Copy-Item -LiteralPath $src_path -Destination $dest_path -ErrorAction Stop -WhatIf:$WhatIfPreference
+				Copy-Item -LiteralPath $file.FullName -Destination $dest_path -ErrorAction Stop -WhatIf:$WhatIfPreference
 			}
 
-			"$($this.UpscaleModel)/${subdir}%${filename}"
+			"$($this.UpscaleModel)/${new_filename}"
 			if ($should_deduplicate) { break }
 		}
 
-		return $dest_paths
+		return $manifest_entries
 	}
 }
 
@@ -173,14 +172,14 @@ function Copy-OriginalTextures {
 
 	Write-Verbose "Indexing game textures in '${SourceDir}' ..."
 
-	$texture_paths = Get-ChildItem -LiteralPath $SourceDir -Filter '*.png' -File -Recurse -ErrorAction Stop
+	$texture_files = Get-ChildItem -LiteralPath $SourceDir -Filter '*.png' -File -Recurse -ErrorAction Stop
 	$textures_by_name = [Dictionary[string, Texture]]::new()
 
-	foreach ($path in $texture_paths) {
-		$name = $path.BaseName
+	foreach ($file in $texture_files) {
+		$name = $file.BaseName
 
 		if ($textures_by_name.ContainsKey($name)) {
-			$textures_by_name[$name].AddPath($path.FullName)
+			$textures_by_name[$name].AddFile($file)
 			continue
 		}
 
@@ -191,14 +190,14 @@ function Copy-OriginalTextures {
 		}
 		
 		if ($model -ne 'none') {
-			$textures_by_name[$name] = [Texture]::new($path.FullName, $model)
+			$textures_by_name[$name] = [Texture]::new($file, $model)
 		}
 	}
 
 	Write-Verbose "Copying game textures to '${DestinationDir}' ..."
 
 	foreach ($texture in $textures_by_name.Values) {
-		$texture.CopyTexture($SourceDir, $DestinationDir, $WhatIfPreference)
+		$texture.CopyTexture($DestinationDir, $WhatIfPreference)
 	}
 }
 
