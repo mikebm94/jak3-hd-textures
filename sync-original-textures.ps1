@@ -71,7 +71,7 @@ class Texture {
 	# Adds a full file path to an occurence of this texture in the Jak 3 game textures directory.
 	# The file hash will be computed and add
 	[void] AddPath([string] $Path) {
-		$this.Hashes.Add((Get-FileHash -LiteralPath $Path -Algorithm SHA1))
+		$this.Hashes.Add((Get-FileHash -LiteralPath $Path -Algorithm SHA1).Hash)
 		$this.Paths.Add($Path)
 	}
 
