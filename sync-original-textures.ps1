@@ -171,7 +171,7 @@ function Copy-OriginalTextures {
 		$Options
 	)
 
-	Write-Verbose "Copying textures from '${SourceDir}' to '${DestinationDir}' ..."
+	Write-Verbose "Indexing game textures in '${SourceDir}' ..."
 
 	$texture_paths = Get-ChildItem -LiteralPath $SourceDir -Filter '*.png' -File -Recurse -ErrorAction Stop
 	$textures_by_name = [Dictionary[string, Texture]]::new()
@@ -194,6 +194,8 @@ function Copy-OriginalTextures {
 			$textures_by_name[$name] = [Texture]::new($path.FullName, $model)
 		}
 	}
+
+	Write-Verbose "Copying game textures to '${DestinationDir}' ..."
 
 	foreach ($texture in $textures_by_name.Values) {
 		$texture.CopyTexture($SourceDir, $DestinationDir, $WhatIfPreference)
