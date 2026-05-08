@@ -33,6 +33,7 @@ For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` wil
 
 using namespace System.Collections.Generic
 using namespace System.IO
+using namespace System.Text
 
 [CmdletBinding(SupportsShouldProcess)]
 param(
@@ -129,7 +130,17 @@ function Main {
 	
 	$manifest_path = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'manifest.txt'
 	Write-Verbose "Saving texture manifest to '${manifest_path}' ..."
-	$texture_paths | Sort-Object -Culture 'en-US' | Set-Content -LiteralPath $manifest_path -Encoding UTF8 -WhatIf:$false
+
+	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
+	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
+
+	# Older versions of PowerShell will add a BOM with the built in file writing methods
+	# causing git to see the file as changed. Use .NET methods instead.
+	[File]::WriteAllText(
+		$manifest_path,
+		[string]::Join([Environment]::NewLine, $texture_paths),
+		[UTF8Encoding]::new($false)
+	)
 }
 
 function Sync-ExistingTexturesWithOptions {
@@ -153,6 +164,7 @@ Copies the needed textures from the Jak 3 game files to `textures/original/`.
 #>
 function Copy-OriginalTextures {
 	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
 	param(
 		# The path to the extracted Jak 3 textures directory.
 		[Parameter(Mandatory, Position = 0)]
