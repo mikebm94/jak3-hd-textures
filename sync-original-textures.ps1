@@ -32,6 +32,7 @@ For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` wil
 #>
 
 using namespace System.Collections.Generic
+using namespace System.Diagnostics.CodeAnalysis
 using namespace System.IO
 using namespace System.Text
 
@@ -105,6 +106,7 @@ class Texture {
 
 
 function Main {
+	[SuppressMessageAttribute("PSShouldProcess", "")]
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
 	
@@ -163,6 +165,7 @@ function Sync-ExistingTexturesWithOptions {
 Copies the needed textures from the Jak 3 game files to `textures/original/`.
 #>
 function Copy-OriginalTextures {
+	[SuppressMessageAttribute("PSShouldProcess", "")]
 	[CmdletBinding(SupportsShouldProcess)]
 	[OutputType([string])]
 	param(
