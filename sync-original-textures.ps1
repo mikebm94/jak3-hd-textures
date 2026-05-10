@@ -81,7 +81,7 @@ class Texture {
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) in the source directory
 	# to the destination directory. Returns the copied texture paths relative to the destination
 	# for writing to the texture manifest file.
-	[string[]] CopyTexture([string] $DestinationDir, [bool] $WhatIfPreference) {
+	[string[]] CopyTo([string] $DestinationDir, [bool] $WhatIfPreference) {
 		$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
 		Initialize-Directory $DestinationDir -WhatIf:$WhatIfPreference
 
@@ -212,7 +212,7 @@ function Copy-OriginalTextures {
 	Write-Verbose "Copying game textures to '${DestinationDir}' ..."
 
 	foreach ($texture in $textures_by_name.Values) {
-		$texture.CopyTexture($DestinationDir, $WhatIfPreference)
+		$texture.CopyTo($DestinationDir, $WhatIfPreference)
 	}
 }
 
