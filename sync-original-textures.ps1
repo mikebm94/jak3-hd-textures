@@ -2,14 +2,19 @@
 
 <#
 .SYNOPSIS
-Finds and copies the original Jak 3 textures extracted from the ISO via OpenGOAL to `textures/original/`.
-Make sure you've decompiled Jak 3 using the launcher or the CLI.
+Finds and copies the original Jak 3 game textures to `textures/original/`.
 
-The file `/upscale-options.json` is used to exclude certain textures from being copied and upscaled
+.DESCRIPTION
+Finds and copies the original Jak 3 game textures to `textures/original/`.
+Make sure you've decompiled the Jak 3 ISO using the OpenGOAL launcher or CLI.
+
+The file `upscale-options.json` is used to exclude certain textures from being copied and upscaled
 (such as animated textures), and to specify which upscale model to use for certain textures.
+Textures can also be marked to be manually upscaled instead of using an AI model.
+These are copied to `textures/original/manual/`.
 
 Re-run this script after making changes to the upscale options file. It will copy any newly included textures,
-delete ones that are newly excluded, and move textures accordingly if their upscale model has been changed.
+delete ones that are newly excluded, and move textures accordingly if an upscale model has been changed.
 
 A manifest of all textures copied will be written to `textures/manifest.txt`.
 This makes it easy to spot changes to the texture pack using git.
@@ -30,6 +35,7 @@ This is done by encoding the heirarchy within the filenames themselves, with a `
 For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` will be copied to
 `textures/original/<Upscale Model>/arenacst-pris%bam-hairhilite.png`.
 #>
+
 
 using namespace System.Collections.Generic
 using namespace System.Diagnostics.CodeAnalysis
@@ -78,9 +84,8 @@ class Texture {
 		$this.Hashes.Add((Get-FileHash -LiteralPath $File.FullName -Algorithm SHA1).Hash)
 	}
 
-	# Copies all occurences of this texture (or only one if it can be de-duplicated) in the source directory
-	# to the destination directory. Returns the copied texture paths relative to the destination
-	# for writing to the texture manifest file.
+	# Copies all occurences of this texture (or only one if it can be de-duplicated) to the destination directory.
+	# Returns the copied texture paths relative to the destination for writing to the texture manifest file.
 	[string[]] CopyTo([string] $DestinationDir, [bool] $WhatIfPreference) {
 		$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
 		Initialize-Directory $DestinationDir -WhatIf:$WhatIfPreference
@@ -136,8 +141,8 @@ function Main {
 	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
 	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
 
-	# Older versions of PowerShell will add a BOM with the built in file writing methods
-	# causing git to see the file as changed. Use .NET methods instead.
+	# Use .NET directly to write without a BOM, since Windows PowerShell saves with BOMs
+	# and PowerShell (Core) does not, causing git to falsely see the file as modified.
 	[File]::WriteAllText(
 		$manifest_path,
 		[string]::Join([Environment]::NewLine, $texture_paths),
@@ -162,7 +167,7 @@ function Sync-ExistingTexturesWithOptions {
 
 <#
 .SYNOPSIS
-Copies the needed textures from the Jak 3 game files to `textures/original/`.
+Copies the original Jak 3 game textures according to the upscale options.
 #>
 function Copy-OriginalTextures {
 	[SuppressMessageAttribute("PSShouldProcess", "")]
@@ -179,7 +184,7 @@ function Copy-OriginalTextures {
 		[string]
 		$DestinationDir,
 
-		# The options configuring which textures get copied and what upscale models to use.
+		# The upscale options configuring which textures get copied and what models to use.
 		[Parameter(Mandatory, Position = 2)]
 		[UpscaleOptions]
 		$Options
