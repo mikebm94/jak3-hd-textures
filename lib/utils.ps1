@@ -14,43 +14,18 @@ class UpscaleOptions {
 
 		$this.DefaultModel = $raw_options.DefaultModel
 		if (-not (IsValidFilename $this.DefaultModel)) {
-			throw "'DefaultModel' must not be empty or contain invalid filename characters."
+			throw "DefaultModel must not be empty or contain invalid filename characters."
 		}
 
 		$this.TextureModels = [Dictionary[string, string]]::new()
 
-		foreach ($model in $raw_options.CustomUpscaling) {
-			if (-not (IsValidFilename $model.ModelName)) {
-				throw "in 'CustomUpscaling': 'ModelName' must not be empty or contain invalid filename characters."
+		foreach ($group in $raw_options.TextureGroups) {
+			if (-not (IsValidFilename $group.Model)) {
+				throw "Texture group '$($group.Name)': 'Model' must not be empty or contain invalid filename characters."
 			}
 
-			foreach ($texture_name in $model.TextureNames) {
-				if (-not (IsValidFilename $texture_name)) {
-					throw "in 'CustomUpscaling': in model '$($model.ModelName): " +
-						"'TextureNames' items must not be empty or contain invalid filename characters."
-				}
-
-				$this.TextureModels[$texture_name] = $model.ModelName
-			}
-		}
-
-		foreach ($texture_name in $raw_options.ManualUpscaling) {
-			if (-not (IsValidFilename $texture_name)) {
-				throw "in 'ManualUpscaling': 'TextureNames' items must not be empty " +
-					"or contain invalid filename characters."
-			}
-
-			$this.TextureModels[$texture_name] = 'manual'
-		}
-
-		foreach ($category in $raw_options.NoUpscaling) {
-			foreach ($texture_name in $category.TextureNames) {
-				if (-not (IsValidFilename $texture_name)) {
-					throw "in 'NoUpscaling': 'TextureNames' items must not be empty " +
-						"or contain invalid filename characters."
-				}
-
-				$this.TextureModels[$texture_name] = 'none'
+			foreach ($texture_name in $group.TextureNames) {
+				$this.TextureModels[$texture_name] = $group.Model
 			}
 		}
 	}

@@ -1,19 +1,34 @@
 {
 	"DefaultModel": "4xLSDIRplusN",
 
-	"CustomUpscaling": [],
-
-	"ManualUpscaling": [],
-
-	"NoUpscaling": [
-		{ "Category": "MiscTextures", "TextureNames": [] },
-
-		{ "Category": "EyeTextures", "TextureNames": [] },
-
-		{ "Category": "SkyTextures", "TextureNames": [] },
+	"TextureGroups": [
+		{
+			"Name": "Manually Upscaled",
+			"Model": "manual",
+			"TextureNames": []
+		},
 
 		{
-			"Category": "AnimatedTextures",
+			"Name": "Not Upscaled (Misc Textures)",
+			"Model": "none",
+			"TextureNames": []
+		},
+
+		{
+			"Name": "Not Upscaled (Eye Textures)",
+			"Model": "none",
+			"TextureNames": []
+		},
+
+		{
+			"Name": "Not Upscaled (Sky Textures)",
+			"Model": "none",
+			"TextureNames": []
+		},
+
+		{
+			"Name": "Not Upscaled (Animated Textures)",
+			"Model": "none",
 			"TextureNames": [
 				"jakc-arm",
 				"jakc-eyebrow",
