@@ -11,7 +11,7 @@ The file `/upscale-options.json` is used to exclude certain textures from being 
 Re-run this script after making changes to the upscale options file. It will copy any newly included textures,
 delete ones that are newly excluded, and move textures accordingly if their upscale model has been changed.
 
-A manifest of all textures copied will be written to `textures/original/manifest.txt`.
+A manifest of all textures copied will be written to `textures/manifest.txt`.
 This makes it easy to spot changes to the texture pack using git.
 
 .NOTES
