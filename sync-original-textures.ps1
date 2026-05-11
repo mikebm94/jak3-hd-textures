@@ -114,7 +114,7 @@ function Main {
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
 	
-	if ([String]::IsNullOrWhiteSpace($OpenGoalDir)) {
+	if (-not $PSBoundParameters.ContainsKey('OpenGoalDir')) {
 		$OpenGoalDir = Find-OpenGoalInstallDir
 	}
 	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
