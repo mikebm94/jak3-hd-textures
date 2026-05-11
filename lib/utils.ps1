@@ -215,34 +215,6 @@ function Clear-Directory {
 
 <#
 .SYNOPSIS
-Returns paths without their common parent path.
-#>
-function Get-PathWithoutPrefix {
-	[CmdletBinding()]
-	[OutputType([string])]
-	param(
-		[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]
-		[string[]]
-		$Path,
-
-		[Parameter(Mandatory)]
-		[string]
-		$Prefix
-	)
-
-	begin {
-		$prefix_pattern = "^$([regex]::Escape($Prefix))[\\/]*"
-	}
-
-	process {
-		foreach ($path_item in $Path) {
-			$path_item -replace $prefix_pattern
-		}
-	}
-}
-
-<#
-.SYNOPSIS
 Checks if a string is suitable as a filename.
 #>
 function IsValidFilename {
