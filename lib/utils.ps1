@@ -112,7 +112,7 @@ function Get-SearchResultsDir {
 .SYNOPSIS
 Finds the OpenGOAL installation directory.
 #>
-function Get-OpenGoalInstallDir {
+function Find-OpenGoalInstallDir {
 	[CmdletBinding()]
 	[OutputType([string])]
 	param()
@@ -138,9 +138,9 @@ function Get-OpenGoalInstallDir {
 
 <#
 .SYNOPSIS
-Gets the directory where OpenGOAL places textures extracted from the Jak 3 ISO.
+Finds the directory where OpenGOAL places textures extracted from the Jak 3 ISO.
 #>
-function Get-GameTexturesDir {
+function Find-GameTexturesDir {
 	[CmdletBinding()]
 	[OutputType([string])]
 	param(
