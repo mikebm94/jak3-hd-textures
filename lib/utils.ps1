@@ -39,24 +39,16 @@ class UpscaleOptions {
 
 <#
 .SYNOPSIS
-Verifies a directory exists and creates it if it doesn't.
-Throws an exception if the directory can't be created.
+Gets the options configuring what textures get upscaled and which models to use.
 #>
-function Initialize-Directory {
-	[CmdletBinding(SupportsShouldProcess)]
-	param(
-		[Parameter(Mandatory, Position = 0)]
-		[string]
-		$Path
-	)
+function Get-UpscaleOptions {
+	[CmdletBinding()]
+	[OutputType([UpscaleOptions])]
+	param()
 
-	if (Test-Path -LiteralPath $Path -PathType Container) { return }
-
-	Write-Verbose "Creating directory '${Path}' ..."
-	$null = New-Item $Path -ItemType Directory
-	if (-not $?) {
-		throw "Failed to create directory '${Path}': $($Error[0])"
-	}
+	$upscale_options_path = Join-Path $ProjectDir 'upscale-options.json'
+	Write-Verbose "Reading upscale options file: '${upscale_options_path}' ..."
+	[UpscaleOptions]::new([File]::ReadAllText($upscale_options_path))
 }
 
 <#
@@ -69,21 +61,6 @@ function Get-TexturesDir {
 	param()
 
 	$dir = Join-Path $ProjectDir 'textures/'
-	Initialize-Directory $dir -Verbose:$VerbosePreference
-	$dir
-}
-
-<#
-.SYNOPSIS
-Gets the directory where the matching texture files are copied to
-when performing searches on the Jak 3 game textures directory.
-#>
-function Get-SearchResultsDir {
-	[CmdletBinding(SupportsShouldProcess)]
-	[OutputType([string])]
-	param()
-
-	$dir = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'search-results/'
 	Initialize-Directory $dir -Verbose:$VerbosePreference
 	$dir
 }
@@ -112,6 +89,21 @@ function Get-UpscaledTexturesDir {
 	param()
 
 	$dir = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'upscaled/'
+	Initialize-Directory $dir -Verbose:$VerbosePreference
+	$dir
+}
+
+<#
+.SYNOPSIS
+Gets the directory where the matching texture files are copied to
+when performing searches on the Jak 3 game textures directory.
+#>
+function Get-SearchResultsDir {
+	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
+	param()
+
+	$dir = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'search-results/'
 	Initialize-Directory $dir -Verbose:$VerbosePreference
 	$dir
 }
@@ -177,16 +169,24 @@ function Get-GameTexturesDir {
 
 <#
 .SYNOPSIS
-Gets the options configuring what textures get upscaled and which models to use.
+Verifies a directory exists and creates it if it doesn't.
+Throws an exception if the directory can't be created.
 #>
-function Get-UpscaleOptions {
-	[CmdletBinding()]
-	[OutputType([UpscaleOptions])]
-	param()
+function Initialize-Directory {
+	[CmdletBinding(SupportsShouldProcess)]
+	param(
+		[Parameter(Mandatory, Position = 0)]
+		[string]
+		$Path
+	)
 
-	$upscale_options_path = Join-Path $ProjectDir 'upscale-options.json'
-	Write-Verbose "Reading upscale options file: '${upscale_options_path}' ..."
-	[UpscaleOptions]::new([File]::ReadAllText($upscale_options_path))
+	if (Test-Path -LiteralPath $Path -PathType Container) { return }
+
+	Write-Verbose "Creating directory '${Path}' ..."
+	$null = New-Item $Path -ItemType Directory
+	if (-not $?) {
+		throw "Failed to create directory '${Path}': $($Error[0])"
+	}
 }
 
 <#
