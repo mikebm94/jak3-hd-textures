@@ -117,23 +117,36 @@ function Find-OpenGoalInstallDir {
 	[OutputType([string])]
 	param()
 
-	Write-Host "Searching for OpenGOAL installation directory ..."
+	Write-Host 'Locating OpenGOAL installation directory ...'
 
-	$search_paths = @(
-		(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
-		"C:/ProgramData/OpenGOAL/"
-	)
+	if (Test-Path -LiteralPath 'Env:OPENGOAL_DIR') {
+		Write-Host 'Environment variable OPENGOAL_DIR is set.'
+		$opengoal_dir = $env:OPENGOAL_DIR
 
-	foreach ($search_path in $search_paths) {
-		if (Test-Path -LiteralPath $search_path -PathType Container) {
-			Write-Host "Found OpenGOAL installation at '${search_path}'."
-			return $search_path
+		if (Test-Path -LiteralPath $opengoal_dir -PathType Container) {
+			return $opengoal_dir
 		}
+		
+		Write-Host "No installation exists at '${opengoal_dir}'."
+	}
+	else {
+		Write-Host 'Environment variable OPENGOAL_DIR not set, searching common locations ...'
 
-		Write-Host "No installation at '${search_path}'."
+		$search_paths = @(
+			(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
+			"C:/ProgramData/OpenGOAL/"
+		)
+
+		foreach ($search_path in $search_paths) {
+			if (Test-Path -LiteralPath $search_path -PathType Container) {
+				return $search_path
+			}
+
+			Write-Host "No installation found at '${search_path}'."
+		}
 	}
 
-	throw "Failed to find OpenGOAL installation directory."
+	throw "Failed to locate OpenGOAL installation directory."
 }
 
 <#
