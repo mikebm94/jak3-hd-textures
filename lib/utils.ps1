@@ -47,7 +47,7 @@ function Get-UpscaleOptions {
 	param()
 
 	$upscale_options_path = Join-Path $ProjectDir 'upscale-options.json'
-	Write-Verbose "Reading upscale options file: '${upscale_options_path}' ..."
+	Write-Host "Reading upscale options file: '${upscale_options_path}' ..."
 	[UpscaleOptions]::new([File]::ReadAllText($upscale_options_path))
 }
 
@@ -61,7 +61,7 @@ function Get-TexturesDir {
 	param()
 
 	$dir = Join-Path $ProjectDir 'textures/'
-	Initialize-Directory $dir -Verbose:$VerbosePreference
+	Initialize-Directory $dir
 	$dir
 }
 
@@ -74,8 +74,8 @@ function Get-OriginalTexturesDir {
 	[OutputType([string])]
 	param()
 
-	$dir = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'original/'
-	Initialize-Directory $dir -Verbose:$VerbosePreference
+	$dir = Join-Path (Get-TexturesDir) 'original/'
+	Initialize-Directory $dir
 	$dir
 }
 
@@ -88,8 +88,8 @@ function Get-UpscaledTexturesDir {
 	[OutputType([string])]
 	param()
 
-	$dir = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'upscaled/'
-	Initialize-Directory $dir -Verbose:$VerbosePreference
+	$dir = Join-Path (Get-TexturesDir) 'upscaled/'
+	Initialize-Directory $dir
 	$dir
 }
 
@@ -103,8 +103,8 @@ function Get-SearchResultsDir {
 	[OutputType([string])]
 	param()
 
-	$dir = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'search-results/'
-	Initialize-Directory $dir -Verbose:$VerbosePreference
+	$dir = Join-Path (Get-TexturesDir) 'search-results/'
+	Initialize-Directory $dir
 	$dir
 }
 
@@ -116,7 +116,7 @@ function Get-OpenGoalInstallDir {
 	[OutputType([string])]
 	param()
 
-	Write-Verbose "Searching for OpenGOAL installation directory ..."
+	Write-Host "Searching for OpenGOAL installation directory ..."
 
 	$search_paths = @(
 		(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
@@ -125,11 +125,11 @@ function Get-OpenGoalInstallDir {
 
 	foreach ($search_path in $search_paths) {
 		if (Test-Path -LiteralPath $search_path -PathType Container) {
-			Write-Verbose "Found OpenGOAL installation at '${search_path}'."
+			Write-Host "Found OpenGOAL installation at '${search_path}'."
 			return $search_path
 		}
 
-		Write-Verbose "No installation at '${search_path}'."
+		Write-Host "No installation at '${search_path}'."
 	}
 
 	throw "Failed to find OpenGOAL installation directory."
@@ -148,7 +148,7 @@ function Get-GameTexturesDir {
 		$OpenGoalDir
 	)
 
-	Write-Verbose "Searching for Jak 3 textures directory ..."
+	Write-Host "Searching for Jak 3 textures directory ..."
 
 	$search_paths = @(
 		(Join-Path $OpenGoalDir 'active/jak3/data/decompiler_out/jak3/textures/'),
@@ -157,11 +157,11 @@ function Get-GameTexturesDir {
 
 	foreach ($search_path in $search_paths) {
 		if (Test-Path -LiteralPath $search_path -PathType Container) {
-			Write-Verbose "Found Jak 3 textures at '${search_path}'."
+			Write-Host "Found Jak 3 textures at '${search_path}'."
 			return $search_path
 		}
 
-		Write-Verbose "No Jak 3 textures at '${search_path}'."
+		Write-Host "No Jak 3 textures at '${search_path}'."
 	}
 
 	throw "Failed to find Jak 3 textures directory."
@@ -182,7 +182,7 @@ function Initialize-Directory {
 
 	if (Test-Path -LiteralPath $Path -PathType Container) { return }
 
-	Write-Verbose "Creating directory '${Path}' ..."
+	Write-Host "Creating directory '${Path}' ..."
 	$null = New-Item $Path -ItemType Directory
 	if (-not $?) {
 		throw "Failed to create directory '${Path}': $($Error[0])"
@@ -203,7 +203,7 @@ function Clear-Directory {
 
 	process {
 		foreach ($path_to_clean in $Path) {
-			Write-Verbose "Cleaning directory '${path_to_clean}' ..."
+			Write-Host "Cleaning directory '${path_to_clean}' ..."
 
 			$children =
 				Get-ChildItem -LiteralPath $Path -ErrorAction Stop |
