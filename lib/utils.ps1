@@ -196,7 +196,11 @@ function Clear-Directory {
 	param(
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]
 		[string[]]
-		$Path
+		$Path,
+
+		# Filters preventing the matching items from being deleted.
+		[string[]]
+		$Exclude
 	)
 
 	process {
@@ -204,7 +208,7 @@ function Clear-Directory {
 			Write-Host "Cleaning directory '${path_to_clean}' ..."
 
 			$children =
-				Get-ChildItem -LiteralPath $Path -ErrorAction Stop |
+				Get-ChildItem -LiteralPath $Path -Exclude $Exclude -ErrorAction Stop |
 				Select-Object -ExpandProperty FullName -ErrorAction Stop
 			$null = Remove-Item -LiteralPath $children -Recurse -Force -ErrorAction Stop
 		}
