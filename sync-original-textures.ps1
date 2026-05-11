@@ -21,7 +21,6 @@ This makes it easy to spot changes to the texture pack using git.
 
 .NOTES
 Use the -WhatIf switch to do a dry run (generates the manifest without actually copying/deleting files.)
-Use the -Verbose switch to see information about what the script is doing.
 
 If the same texture occurs multiple times in the game files, it will be de-duplicated so it only needs
 to be copied and upscaled once by placing a single copy in the `_all` texture directory.
@@ -116,27 +115,27 @@ function Main {
 	param()
 	
 	if ([String]::IsNullOrWhiteSpace($OpenGoalDir)) {
-		$OpenGoalDir = Get-OpenGoalInstallDir -Verbose:$VerbosePreference
+		$OpenGoalDir = Get-OpenGoalInstallDir
 	}
 	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
 		throw "OpenGOAL installation directory '${OpenGoalDir}' does not exist."
 	}
 
-	$dest_dir = Get-OriginalTexturesDir -Verbose:$VerbosePreference
-	$upscale_options = Get-UpscaleOptions -Verbose:$VerbosePreference
+	$dest_dir = Get-OriginalTexturesDir
+	$upscale_options = Get-UpscaleOptions
 
 	if ($Force) {
-		Clear-Directory $dest_dir -Verbose:$VerbosePreference
+		Clear-Directory $dest_dir
 	}
 	else {
-		Sync-ExistingTexturesWithOptions $dest_dir $upscale_options -Verbose:$VerbosePreference
+		Sync-ExistingTexturesWithOptions $dest_dir $upscale_options
 	}
 	
-	$src_dir = Get-GameTexturesDir $OpenGoalDir -Verbose:$VerbosePreference
-	$texture_paths = Copy-OriginalTextures $src_dir $dest_dir $upscale_options -Verbose:$VerbosePreference
+	$src_dir = Get-GameTexturesDir $OpenGoalDir
+	$texture_paths = Copy-OriginalTextures $src_dir $dest_dir $upscale_options
 	
-	$manifest_path = Join-Path (Get-TexturesDir -Verbose:$VerbosePreference) 'manifest.txt'
-	Write-Verbose "Saving texture manifest to '${manifest_path}' ..."
+	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
+	Write-Host "Saving texture manifest to '${manifest_path}' ..."
 
 	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
 	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
@@ -190,7 +189,7 @@ function Copy-OriginalTextures {
 		$Options
 	)
 
-	Write-Verbose "Indexing game textures in '${SourceDir}' ..."
+	Write-Host "Indexing game textures in '${SourceDir}' ..."
 
 	$texture_files = Get-ChildItem -LiteralPath $SourceDir -Filter '*.png' -File -Recurse -ErrorAction Stop
 	$textures_by_name = [Dictionary[string, Texture]]::new()
@@ -214,7 +213,7 @@ function Copy-OriginalTextures {
 		}
 	}
 
-	Write-Verbose "Copying game textures to '${DestinationDir}' ..."
+	Write-Host "Copying game textures to '${DestinationDir}' ..."
 
 	foreach ($texture in $textures_by_name.Values) {
 		$texture.CopyTo($DestinationDir, $WhatIfPreference)
@@ -222,4 +221,4 @@ function Copy-OriginalTextures {
 }
 
 
-Main -Verbose:$VerbosePreference
+Main
