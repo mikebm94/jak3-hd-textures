@@ -183,10 +183,7 @@ function Initialize-Directory {
 	if (Test-Path -LiteralPath $Path -PathType Container) { return }
 
 	Write-Host "Creating directory '${Path}' ..."
-	$null = New-Item $Path -ItemType Directory
-	if (-not $?) {
-		throw "Failed to create directory '${Path}': $($Error[0])"
-	}
+	$null = New-Item $Path -ItemType Directory -ErrorAction Stop
 }
 
 <#
