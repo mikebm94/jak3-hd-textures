@@ -115,7 +115,7 @@ function Main {
 	param()
 	
 	if ([String]::IsNullOrWhiteSpace($OpenGoalDir)) {
-		$OpenGoalDir = Get-OpenGoalInstallDir
+		$OpenGoalDir = Find-OpenGoalInstallDir
 	}
 	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
 		throw "OpenGOAL installation directory '${OpenGoalDir}' does not exist."
@@ -131,7 +131,7 @@ function Main {
 		Sync-ExistingTexturesWithOptions $dest_dir $upscale_options
 	}
 	
-	$src_dir = Get-GameTexturesDir $OpenGoalDir
+	$src_dir = Find-GameTexturesDir $OpenGoalDir
 	$texture_paths = Copy-OriginalTextures $src_dir $dest_dir $upscale_options
 	
 	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
