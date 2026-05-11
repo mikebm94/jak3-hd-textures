@@ -3,10 +3,15 @@ using namespace System.IO
 
 $ProjectDir = Split-Path $PSScriptRoot -Parent
 
-
+# Options configuring which textures get upscaled and which models to use.
 class UpscaleOptions {
+	# The upscale model to use on textures unless otherwise specified.
 	[string] $DefaultModel
 
+	# Maps texture names to their respective upscale models.
+	# Special values:
+	#	'none' - Texture will not be copied and upscaled.
+	#	'manual' - Texture will be copied, but will be upscaled by hand.
 	[Dictionary[string, string]] $TextureModels
 
 	UpscaleOptions([string] $Json) {
@@ -54,6 +59,10 @@ function Initialize-Directory {
 	}
 }
 
+<#
+.SYNOPSIS
+Gets the parent directory where all texture files (and the texture manifest) are placed.
+#>
 function Get-TexturesDir {
 	[CmdletBinding(SupportsShouldProcess)]
 	[OutputType([string])]
@@ -64,6 +73,11 @@ function Get-TexturesDir {
 	$dir
 }
 
+<#
+.SYNOPSIS
+Gets the directory where the matching texture files are copied to
+when performing searches on the Jak 3 game textures directory.
+#>
 function Get-SearchResultsDir {
 	[CmdletBinding(SupportsShouldProcess)]
 	[OutputType([string])]
@@ -74,6 +88,10 @@ function Get-SearchResultsDir {
 	$dir
 }
 
+<#
+.SYNOPSIS
+Gets the directory where the original game textures are copied to.
+#>
 function Get-OriginalTexturesDir {
 	[CmdletBinding(SupportsShouldProcess)]
 	[OutputType([string])]
@@ -84,6 +102,10 @@ function Get-OriginalTexturesDir {
 	$dir
 }
 
+<#
+.SYNOPSIS
+Gets the directory where the upscaled textures are saved to.
+#>
 function Get-UpscaledTexturesDir {
 	[CmdletBinding(SupportsShouldProcess)]
 	[OutputType([string])]
@@ -94,6 +116,9 @@ function Get-UpscaledTexturesDir {
 	$dir
 }
 
+<#
+Finds the OpenGOAL installation directory.
+#>
 function Get-OpenGoalInstallDir {
 	[CmdletBinding()]
 	[OutputType([string])]
@@ -118,6 +143,10 @@ function Get-OpenGoalInstallDir {
 	throw "Failed to find OpenGOAL installation directory."
 }
 
+<#
+.SYNOPSIS
+Gets the directory where OpenGOAL places textures extracted from the Jak 3 ISO.
+#>
 function Get-GameTexturesDir {
 	[CmdletBinding()]
 	[OutputType([string])]
@@ -146,6 +175,10 @@ function Get-GameTexturesDir {
 	throw "Failed to find Jak 3 textures directory."
 }
 
+<#
+.SYNOPSIS
+Gets the options configuring what textures get upscaled and which models to use.
+#>
 function Get-UpscaleOptions {
 	[CmdletBinding()]
 	[OutputType([UpscaleOptions])]
@@ -156,6 +189,10 @@ function Get-UpscaleOptions {
 	[UpscaleOptions]::new([File]::ReadAllText($upscale_options_path))
 }
 
+<#
+.SYNOPSIS
+Deletes all items in a directory but leaves the directory itself.
+#>
 function Clear-Directory {
 	[CmdletBinding(SupportsShouldProcess)]
 	param(
@@ -204,6 +241,10 @@ function Get-PathWithoutPrefix {
 	}
 }
 
+<#
+.SYNOPSIS
+Checks if a string is suitable as a filename.
+#>
 function IsValidFilename {
 	[OutputType([bool])]
 	param(
