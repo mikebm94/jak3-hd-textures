@@ -224,10 +224,14 @@ function Clear-Directory {
 
 			Write-Host "Cleaning directory '${path_to_clean}' ..."
 
-			$children =
+			[string[]] $children = @(
 				Get-ChildItem -LiteralPath $Path -Exclude $Exclude -ErrorAction Stop |
 				Select-Object -ExpandProperty FullName -ErrorAction Stop
-			$null = Remove-Item -LiteralPath $children -Recurse -Force -ErrorAction Stop
+			)
+
+			if ($children.Count -gt 0) {
+				$null = Remove-Item -LiteralPath $children -Recurse -Force -ErrorAction Stop
+			}
 		}
 	}
 }
