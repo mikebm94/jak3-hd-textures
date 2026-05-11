@@ -43,8 +43,8 @@ using namespace System.Text
 
 [CmdletBinding(SupportsShouldProcess)]
 param(
-	# The path to the OpenGOAL installation directory. If not supplied it will be automatically searched for,
-	# in order, at the following locations:
+	# The path to the OpenGOAL installation directory. If not supplied, the environment variable `OPENGOAL_DIR`
+	# will be checked. If it isn't set, OpenGOAL will be searched for in order, at the following locations:
 	#	C:\Users\<username>\AppData\Local\Programs\OpenGOAL
 	#	C:\ProgramData\OpenGOAL
 	[string]
@@ -114,12 +114,14 @@ function Main {
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
 	
-	if (-not $PSBoundParameters.ContainsKey('OpenGoalDir')) {
+	if ([string]::IsNullOrEmpty($OpenGoalDir)) {
 		$OpenGoalDir = Find-OpenGoalInstallDir
 	}
 	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
-		throw "OpenGOAL installation directory '${OpenGoalDir}' does not exist."
+		throw "Specified OpenGOAL installation directory '${OpenGoalDir}' does not exist."
 	}
+
+	Write-Host "Using OpenGOAL installation directory '${OpenGoalDir}'."
 
 	$dest_dir = Get-OriginalTexturesDir
 	$upscale_options = Get-UpscaleOptions
