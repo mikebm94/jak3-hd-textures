@@ -218,6 +218,10 @@ function Clear-Directory {
 
 	process {
 		foreach ($path_to_clean in $Path) {
+			if (-not (Test-Path -LiteralPath $path_to_clean -PathType Container)) {
+				continue
+			}
+
 			Write-Host "Cleaning directory '${path_to_clean}' ..."
 
 			$children =
