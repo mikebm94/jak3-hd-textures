@@ -109,6 +109,7 @@ function Get-SearchResultsDir {
 }
 
 <#
+.SYNOPSIS
 Finds the OpenGOAL installation directory.
 #>
 function Get-OpenGoalInstallDir {
