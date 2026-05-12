@@ -19,7 +19,7 @@ class UpscaleOptions {
 
 		$this.DefaultModel = $raw_options.DefaultModel
 		if (-not (IsValidFilename $this.DefaultModel)) {
-			throw "DefaultModel must not be empty or contain invalid filename characters."
+			throw 'DefaultModel must not be empty or contain invalid filename characters.'
 		}
 
 		$this.TextureModels = [Dictionary[string, string]]::new()
@@ -46,7 +46,7 @@ function Get-UpscaleOptions {
 	[OutputType([UpscaleOptions])]
 	param()
 
-	Write-Host "Reading upscale options ..."
+	Write-Host 'Reading upscale options ...'
 	$upscale_options_path = Join-Path $ProjectDir 'upscale-options.json'
 	[UpscaleOptions]::new([File]::ReadAllText($upscale_options_path))
 }
@@ -129,7 +129,7 @@ function Find-OpenGoalInstallDir {
 
 	$search_paths = @(
 		(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
-		"C:/ProgramData/OpenGOAL/"
+		'C:/ProgramData/OpenGOAL/'
 	)
 
 	foreach ($search_path in $search_paths) {
@@ -138,7 +138,7 @@ function Find-OpenGoalInstallDir {
 		}
 	}
 
-	throw "Failed to find OpenGOAL directory."
+	throw 'Failed to find OpenGOAL directory.'
 }
 
 <#
@@ -165,7 +165,7 @@ function Find-GameTexturesDir {
 		}
 	}
 
-	throw "Failed to find Jak 3 game textures in OpenGOAL directory."
+	throw 'Failed to find Jak 3 game textures in OpenGOAL directory.'
 }
 
 <#
