@@ -46,8 +46,8 @@ function Get-UpscaleOptions {
 	[OutputType([UpscaleOptions])]
 	param()
 
+	Write-Host "Reading upscale options ..."
 	$upscale_options_path = Join-Path $ProjectDir 'upscale-options.json'
-	Write-Host "Reading upscale options file: '${upscale_options_path}' ..."
 	[UpscaleOptions]::new([File]::ReadAllText($upscale_options_path))
 }
 
@@ -117,36 +117,28 @@ function Find-OpenGoalInstallDir {
 	[OutputType([string])]
 	param()
 
-	Write-Host 'Locating OpenGOAL installation directory ...'
-
 	if (Test-Path -LiteralPath 'Env:OPENGOAL_DIR') {
-		Write-Host 'Environment variable OPENGOAL_DIR is set.'
 		$opengoal_dir = $env:OPENGOAL_DIR
 
 		if (Test-Path -LiteralPath $opengoal_dir -PathType Container) {
 			return $opengoal_dir
 		}
 		
-		Write-Host "No installation exists at '${opengoal_dir}'."
+		throw "OpenGOAL directory '${opengoal_dir}' (set by OPENGOAL_DIR environment variable) does not exist."
 	}
-	else {
-		Write-Host 'Environment variable OPENGOAL_DIR not set, searching common locations ...'
 
-		$search_paths = @(
-			(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
-			"C:/ProgramData/OpenGOAL/"
-		)
+	$search_paths = @(
+		(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
+		"C:/ProgramData/OpenGOAL/"
+	)
 
-		foreach ($search_path in $search_paths) {
-			if (Test-Path -LiteralPath $search_path -PathType Container) {
-				return $search_path
-			}
-
-			Write-Host "No installation found at '${search_path}'."
+	foreach ($search_path in $search_paths) {
+		if (Test-Path -LiteralPath $search_path -PathType Container) {
+			return $search_path
 		}
 	}
 
-	throw "Failed to locate OpenGOAL installation directory."
+	throw "Failed to find OpenGOAL directory."
 }
 
 <#
@@ -162,8 +154,6 @@ function Find-GameTexturesDir {
 		$OpenGoalDir
 	)
 
-	Write-Host "Searching for Jak 3 textures directory ..."
-
 	$search_paths = @(
 		(Join-Path $OpenGoalDir 'active/jak3/data/decompiler_out/jak3/textures/'),
 		(Join-Path $OpenGoalDir 'data/decompiler_out/jak3/textures/')
@@ -171,14 +161,11 @@ function Find-GameTexturesDir {
 
 	foreach ($search_path in $search_paths) {
 		if (Test-Path -LiteralPath $search_path -PathType Container) {
-			Write-Host "Found Jak 3 textures at '${search_path}'."
 			return $search_path
 		}
-
-		Write-Host "No Jak 3 textures at '${search_path}'."
 	}
 
-	throw "Failed to find Jak 3 textures directory."
+	throw "Failed to find Jak 3 game textures in OpenGOAL directory."
 }
 
 <#
@@ -194,10 +181,9 @@ function Initialize-Directory {
 		$Path
 	)
 
-	if (Test-Path -LiteralPath $Path -PathType Container) { return }
-
-	Write-Host "Creating directory '${Path}' ..."
-	$null = New-Item $Path -ItemType Directory -ErrorAction Stop
+	if (-not (Test-Path -LiteralPath $Path -PathType Container)) {
+		$null = New-Item $Path -ItemType Directory -ErrorAction Stop
+	}
 }
 
 <#

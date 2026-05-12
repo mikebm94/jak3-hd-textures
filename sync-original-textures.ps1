@@ -118,10 +118,10 @@ function Main {
 		$OpenGoalDir = Find-OpenGoalInstallDir
 	}
 	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
-		throw "Specified OpenGOAL installation directory '${OpenGoalDir}' does not exist."
+		throw "OpenGOAL directory '${OpenGoalDir}' (passed via -OpenGoalDir) does not exist."
 	}
 
-	Write-Host "Using OpenGOAL installation directory '${OpenGoalDir}'."
+	Write-Host "OpenGOAL installation directory: ${OpenGoalDir}"
 
 	$dest_dir = Get-OriginalTexturesDir
 	$upscale_options = Get-UpscaleOptions
@@ -137,7 +137,7 @@ function Main {
 	$texture_paths = Copy-OriginalTextures $src_dir $dest_dir $upscale_options
 	
 	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
-	Write-Host "Saving texture manifest to '${manifest_path}' ..."
+	Write-Host "Saving texture manifest (total textures: $($texture_paths.Count)) ..."
 
 	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
 	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
