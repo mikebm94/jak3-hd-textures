@@ -120,6 +120,9 @@ function Main {
 	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
 		throw "OpenGOAL directory '${OpenGoalDir}' (passed via -OpenGoalDir) does not exist."
 	}
+	else {
+		$OpenGoalDir = Resolve-Path -LiteralPath $OpenGoalDir
+	}
 
 	Write-Host "OpenGOAL installation directory: ${OpenGoalDir}"
 
