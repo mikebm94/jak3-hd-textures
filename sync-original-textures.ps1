@@ -110,7 +110,7 @@ class Texture {
 
 
 function Main {
-	[SuppressMessageAttribute("PSShouldProcess", "")]
+	[SuppressMessageAttribute('PSShouldProcess', '')]
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
 	
@@ -174,7 +174,7 @@ function Sync-ExistingTexturesWithOptions {
 Copies the original Jak 3 game textures according to the upscale options.
 #>
 function Copy-OriginalTextures {
-	[SuppressMessageAttribute("PSShouldProcess", "")]
+	[SuppressMessageAttribute('PSShouldProcess', '')]
 	[CmdletBinding(SupportsShouldProcess)]
 	[OutputType([string])]
 	param(
