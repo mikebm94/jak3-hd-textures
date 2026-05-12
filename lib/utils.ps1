@@ -229,7 +229,7 @@ Checks if a string is suitable as a filename.
 function IsValidFilename {
 	[OutputType([bool])]
 	param(
-		[Parameter(Mandatory, Position = 0)]
+		[Parameter(Position = 0)]
 		[string]
 		$Name
 	)
