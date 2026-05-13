@@ -137,7 +137,7 @@ function Main {
 	}
 	
 	$src_dir = Find-GameTexturesDir $OpenGoalDir
-	$texture_paths = Copy-OriginalTextures $src_dir $dest_dir $upscale_options
+	$texture_paths = @( Copy-OriginalTextures $src_dir $dest_dir $upscale_options )
 	
 	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
 	Write-Host "Saving texture manifest (total textures: $($texture_paths.Count)) ..."
