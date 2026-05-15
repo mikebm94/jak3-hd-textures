@@ -39,6 +39,7 @@ For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` wil
 using namespace System.Collections.Generic
 using namespace System.Diagnostics.CodeAnalysis
 using namespace System.IO
+using namespace System.Linq
 using namespace System.Text
 
 [CmdletBinding(SupportsShouldProcess)]
@@ -174,7 +175,69 @@ function Sync-ExistingTexturesWithOptions {
 		$Options
 	)
 
-	# TODO
+	Write-Host "Syncing existing original textures with upscale options ..."
+
+	$files_to_delete = [List[FileInfo]]::new()
+	$files_to_move = [List[Tuple[FileInfo, string]]]::new() # Source, Destination
+	$model_dirs = Get-ChildItem -LiteralPath $Path -Directory -ErrorAction Stop
+
+	foreach ($model_dir in $model_dirs) {
+		$current_model = $model_dir.Name
+		$texture_files = Get-ChildItem -LiteralPath $model_dir.FullName -File -ErrorAction Stop
+
+		foreach ($texture_file in $texture_files) {
+			$texture_name = ($texture_file.BaseName -split '%')[1]
+
+			if ($null -eq $texture_name) {
+				Write-Error "Encountered unknown texture file: $($texture_file.FullName)"
+				continue
+			}
+
+			$new_model = $Options.TextureModels[$texture_name]
+
+			if ($null -eq $new_model) {
+				$new_model = $Options.DefaultModel
+			}
+
+			if ($new_model -eq 'none') {
+				$null = $files_to_delete.Add($texture_file)
+			}
+			elseif ($new_model -ne $current_model) {
+				$dest_dir = Join-Path $Path $new_model
+				Initialize-Directory $dest_dir
+				$null = $files_to_move.Add([Tuple]::Create($texture_file, (Join-Path $dest_dir $texture_file.Name)))
+			}
+		}
+	}
+
+	if ($files_to_delete.Count -gt 0) {
+		Write-Host "Removing $($files_to_delete.Count) texture(s) excluded from upscaling ..."
+
+		foreach ($file in $files_to_delete) {
+			if ($PSCmdlet.ShouldProcess($file, 'Remove File')) {
+				$file.Delete()
+			}
+		}
+	}
+
+	if ($files_to_move.Count -gt 0) {
+		Write-Host "Moving $($files_to_move.Count) texture(s) with changed upscale models ..."
+
+		foreach ($src_dest in $files_to_move) {
+			if ($PSCmdlet.ShouldProcess("Item: $($src_dest.Item1) Destination: $($src_dest.Item2)", 'Move File')) {
+				$src_dest.Item1.MoveTo($src_dest.Item2)
+			}
+		}
+	}
+
+	# Remove empty directories.
+	foreach ($model_dir in $model_dirs) {
+		if (-not [Enumerable]::Any($model_dir.EnumerateFileSystemInfos())) {
+			if ($PSCmdlet.ShouldProcess($model_dir, 'Remove Directory')) {
+				$model_dir.Delete()
+			}
+		}
+	}
 }
 
 <#
