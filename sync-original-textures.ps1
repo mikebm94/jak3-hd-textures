@@ -97,7 +97,15 @@ class Texture {
 			$dest_path = Join-Path $DestinationDir $new_filename
 
 			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
-				Copy-Item -LiteralPath $file.FullName -Destination $dest_path -ErrorAction Stop -WhatIf:$WhatIfPreference
+				if ($WhatIfPreference) {
+					Write-Host (
+						'What If: Performing the operation "Copy File" on target "Item: {0} Destination: {1}".' `
+						-f $file.FullName, $dest_path
+					)
+				}
+				else {
+					$null = $file.CopyTo($dest_path)
+				}
 			}
 
 			"$($this.UpscaleModel)/${new_filename}"
