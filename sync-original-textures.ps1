@@ -134,7 +134,7 @@ function Main {
 	Write-Host "OpenGOAL installation directory: ${OpenGoalDir}"
 
 	$dest_dir = Get-OriginalTexturesDir
-	$upscale_options = Get-UpscaleOptions
+	$upscale_options = Read-UpscaleOptions
 
 	if ($Force) {
 		Clear-Directory $dest_dir

@@ -39,9 +39,9 @@ class UpscaleOptions {
 
 <#
 .SYNOPSIS
-Gets the options configuring what textures get upscaled and which models to use.
+Reads the options configuring what textures get upscaled and which models to use.
 #>
-function Get-UpscaleOptions {
+function Read-UpscaleOptions {
 	[CmdletBinding()]
 	[OutputType([UpscaleOptions])]
 	param()
