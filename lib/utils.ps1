@@ -111,6 +111,11 @@ function Get-SearchResultsDir {
 <#
 .SYNOPSIS
 Finds the OpenGOAL installation directory.
+
+The environment variable `OPENGOAL_DIR` is checked first.
+If it isn't set, OpenGOAL will be searched for, in order, at the following locations:
+	C:\Users\<username>\AppData\Local\Programs\OpenGOAL
+	C:\ProgramData\OpenGOAL
 #>
 function Find-OpenGoalInstallDir {
 	[CmdletBinding()]
