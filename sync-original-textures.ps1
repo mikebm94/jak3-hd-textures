@@ -45,9 +45,7 @@ using namespace System.Text
 [CmdletBinding(SupportsShouldProcess)]
 param(
 	# The path to the OpenGOAL installation directory. If not supplied, the environment variable `OPENGOAL_DIR`
-	# will be checked. If it isn't set, OpenGOAL will be searched for in order, at the following locations:
-	#	C:\Users\<username>\AppData\Local\Programs\OpenGOAL
-	#	C:\ProgramData\OpenGOAL
+	# will be checked. If it isn't set, OpenGOAL will be searched for in common locations.
 	[string]
 	$OpenGoalDir,
 
