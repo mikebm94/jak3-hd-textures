@@ -2,10 +2,10 @@
 
 <#
 .SYNOPSIS
-Finds and copies the original Jak 3 game textures to `textures/original/`.
+Finds and copies the original Jak 3 game textures needed for upscaling to `textures/original/`.
 
 .DESCRIPTION
-Finds and copies the original Jak 3 game textures to `textures/original/`.
+Finds and copies the original Jak 3 game textures needed for upscaling to `textures/original/`.
 Make sure you've decompiled the Jak 3 ISO using the OpenGOAL launcher or CLI.
 
 The file `upscale-options.json` is used to exclude certain textures from being copied and upscaled
@@ -16,7 +16,7 @@ These are copied to `textures/original/manual/`.
 Re-run this script after making changes to the upscale options file. It will copy any newly included textures,
 delete ones that are newly excluded, and move textures accordingly if an upscale model has been changed.
 
-A manifest of all textures copied will be written to `textures/manifest.txt`.
+A manifest of all textures in `textures/original/` will be written to `textures/manifest.txt`.
 This makes it easy to spot changes to the texture pack using git.
 
 .NOTES
