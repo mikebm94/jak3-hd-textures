@@ -53,7 +53,7 @@ param(
 	# Otherwise, existing textures will be synced to match any changes to the upscale settings
 	# and only the missing textures will be copied.
 	[switch]
-	$Force
+	$Clean
 )
 
 . (Join-Path $PSScriptRoot 'lib/common.ps1')
@@ -81,7 +81,7 @@ function Main {
 	$dest_dir = Get-OriginalTexturesDir
 	$upscale_options = Read-UpscaleOptions
 
-	if ($Force) {
+	if ($Clean) {
 		Clear-Directory $dest_dir
 	}
 	else {
