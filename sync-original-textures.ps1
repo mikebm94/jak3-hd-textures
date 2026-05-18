@@ -186,7 +186,7 @@ function Sync-ExistingTexturesWithOptions {
 		foreach ($texture_file in $texture_files) {
 			$texture_name = ($texture_file.BaseName -split '%')[1]
 
-			if ($null -eq $texture_name) {
+			if ([string]::IsNullOrWhiteSpace($texture_name)) {
 				Write-Warning "Encountered unknown texture file: $($texture_file.FullName)"
 				continue
 			}
