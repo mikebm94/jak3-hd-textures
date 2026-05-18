@@ -187,7 +187,7 @@ function Sync-ExistingTexturesWithOptions {
 			$texture_name = ($texture_file.BaseName -split '%')[1]
 
 			if ($null -eq $texture_name) {
-				Write-Error "Encountered unknown texture file: $($texture_file.FullName)"
+				Write-Warning "Encountered unknown texture file: $($texture_file.FullName)"
 				continue
 			}
 
