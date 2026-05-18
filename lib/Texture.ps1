@@ -4,6 +4,7 @@ using namespace System.IO
 # Handles copying and de-duplication for textures found in the game files.
 class Texture {
 	# The name of the model used to upscale this texture.
+	# Leave null if the texture is a search result.
 	[string] $UpscaleModel
 
 	# All files found under this textures name.
@@ -27,17 +28,22 @@ class Texture {
 	}
 
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) to the destination directory.
-	# Returns the copied texture paths relative to the destination for writing to the texture manifest file.
+	# Returns the resulting texture filepaths relative to the destination directory.
+	# If the texture is a search result, only the files actually copied are returned.
 	[string[]] CopyTo([string] $DestinationDir, [bool] $WhatIfPreference) {
-		$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
+		if ($null -ne $this.UpscaleModel) {
+			$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
+		}
+
 		Initialize-Directory $DestinationDir -WhatIf:$WhatIfPreference
 
 		$should_deduplicate = ($this.Hashes.Count -le 1) -and ($this.Files.Count -gt 1)
 
-		$manifest_entries = foreach ($file in $this.Files) {
+		$filepaths = foreach ($file in $this.Files) {
 			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
 			$new_filename = "${subdir_name}%$($file.Name)"
 			$dest_path = Join-Path $DestinationDir $new_filename
+			$was_copied = $false
 
 			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
 				if ($WhatIfPreference) {
@@ -48,13 +54,20 @@ class Texture {
 				}
 				else {
 					$null = $file.CopyTo($dest_path)
+					$was_copied = $true
 				}
 			}
 
-			"$($this.UpscaleModel)/${new_filename}"
+			if ($null -ne $this.UpscaleModel) {
+				"$($this.UpscaleModel)/${new_filename}"
+			}
+			elseif ($was_copied) {
+				$new_filename
+			}
+
 			if ($should_deduplicate) { break }
 		}
 
-		return $manifest_entries
+		return $filepaths
 	}
 }

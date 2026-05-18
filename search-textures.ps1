@@ -19,6 +19,7 @@ The filter list and texture list file is deleted when `-Clean` is passed.
 #>
 
 
+using namespace System.Diagnostics.CodeAnalysis
 using namespace System.Collections.Generic
 
 [CmdletBinding(SupportsShouldProcess)]
@@ -47,6 +48,7 @@ param(
 )
 
 . (Join-Path $PSScriptRoot 'lib/common.ps1')
+. (Join-Path $PSScriptRoot 'lib/Texture.ps1')
 
 
 function Main {
@@ -84,6 +86,7 @@ function Main {
 }
 
 function Search-GameTextures {
+	[SuppressMessageAttribute('PSShouldProcess', '')]
 	[CmdletBinding(SupportsShouldProcess)]
 	param(
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
@@ -103,23 +106,28 @@ function Search-GameTextures {
 		Write-Host "Searching for '${Filter}' ..."
 
 		$results = Get-ChildItem -LiteralPath $SearchDir -Filter "$Filter.png" -File -Recurse -ErrorAction Stop
-		$unique_textures = [HashSet[string]]::new()
-		$copied_textures = 0
+		$results_by_name = [Dictionary[string, Texture]]::new()
 
 		foreach ($file in $results) {
-			$null = $unique_textures.Add($file.BaseName)
-			$dest_path = Join-Path $ResultsDir "$($file.Directory.BaseName)%$($file.Name)"
+			$texture_name = $file.BaseName
 
-			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
-				if ($PSCmdlet.ShouldProcess("Item: $($file.FullName) Destination: ${dest_path}", 'Copy File')) {
-					$null = $file.CopyTo($dest_path)
-				}
-
-				$copied_textures += 1
+			if ($results_by_name.ContainsKey($texture_name)) {
+				$results_by_name[$texture_name].AddFile($file)
+			}
+			else {
+				$results_by_name[$texture_name] = [Texture]::new($file, $null)
 			}
 		}
 
-		Write-Host "Found $($results.Count) result(s) - $($unique_textures.Count) unique, ${copied_textures} new."
+		$found = $results.Count
+		$unique = $results_by_name.Keys.Count
+		$copied = 0
+
+		foreach ($texture in $results_by_name.Values) {
+			$copied += $texture.CopyTo($ResultsDir, $WhatIfPreference).Count
+		}
+
+		Write-Host "Found ${found} result(s) - ${copied} copied, ${unique} unique name(s)."
 	}
 }
 
