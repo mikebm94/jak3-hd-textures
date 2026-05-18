@@ -16,7 +16,6 @@
 4xLSDIRplusN/_all%ashelin-cglogo.png
 4xLSDIRplusN/_all%ashelin-cgrank.png
 4xLSDIRplusN/_all%ashelin-chest.png
-4xLSDIRplusN/_all%ashelin-eye.png
 4xLSDIRplusN/_all%ashelin-eyebrow.png
 4xLSDIRplusN/_all%ashelin-eyelid.png
 4xLSDIRplusN/_all%ashelin-face.png
@@ -41,8 +40,6 @@
 4xLSDIRplusN/_all%bab-pendant.png
 4xLSDIRplusN/_all%back01.png
 4xLSDIRplusN/_all%backThing01.png
-4xLSDIRplusN/_all%bam-eyelight.png
-4xLSDIRplusN/_all%bam-iris-16x16.png
 4xLSDIRplusN/_all%baron-propoganda-logo.png
 4xLSDIRplusN/_all%bat-amulet-01.png
 4xLSDIRplusN/_all%bat-amulet-02.png
@@ -132,7 +129,6 @@
 4xLSDIRplusN/_all%citn-allflesh.png
 4xLSDIRplusN/_all%citn-allleather-edge.png
 4xLSDIRplusN/_all%citn-allleather-shoulder.png
-4xLSDIRplusN/_all%citn-allleye.png
 4xLSDIRplusN/_all%citn-allshoebottom.png
 4xLSDIRplusN/_all%citwide-crimson-gold.png
 4xLSDIRplusN/_all%citwide-crimson-light.png
@@ -385,7 +381,6 @@
 4xLSDIRplusN/_all%common_sandstone_pill01.png
 4xLSDIRplusN/_all%common_sandstone_trim01.png
 4xLSDIRplusN/_all%crack01.png
-4xLSDIRplusN/_all%cty-grunt-eye-01.png
 4xLSDIRplusN/_all%cty-grunt-gem-01.png
 4xLSDIRplusN/_all%cty-grunt-hose.png
 4xLSDIRplusN/_all%cty-grunt-metal-01.png
@@ -463,7 +458,6 @@
 4xLSDIRplusN/_all%daxtertuft.png
 4xLSDIRplusN/_all%des-bark-crooked-01.png
 4xLSDIRplusN/_all%des-beast-brown-tube.png
-4xLSDIRplusN/_all%des-beast-eye.png
 4xLSDIRplusN/_all%des-beast-feet.png
 4xLSDIRplusN/_all%des-beast-gunend.png
 4xLSDIRplusN/_all%des-beast-leg.png
@@ -478,8 +472,6 @@
 4xLSDIRplusN/_all%des-branch-01.png
 4xLSDIRplusN/_all%des-bridge-brace-01.png
 4xLSDIRplusN/_all%des-bridge-plank.png
-4xLSDIRplusN/_all%des-burn-eye-off.png
-4xLSDIRplusN/_all%des-burn-eye-on.png
 4xLSDIRplusN/_all%des-burn-precursor-01-bottom.png
 4xLSDIRplusN/_all%des-burn-precursor-01.png
 4xLSDIRplusN/_all%des-burn-precursor-head-01.png
@@ -555,8 +547,6 @@
 4xLSDIRplusN/_all%dk-eco-vent-side-01.png
 4xLSDIRplusN/_all%dk-maker-idol-collar-01.png
 4xLSDIRplusN/_all%dk-maker-idol-collar-02.png
-4xLSDIRplusN/_all%dk-maker-idol-eye-01.png
-4xLSDIRplusN/_all%dk-maker-idol-eye-dk-01.png
 4xLSDIRplusN/_all%dk-maker-idol-globes-01.png
 4xLSDIRplusN/_all%dk-maker-idol-globes-dk-01.png
 4xLSDIRplusN/_all%dk-maker-idol-head-01.png
@@ -592,7 +582,6 @@
 4xLSDIRplusN/_all%dp-bipedal-dk-plate-04.png
 4xLSDIRplusN/_all%dp-bipedal-dk-sm-plate-01.png
 4xLSDIRplusN/_all%dp-bipedal-dk-stomach-plate-01.png
-4xLSDIRplusN/_all%dp-bipedal-eye-01.png
 4xLSDIRplusN/_all%dp-bipedal-finger-plate-01.png
 4xLSDIRplusN/_all%dp-bipedal-nose-01.png
 4xLSDIRplusN/_all%dp-bipedal-power-hose.png
@@ -608,7 +597,6 @@
 4xLSDIRplusN/_all%eco-lt-cryst-02.png
 4xLSDIRplusN/_all%eco-lt-cryst-03.png
 4xLSDIRplusN/_all%ecocreature-claws.png
-4xLSDIRplusN/_all%ecocreature-eye.png
 4xLSDIRplusN/_all%ecocreature-flesh.png
 4xLSDIRplusN/_all%ecocreature-insidemouth.png
 4xLSDIRplusN/_all%ecocreature-joint.png
@@ -617,7 +605,6 @@
 4xLSDIRplusN/_all%environment-darkprec.png
 4xLSDIRplusN/_all%environment-oldmetal.png
 4xLSDIRplusN/_all%environment-precur-level.png
-4xLSDIRplusN/_all%errocyber-eye.png
 4xLSDIRplusN/_all%errocyber-eyelid.png
 4xLSDIRplusN/_all%errocyber-faceflesh.png
 4xLSDIRplusN/_all%errolcyber-bighand-01.png
@@ -648,7 +635,6 @@
 4xLSDIRplusN/_all%errolcyber-redmetal-01.png
 4xLSDIRplusN/_all%errolcyber-redmetal-02.png
 4xLSDIRplusN/_all%errolcyber-redmetal-03.png
-4xLSDIRplusN/_all%errolcyber-roboeye.png
 4xLSDIRplusN/_all%errolcyber-rubberpipe-light.png
 4xLSDIRplusN/_all%errolcyber-rubberpipe.png
 4xLSDIRplusN/_all%errolcyber-spine.png
@@ -808,7 +794,6 @@
 4xLSDIRplusN/_all%freehq-wal-tilem07.png
 4xLSDIRplusN/_all%gauge01.png
 4xLSDIRplusN/_all%gekko-body.png
-4xLSDIRplusN/_all%gekko-eye-01.png
 4xLSDIRplusN/_all%gekko-fingers.png
 4xLSDIRplusN/_all%gekko-hose.png
 4xLSDIRplusN/_all%gekko-laser.png
@@ -820,7 +805,6 @@
 4xLSDIRplusN/_all%gen-02.png
 4xLSDIRplusN/_all%gen-03.png
 4xLSDIRplusN/_all%grillRim01.png
-4xLSDIRplusN/_all%grunt-eye-01.png
 4xLSDIRplusN/_all%grunt-gem-01.png
 4xLSDIRplusN/_all%grunt-hose.png
 4xLSDIRplusN/_all%grunt-metal-01.png
@@ -831,7 +815,6 @@
 4xLSDIRplusN/_all%gun-barrel-alt.png
 4xLSDIRplusN/_all%gun-blue-glow.png
 4xLSDIRplusN/_all%gun-cover.png
-4xLSDIRplusN/_all%gun-eye.png
 4xLSDIRplusN/_all%gun-gunrack-01.png
 4xLSDIRplusN/_all%gun-gunrack-02.png
 4xLSDIRplusN/_all%gun-laser.png
@@ -896,7 +879,6 @@
 4xLSDIRplusN/_all%jakb-blackstrap.png
 4xLSDIRplusN/_all%jakb-brownleather.png
 4xLSDIRplusN/_all%jakb-clips.png
-4xLSDIRplusN/_all%jakb-eye.png
 4xLSDIRplusN/_all%jakb-eyebrow.png
 4xLSDIRplusN/_all%jakb-eyelid.png
 4xLSDIRplusN/_all%jakb-facelft.png
@@ -951,7 +933,6 @@
 4xLSDIRplusN/_all%jinx-hair.png
 4xLSDIRplusN/_all%jinx-hairtye.png
 4xLSDIRplusN/_all%jinx-handle.png
-4xLSDIRplusN/_all%jinx-iris.png
 4xLSDIRplusN/_all%jinx-kneepad.png
 4xLSDIRplusN/_all%jinx-pants.png
 4xLSDIRplusN/_all%jinx-rope-01.png
@@ -976,7 +957,6 @@
 4xLSDIRplusN/_all%keira-hair-newest.png
 4xLSDIRplusN/_all%keira-handbottom.png
 4xLSDIRplusN/_all%keira-handtop.png
-4xLSDIRplusN/_all%keira-iris-64x64.png
 4xLSDIRplusN/_all%keira-largewraps.png
 4xLSDIRplusN/_all%keira-lens-large.png
 4xLSDIRplusN/_all%keira-mask.png
@@ -1021,7 +1001,6 @@
 4xLSDIRplusN/_all%kid-blackstrap.png
 4xLSDIRplusN/_all%kid-brownstrap.png
 4xLSDIRplusN/_all%kid-clips.png
-4xLSDIRplusN/_all%kid-eye.png
 4xLSDIRplusN/_all%kid-eyelid.png
 4xLSDIRplusN/_all%kid-face.png
 4xLSDIRplusN/_all%kid-finger.png
@@ -1072,7 +1051,6 @@
 4xLSDIRplusN/_all%klever-brownstrap.png
 4xLSDIRplusN/_all%klever-chest.png
 4xLSDIRplusN/_all%klever-clips.png
-4xLSDIRplusN/_all%klever-eye.png
 4xLSDIRplusN/_all%klever-eyelid.png
 4xLSDIRplusN/_all%klever-face-01.png
 4xLSDIRplusN/_all%klever-face-01scars.png
@@ -1109,7 +1087,6 @@
 4xLSDIRplusN/_all%light01.png
 4xLSDIRplusN/_all%lt-eco-vent-blue-01.png
 4xLSDIRplusN/_all%lt-eco-vent-side-01.png
-4xLSDIRplusN/_all%manta-eye-01.png
 4xLSDIRplusN/_all%manta-gem-01.png
 4xLSDIRplusN/_all%manta-hose.png
 4xLSDIRplusN/_all%manta-laser.png
@@ -1150,7 +1127,6 @@
 4xLSDIRplusN/_all%metalcrate-lod02.png
 4xLSDIRplusN/_all%metalcrate-lod03.png
 4xLSDIRplusN/_all%metalcrate-lod04.png
-4xLSDIRplusN/_all%metalflut-eye.png
 4xLSDIRplusN/_all%metalflut-leatherstrap-b-01.png
 4xLSDIRplusN/_all%metalflut-leatherstrap-c.png
 4xLSDIRplusN/_all%metalflut-nail.png
@@ -1290,14 +1266,12 @@
 4xLSDIRplusN/_all%neo-wasp-body.png
 4xLSDIRplusN/_all%neo-wasp-brown.png
 4xLSDIRplusN/_all%neo-wasp-dark-brown.png
-4xLSDIRplusN/_all%neo-wasp-eye.png
 4xLSDIRplusN/_all%nest-fingerback.png
 4xLSDIRplusN/_all%nest-pups.png
 4xLSDIRplusN/_all%nestb-basekor.png
 4xLSDIRplusN/_all%nestb-eggskin.png
 4xLSDIRplusN/_all%nst-egg-spider-body.png
 4xLSDIRplusN/_all%nst-egg-spider-egg.png
-4xLSDIRplusN/_all%nst-egg-spider-eye.png
 4xLSDIRplusN/_all%nst-egg-spider-metal.png
 4xLSDIRplusN/_all%nst-egg-spider-pipe.png
 4xLSDIRplusN/_all%nsta-cave-carved-surface-bottom.png
@@ -1322,7 +1296,6 @@
 4xLSDIRplusN/_all%nsta-wall.png
 4xLSDIRplusN/_all%nstab-basekor.png
 4xLSDIRplusN/_all%nstab-eggskin.png
-4xLSDIRplusN/_all%nwasp-eye-01.png
 4xLSDIRplusN/_all%nwasp-gem-01.png
 4xLSDIRplusN/_all%nwasp-hose.png
 4xLSDIRplusN/_all%nwasp-metal-01.png
@@ -1333,7 +1306,6 @@
 4xLSDIRplusN/_all%onin-bowlhead.png
 4xLSDIRplusN/_all%onin-braclet.png
 4xLSDIRplusN/_all%onin-chain.png
-4xLSDIRplusN/_all%onin-eye.png
 4xLSDIRplusN/_all%onin-eyelid.png
 4xLSDIRplusN/_all%onin-face.png
 4xLSDIRplusN/_all%onin-finger.png
@@ -1350,7 +1322,6 @@
 4xLSDIRplusN/_all%onin-hand.png
 4xLSDIRplusN/_all%onin-handpalm.png
 4xLSDIRplusN/_all%onin-idol.png
-4xLSDIRplusN/_all%onin-idoleye.png
 4xLSDIRplusN/_all%onin-magic-bigpuff.png
 4xLSDIRplusN/_all%onin-mat.png
 4xLSDIRplusN/_all%onin-neck.png
@@ -1454,7 +1425,6 @@
 4xLSDIRplusN/_all%prec-tess-belt.png
 4xLSDIRplusN/_all%prec-tess-belt2.png
 4xLSDIRplusN/_all%prec-tess-emblem.png
-4xLSDIRplusN/_all%prec-tess-eye.png
 4xLSDIRplusN/_all%prec-tess-eyelid.png
 4xLSDIRplusN/_all%prec-tess-face.png
 4xLSDIRplusN/_all%prec-tess-glove.png
@@ -1624,7 +1594,6 @@
 4xLSDIRplusN/_all%samos-vest.png
 4xLSDIRplusN/_all%samosbird-beak.png
 4xLSDIRplusN/_all%samosbird-body.png
-4xLSDIRplusN/_all%samosbird-eye.png
 4xLSDIRplusN/_all%samosbird-plume.png
 4xLSDIRplusN/_all%samosbird-wing.png
 4xLSDIRplusN/_all%screen-00.png
@@ -1652,7 +1621,6 @@
 4xLSDIRplusN/_all%seem-bootmet.png
 4xLSDIRplusN/_all%seem-boottoe.png
 4xLSDIRplusN/_all%seem-ear.png
-4xLSDIRplusN/_all%seem-eye.png
 4xLSDIRplusN/_all%seem-eyelid.png
 4xLSDIRplusN/_all%seem-face.png
 4xLSDIRplusN/_all%seem-finger.png
@@ -1770,7 +1738,6 @@
 4xLSDIRplusN/_all%sewer-yellow-light-01.png
 4xLSDIRplusN/_all%sewer-yellow-light-02.png
 4xLSDIRplusN/_all%sig-belt.png
-4xLSDIRplusN/_all%sig-eye.png
 4xLSDIRplusN/_all%sig-eyelid.png
 4xLSDIRplusN/_all%sig-faceleft.png
 4xLSDIRplusN/_all%sig-facert.png
@@ -1932,7 +1899,6 @@
 4xLSDIRplusN/_all%tess-buckle.png
 4xLSDIRplusN/_all%tess-chest.png
 4xLSDIRplusN/_all%tess-emblem.png
-4xLSDIRplusN/_all%tess-eye.png
 4xLSDIRplusN/_all%tess-eyelid.png
 4xLSDIRplusN/_all%tess-face.png
 4xLSDIRplusN/_all%tess-finger.png
@@ -1969,7 +1935,6 @@
 4xLSDIRplusN/_all%torn-armor.png
 4xLSDIRplusN/_all%torn-blademetal.png
 4xLSDIRplusN/_all%torn-ear.png
-4xLSDIRplusN/_all%torn-eye.png
 4xLSDIRplusN/_all%torn-eyelid.png
 4xLSDIRplusN/_all%torn-face-right.png
 4xLSDIRplusN/_all%torn-face.png
@@ -1999,7 +1964,6 @@
 4xLSDIRplusN/_all%tow-pup-detail-01.png
 4xLSDIRplusN/_all%tow-pup-metal-01.png
 4xLSDIRplusN/_all%tow-pup-skin-01.png
-4xLSDIRplusN/_all%tow-pupeyes-01.png
 4xLSDIRplusN/_all%tow-slime-01.png
 4xLSDIRplusN/_all%tow-wall-supports-HI.png
 4xLSDIRplusN/_all%tow-wall-supports.png
@@ -2041,7 +2005,6 @@
 4xLSDIRplusN/_all%veger-fingertop.png
 4xLSDIRplusN/_all%veger-gold.png
 4xLSDIRplusN/_all%veger-hand.png
-4xLSDIRplusN/_all%veger-iris.png
 4xLSDIRplusN/_all%veger-legwraps.png
 4xLSDIRplusN/_all%veger-pages.png
 4xLSDIRplusN/_all%veger-pants.png
@@ -2232,7 +2195,6 @@
 4xLSDIRplusN/_all%wstd-stands-shell02.png
 4xLSDIRplusN/_all%wstd-throne-wall01.png
 4xLSDIRplusN/_all%wstd-torchbowl-coal-01.png
-4xLSDIRplusN/_all%wstlander-01-eye.png
 4xLSDIRplusN/_all%wstlander-01-glovetop.png
 4xLSDIRplusN/_all%wstlander-01-gunmetal-01.png
 4xLSDIRplusN/_all%wstlander-01-gunmetal-02.png
@@ -2251,14 +2213,12 @@
 4xLSDIRplusN/_all%wstlander-02-armor.png
 4xLSDIRplusN/_all%wstlander-02-belt.png
 4xLSDIRplusN/_all%wstlander-02-bootheel.png
-4xLSDIRplusN/_all%wstlander-02-eye.png
 4xLSDIRplusN/_all%wstlander-02-glove.png
 4xLSDIRplusN/_all%wstlander-02-head.png
 4xLSDIRplusN/_all%wstlander-02-ponytail.png
 4xLSDIRplusN/_all%wstlander-02-scarf.png
 4xLSDIRplusN/_all%wstlander-02-shirt.png
 4xLSDIRplusN/_all%wstlander-02-skirt.png
-4xLSDIRplusN/_all%wstlander-03-eye.png
 4xLSDIRplusN/_all%wstlander-03-flesh.png
 4xLSDIRplusN/_all%wstlander-04-dark-blue.png
 4xLSDIRplusN/_all%wstlander-04-gun.png
@@ -2281,7 +2241,6 @@
 4xLSDIRplusN/arenacst-pris%jakchires-glovetop.png
 4xLSDIRplusN/arenacst-pris%jakchires-precarmor-01.png
 4xLSDIRplusN/arenacst-pris%jakchires-teeth.png
-4xLSDIRplusN/arenacst-pris2%king-iris.png
 4xLSDIRplusN/arenacst-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/arenacst-pris2%sig-skirts-02.png
 4xLSDIRplusN/arenacst-pris2%vin-teeth-01.png
@@ -2495,9 +2454,7 @@
 4xLSDIRplusN/combx-tfrag%comb-temp-glass.png
 4xLSDIRplusN/combx-tfrag%rail-env-wall-01.png
 4xLSDIRplusN/combx-tfrag%tpl-door-face-01.png
-4xLSDIRplusN/common%autoeye-iris.png
 4xLSDIRplusN/common%autoeye-lid.png
-4xLSDIRplusN/common%autoeye-pupil.png
 4xLSDIRplusN/common%lens-highlight.png
 4xLSDIRplusN/common%skull-gem-env.png
 4xLSDIRplusN/ctycara-pris%carbdash01.png
@@ -2689,7 +2646,6 @@
 4xLSDIRplusN/ctypepa-pris%citfat-cotton-gather.png
 4xLSDIRplusN/ctypepa-pris%citfat-cottonbutton.png
 4xLSDIRplusN/ctypepa-pris%citfat-cottonclip.png
-4xLSDIRplusN/ctypepa-pris%citfat-eye.png
 4xLSDIRplusN/ctypepa-pris%citfat-eyebrow-bro.png
 4xLSDIRplusN/ctypepa-pris%citfat-eyebrow.png
 4xLSDIRplusN/ctypepa-pris%citfat-fleshbrown.png
@@ -2752,7 +2708,6 @@
 4xLSDIRplusN/ctyport-vis-pris%airlock-door-main.png
 4xLSDIRplusN/ctyport-vis-pris%mechdax-armfur.png
 4xLSDIRplusN/ctyport-vis-pris%mechdax-ear.png
-4xLSDIRplusN/ctyport-vis-pris%mechdax-eye.png
 4xLSDIRplusN/ctyport-vis-pris%mechdax-finger.png
 4xLSDIRplusN/ctyport-vis-pris%mechdax-horn.png
 4xLSDIRplusN/ctyport-vis-pris%mechdax-leather.png
@@ -2883,14 +2838,6 @@
 4xLSDIRplusN/ctysluma-sprite%baron-neon-dot-d.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-dot-ring-on.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-dot-ring.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-a-on.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-a.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-b-on.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-b.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-border-on.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-border.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-c-on.png
-4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-c.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-ghotee-on.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-ghotee.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-mouth-on.png
@@ -3065,7 +3012,6 @@
 4xLSDIRplusN/ctywide-vis-tfrag%t-palshaft-plate01.png
 4xLSDIRplusN/ctywide-vis-tfrag%t-palshaft-roof-01.png
 4xLSDIRplusN/desbattl-minimap%wascity-turret-hud-big-arrow-01.png
-4xLSDIRplusN/desbattl-pris%mh-flyer-eye-01.png
 4xLSDIRplusN/desbattl-pris%mh-flyer-hose.png
 4xLSDIRplusN/desbattl-pris%mh-flyer-leatherstrap-01.png
 4xLSDIRplusN/desbattl-pris%mh-flyer-metal-01.png
@@ -3381,7 +3327,6 @@
 4xLSDIRplusN/desoasis-pris%ashelin-lo-cglogo.png
 4xLSDIRplusN/desoasis-pris%ashelin-lo-cgrank.png
 4xLSDIRplusN/desoasis-pris%ashelin-lo-chest.png
-4xLSDIRplusN/desoasis-pris%ashelin-lo-eye.png
 4xLSDIRplusN/desoasis-pris%ashelin-lo-eyebrow.png
 4xLSDIRplusN/desoasis-pris%ashelin-lo-face.png
 4xLSDIRplusN/desoasis-pris%ashelin-lo-glove.png
@@ -3782,7 +3727,6 @@
 4xLSDIRplusN/factoryd-vis-pris%cguardgame-metaledark-02.png
 4xLSDIRplusN/factoryd-vis-pris%cguardgame-metallight-01small.png
 4xLSDIRplusN/factoryd-vis-pris%cguardgame-shoebottom.png
-4xLSDIRplusN/factoryd-vis-pris%missle-bot-eye-01.png
 4xLSDIRplusN/factoryd-vis-pris%missle-bot-gear-01.png
 4xLSDIRplusN/factoryd-vis-pris%missle-bot-gear-02.png
 4xLSDIRplusN/factoryd-vis-pris%missle-bot-gear-03.png
@@ -3885,7 +3829,6 @@
 4xLSDIRplusN/freecast-pris%environment-title.png
 4xLSDIRplusN/freecast-pris%jakc-armor.png
 4xLSDIRplusN/freecast-pris2%bam-hairhilite.png
-4xLSDIRplusN/freecast-pris2%samos-eye.png
 4xLSDIRplusN/freecast-pris2%samos-eyelid.png
 4xLSDIRplusN/freecast-pris2%samos-lens.png
 4xLSDIRplusN/freecast-pris2%samos-log-03.png
@@ -4414,7 +4357,6 @@
 4xLSDIRplusN/introcst-pris%cguard1-boottop.png
 4xLSDIRplusN/introcst-pris%cguard1-brushedmetal.png
 4xLSDIRplusN/introcst-pris%cguard1-chestplate.png
-4xLSDIRplusN/introcst-pris%cguard1-eyering.png
 4xLSDIRplusN/introcst-pris%cguard1-face.png
 4xLSDIRplusN/introcst-pris%cguard1-glove.png
 4xLSDIRplusN/introcst-pris%cguard1-greyheadshield.png
@@ -4444,8 +4386,6 @@
 4xLSDIRplusN/introcst-pris%klever-earcup.png
 4xLSDIRplusN/introcst-pris%klever-mustache.png
 4xLSDIRplusN/introcst-pris2%bam-hairhilite.png
-4xLSDIRplusN/introcst-pris2%king-iris.png
-4xLSDIRplusN/introcst-pris2%samos-eye.png
 4xLSDIRplusN/introcst-pris2%samos-eyelid.png
 4xLSDIRplusN/introcst-pris2%samos-lens.png
 4xLSDIRplusN/introcst-pris2%samos-log-03.png
@@ -4497,7 +4437,6 @@
 4xLSDIRplusN/lblowcst-pris%sig2-shoulderarmor.png
 4xLSDIRplusN/lblowcst-pris%torn-belt.png
 4xLSDIRplusN/lblowcst-pris%torn-belt2.png
-4xLSDIRplusN/lblowcst-pris%torn-eye-lorez.png
 4xLSDIRplusN/lblowcst-pris%torn-footleather.png
 4xLSDIRplusN/lblowcst-pris%torn-gunbarrel-02.png
 4xLSDIRplusN/lblowcst-pris%torn-gunbarrel.png
@@ -4650,11 +4589,7 @@
 4xLSDIRplusN/ldamklev-pris%bam-hairhilite.png
 4xLSDIRplusN/ldamklev-pris%klever-earcup.png
 4xLSDIRplusN/ldamklev-pris%klever-mustache.png
-4xLSDIRplusN/ldamklev-pris2%king-iris.png
-4xLSDIRplusN/ldampeck-pris2%king-iris.png
-4xLSDIRplusN/ldampksm-pris2%king-iris.png
 4xLSDIRplusN/ldampksm-pris2%seem-precmetal-edge.png
-4xLSDIRplusN/ldamsig-pris2%king-iris.png
 4xLSDIRplusN/ldamsig-pris2%sig-skirts-02.png
 4xLSDIRplusN/ldamsig-pris2%vin-teeth-01.png
 4xLSDIRplusN/ldax-pris%bam-hairhilite.png
@@ -4678,7 +4613,6 @@
 4xLSDIRplusN/ldmpckgn-pris%jakc-wristband-a2.png
 4xLSDIRplusN/ldmpckgn-pris%jakchires-brownstrap.png
 4xLSDIRplusN/ldmpckgn-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ldmpckgn-pris2%king-iris.png
 4xLSDIRplusN/level-default-minimap%checkpoint.png
 4xLSDIRplusN/level-default-minimap%hud-arrow-dkpwr-01.png
 4xLSDIRplusN/level-default-minimap%hud-arrow-down-01-lit.png
@@ -5273,7 +5207,6 @@
 4xLSDIRplusN/ljkcdmkl-pris%jakchires-teeth.png
 4xLSDIRplusN/ljkcdmkl-pris%klever-earcup.png
 4xLSDIRplusN/ljkcdmkl-pris%klever-mustache.png
-4xLSDIRplusN/ljkcdmkl-pris2%king-iris.png
 4xLSDIRplusN/ljkdmpk-pris%bam-hairhilite.png
 4xLSDIRplusN/ljkdmpk-pris%jakc-armor.png
 4xLSDIRplusN/ljkdmpk-pris%jakc-chestplate-straps.png
@@ -5287,7 +5220,6 @@
 4xLSDIRplusN/ljkdmpk-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljkdmpk-pris%jakchires-precarmor-01.png
 4xLSDIRplusN/ljkdmpk-pris%jakchires-teeth.png
-4xLSDIRplusN/ljkdmpk-pris2%king-iris.png
 4xLSDIRplusN/ljkdxvin-pris%bam-hairhilite.png
 4xLSDIRplusN/ljkdxvin-pris%daxter-eyelid.png
 4xLSDIRplusN/ljkdxvin-pris%jakc-armor.png
@@ -5339,7 +5271,6 @@
 4xLSDIRplusN/lkleever-pris%klever-earcup.png
 4xLSDIRplusN/lkleever-pris%klever-mustache.png
 4xLSDIRplusN/lmech-pris%dm-mech-claws.png
-4xLSDIRplusN/lmech-pris%dm-mech-eye.png
 4xLSDIRplusN/lmech-pris%dm-mech-head.png
 4xLSDIRplusN/lmech-pris%dm-mech-joint-cap.png
 4xLSDIRplusN/lmech-pris%dm-mech-joint.png
@@ -5373,7 +5304,6 @@
 4xLSDIRplusN/lnstcst-pris2%vin-teeth-01.png
 4xLSDIRplusN/lnstcst-water%desert-nest-egg-piping.png
 4xLSDIRplusN/lnstcst-water%nst-spiderweb.png
-4xLSDIRplusN/lnstoba-vis-pris%mhbat-eye-01.png
 4xLSDIRplusN/lnstoba-vis-pris%mhbat-hose.png
 4xLSDIRplusN/lnstoba-vis-pris%mhbat-metal-01.png
 4xLSDIRplusN/lnstoba-vis-pris%mhbat-skin-01.png
@@ -5389,7 +5319,6 @@
 4xLSDIRplusN/lnstoba-vis-pris%nst-hose.png
 4xLSDIRplusN/lnstoba-vis-water%nst-egg-membrane-01.png
 4xLSDIRplusN/lnstobb-minimap%hud-mhcentipede-01.png
-4xLSDIRplusN/lnstobb-pris%mhcent-eye.png
 4xLSDIRplusN/lnstobb-pris%mhcent-metal-01.png
 4xLSDIRplusN/lnstobb-pris%mhcent-metal-02.png
 4xLSDIRplusN/lnstobb-pris%mhcent-mouth-01.png
@@ -5454,7 +5383,6 @@
 4xLSDIRplusN/lpattack-vis-pris%king-hair-small.png
 4xLSDIRplusN/lpattack-vis-pris%king-hand-small.png
 4xLSDIRplusN/lpattack-vis-pris%king-horn-small.png
-4xLSDIRplusN/lpattack-vis-pris%king-iris.png
 4xLSDIRplusN/lpattack-vis-pris%king-leg-small.png
 4xLSDIRplusN/lpattack-vis-pris%king-lgblackstrap-small.png
 4xLSDIRplusN/lpattack-vis-pris%king-precursermetal-plain-small.png
@@ -5500,7 +5428,6 @@
 4xLSDIRplusN/lprecurc-vis-tfrag%precur-tubes-small-01.png
 4xLSDIRplusN/lprecurc-vis-tfrag%precur-wall-groove-01.png
 4xLSDIRplusN/lsamos-pris2%bam-hairhilite.png
-4xLSDIRplusN/lsamos-pris2%samos-eye.png
 4xLSDIRplusN/lsamos-pris2%samos-eyelid.png
 4xLSDIRplusN/lsamos-pris2%samos-lens.png
 4xLSDIRplusN/lsamos-pris2%samos-log-03.png
@@ -5576,7 +5503,6 @@
 4xLSDIRplusN/ltornjnx-pris2%torn-metal2.png
 4xLSDIRplusN/ltornjnx-pris2%torn-shoe-02.png
 4xLSDIRplusN/ltornsam-pris2%bam-hairhilite.png
-4xLSDIRplusN/ltornsam-pris2%samos-eye.png
 4xLSDIRplusN/ltornsam-pris2%samos-eyelid.png
 4xLSDIRplusN/ltornsam-pris2%samos-lens.png
 4xLSDIRplusN/ltornsam-pris2%samos-log-03.png
@@ -5875,13 +5801,11 @@
 4xLSDIRplusN/mineb-vis-pris%mine-white-stripe-metal-01.png
 4xLSDIRplusN/mineb-vis-pris%monster-frog-back.png
 4xLSDIRplusN/mineb-vis-pris%monster-frog-belly.png
-4xLSDIRplusN/mineb-vis-pris%monster-frog-eye.png
 4xLSDIRplusN/mineb-vis-pris%monster-frog-fin.png
 4xLSDIRplusN/mineb-vis-pris%monster-frog-leg.png
 4xLSDIRplusN/mineb-vis-pris%monster-frog-legfront.png
 4xLSDIRplusN/mineb-vis-pris%monster-frog-toenails.png
 4xLSDIRplusN/mineb-vis-pris%rat-eartrans.png
-4xLSDIRplusN/mineb-vis-pris%rat-eye.png
 4xLSDIRplusN/mineb-vis-pris%rat-hair.png
 4xLSDIRplusN/mineb-vis-pris%rat-nose.png
 4xLSDIRplusN/mineb-vis-pris%rat-sidehair.png
@@ -6097,8 +6021,6 @@
 4xLSDIRplusN/mined-pris%mine-white-stripe-metal-01.png
 4xLSDIRplusN/mined-pris%mined_redbrake.png
 4xLSDIRplusN/mined-pris%mined_rostone-01.png
-4xLSDIRplusN/mined-pris%prebot-eye-reflection.png
-4xLSDIRplusN/mined-pris%prebot-eye.png
 4xLSDIRplusN/mined-pris%prebot-foot.png
 4xLSDIRplusN/mined-pris%prebot-innermetal-edges.png
 4xLSDIRplusN/mined-pris%prebot-innermetal.png
@@ -6209,7 +6131,6 @@
 4xLSDIRplusN/museum-pris%klever-earcup.png
 4xLSDIRplusN/museum-pris%klever-mustache.png
 4xLSDIRplusN/museum-pris2%bam-hairhilite.png
-4xLSDIRplusN/museum-pris2%samos-eye.png
 4xLSDIRplusN/museum-pris2%samos-eyelid.png
 4xLSDIRplusN/museum-pris2%samos-lens.png
 4xLSDIRplusN/museum-pris2%samos-log-03.png
@@ -6234,7 +6155,6 @@
 4xLSDIRplusN/museum2-pris%prec-veger-sleeve.png
 4xLSDIRplusN/museum2-pris2%bam-hairhilite.png
 4xLSDIRplusN/museum2-pris2%daxter-eyelid.png
-4xLSDIRplusN/museum2-pris2%king-iris.png
 4xLSDIRplusN/museum2-pris2%prec-veger-sleeve.png
 4xLSDIRplusN/museum2-pris2%sig-skirts-02.png
 4xLSDIRplusN/museum2-pris2%veger-coatclips.png
@@ -6247,7 +6167,6 @@
 4xLSDIRplusN/museum3-pris%cguardred-boottop.png
 4xLSDIRplusN/museum3-pris%cguardred-brushedmetal.png
 4xLSDIRplusN/museum3-pris%cguardred-chestplate.png
-4xLSDIRplusN/museum3-pris%cguardred-eyering.png
 4xLSDIRplusN/museum3-pris%cguardred-face.png
 4xLSDIRplusN/museum3-pris%cguardred-glove.png
 4xLSDIRplusN/museum3-pris%cguardred-greyheadshield.png
@@ -6279,7 +6198,6 @@
 4xLSDIRplusN/museum3-pris%kor-boot.png
 4xLSDIRplusN/museum3-pris%kor-bootsole.png
 4xLSDIRplusN/museum3-pris%kor-chain.png
-4xLSDIRplusN/museum3-pris%kor-eye.png
 4xLSDIRplusN/museum3-pris%kor-eyelid.png
 4xLSDIRplusN/museum3-pris%kor-finger.png
 4xLSDIRplusN/museum3-pris%kor-hair.png
@@ -6301,7 +6219,6 @@
 4xLSDIRplusN/museum3-pris%kor-wraps.png
 4xLSDIRplusN/museum3-pris%kor-wrapsclean.png
 4xLSDIRplusN/museum3-pris%kor-wrapsdirty.png
-4xLSDIRplusN/museum3-pris%samos-eye.png
 4xLSDIRplusN/museum3-pris%samos-eyelid.png
 4xLSDIRplusN/museum3-pris%samos-lens.png
 4xLSDIRplusN/museum3-pris%samos-log-03.png
@@ -6319,13 +6236,11 @@
 4xLSDIRplusN/museum3-pris%samosyoung-vest.png
 4xLSDIRplusN/museum3-pris%vin-teeth-01.png
 4xLSDIRplusN/museum3-pris2%bam-hairhilite.png
-4xLSDIRplusN/museum3-pris2%samos-eye.png
 4xLSDIRplusN/museum3-pris2%samos-eyelid.png
 4xLSDIRplusN/museum3-pris2%samos-lens.png
 4xLSDIRplusN/museum3-pris2%samos-log-03.png
 4xLSDIRplusN/museum3b-pris%bam-hairhilite.png
 4xLSDIRplusN/museum3b-pris%crocadog-collar.png
-4xLSDIRplusN/museum3b-pris%crocadog-eye.png
 4xLSDIRplusN/museum3b-pris%crocadog-eyelid.png
 4xLSDIRplusN/museum3b-pris%crocadog-facegreen.png
 4xLSDIRplusN/museum3b-pris%crocadog-faceyellow.png
@@ -6345,7 +6260,6 @@
 4xLSDIRplusN/museum3b-pris%errol-chinstrap.png
 4xLSDIRplusN/museum3b-pris%errol-ear.png
 4xLSDIRplusN/museum3b-pris%errol-earcup.png
-4xLSDIRplusN/museum3b-pris%errol-eye.png
 4xLSDIRplusN/museum3b-pris%errol-eyebrow.png
 4xLSDIRplusN/museum3b-pris%errol-eyelid.png
 4xLSDIRplusN/museum3b-pris%errol-face.png
@@ -6395,7 +6309,6 @@
 4xLSDIRplusN/museum3b-pris%krew-jewe-smaller.png
 4xLSDIRplusN/museum3b-pris%krew-lamp.png
 4xLSDIRplusN/museum3b-pris%krew-leatherplain.png
-4xLSDIRplusN/museum3b-pris%krew-lfteye.png
 4xLSDIRplusN/museum3b-pris%krew-light.png
 4xLSDIRplusN/museum3b-pris%krew-loop.png
 4xLSDIRplusN/museum3b-pris%krew-loop2.png
@@ -6407,7 +6320,6 @@
 4xLSDIRplusN/museum3b-pris%krew-pipe-anim.png
 4xLSDIRplusN/museum3b-pris%krew-plainmetal.png
 4xLSDIRplusN/museum3b-pris%krew-ring.png
-4xLSDIRplusN/museum3b-pris%krew-rteye.png
 4xLSDIRplusN/museum3b-pris%krew-shirt.png
 4xLSDIRplusN/museum3b-pris%krew-shirtleather.png
 4xLSDIRplusN/museum3b-pris%krew-vehicle.png
@@ -6449,7 +6361,6 @@
 4xLSDIRplusN/museum3b-pris2%baron-brownleatherstrap.png
 4xLSDIRplusN/museum3b-pris2%baron-brushedmetal.png
 4xLSDIRplusN/museum3b-pris2%baron-chestemblem.png
-4xLSDIRplusN/museum3b-pris2%baron-eye.png
 4xLSDIRplusN/museum3b-pris2%baron-eyelid.png
 4xLSDIRplusN/museum3b-pris2%baron-face.png
 4xLSDIRplusN/museum3b-pris2%baron-hand.png
@@ -6477,7 +6388,6 @@
 4xLSDIRplusN/museum3b-pris2%brut-cloaktail.png
 4xLSDIRplusN/museum3b-pris2%brut-cloaktop.png
 4xLSDIRplusN/museum3b-pris2%brut-diaper.png
-4xLSDIRplusN/museum3b-pris2%brut-eye.png
 4xLSDIRplusN/museum3b-pris2%brut-eyelid.png
 4xLSDIRplusN/museum3b-pris2%brut-feather.png
 4xLSDIRplusN/museum3b-pris2%brut-finger.png
@@ -6513,7 +6423,6 @@
 4xLSDIRplusN/museum4-pris%bluesage-barreltop.png
 4xLSDIRplusN/museum4-pris%bluesage-copperfixture.png
 4xLSDIRplusN/museum4-pris%bluesage-copperwire.png
-4xLSDIRplusN/museum4-pris%bluesage-eye-centered-16x16.png
 4xLSDIRplusN/museum4-pris%bluesage-eyelid.png
 4xLSDIRplusN/museum4-pris%bluesage-flesh.png
 4xLSDIRplusN/museum4-pris%bluesage-greenwire.png
@@ -6531,7 +6440,6 @@
 4xLSDIRplusN/museum4-pris%es-green-metal.png
 4xLSDIRplusN/museum4-pris%es-precursor-metal-01.png
 4xLSDIRplusN/museum4-pris%esbelly-01.png
-4xLSDIRplusN/museum4-pris%eseye.png
 4xLSDIRplusN/museum4-pris%eseyebrow.png
 4xLSDIRplusN/museum4-pris%espants-01.png
 4xLSDIRplusN/museum4-pris%espants-02.png
@@ -6560,7 +6468,6 @@
 4xLSDIRplusN/museum4-pris%evilbro-wrap.png
 4xLSDIRplusN/museum4-pris%explorer-ball.png
 4xLSDIRplusN/museum4-pris%explorer-buckle.png
-4xLSDIRplusN/museum4-pris%explorer-eye-centered-16x16.png
 4xLSDIRplusN/museum4-pris%explorer-eyelid.png
 4xLSDIRplusN/museum4-pris%explorer-mustache.png
 4xLSDIRplusN/museum4-pris%explorer-pants.png
@@ -6591,7 +6498,6 @@
 4xLSDIRplusN/museum4-pris%fman-beard-02.png
 4xLSDIRplusN/museum4-pris%fman-beard-03.png
 4xLSDIRplusN/museum4-pris%fman-belt.png
-4xLSDIRplusN/museum4-pris%fman-eye-centered-16x16.png
 4xLSDIRplusN/museum4-pris%fman-eyelid.png
 4xLSDIRplusN/museum4-pris%fman-flesh.png
 4xLSDIRplusN/museum4-pris%fman-metal.png
@@ -6606,7 +6512,6 @@
 4xLSDIRplusN/museum4-pris%gambler-barrel.png
 4xLSDIRplusN/museum4-pris%gambler-card.png
 4xLSDIRplusN/museum4-pris%gambler-cork.png
-4xLSDIRplusN/museum4-pris%gambler-eye-16x16.png
 4xLSDIRplusN/museum4-pris%gambler-glasses.png
 4xLSDIRplusN/museum4-pris%gambler-hair.png
 4xLSDIRplusN/museum4-pris%gambler-hair2.png
@@ -6620,7 +6525,6 @@
 4xLSDIRplusN/museum4-pris%geo-belt.png
 4xLSDIRplusN/museum4-pris%geo-braid.png
 4xLSDIRplusN/museum4-pris%geo-buckle.png
-4xLSDIRplusN/museum4-pris%geo-eye-16x16.png
 4xLSDIRplusN/museum4-pris%geo-eyebrow.png
 4xLSDIRplusN/museum4-pris%geo-hat-02.png
 4xLSDIRplusN/museum4-pris%geo-hat.png
@@ -6667,9 +6571,7 @@
 4xLSDIRplusN/museum4-pris%mayor-spats.png
 4xLSDIRplusN/museum4-pris%mayor-vestbutton.png
 4xLSDIRplusN/museum4-pris%mayor-vesthole.png
-4xLSDIRplusN/museum4-pris%mayor-white-eye.png
 4xLSDIRplusN/museum4-pris%mineshort-candle.png
-4xLSDIRplusN/museum4-pris%mineshort-eye-16x16.png
 4xLSDIRplusN/museum4-pris%mineshort-flesh.png
 4xLSDIRplusN/museum4-pris%mineshort-hairyflesh.png
 4xLSDIRplusN/museum4-pris%mineshort-lamp.png
@@ -6697,7 +6599,6 @@
 4xLSDIRplusN/museum4-pris%minetall-birdtail.png
 4xLSDIRplusN/museum4-pris%minetall-birdwings.png
 4xLSDIRplusN/museum4-pris%minetall-dynamite.png
-4xLSDIRplusN/museum4-pris%minetall-eye-16x16.png
 4xLSDIRplusN/museum4-pris%minetall-hair.png
 4xLSDIRplusN/museum4-pris%minetall-leatherstrap.png
 4xLSDIRplusN/museum4-pris%minetall-leggings.png
@@ -6715,7 +6616,6 @@
 4xLSDIRplusN/museum4-pris%ogre-brownleather.png
 4xLSDIRplusN/museum4-pris%ogre-claw.png
 4xLSDIRplusN/museum4-pris%ogre-envmap.png
-4xLSDIRplusN/museum4-pris%ogre-eye.png
 4xLSDIRplusN/museum4-pris%ogre-furlong.png
 4xLSDIRplusN/museum4-pris%ogre-furtrans.png
 4xLSDIRplusN/museum4-pris%ogre-furtrans2.png
@@ -6740,7 +6640,6 @@
 4xLSDIRplusN/museum4-pris%redsage-multitileglow.png
 4xLSDIRplusN/museum4-pris%redsage-squaretile.png
 4xLSDIRplusN/museum4-pris%sculptor-belt.png
-4xLSDIRplusN/museum4-pris%sculptor-eye.png
 4xLSDIRplusN/museum4-pris%sculptor-eyelid.png
 4xLSDIRplusN/museum4-pris%sculptor-glove.png
 4xLSDIRplusN/museum4-pris%sculptor-hair.png
@@ -6763,7 +6662,6 @@
 4xLSDIRplusN/museum4-pris%yelsage-barreltop.png
 4xLSDIRplusN/museum4-pris%yelsage-beard.png
 4xLSDIRplusN/museum4-pris%yelsage-boltstrip.png
-4xLSDIRplusN/museum4-pris%yelsage-eye-16x16new.png
 4xLSDIRplusN/museum4-pris%yelsage-eyelid.png
 4xLSDIRplusN/museum4-pris%yelsage-flesh.png
 4xLSDIRplusN/museum4-pris%yelsage-handlewrap.png
@@ -6789,7 +6687,6 @@
 4xLSDIRplusN/museum4-pris2%jak-orig-belt.png
 4xLSDIRplusN/museum4-pris2%jak-orig-clips.png
 4xLSDIRplusN/museum4-pris2%jak-orig-earflaps.png
-4xLSDIRplusN/museum4-pris2%jak-orig-eye.png
 4xLSDIRplusN/museum4-pris2%jak-orig-eyebrow.png
 4xLSDIRplusN/museum4-pris2%jak-orig-eyelid.png
 4xLSDIRplusN/museum4-pris2%jak-orig-face.png
@@ -6814,7 +6711,6 @@
 4xLSDIRplusN/museum4-tfrag%blady-brown4x4.png
 4xLSDIRplusN/museum4-tfrag%blady-brownleather.png
 4xLSDIRplusN/museum4-tfrag%blady-diaper.png
-4xLSDIRplusN/museum4-tfrag%blady-eyecentered-32x32.png
 4xLSDIRplusN/museum4-tfrag%blady-eyelid.png
 4xLSDIRplusN/museum4-tfrag%blady-feaTher.png
 4xLSDIRplusN/museum4-tfrag%blady-hat.png
@@ -6829,7 +6725,6 @@
 4xLSDIRplusN/museum4-tfrag%flut-brow.png
 4xLSDIRplusN/museum4-tfrag%flut-creamfeathers.png
 4xLSDIRplusN/museum4-tfrag%flut-dkbluefeathers.png
-4xLSDIRplusN/museum4-tfrag%flut-eye-16x16.png
 4xLSDIRplusN/museum4-tfrag%flut-eyelid.png
 4xLSDIRplusN/museum4-tfrag%flut-face.png
 4xLSDIRplusN/museum4-tfrag%flut-leg.png
@@ -6841,7 +6736,6 @@
 4xLSDIRplusN/museum4-tfrag%flut-wingends.png
 4xLSDIRplusN/museum4-tfrag%flut-yellow2dkblue.png
 4xLSDIRplusN/museum4-tfrag%orange.png
-4xLSDIRplusN/museum4-tfrag%war-autoeye.png
 4xLSDIRplusN/museum4-tfrag%war-booboo.png
 4xLSDIRplusN/museum4-tfrag%war-brokenstrap.png
 4xLSDIRplusN/museum4-tfrag%war-cape.png
@@ -6853,7 +6747,6 @@
 4xLSDIRplusN/museum4-tfrag%war-wrapstrap.png
 4xLSDIRplusN/museum4b-pris%bab-allfur.png
 4xLSDIRplusN/museum4b-pris%bab-diaper.png
-4xLSDIRplusN/museum4b-pris%bab-eye.png
 4xLSDIRplusN/museum4b-pris%bab-fur.png
 4xLSDIRplusN/museum4b-pris%bab-furskin-trans.png
 4xLSDIRplusN/museum4b-pris%bab-furtrans.png
@@ -6907,7 +6800,6 @@
 4xLSDIRplusN/onintent-pris%jakchires-precarmor-01.png
 4xLSDIRplusN/onintent-pris%jakchires-teeth.png
 4xLSDIRplusN/onintent-pris2%bam-hairhilite.png
-4xLSDIRplusN/onintent-pris2%samos-eye.png
 4xLSDIRplusN/onintent-pris2%samos-eyelid.png
 4xLSDIRplusN/onintent-pris2%samos-lens.png
 4xLSDIRplusN/onintent-pris2%samos-log-03.png
@@ -7005,7 +6897,6 @@
 4xLSDIRplusN/outrocst-pris%klever-earcup.png
 4xLSDIRplusN/outrocst-pris%klever-mustache.png
 4xLSDIRplusN/outrocst-pris2%bam-hairhilite.png
-4xLSDIRplusN/outrocst-pris2%samos-eye.png
 4xLSDIRplusN/outrocst-pris2%samos-eyelid.png
 4xLSDIRplusN/outrocst-pris2%samos-lens.png
 4xLSDIRplusN/outrocst-pris2%samos-log-03.png
@@ -7023,7 +6914,6 @@
 4xLSDIRplusN/powergd-pris%grunt-skin-02.png
 4xLSDIRplusN/powergd-pris%grunt-vector-01.png
 4xLSDIRplusN/powergd-pris%grunt-vector-02.png
-4xLSDIRplusN/powergd-pris%grunt-vector-eye-01.png
 4xLSDIRplusN/powergd-pris%roboguard-headshield.png
 4xLSDIRplusN/powergd-pris%sk-ear.png
 4xLSDIRplusN/powergd-pris%sk-orange2yellowfur.png
@@ -7167,8 +7057,6 @@
 4xLSDIRplusN/precurd-vis-water%environment-lightjak.png
 4xLSDIRplusN/programmer%checker.png
 4xLSDIRplusN/programmer%colorbars13.png
-4xLSDIRplusN/programmer%programmer_eye_left.png
-4xLSDIRplusN/programmer%programmer_eye_right.png
 4xLSDIRplusN/progress-minimap%arena-01.png
 4xLSDIRplusN/progress-minimap%arena-02.png
 4xLSDIRplusN/progress-minimap%arena-03.png
@@ -7552,7 +7440,6 @@
 4xLSDIRplusN/rubblea-vis-pris%daxter-eyelid.png
 4xLSDIRplusN/rubblea-vis-pris%rhino-horn-02.png
 4xLSDIRplusN/rubblea-vis-pris%vehicle-wheel-01.png
-4xLSDIRplusN/rubblea-vis-pris2%king-iris.png
 4xLSDIRplusN/rubblea-vis-shrub%rub-greyblue-plain-lowres.png
 4xLSDIRplusN/rubblea-vis-shrub%rub-scorch.png
 4xLSDIRplusN/rubblea-vis-shrub%rub-wall-small-grill.png
@@ -7686,7 +7573,6 @@
 4xLSDIRplusN/rublcst-vis-pris%rhino-horn-02.png
 4xLSDIRplusN/rublcst-vis-pris%vehicle-wheel-01.png
 4xLSDIRplusN/rublcst-vis-pris2%bam-hairhilite.png
-4xLSDIRplusN/rublcst-vis-pris2%king-iris.png
 4xLSDIRplusN/rublcst-vis-pris2%veger-coatclips.png
 4xLSDIRplusN/rublcst-vis-pris2%veger-hair.png
 4xLSDIRplusN/rublcst-vis-pris2%veger-scarf.png
@@ -7758,7 +7644,6 @@
 4xLSDIRplusN/sewa-vis-pris%saberfish-skin-01.png
 4xLSDIRplusN/sewa-vis-pris%saberfish-skin-02.png
 4xLSDIRplusN/sewa-vis-pris%saberfish-skin-03.png
-4xLSDIRplusN/sewa-vis-pris%sew-frog-eye-01.png
 4xLSDIRplusN/sewa-vis-pris%sew-frog-fin-01.png
 4xLSDIRplusN/sewa-vis-pris%sew-frog-fin-02.png
 4xLSDIRplusN/sewa-vis-pris%sew-frog-skin-01.png
@@ -8392,7 +8277,6 @@
 4xLSDIRplusN/sewl-vis-tfrag%sewer-plate-05.png
 4xLSDIRplusN/sewl-vis-tfrag%sewer-scaffold-03.png
 4xLSDIRplusN/sewm-vis-pris%airlock-door-main.png
-4xLSDIRplusN/sewm-vis-pris%nfish-eye-01.png
 4xLSDIRplusN/sewm-vis-pris%nfish-hose-02.png
 4xLSDIRplusN/sewm-vis-pris%nfish-hose.png
 4xLSDIRplusN/sewm-vis-pris%nfish-metal-01.png
@@ -8721,8 +8605,6 @@
 4xLSDIRplusN/templea-vis-pris2%spider-emblem.png
 4xLSDIRplusN/templea-vis-pris2%spider-leg.png
 4xLSDIRplusN/templea-vis-pris2%spider-tusk.png
-4xLSDIRplusN/templea-vis-pris2%spidereye-environment.png
-4xLSDIRplusN/templea-vis-pris2%spidereye.png
 4xLSDIRplusN/templea-vis-shrub%temple_flag03.png
 4xLSDIRplusN/templea-vis-shrub%temple_sandstone_ground01.png
 4xLSDIRplusN/templea-vis-tfrag%common_sandstone_base01.png
@@ -8995,7 +8877,6 @@
 4xLSDIRplusN/volcanoa-vis-pris%grunt-skin-02.png
 4xLSDIRplusN/volcanoa-vis-pris%spikey-frog-back.png
 4xLSDIRplusN/volcanoa-vis-pris%spikey-frog-belly.png
-4xLSDIRplusN/volcanoa-vis-pris%spikey-frog-eye.png
 4xLSDIRplusN/volcanoa-vis-pris%spikey-frog-leg.png
 4xLSDIRplusN/volcanoa-vis-pris%spikey-frog-legfront.png
 4xLSDIRplusN/volcanoa-vis-pris%spikey-frog-toenails.png
@@ -9175,7 +9056,6 @@
 4xLSDIRplusN/wascast-pris%jakchires-glovetop.png
 4xLSDIRplusN/wascast-pris%jakchires-precarmor-01.png
 4xLSDIRplusN/wascast-pris%jakchires-teeth.png
-4xLSDIRplusN/wascast-pris2%king-iris.png
 4xLSDIRplusN/wascast-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/waschase-minimap%hud-kanga-lizard.png
 4xLSDIRplusN/wascitya-vis-shrub%wascity-ditch-wall-top-to-ground.png
@@ -9280,7 +9160,6 @@
 4xLSDIRplusN/wasdefen-pris%dm-missle-tip.png
 4xLSDIRplusN/wasdefen-pris%dm-missle-tubes.png
 4xLSDIRplusN/wasdefen-pris%dp-robot-cable-01.png
-4xLSDIRplusN/wasdefen-pris%dp-robot-eyes.png
 4xLSDIRplusN/wasdefen-pris%dp-robot-globe-joint.png
 4xLSDIRplusN/wasdefen-pris%dp-robot-hex-pattern-01.png
 4xLSDIRplusN/wasdefen-pris%dp-robot-hull-01.png
@@ -9341,7 +9220,6 @@
 4xLSDIRplusN/waspala-pris%waspala-wheel-interior.png
 4xLSDIRplusN/waspala-pris%waspala-wheel-paddle.png
 4xLSDIRplusN/waspala-pris%waspala-wheel-pipe.png
-4xLSDIRplusN/waspala-pris2%king-iris.png
 4xLSDIRplusN/waspala-shrub%waspala-shrub-plant.png
 4xLSDIRplusN/waspala-shrub%waspala-small-rocks.png
 4xLSDIRplusN/waspala-tfrag%common_sandstone_base01.png
@@ -9640,7 +9518,6 @@
 4xLSDIRplusN/wasstadb-tfrag%dummy-blade-long-01.png
 4xLSDIRplusN/wasstadb-tfrag%dummy-chestplate-01.png
 4xLSDIRplusN/wasstadb-tfrag%dummy-env-01.png
-4xLSDIRplusN/wasstadb-tfrag%dummy-eye-01.png
 4xLSDIRplusN/wasstadb-tfrag%dummy-faceplate-01.png
 4xLSDIRplusN/wasstadb-tfrag%dummy-red-01.png
 4xLSDIRplusN/wasstadb-tfrag%dummy-stripe-pole-01.png
