@@ -4,7 +4,7 @@ using namespace System.IO
 # Handles copying and de-duplication for textures found in the game files.
 class Texture {
 	# The name of the model used to upscale this texture.
-	# Leave null if the texture is a search result.
+	# Leave empty if the texture is a search result.
 	[string] $UpscaleModel
 
 	# All files found under this textures name.
@@ -31,7 +31,7 @@ class Texture {
 	# Returns the resulting texture filepaths relative to the destination directory.
 	# If the texture is a search result, only the files actually copied are returned.
 	[string[]] CopyTo([string] $DestinationDir, [bool] $WhatIfPreference) {
-		if ($null -ne $this.UpscaleModel) {
+		if (-not [string]::IsNullOrEmpty($this.UpscaleModel)) {
 			$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
 		}
 
@@ -58,7 +58,7 @@ class Texture {
 				}
 			}
 
-			if ($null -ne $this.UpscaleModel) {
+			if (-not [string]::IsNullOrEmpty($this.UpscaleModel)) {
 				"$($this.UpscaleModel)/${new_filename}"
 			}
 			elseif ($was_copied) {
