@@ -50,7 +50,8 @@ param(
 	$OpenGoalDir,
 
 	# If specified, deletes all existing textures in `textures/original/` and re-obtains them.
-	# Otherwise, only the necessary textures will be copied.
+	# Otherwise, existing textures will be synced to match any changes to the upscale settings
+	# and only the missing textures will be copied.
 	[switch]
 	$Force
 )
