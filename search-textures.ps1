@@ -115,7 +115,7 @@ function Search-GameTextures {
 				$results_by_name[$texture_name].AddFile($file)
 			}
 			else {
-				$results_by_name[$texture_name] = [Texture]::new($file, $null)
+				$results_by_name[$texture_name] = [Texture]::new($file, '')
 			}
 		}
 
