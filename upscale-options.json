@@ -26,14 +26,6 @@
 				"bam-eyelight",
 				"bam-iris-16x16",
 				"baron-eye",
-				"baron-neon-eye-a",
-				"baron-neon-eye-a-on",
-				"baron-neon-eye-b",
-				"baron-neon-eye-b-on",
-				"baron-neon-eye-border",
-				"baron-neon-eye-border-on",
-				"baron-neon-eye-c",
-				"baron-neon-eye-c-on",
 				"blady-eyecentered-32x32",
 				"bluesage-eye-centered-16x16",
 				"brut-eye",
@@ -123,6 +115,7 @@
 				"wstlander-03-eye",
 				"yelsage-eye-16x16new"
 			]
+
 		},
 
 		{
