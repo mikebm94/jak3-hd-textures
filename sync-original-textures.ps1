@@ -186,6 +186,9 @@ function Sync-ExistingTexturesWithOptions {
 <#
 .SYNOPSIS
 Copies the original Jak 3 game textures according to the upscale options.
+
+.OUTPUTS
+Returns all texture filepaths relative to `textures/original/` for writing to the manifest.
 #>
 function Copy-OriginalTextures {
 	[SuppressMessageAttribute('PSShouldProcess', '')]
