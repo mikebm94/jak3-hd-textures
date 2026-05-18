@@ -47,7 +47,7 @@ param(
 	$OpenGoalDir
 )
 
-. (Join-Path $PSScriptRoot 'lib/utils.ps1')
+. (Join-Path $PSScriptRoot 'lib/common.ps1')
 
 
 function Main {
