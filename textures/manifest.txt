@@ -2838,6 +2838,14 @@
 4xLSDIRplusN/ctysluma-sprite%baron-neon-dot-d.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-dot-ring-on.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-dot-ring.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-a-on.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-a.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-b-on.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-b.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-border-on.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-border.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-c-on.png
+4xLSDIRplusN/ctysluma-sprite%baron-neon-eye-c.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-ghotee-on.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-ghotee.png
 4xLSDIRplusN/ctysluma-sprite%baron-neon-mouth-on.png
