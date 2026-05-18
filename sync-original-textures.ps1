@@ -55,7 +55,7 @@ param(
 	$Force
 )
 
-. (Join-Path $PSScriptRoot 'lib/utils.ps1')
+. (Join-Path $PSScriptRoot 'lib/common.ps1')
 . (Join-Path $PSScriptRoot 'lib/Texture.ps1')
 . (Join-Path $PSScriptRoot 'lib/UpscaleOptions.ps1')
 
