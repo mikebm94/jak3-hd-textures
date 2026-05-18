@@ -20,7 +20,6 @@ The filter list and texture list file is deleted when `-Clean` is passed.
 
 
 using namespace System.Collections.Generic
-using namespace System.IO
 
 [CmdletBinding(SupportsShouldProcess)]
 param(
