@@ -11,7 +11,7 @@ The purpose of this script is to incrementally curate a list of textures that ca
 to a texture group in `upscale-options.json` to control how they are upscaled.
 Texture files from previous searches will not be deleted unless the `-Clean` switch is passed.
 
-Each search will add the filters used to the file `textures/search-results/filter-list.txt`.
+Each search will add the filters and exclusions used to the file `textures/search-results/search-list.json`.
 When you're done with your searches, you can manually delete textures you don't want to include
 in the final texture group, then pass the `-WriteTextureList` switch to write a list of all unique texture names
 found in the search results directory to the file `textures/search-results/texture-list.json`
@@ -56,6 +56,12 @@ param(
 . (Join-Path $PSScriptRoot 'lib/common.ps1')
 . (Join-Path $PSScriptRoot 'lib/Texture.ps1')
 
+# Represents entries in the search list JSON file.
+class SearchInfo {
+	[string[]] $Filters
+	[string[]] $Exclusions
+}
+
 
 function Main {
 	[CmdletBinding(SupportsShouldProcess)]
@@ -88,7 +94,7 @@ function Main {
 	$Filters | Search-GameTextures -SearchDir $search_dir -ResultsDir $results_dir -Exclude $Exclude
 	Write-Host "Results copied to '${results_dir}'."
 
-	Write-FilterList $Filters -ResultsDir $results_dir
+	Update-SearchList -Filters $Filters -Exclude $Exclude -ResultsDir $results_dir
 }
 
 function Search-GameTextures {
@@ -140,34 +146,39 @@ function Search-GameTextures {
 	}
 }
 
-function Write-FilterList {
+function Update-SearchList {
 	[CmdletBinding(SupportsShouldProcess)]
 	param(
-		[Parameter(Mandatory, Position = 0)]
+		[Parameter(Mandatory)]
 		[string[]]
 		$Filters,
+
+		[string[]]
+		$Exclude,
 
 		[Parameter(Mandatory)]
 		[string]
 		$ResultsDir
 	)
 
-	$filterlist_path = Join-Path $ResultsDir 'filter-list.txt'
-	Write-Host "Writing filter(s) used to '${filterlist_path}' ..."
+	$searchlist_path = Join-Path $ResultsDir 'search-list.json'
+	Write-Host "Writing search info to '${searchlist_path}' ..."
 
-	$unique_filters = [HashSet[string]]::new()
+	$search_entries = [List[SearchInfo]]::new()
 
-	if (Test-Path -LiteralPath $filterlist_path -PathType Leaf) {
-		Get-Content -LiteralPath $filterlist_path | ForEach-Object {
-			$null = $unique_filters.Add($_)
+	if (Test-Path -LiteralPath $searchlist_path -PathType Leaf) {
+		$existing_entries = Get-Content -LiteralPath $searchlist_path -Raw | ConvertFrom-Json
+		foreach ($entry in $existing_entries) {
+			$null = $search_entries.Add([SearchInfo]$entry)
 		}
 	}
 
-	foreach ($filter in $Filters) {
-		$null = $unique_filters.Add($filter)
-	}
-
-	$unique_filters | Sort-Object | Set-Content -LiteralPath $filterlist_path
+	$null = $search_entries.Add([SearchInfo]@{
+		Filters = $Filters
+		Exclusions = $Exclude
+	})
+	
+	$search_entries | ConvertTo-Json | Set-Content -LiteralPath $searchlist_path
 }
 
 function Write-TextureList {
