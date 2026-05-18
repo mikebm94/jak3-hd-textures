@@ -103,7 +103,7 @@ function Search-GameTextures {
 	)
 
 	process {
-		Write-Host "Searching for '${Filter}' ..."
+		Write-Host "Searching in game textures for '${Filter}' ..."
 
 		$results = Get-ChildItem -LiteralPath $SearchDir -Filter "$Filter.png" -File -Recurse -ErrorAction Stop
 		$results_by_name = [Dictionary[string, Texture]]::new()
