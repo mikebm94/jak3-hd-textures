@@ -36,6 +36,12 @@ param(
 	[string[]]
 	$Filters,
 
+	# Excludes results matching these filters from the final search results. Supports `*` and `?` wildcards.
+	# Applies to all filters passed to the `-Filters` parameter.
+	[Parameter(ParameterSetName = 'Search')]
+	[string[]]
+	$Exclude,
+
 	# Deletes all files in `textures/search-results/` before performing the search.
 	[Parameter(ParameterSetName = 'Search')]
 	[switch]
@@ -79,7 +85,7 @@ function Main {
 	}
 
 	$search_dir = Find-GameTexturesDir -OpenGoalDir $OpenGoalDir
-	$Filters | Search-GameTextures -SearchDir $search_dir -ResultsDir $results_dir
+	$Filters | Search-GameTextures -SearchDir $search_dir -ResultsDir $results_dir -Exclude $Exclude
 	Write-Host "Results copied to '${results_dir}'."
 
 	Write-FilterList $Filters -ResultsDir $results_dir
@@ -99,13 +105,16 @@ function Search-GameTextures {
 
 		[Parameter(Mandatory)]
 		[string]
-		$ResultsDir
+		$ResultsDir,
+
+		[string[]]
+		$Exclude
 	)
 
 	process {
 		Write-Host "Searching in game textures for '${Filter}' ..."
 
-		$results = Get-ChildItem -LiteralPath $SearchDir -Filter "$Filter.png" -File -Recurse -ErrorAction Stop
+		$results = Get-ChildItem -LiteralPath $SearchDir -Filter "$Filter.png" -Exclude $Exclude -File -Recurse -ErrorAction Stop
 		$results_by_name = [Dictionary[string, Texture]]::new()
 
 		foreach ($file in $results) {
