@@ -4,6 +4,6 @@
     "author": "mikebm94",
     "releaseDate": "2026-04-12",
     "supportedGames": ["jak3"],
-    "description": "Upscaled textures for Jak 3 using the 4xLSDIRplusN pre-trained Real-ESRGAN model.",
+    "description": "Upscaled textures for Jak 3.",
     "tags": ["jak3", "overhaul", "hd", "texture"]
 }
