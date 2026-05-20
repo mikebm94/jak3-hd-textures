@@ -121,7 +121,14 @@
 		{
 			"Name": "Not Upscaled (Sky Textures)",
 			"Model": "none",
-			"TextureNames": []
+			"TextureNames": [
+				"big-cloud",
+				"dust-cloud",
+				"edge-cloud",
+				"environment-ocean-alphamod",
+				"sky-glow-soft",
+				"sky-hotdot"
+			]
 		},
 
 		{

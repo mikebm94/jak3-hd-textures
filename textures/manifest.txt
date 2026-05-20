@@ -592,7 +592,6 @@
 4xLSDIRplusN/_all%dp-bipedal-skin-ribs-01.png
 4xLSDIRplusN/_all%dp-bipedal-spine-01.png
 4xLSDIRplusN/_all%dp-bipedal-toe-01.png
-4xLSDIRplusN/_all%dust-cloud.png
 4xLSDIRplusN/_all%dust-sparkle.png
 4xLSDIRplusN/_all%eco-lt-cryst-02.png
 4xLSDIRplusN/_all%eco-lt-cryst-03.png
@@ -4761,14 +4760,12 @@
 4xLSDIRplusN/level-default-shrub%loadsave-post.png
 4xLSDIRplusN/level-default-shrub%loadsave-save.png
 4xLSDIRplusN/level-default-shrub%loadsave-secrets.png
-4xLSDIRplusN/level-default-sprite%big-cloud.png
 4xLSDIRplusN/level-default-sprite%bigpuff.png
 4xLSDIRplusN/level-default-sprite%colorflash.png
 4xLSDIRplusN/level-default-sprite%crate-metalbolt-splinter.png
 4xLSDIRplusN/level-default-sprite%crate-wood-01-splinter.png
 4xLSDIRplusN/level-default-sprite%diamond-star.png
 4xLSDIRplusN/level-default-sprite%dirtpuff01.png
-4xLSDIRplusN/level-default-sprite%edge-cloud.png
 4xLSDIRplusN/level-default-sprite%explo-texture.png
 4xLSDIRplusN/level-default-sprite%explosion-edge.png
 4xLSDIRplusN/level-default-sprite%explosion-nebula.png
@@ -8437,10 +8434,7 @@
 4xLSDIRplusN/sewo-vis-tfrag%sewer-rubber-rim-01.png
 4xLSDIRplusN/sewo-vis-tfrag%sewer-scaffold-03.png
 4xLSDIRplusN/sewo-vis-tfrag%sewer-stone-arch-01.png
-4xLSDIRplusN/sky-textures%environment-ocean-alphamod.png
 4xLSDIRplusN/sky-textures%full-moon.png
-4xLSDIRplusN/sky-textures%sky-glow-soft.png
-4xLSDIRplusN/sky-textures%sky-hotdot.png
 4xLSDIRplusN/slumbset-pris%bam-hairhilite.png
 4xLSDIRplusN/slumbset-pris%daxter-eyelid.png
 4xLSDIRplusN/slumbset-pris%jakc-armor.png
