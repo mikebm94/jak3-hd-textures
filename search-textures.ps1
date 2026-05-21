@@ -192,11 +192,11 @@ function Write-TextureList {
 	$texturelist_path = Join-Path $ResultsDir 'texture-list.json'
 	Write-Host "Writing texture list to '${texturelist_path}' ..."
 
-	$results = Get-ChildItem -LiteralPath $ResultsDir -Filter '*%*.png' -File -ErrorAction Stop
+	$results = Get-ChildItem -LiteralPath $ResultsDir -Filter '*__*.png' -File -ErrorAction Stop
 	$unique_textures = [HashSet[string]]::new()
 
 	foreach ($file in $results) {
-		$texture_name = ($file.BaseName -split '%')[1]
+		$texture_name = ($file.BaseName -split '__')[1]
 
 		if ([string]::IsNullOrWhiteSpace($texture_name)) {
 			Write-Warning "Texture file has invalid filename: '$($file.FullName)'"

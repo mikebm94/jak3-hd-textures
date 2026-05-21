@@ -29,10 +29,10 @@ See: https://github.com/open-goal/jak-project/pull/3234
 
 Textures will be grouped in directories named after their respective upscale model.
 The directory structure will be flattened within these directories since batch upscaling doesn't support recursion.
-This is done by encoding the heirarchy within the filenames themselves, with a `%` representing a path separator.
+This is done by encoding the heirarchy within the filenames themselves, with `__` representing a path separator.
 
 For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` will be copied to
-`textures/original/<Upscale Model>/arenacst-pris%bam-hairhilite.png`.
+`textures/original/<Upscale Model>/arenacst-pris__bam-hairhilite.png`.
 #>
 
 
@@ -129,7 +129,7 @@ function Sync-ExistingTexturesWithOptions {
 		$texture_files = Get-ChildItem -LiteralPath $model_dir.FullName -File -ErrorAction Stop
 
 		foreach ($texture_file in $texture_files) {
-			$texture_name = ($texture_file.BaseName -split '%')[1]
+			$texture_name = ($texture_file.BaseName -split '__')[1]
 
 			if ([string]::IsNullOrWhiteSpace($texture_name)) {
 				Write-Warning "Encountered unknown texture file: $($texture_file.FullName)"
