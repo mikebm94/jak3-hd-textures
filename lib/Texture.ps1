@@ -41,7 +41,7 @@ class Texture {
 
 		$filepaths = foreach ($file in $this.Files) {
 			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
-			$new_filename = "${subdir_name}%$($file.Name)"
+			$new_filename = "${subdir_name}__$($file.Name)"
 			$dest_path = Join-Path $DestinationDir $new_filename
 			$was_copied = $false
 
