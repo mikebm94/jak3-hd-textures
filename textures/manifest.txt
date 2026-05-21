@@ -4,7 +4,6 @@
 4xLSDIRplusN/_all%airlock-door-cog1.png
 4xLSDIRplusN/_all%airlock-door-metal2.png
 4xLSDIRplusN/_all%airlockl-door-metalframe.png
-4xLSDIRplusN/_all%artifact-blue-glow-01.png
 4xLSDIRplusN/_all%artifact-dec-01.png
 4xLSDIRplusN/_all%artifact-dec-02.png
 4xLSDIRplusN/_all%artifact-plain-01.png
@@ -118,20 +117,17 @@
 4xLSDIRplusN/_all%cguardgame-metallight-plain.png
 4xLSDIRplusN/_all%cguardgame-shouldershield.png
 4xLSDIRplusN/_all%cguardgame-sleeve.png
-4xLSDIRplusN/_all%charHOLD.png
 4xLSDIRplusN/_all%cipher-drum-02.png
 4xLSDIRplusN/_all%cipher-drum-03.png
 4xLSDIRplusN/_all%cipher-side-01.png
 4xLSDIRplusN/_all%cipher-side-02.png
 4xLSDIRplusN/_all%cipher-side-03.png
-4xLSDIRplusN/_all%citn-allbuckel.png
 4xLSDIRplusN/_all%citn-alleyebrow.png
 4xLSDIRplusN/_all%citn-allflesh.png
 4xLSDIRplusN/_all%citn-allleather-edge.png
 4xLSDIRplusN/_all%citn-allleather-shoulder.png
 4xLSDIRplusN/_all%citn-allshoebottom.png
 4xLSDIRplusN/_all%citwide-crimson-gold.png
-4xLSDIRplusN/_all%citwide-crimson-light.png
 4xLSDIRplusN/_all%citwide-crimson-red.png
 4xLSDIRplusN/_all%citwide-crimson-tube.png
 4xLSDIRplusN/_all%citwide-crimson-wall-plain.png
@@ -157,7 +153,6 @@
 4xLSDIRplusN/_all%city-farm-dirtymetal-01.png
 4xLSDIRplusN/_all%city-farm-flowers.png
 4xLSDIRplusN/_all%city-farm-ground-stain-01.png
-4xLSDIRplusN/_all%city-farm-lamp.png
 4xLSDIRplusN/_all%city-farm-mar-leaf-02.png
 4xLSDIRplusN/_all%city-farm-mar-main.png
 4xLSDIRplusN/_all%city-farm-mark-roof-tiles.png
@@ -204,8 +199,6 @@
 4xLSDIRplusN/_all%city-ind-black.png
 4xLSDIRplusN/_all%city-ind-blotch-withstreaks-01.png
 4xLSDIRplusN/_all%city-ind-border-stripe-dark-01.png
-4xLSDIRplusN/_all%city-ind-buldge-light-self-illuminated-02.png
-4xLSDIRplusN/_all%city-ind-buldge-light-self-illuminated-03.png
 4xLSDIRplusN/_all%city-ind-catwalk-coping-01.png
 4xLSDIRplusN/_all%city-ind-catwalk-slope-metal.png
 4xLSDIRplusN/_all%city-ind-dark-marble.png
@@ -230,7 +223,6 @@
 4xLSDIRplusN/_all%city-ind-palace-cable-section.png
 4xLSDIRplusN/_all%city-ind-panels-scorched-02.png
 4xLSDIRplusN/_all%city-ind-panels-scorched-03.png
-4xLSDIRplusN/_all%city-ind-redlight.png
 4xLSDIRplusN/_all%city-ind-stain-01.png
 4xLSDIRplusN/_all%city-ind-stain-02.png
 4xLSDIRplusN/_all%city-ind-support-base.png
@@ -313,7 +305,6 @@
 4xLSDIRplusN/_all%city-port-small-metal-highlite.png
 4xLSDIRplusN/_all%city-roofmetal-rim.png
 4xLSDIRplusN/_all%city-side-support.png
-4xLSDIRplusN/_all%city-slum-litwindow.png
 4xLSDIRplusN/_all%city-slum-medpipe-01.png
 4xLSDIRplusN/_all%city-slum-roof.png
 4xLSDIRplusN/_all%city-slum-wood-plain.png
@@ -351,7 +342,6 @@
 4xLSDIRplusN/_all%citywide-palace-support-03.png
 4xLSDIRplusN/_all%citywide-pillar.png
 4xLSDIRplusN/_all%citywide-sail-01.png
-4xLSDIRplusN/_all%citywide-stadium-lightbank.png
 4xLSDIRplusN/_all%citywide-wall-boltedmetal.png
 4xLSDIRplusN/_all%citywide-wall-brown-strip.png
 4xLSDIRplusN/_all%citywide-wall-frame.png
@@ -368,16 +358,10 @@
 4xLSDIRplusN/_all%comb-pre-metal-01-yellow.png
 4xLSDIRplusN/_all%comb-pre-metal-fade-plain.png
 4xLSDIRplusN/_all%comb-pre-metal-fade-yellow.png
-4xLSDIRplusN/_all%comb-redmarker.png
 4xLSDIRplusN/_all%comb-tarn-fade-wall-01.png
 4xLSDIRplusN/_all%comb-tarn-wall-01.png
-4xLSDIRplusN/_all%comb-temp-light.png
-4xLSDIRplusN/_all%common-black.png
 4xLSDIRplusN/_all%common-glass.png
-4xLSDIRplusN/_all%common-gray-dark.png
-4xLSDIRplusN/_all%common-gray.png
 4xLSDIRplusN/_all%common-gun-panel-03.png
-4xLSDIRplusN/_all%common-transparent.png
 4xLSDIRplusN/_all%common_sandstone_pill01.png
 4xLSDIRplusN/_all%common_sandstone_trim01.png
 4xLSDIRplusN/_all%crack01.png
@@ -404,9 +388,6 @@
 4xLSDIRplusN/_all%ctyslumc-grass.png
 4xLSDIRplusN/_all%ctyslumc-grate1.png
 4xLSDIRplusN/_all%ctyslumc-green.png
-4xLSDIRplusN/_all%ctyslumc-light-amber.png
-4xLSDIRplusN/_all%ctyslumc-light-blue.png
-4xLSDIRplusN/_all%ctyslumc-light.png
 4xLSDIRplusN/_all%ctyslumc-overhang-01.png
 4xLSDIRplusN/_all%ctyslumc-overhang-02.png
 4xLSDIRplusN/_all%ctyslumc-overhang-03.png
@@ -454,7 +435,6 @@
 4xLSDIRplusN/_all%daxterhelmetplain.png
 4xLSDIRplusN/_all%daxterlense.png
 4xLSDIRplusN/_all%daxternose.png
-4xLSDIRplusN/_all%daxterteeth.png
 4xLSDIRplusN/_all%daxtertuft.png
 4xLSDIRplusN/_all%des-bark-crooked-01.png
 4xLSDIRplusN/_all%des-beast-brown-tube.png
@@ -634,10 +614,8 @@
 4xLSDIRplusN/_all%errolcyber-redmetal-01.png
 4xLSDIRplusN/_all%errolcyber-redmetal-02.png
 4xLSDIRplusN/_all%errolcyber-redmetal-03.png
-4xLSDIRplusN/_all%errolcyber-rubberpipe-light.png
 4xLSDIRplusN/_all%errolcyber-rubberpipe.png
 4xLSDIRplusN/_all%errolcyber-spine.png
-4xLSDIRplusN/_all%errolcyber-teeth.png
 4xLSDIRplusN/_all%explorer-belt.png
 4xLSDIRplusN/_all%explosion-wave.png
 4xLSDIRplusN/_all%fac-tower-01.png
@@ -664,7 +642,6 @@
 4xLSDIRplusN/_all%facb-big-metal-panl04.png
 4xLSDIRplusN/_all%facb-bridgelights-01.png
 4xLSDIRplusN/_all%facb-glass-01.png
-4xLSDIRplusN/_all%facb-light-01.png
 4xLSDIRplusN/_all%facb-metal-grill-01.png
 4xLSDIRplusN/_all%facb-roadmarkings-01.png
 4xLSDIRplusN/_all%facb-spotlight.png
@@ -693,7 +670,6 @@
 4xLSDIRplusN/_all%facc-floor-trim.png
 4xLSDIRplusN/_all%facc-hole-grill-01.png
 4xLSDIRplusN/_all%facc-light-01.png
-4xLSDIRplusN/_all%facc-light-02.png
 4xLSDIRplusN/_all%facc-markings-01.png
 4xLSDIRplusN/_all%facc-markings-02.png
 4xLSDIRplusN/_all%facc-markings-03.png
@@ -717,8 +693,6 @@
 4xLSDIRplusN/_all%facc-wall-rnd-light-01.png
 4xLSDIRplusN/_all%farm-grass-ground-01.png
 4xLSDIRplusN/_all%farm-grass-ground-02.png
-4xLSDIRplusN/_all%farmer-flesh4x4.png
-4xLSDIRplusN/_all%farmer-teeth.png
 4xLSDIRplusN/_all%farmer-toes.png
 4xLSDIRplusN/_all%farmer-whitestraps.png
 4xLSDIRplusN/_all%flamer-wing.png
@@ -808,11 +782,9 @@
 4xLSDIRplusN/_all%grunt-hose.png
 4xLSDIRplusN/_all%grunt-metal-01.png
 4xLSDIRplusN/_all%grunt-skin-01.png
-4xLSDIRplusN/_all%grunt-skin-03.png
 4xLSDIRplusN/_all%grunt-teeth-01.png
 4xLSDIRplusN/_all%gun-backslit.png
 4xLSDIRplusN/_all%gun-barrel-alt.png
-4xLSDIRplusN/_all%gun-blue-glow.png
 4xLSDIRplusN/_all%gun-cover.png
 4xLSDIRplusN/_all%gun-gunrack-01.png
 4xLSDIRplusN/_all%gun-gunrack-02.png
@@ -821,14 +793,10 @@
 4xLSDIRplusN/_all%gun-magport.png
 4xLSDIRplusN/_all%gun-main.png
 4xLSDIRplusN/_all%gun-pump.png
-4xLSDIRplusN/_all%gun-purple-glow.png
-4xLSDIRplusN/_all%gun-red-glow.png
 4xLSDIRplusN/_all%gun-teeth.png
 4xLSDIRplusN/_all%gun-tip.png
-4xLSDIRplusN/_all%gun-yellow-glow.png
 4xLSDIRplusN/_all%gun-yellow-mag-end.png
 4xLSDIRplusN/_all%gun-yellow-mag.png
-4xLSDIRplusN/_all%gun-yellowgreen.png
 4xLSDIRplusN/_all%gunBoxBack01.png
 4xLSDIRplusN/_all%gunBoxFront01.png
 4xLSDIRplusN/_all%gunbox01.png
@@ -842,9 +810,7 @@
 4xLSDIRplusN/_all%homing-missle-fin-01.png
 4xLSDIRplusN/_all%hood01.png
 4xLSDIRplusN/_all%hud-des-beast.png
-4xLSDIRplusN/_all%hud-egg-glow.png
 4xLSDIRplusN/_all%hud-gladiator.png
-4xLSDIRplusN/_all%hud-mhcentipede-meter-01.png
 4xLSDIRplusN/_all%hud-small-frame-01.png
 4xLSDIRplusN/_all%hud-small-frame-02.png
 4xLSDIRplusN/_all%hud-small-vehicle-health-bar-01.png
@@ -873,7 +839,6 @@
 4xLSDIRplusN/_all%jackb-lens.png
 4xLSDIRplusN/_all%jak-belt.png
 4xLSDIRplusN/_all%jak-gogglemetal.png
-4xLSDIRplusN/_all%jak-teeth.png
 4xLSDIRplusN/_all%jakb-armor.png
 4xLSDIRplusN/_all%jakb-blackstrap.png
 4xLSDIRplusN/_all%jakb-brownleather.png
@@ -939,7 +904,6 @@
 4xLSDIRplusN/_all%jinx-shirt.png
 4xLSDIRplusN/_all%jinx-shoebottom2.png
 4xLSDIRplusN/_all%jinx-singlerope.png
-4xLSDIRplusN/_all%jinx-teeth.png
 4xLSDIRplusN/_all%jinx-wraps.png
 4xLSDIRplusN/_all%kcfrontend01.png
 4xLSDIRplusN/_all%keira-bellylong.png
@@ -1009,7 +973,6 @@
 4xLSDIRplusN/_all%kid-overalls.png
 4xLSDIRplusN/_all%kid-sash.png
 4xLSDIRplusN/_all%kid-shirt.png
-4xLSDIRplusN/_all%kid-teeth.png
 4xLSDIRplusN/_all%king-arm.png
 4xLSDIRplusN/_all%king-blackskirt2.png
 4xLSDIRplusN/_all%king-bluemetal.png
@@ -1035,7 +998,6 @@
 4xLSDIRplusN/_all%king-shoebottom.png
 4xLSDIRplusN/_all%king-skirt-b.png
 4xLSDIRplusN/_all%king-skirt.png
-4xLSDIRplusN/_all%king-teeth.png
 4xLSDIRplusN/_all%king-thinstrap.png
 4xLSDIRplusN/_all%king-vest.png
 4xLSDIRplusN/_all%king-vestback.png
@@ -1159,7 +1121,6 @@
 4xLSDIRplusN/_all%mhcity-grunt-egg-bulbtop-01.png
 4xLSDIRplusN/_all%mhcity-lilhouse-door-frame.png
 4xLSDIRplusN/_all%mhcity-plant-01.png
-4xLSDIRplusN/_all%mhcity-plant-light-01.png
 4xLSDIRplusN/_all%mhcity-puffer-mid-01.png
 4xLSDIRplusN/_all%mhcity-puffer-top-01.png
 4xLSDIRplusN/_all%mhcity-skin-ground-to-floor-01.png
@@ -1174,7 +1135,6 @@
 4xLSDIRplusN/_all%minc-blue-paint-02.png
 4xLSDIRplusN/_all%minc-bolt.png
 4xLSDIRplusN/_all%minc-cliff-face-01.png
-4xLSDIRplusN/_all%minc-light-blue.png
 4xLSDIRplusN/_all%minc-metal-wheel-01.png
 4xLSDIRplusN/_all%minc-pre-04.png
 4xLSDIRplusN/_all%minc-pre-10.png
@@ -1330,7 +1290,6 @@
 4xLSDIRplusN/_all%onin-shirt.png
 4xLSDIRplusN/_all%onin-skirt.png
 4xLSDIRplusN/_all%onin-tank-glass.png
-4xLSDIRplusN/_all%onin-teeth.png
 4xLSDIRplusN/_all%onin-toe.png
 4xLSDIRplusN/_all%palace-break-brokenwall.png
 4xLSDIRplusN/_all%palace-break-rebar.png
@@ -1348,7 +1307,6 @@
 4xLSDIRplusN/_all%palcab-lowres-background-desert-01.png
 4xLSDIRplusN/_all%palcab-lowres-background-desert-to-shore.png
 4xLSDIRplusN/_all%palcab-lowres-background-grass-to-desert-02.png
-4xLSDIRplusN/_all%palcab-lowres-background-mounatin-window.png
 4xLSDIRplusN/_all%palcab-lowres-background-mount-build-01.png
 4xLSDIRplusN/_all%palcab-lowres-background-mount-build-03.png
 4xLSDIRplusN/_all%palcab-lowres-background-mountains-02.png
@@ -1384,7 +1342,6 @@
 4xLSDIRplusN/_all%pecker-face.png
 4xLSDIRplusN/_all%pecker-plume.png
 4xLSDIRplusN/_all%pecker-tail.png
-4xLSDIRplusN/_all%pecker-teeth.png
 4xLSDIRplusN/_all%pecker-wingbottom.png
 4xLSDIRplusN/_all%pecker-wingtop.png
 4xLSDIRplusN/_all%pecker-yellowfur.png
@@ -1420,7 +1377,6 @@
 4xLSDIRplusN/_all%prec-surfer-sash.png
 4xLSDIRplusN/_all%prec-surfer-shirt.png
 4xLSDIRplusN/_all%prec-surfer-sleeve.png
-4xLSDIRplusN/_all%prec-teeth.png
 4xLSDIRplusN/_all%prec-tess-belt.png
 4xLSDIRplusN/_all%prec-tess-belt2.png
 4xLSDIRplusN/_all%prec-tess-emblem.png
@@ -1451,7 +1407,6 @@
 4xLSDIRplusN/_all%prec-veger-orange.png
 4xLSDIRplusN/_all%prec-veger-spat.png
 4xLSDIRplusN/_all%prec-veger-vest.png
-4xLSDIRplusN/_all%precur-blue-light-01.png
 4xLSDIRplusN/_all%precur-bomb-spawner-hole.png
 4xLSDIRplusN/_all%precur-bridge-floor-01.png
 4xLSDIRplusN/_all%precur-bridge-plate-01.png
@@ -1466,7 +1421,6 @@
 4xLSDIRplusN/_all%precur-light-blue-01.png
 4xLSDIRplusN/_all%precur-light-green-01.png
 4xLSDIRplusN/_all%precur-light-green-02.png
-4xLSDIRplusN/_all%precur-light-red-01.png
 4xLSDIRplusN/_all%precur-nail-02.png
 4xLSDIRplusN/_all%precur-pipe-round-01.png
 4xLSDIRplusN/_all%precur-planet-water-01.png
@@ -1518,8 +1472,6 @@
 4xLSDIRplusN/_all%rail-env-car-01.png
 4xLSDIRplusN/_all%rail-fit-01.png
 4xLSDIRplusN/_all%rail-gray-metal-01.png
-4xLSDIRplusN/_all%rail-light-green.png
-4xLSDIRplusN/_all%rail-light-red.png
 4xLSDIRplusN/_all%rail-patch-01.png
 4xLSDIRplusN/_all%rail-pipe-05.png
 4xLSDIRplusN/_all%rail-rock-01.png
@@ -1549,12 +1501,9 @@
 4xLSDIRplusN/_all%rub-dirt-a.png
 4xLSDIRplusN/_all%rub-door-metal-frame.png
 4xLSDIRplusN/_all%rub-door-metal.png
-4xLSDIRplusN/_all%rub-elec-switch-light-off.png
-4xLSDIRplusN/_all%rub-elec-switch-light-on.png
 4xLSDIRplusN/_all%rub-endblocks.png
 4xLSDIRplusN/_all%rub-ground-01-small.png
 4xLSDIRplusN/_all%rub-lamp-fencespike-round.png
-4xLSDIRplusN/_all%rub-lamp-light-01.png
 4xLSDIRplusN/_all%rub-met-strp-close.png
 4xLSDIRplusN/_all%rub-metal-flatpipe-01.png
 4xLSDIRplusN/_all%rub-metal-wallgrill.png
@@ -1634,7 +1583,6 @@
 4xLSDIRplusN/_all%seem-skirt-small.png
 4xLSDIRplusN/_all%seem-skirt.png
 4xLSDIRplusN/_all%seem-straps.png
-4xLSDIRplusN/_all%seem-teeth.png
 4xLSDIRplusN/_all%seem-uppertorso.png
 4xLSDIRplusN/_all%sew-elevator-lod0top.png
 4xLSDIRplusN/_all%sew-fan-basetop.png
@@ -1693,8 +1641,6 @@
 4xLSDIRplusN/_all%sewer-grate-01.png
 4xLSDIRplusN/_all%sewer-grill-02.png
 4xLSDIRplusN/_all%sewer-grindpipe.png
-4xLSDIRplusN/_all%sewer-hall-light-01.png
-4xLSDIRplusN/_all%sewer-light-flourescent-01.png
 4xLSDIRplusN/_all%sewer-lip-01-hitweak.png
 4xLSDIRplusN/_all%sewer-lip-01.png
 4xLSDIRplusN/_all%sewer-mantel-01.png
@@ -1720,8 +1666,6 @@
 4xLSDIRplusN/_all%sewer-plate-05-hitweak.png
 4xLSDIRplusN/_all%sewer-plate-06.png
 4xLSDIRplusN/_all%sewer-pool-rim-02.png
-4xLSDIRplusN/_all%sewer-red-light-01.png
-4xLSDIRplusN/_all%sewer-red-light-02.png
 4xLSDIRplusN/_all%sewer-round-01.png
 4xLSDIRplusN/_all%sewer-round-02.png
 4xLSDIRplusN/_all%sewer-round-03.png
@@ -1732,10 +1676,7 @@
 4xLSDIRplusN/_all%sewer-screw-02.png
 4xLSDIRplusN/_all%sewer-shrub-pitting-01.png
 4xLSDIRplusN/_all%sewer-shrub-rust-01.png
-4xLSDIRplusN/_all%sewer-small-light-01.png
 4xLSDIRplusN/_all%sewer-track-01.png
-4xLSDIRplusN/_all%sewer-yellow-light-01.png
-4xLSDIRplusN/_all%sewer-yellow-light-02.png
 4xLSDIRplusN/_all%sig-belt.png
 4xLSDIRplusN/_all%sig-eyelid.png
 4xLSDIRplusN/_all%sig-faceleft.png
@@ -1800,9 +1741,6 @@
 4xLSDIRplusN/_all%spydroid-gold.png
 4xLSDIRplusN/_all%spydroid-leg-grey-end.png
 4xLSDIRplusN/_all%spydroid-leg-grey.png
-4xLSDIRplusN/_all%spydroid-light-small-red.png
-4xLSDIRplusN/_all%spydroid-light-small.png
-4xLSDIRplusN/_all%spydroid-light.png
 4xLSDIRplusN/_all%spydroid-red.png
 4xLSDIRplusN/_all%squid-bulb-sm.png
 4xLSDIRplusN/_all%squid-drabgun.png
@@ -1852,7 +1790,6 @@
 4xLSDIRplusN/_all%t-strip-lo-palsup-panel-3.png
 4xLSDIRplusN/_all%t-strip-lo-palsup-panel-4.png
 4xLSDIRplusN/_all%t-strip-lo-palsup-panel-5.png
-4xLSDIRplusN/_all%talkbox-light-02.png
 4xLSDIRplusN/_all%tcab-beam01-lores.png
 4xLSDIRplusN/_all%tcab-blue-ring-01.png
 4xLSDIRplusN/_all%tcab-plat-edg-01-lores.png
@@ -1914,7 +1851,6 @@
 4xLSDIRplusN/_all%tess-shoebottom.png
 4xLSDIRplusN/_all%tess-shoetop.png
 4xLSDIRplusN/_all%tess-sleeve.png
-4xLSDIRplusN/_all%tess-teeth.png
 4xLSDIRplusN/_all%tess-underwear.png
 4xLSDIRplusN/_all%tess-upperboot.png
 4xLSDIRplusN/_all%time-bubble-clock.png
@@ -1945,7 +1881,6 @@
 4xLSDIRplusN/_all%torn-pipe.png
 4xLSDIRplusN/_all%torn-scarf.png
 4xLSDIRplusN/_all%torn-shoe.png
-4xLSDIRplusN/_all%torn-teeth-01.png
 4xLSDIRplusN/_all%torn-vest.png
 4xLSDIRplusN/_all%tow-base-ground-plat.png
 4xLSDIRplusN/_all%tow-basebone-01.png
@@ -2014,7 +1949,6 @@
 4xLSDIRplusN/_all%veger-sleeve.png
 4xLSDIRplusN/_all%veger-sleevelower.png
 4xLSDIRplusN/_all%veger-stickwrap.png
-4xLSDIRplusN/_all%veger-teeth.png
 4xLSDIRplusN/_all%veger-vest.png
 4xLSDIRplusN/_all%veger-walkingstick-01.png
 4xLSDIRplusN/_all%veger-walkingstick-02.png
@@ -2083,7 +2017,6 @@
 4xLSDIRplusN/_all%was-burningbush-02.png
 4xLSDIRplusN/_all%was-burningbush-03.png
 4xLSDIRplusN/_all%was-burningbush-04.png
-4xLSDIRplusN/_all%was-burningbush-light-01.png
 4xLSDIRplusN/_all%was-dogat-body.png
 4xLSDIRplusN/_all%was-dogat-face.png
 4xLSDIRplusN/_all%was-dogat-nose.png
@@ -2165,7 +2098,6 @@
 4xLSDIRplusN/_all%water-froth.png
 4xLSDIRplusN/_all%water-splat.png
 4xLSDIRplusN/_all%wave-foam.png
-4xLSDIRplusN/_all%widow-bomb-glow.png
 4xLSDIRplusN/_all%widow-bomb-thrust.png
 4xLSDIRplusN/_all%widow-bomb.png
 4xLSDIRplusN/_all%widow-dull-inards.png
@@ -2218,7 +2150,6 @@
 4xLSDIRplusN/_all%wstlander-02-scarf.png
 4xLSDIRplusN/_all%wstlander-02-shirt.png
 4xLSDIRplusN/_all%wstlander-02-skirt.png
-4xLSDIRplusN/_all%wstlander-03-flesh.png
 4xLSDIRplusN/_all%wstlander-04-dark-blue.png
 4xLSDIRplusN/_all%wstlander-04-gun.png
 4xLSDIRplusN/_all%wstlander-04-headband.png
@@ -2239,10 +2170,8 @@
 4xLSDIRplusN/arenacst-pris%jakchires-chestplate.png
 4xLSDIRplusN/arenacst-pris%jakchires-glovetop.png
 4xLSDIRplusN/arenacst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/arenacst-pris%jakchires-teeth.png
 4xLSDIRplusN/arenacst-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/arenacst-pris2%sig-skirts-02.png
-4xLSDIRplusN/arenacst-pris2%vin-teeth-01.png
 4xLSDIRplusN/arenacst-tfrag%wstd-gate-pass-01.png
 4xLSDIRplusN/arenacst-tfrag%wstd-gate-pass-02.png
 4xLSDIRplusN/arenacst-tfrag%wstd-gate-pass-03.png
@@ -2260,11 +2189,9 @@
 4xLSDIRplusN/citycast-pris%jakchires-chestplate.png
 4xLSDIRplusN/citycast-pris%jakchires-glovetop.png
 4xLSDIRplusN/citycast-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/citycast-pris%jakchires-teeth.png
 4xLSDIRplusN/citycast-pris2%bam-hairhilite.png
 4xLSDIRplusN/citycast-pris2%torn-belt.png
 4xLSDIRplusN/citycast-pris2%torn-belt2.png
-4xLSDIRplusN/citycast-pris2%torn-footleather.png
 4xLSDIRplusN/citycast-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/citycast-pris2%torn-gunbarrel.png
 4xLSDIRplusN/citycast-pris2%torn-handle-01.png
@@ -2285,7 +2212,6 @@
 4xLSDIRplusN/comba-pris%jakchires-chestplate.png
 4xLSDIRplusN/comba-pris%jakchires-glovetop.png
 4xLSDIRplusN/comba-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/comba-pris%jakchires-teeth.png
 4xLSDIRplusN/comba-pris%kid-medallion.png
 4xLSDIRplusN/comba-pris%rail-base-mid-01.png
 4xLSDIRplusN/comba-pris%rail-cord-01.png
@@ -2296,7 +2222,6 @@
 4xLSDIRplusN/comba-pris%rail-trim-01.png
 4xLSDIRplusN/comba-shrub%rail-base-dark-01.png
 4xLSDIRplusN/comba-shrub%rail-env-wall-01.png
-4xLSDIRplusN/comba-shrub%rail-light-blue.png
 4xLSDIRplusN/comba-shrub%rail-pipe-03.png
 4xLSDIRplusN/comba-shrub%rail-rider-decal-01.png
 4xLSDIRplusN/comba-shrub%vehicle-body-panel-01.png
@@ -2327,7 +2252,6 @@
 4xLSDIRplusN/comba-tfrag%comb-temp-dark.png
 4xLSDIRplusN/comba-tfrag%comb-temp-glass.png
 4xLSDIRplusN/comba-tfrag%comb-temp-medium.png
-4xLSDIRplusN/comba-tfrag%comb-yell-light.png
 4xLSDIRplusN/comba-tfrag%rail-base-mid-01.png
 4xLSDIRplusN/comba-tfrag%rail-cord-01.png
 4xLSDIRplusN/comba-tfrag%rail-edge-01.png
@@ -2340,24 +2264,15 @@
 4xLSDIRplusN/combb-tfrag%rail-base-mid-01.png
 4xLSDIRplusN/combb-tfrag%rail-cord-01.png
 4xLSDIRplusN/combb-tfrag%rail-edge-01.png
-4xLSDIRplusN/combb-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/combb-tfrag%rail-light-blue.png
-4xLSDIRplusN/combb-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/combb-tfrag%rail-light-yellow.png
 4xLSDIRplusN/combb-tfrag%rail-pipe-01.png
 4xLSDIRplusN/combb-tfrag%rail-pipe-03.png
 4xLSDIRplusN/combc-tfrag%comb-temp-dark.png
 4xLSDIRplusN/combc-tfrag%comb-temp-glass.png
-4xLSDIRplusN/combc-tfrag%comb-yell-light.png
 4xLSDIRplusN/combc-tfrag%rail-base-dark-01.png
 4xLSDIRplusN/combc-tfrag%rail-base-mid-01.png
 4xLSDIRplusN/combc-tfrag%rail-cord-01.png
 4xLSDIRplusN/combc-tfrag%rail-edge-01.png
 4xLSDIRplusN/combc-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/combc-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/combc-tfrag%rail-light-blue.png
-4xLSDIRplusN/combc-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/combc-tfrag%rail-light-yellow.png
 4xLSDIRplusN/combc-tfrag%rail-pipe-01.png
 4xLSDIRplusN/combc-tfrag%rail-pipe-02.png
 4xLSDIRplusN/combc-tfrag%rail-pipe-03.png
@@ -2369,10 +2284,6 @@
 4xLSDIRplusN/combd-tfrag%rail-cord-01.png
 4xLSDIRplusN/combd-tfrag%rail-edge-01.png
 4xLSDIRplusN/combd-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/combd-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/combd-tfrag%rail-light-blue.png
-4xLSDIRplusN/combd-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/combd-tfrag%rail-light-yellow.png
 4xLSDIRplusN/combd-tfrag%rail-pipe-01.png
 4xLSDIRplusN/combd-tfrag%rail-pipe-02.png
 4xLSDIRplusN/combd-tfrag%rail-pipe-03.png
@@ -2382,16 +2293,11 @@
 4xLSDIRplusN/combe-tfrag%comb-pipe2.png
 4xLSDIRplusN/combe-tfrag%comb-temp-dark.png
 4xLSDIRplusN/combe-tfrag%comb-temp-glass.png
-4xLSDIRplusN/combe-tfrag%comb-yell-light.png
 4xLSDIRplusN/combe-tfrag%rail-base-dark-01.png
 4xLSDIRplusN/combe-tfrag%rail-base-mid-01.png
 4xLSDIRplusN/combe-tfrag%rail-cord-01.png
 4xLSDIRplusN/combe-tfrag%rail-edge-01.png
 4xLSDIRplusN/combe-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/combe-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/combe-tfrag%rail-light-blue.png
-4xLSDIRplusN/combe-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/combe-tfrag%rail-light-yellow.png
 4xLSDIRplusN/combe-tfrag%rail-pipe-01.png
 4xLSDIRplusN/combe-tfrag%rail-pipe-02.png
 4xLSDIRplusN/combe-tfrag%rail-pipe-03.png
@@ -2414,7 +2320,6 @@
 4xLSDIRplusN/combn-tfrag%comb-stone-05.png
 4xLSDIRplusN/combn-tfrag%comb-temp-dark.png
 4xLSDIRplusN/combn-tfrag%comb-temp-glass.png
-4xLSDIRplusN/combn-tfrag%comb-yell-light.png
 4xLSDIRplusN/combn-tfrag%mina-idol-02.png
 4xLSDIRplusN/combn-tfrag%minb-stone11.png
 4xLSDIRplusN/combn-tfrag%minb-stone12.png
@@ -2427,8 +2332,6 @@
 4xLSDIRplusN/combn-tfrag%rail-base-mid-01.png
 4xLSDIRplusN/combn-tfrag%rail-cord-01.png
 4xLSDIRplusN/combn-tfrag%rail-edge-01.png
-4xLSDIRplusN/combn-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/combn-tfrag%rail-light-blue.png
 4xLSDIRplusN/combn-tfrag%rail-pipe-01.png
 4xLSDIRplusN/combn-tfrag%rail-pipe-03.png
 4xLSDIRplusN/combx-pris%bam-hairhilite.png
@@ -2444,7 +2347,6 @@
 4xLSDIRplusN/combx-pris%jakchires-chestplate.png
 4xLSDIRplusN/combx-pris%jakchires-glovetop.png
 4xLSDIRplusN/combx-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/combx-pris%jakchires-teeth.png
 4xLSDIRplusN/combx-tfrag%comb-comb-tile.png
 4xLSDIRplusN/combx-tfrag%comb-crct-medium.png
 4xLSDIRplusN/combx-tfrag%comb-pipe2.png
@@ -2515,7 +2417,6 @@
 4xLSDIRplusN/ctygenb-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/ctygenb-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/ctygenb-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ctygenb-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/ctygenb-vis-shrub%city-blotch-withstreaks-01.png
 4xLSDIRplusN/ctygenb-vis-shrub%city-copper.png
 4xLSDIRplusN/ctygenb-vis-shrub%city-dirt-overlay.png
@@ -2548,9 +2449,7 @@
 4xLSDIRplusN/ctygenb-vis-tfrag%city-endblocks.png
 4xLSDIRplusN/ctygenb-vis-tfrag%city-hole-edge-01.png
 4xLSDIRplusN/ctygenb-vis-tfrag%city-ind-buldge-light-01.png
-4xLSDIRplusN/ctygenb-vis-tfrag%city-ind-buldge-light-self-illuminated-01.png
 4xLSDIRplusN/ctygenb-vis-tfrag%city-lamp-bluelight.png
-4xLSDIRplusN/ctygenb-vis-tfrag%city-light-yellow.png
 4xLSDIRplusN/ctygenb-vis-tfrag%city-lurkermetal-01.png
 4xLSDIRplusN/ctygenb-vis-tfrag%city-metal-canal-smalltop.png
 4xLSDIRplusN/ctygenb-vis-tfrag%city-metal-canal.png
@@ -2608,12 +2507,9 @@
 4xLSDIRplusN/ctyinda-vis-tfrag%city-bigpipe-main-02.png
 4xLSDIRplusN/ctyinda-vis-tfrag%city-ind-bigpipe-siding.png
 4xLSDIRplusN/ctyinda-vis-tfrag%city-ind-buldge-light-01.png
-4xLSDIRplusN/ctyinda-vis-tfrag%city-ind-buldge-light-self-illuminated-01.png
 4xLSDIRplusN/ctyinda-vis-tfrag%city-ind-wall-noisy-03.png
 4xLSDIRplusN/ctyinda-vis-tfrag%city-ind-wall-noisy-05.png
 4xLSDIRplusN/ctyinda-vis-tfrag%city-ind-wall-noisy-border-05.png
-4xLSDIRplusN/ctyinda-vis-tfrag%city-red-light-monster.png
-4xLSDIRplusN/ctyinda-vis-tfrag%city-yellow-light-monster.png
 4xLSDIRplusN/ctyinda-vis-tfrag%cty-ind-ground01.png
 4xLSDIRplusN/ctyinda-vis-tfrag%cty-ind-ground02.png
 4xLSDIRplusN/ctyinda-vis-tfrag%sewer-metal-block-01.png
@@ -2629,7 +2525,6 @@
 4xLSDIRplusN/ctyindb-vis-tfrag%city-bigpipe-main-02.png
 4xLSDIRplusN/ctyindb-vis-tfrag%city-ind-bigpipe-siding.png
 4xLSDIRplusN/ctyindb-vis-tfrag%city-ind-buldge-light-01.png
-4xLSDIRplusN/ctyindb-vis-tfrag%city-ind-buldge-light-self-illuminated-01.png
 4xLSDIRplusN/ctyindb-vis-tfrag%city-ind-ground-metal.png
 4xLSDIRplusN/ctyindb-vis-tfrag%city-ind-panels-scorched.png
 4xLSDIRplusN/ctyindb-vis-tfrag%city-ind-wall-noisy-03.png
@@ -2655,7 +2550,6 @@
 4xLSDIRplusN/ctypepa-pris%citichic-boot-03.png
 4xLSDIRplusN/ctypepa-pris%citichic-boot-04.png
 4xLSDIRplusN/ctypepa-pris%citichic-eye.png
-4xLSDIRplusN/ctypepa-pris%citichic-flesh.png
 4xLSDIRplusN/ctypepa-pris%citichic-hair-01.png
 4xLSDIRplusN/ctypepa-pris%citichic-pants-02.png
 4xLSDIRplusN/ctypepa-pris%citichic-pants.png
@@ -3052,12 +2946,10 @@
 4xLSDIRplusN/desbcst-pris%jakchires-chestplate.png
 4xLSDIRplusN/desbcst-pris%jakchires-glovetop.png
 4xLSDIRplusN/desbcst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/desbcst-pris%jakchires-teeth.png
 4xLSDIRplusN/desbcst-pris%vehicle-snake-tread-02.png
 4xLSDIRplusN/desbcst-pris%vehicle-wheel-01.png
 4xLSDIRplusN/desbcst-pris2%bam-hairhilite.png
 4xLSDIRplusN/desbcst-pris2%sig-skirts-02.png
-4xLSDIRplusN/desbcst-pris2%vin-teeth-01.png
 4xLSDIRplusN/desboss1-minimap%hud-tformer-target-01.png
 4xLSDIRplusN/desboss1-pris%bam-hairhilite.png
 4xLSDIRplusN/desboss1-pris%daxter-eyelid.png
@@ -3072,7 +2964,6 @@
 4xLSDIRplusN/desboss1-pris%jakchires-chestplate.png
 4xLSDIRplusN/desboss1-pris%jakchires-glovetop.png
 4xLSDIRplusN/desboss1-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/desboss1-pris%jakchires-teeth.png
 4xLSDIRplusN/desboss1-pris%terraformer-bodyside-bottom.png
 4xLSDIRplusN/desboss1-pris%terraformer-bodyside-top.png
 4xLSDIRplusN/desboss1-pris%terraformer-jewels.png
@@ -3109,7 +3000,6 @@
 4xLSDIRplusN/desboss2-pris%jakchires-chestplate.png
 4xLSDIRplusN/desboss2-pris%jakchires-glovetop.png
 4xLSDIRplusN/desboss2-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/desboss2-pris%jakchires-teeth.png
 4xLSDIRplusN/desboss2-pris%vehicle-snake-tread-02.png
 4xLSDIRplusN/desboss2-pris%vehicle-wheel-01.png
 4xLSDIRplusN/desboss2-pris2%terraformer-bodyside-bottom.png
@@ -3265,7 +3155,6 @@
 4xLSDIRplusN/deshover-pris%jakchires-chestplate.png
 4xLSDIRplusN/deshover-pris%jakchires-glovetop.png
 4xLSDIRplusN/deshover-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/deshover-pris%jakchires-teeth.png
 4xLSDIRplusN/deshover-pris%vehicle-snake-tread-02.png
 4xLSDIRplusN/deshover-pris%vehicle-wheel-01.png
 4xLSDIRplusN/deshover-sprite%hologram-lines.png
@@ -3274,13 +3163,11 @@
 4xLSDIRplusN/deshover-sprite%holostatic-03.png
 4xLSDIRplusN/deshover-sprite%holostatic-04.png
 4xLSDIRplusN/deshover-tfrag%comm-centre-glow-02.png
-4xLSDIRplusN/deshover-tfrag%comm-centre-glow.png
 4xLSDIRplusN/deshover-tfrag%comm-hose-01.png
 4xLSDIRplusN/deshover-tfrag%comm-metal-01.png
 4xLSDIRplusN/deshover-tfrag%comm-metal-02.png
 4xLSDIRplusN/deshover-tfrag%comm-metal-03.png
 4xLSDIRplusN/deshunt-pris2%sig-skirts-02.png
-4xLSDIRplusN/deshunt-pris2%vin-teeth-01.png
 4xLSDIRplusN/desinter-pris%vehicle-body-panel-01.png
 4xLSDIRplusN/desinter-pris%vehicle-brace-pipe-01.png
 4xLSDIRplusN/desinter-pris%vehicle-cap-pin-01.png
@@ -3321,7 +3208,6 @@
 4xLSDIRplusN/desliz-pris%jakchires-chestplate.png
 4xLSDIRplusN/desliz-pris%jakchires-glovetop.png
 4xLSDIRplusN/desliz-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/desliz-pris%jakchires-teeth.png
 4xLSDIRplusN/desliz-pris%klever-earcup.png
 4xLSDIRplusN/desliz-pris%klever-mustache.png
 4xLSDIRplusN/desliz-pris%vehicle-snake-tread-02.png
@@ -3412,7 +3298,6 @@
 4xLSDIRplusN/desrescc-pris%jakchires-chestplate.png
 4xLSDIRplusN/desrescc-pris%jakchires-glovetop.png
 4xLSDIRplusN/desrescc-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/desrescc-pris%jakchires-teeth.png
 4xLSDIRplusN/desrescg-pris%des-transport-backdoor.png
 4xLSDIRplusN/desrescg-pris%des-transport-cab.png
 4xLSDIRplusN/desrescg-pris%des-transport-can.png
@@ -3466,7 +3351,6 @@
 4xLSDIRplusN/destrack-pris%jakchires-chestplate.png
 4xLSDIRplusN/destrack-pris%jakchires-glovetop.png
 4xLSDIRplusN/destrack-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/destrack-pris%jakchires-teeth.png
 4xLSDIRplusN/destrack-pris%klever-earcup.png
 4xLSDIRplusN/destrack-pris%klever-mustache.png
 4xLSDIRplusN/destrack-pris%vehicle-body-panel-01.png
@@ -3494,7 +3378,6 @@
 4xLSDIRplusN/deswalk-vis-pris%dm-tentacle-skin-02.png
 4xLSDIRplusN/deswalk-vis-pris%dm-urchin-base-01.png
 4xLSDIRplusN/deswalk-vis-pris%dm-urchin-horn-01.png
-4xLSDIRplusN/deswalk-vis-pris%dm-urchin-light-02-dest.png
 4xLSDIRplusN/deswalk-vis-pris%dm-urchin-skin-01.png
 4xLSDIRplusN/deswalk-vis-pris%terraformer-metal-05.png
 4xLSDIRplusN/deswalk-vis-pris%terraformer-metal-08.png
@@ -3548,7 +3431,6 @@
 4xLSDIRplusN/factorya-pris%jakchires-chestplate.png
 4xLSDIRplusN/factorya-pris%jakchires-glovetop.png
 4xLSDIRplusN/factorya-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/factorya-pris%jakchires-teeth.png
 4xLSDIRplusN/factorya-pris%jets01.png
 4xLSDIRplusN/factorya-pris%lightCase01.png
 4xLSDIRplusN/factorya-pris%roboguard-headshield.png
@@ -3574,7 +3456,6 @@
 4xLSDIRplusN/factoryb-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/factoryb-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/factoryb-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/factoryb-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/factoryb-vis-pris%kgfighter-01.png
 4xLSDIRplusN/factoryb-vis-pris%kgfighter-02.png
 4xLSDIRplusN/factoryb-vis-pris%kgfighter-03.png
@@ -3784,7 +3665,6 @@
 4xLSDIRplusN/factoryd-vis-tfrag%facd-wall-girders-01-hitweak.png
 4xLSDIRplusN/factoryd-vis-tfrag%facd-wall-girders-01.png
 4xLSDIRplusN/factoryd-vis-tfrag%facd-wires-01.png
-4xLSDIRplusN/factoryd-vis-tfrag%facd-yellow-glow.png
 4xLSDIRplusN/foresta-minimap%hud-chase-statues-01.png
 4xLSDIRplusN/foresta-minimap%hud-dark-eco-plant.png
 4xLSDIRplusN/foresta-minimap%hud-neo-spawner.png
@@ -3795,7 +3675,6 @@
 4xLSDIRplusN/foresta-vis-alpha%precprism-lens-07.png
 4xLSDIRplusN/foresta-vis-pris%airlock-door-main.png
 4xLSDIRplusN/foresta-vis-pris%fora-bridge-plank.png
-4xLSDIRplusN/foresta-vis-pris%fora-precursor-light.png
 4xLSDIRplusN/foresta-vis-pris%fora-precursor-small-groove.png
 4xLSDIRplusN/foresta-vis-pris%holo-cube-face-01.png
 4xLSDIRplusN/foresta-vis-pris%holo-cube-face-02.png
@@ -3855,11 +3734,9 @@
 4xLSDIRplusN/freehq-pris%jakchires-chestplate.png
 4xLSDIRplusN/freehq-pris%jakchires-glovetop.png
 4xLSDIRplusN/freehq-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/freehq-pris%jakchires-teeth.png
 4xLSDIRplusN/freehq-pris2%bam-hairhilite.png
 4xLSDIRplusN/freehq-pris2%torn-belt.png
 4xLSDIRplusN/freehq-pris2%torn-belt2.png
-4xLSDIRplusN/freehq-pris2%torn-footleather.png
 4xLSDIRplusN/freehq-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/freehq-pris2%torn-gunbarrel.png
 4xLSDIRplusN/freehq-pris2%torn-handle-01.png
@@ -3876,7 +3753,6 @@
 4xLSDIRplusN/freehq-sprite%vinroom-tv-radar.png
 4xLSDIRplusN/freehq-sprite%yavin.png
 4xLSDIRplusN/freehq-tfrag%freehg-display01.png
-4xLSDIRplusN/freehq-tfrag%freehq-blue-light.png
 4xLSDIRplusN/freehq-tfrag%freehq-corrosive-metal-01.png
 4xLSDIRplusN/freehq-tfrag%freehq-env.png
 4xLSDIRplusN/freehq-tfrag%freehq-floor-tile-set01.png
@@ -3888,7 +3764,6 @@
 4xLSDIRplusN/freehq-tfrag%freehq-gray-metal-disc04.png
 4xLSDIRplusN/freehq-tfrag%freehq-gray-metal-disc05.png
 4xLSDIRplusN/freehq-tfrag%freehq-gray-metal-disc07.png
-4xLSDIRplusN/freehq-tfrag%freehq-green-light.png
 4xLSDIRplusN/freehq-tfrag%freehq-ground-tile-set1-bm.png
 4xLSDIRplusN/freehq-tfrag%freehq-ground-tile-set1-lbc.png
 4xLSDIRplusN/freehq-tfrag%freehq-ground-tile-set1-lm.png
@@ -3918,7 +3793,6 @@
 4xLSDIRplusN/freehq-tfrag%freehq-projector02.png
 4xLSDIRplusN/freehq-tfrag%freehq-projector03.png
 4xLSDIRplusN/freehq-tfrag%freehq-projector04.png
-4xLSDIRplusN/freehq-tfrag%freehq-red-light.png
 4xLSDIRplusN/freehq-tfrag%freehq-wal-plate01.png
 4xLSDIRplusN/freehq-tfrag%freehq-wal-plate02.png
 4xLSDIRplusN/freehq-tfrag%freehq-wal-plate03.png
@@ -3949,7 +3823,6 @@
 4xLSDIRplusN/gridcst-pris%jakchires-chestplate.png
 4xLSDIRplusN/gridcst-pris%jakchires-glovetop.png
 4xLSDIRplusN/gridcst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/gridcst-pris%jakchires-teeth.png
 4xLSDIRplusN/gridcst-pris2%bam-hairhilite.png
 4xLSDIRplusN/gungame-sprite%gun-cita-bit-01.png
 4xLSDIRplusN/gungame-sprite%gun-cita-bit-02.png
@@ -3975,7 +3848,6 @@
 4xLSDIRplusN/gungame-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/gungame-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/gungame-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/gungame-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/gungame-vis-pris2%bam-hairhilite.png
 4xLSDIRplusN/gungame-vis-pris2%environment-title.png
 4xLSDIRplusN/gungame-vis-pris2%gun-blue-mag.png
@@ -4104,8 +3976,6 @@
 4xLSDIRplusN/hiphog-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/hiphog-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/hiphog-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/hiphog-vis-pris%jakchires-teeth.png
-4xLSDIRplusN/hiphog-vis-tfrag%hip-blue-light.png
 4xLSDIRplusN/hiphog-vis-tfrag%hip-carawing01.png
 4xLSDIRplusN/hiphog-vis-tfrag%hip-crate-body.png
 4xLSDIRplusN/hiphog-vis-tfrag%hip-curtain.png
@@ -4384,7 +4254,6 @@
 4xLSDIRplusN/introcst-pris%cguard1-shirt.png
 4xLSDIRplusN/introcst-pris%cguard1-shouldershield.png
 4xLSDIRplusN/introcst-pris%cguard1-sleeve.png
-4xLSDIRplusN/introcst-pris%cguard1-teeth.png
 4xLSDIRplusN/introcst-pris%daxter-eyelid.png
 4xLSDIRplusN/introcst-pris%handcuff-01.png
 4xLSDIRplusN/introcst-pris%handcuff-02.png
@@ -4444,7 +4313,6 @@
 4xLSDIRplusN/lblowcst-pris%sig2-shoulderarmor.png
 4xLSDIRplusN/lblowcst-pris%torn-belt.png
 4xLSDIRplusN/lblowcst-pris%torn-belt2.png
-4xLSDIRplusN/lblowcst-pris%torn-footleather.png
 4xLSDIRplusN/lblowcst-pris%torn-gunbarrel-02.png
 4xLSDIRplusN/lblowcst-pris%torn-gunbarrel.png
 4xLSDIRplusN/lblowcst-pris%torn-handle-01.png
@@ -4523,7 +4391,6 @@
 4xLSDIRplusN/lctydest-tfrag%mhcity-grunt-egg-rim-01.png
 4xLSDIRplusN/lctydest-tfrag%mhcity-mektunnel.png
 4xLSDIRplusN/lctyhijk-pris%ctydecoy-glow-02.png
-4xLSDIRplusN/lctyhijk-pris%ctydecoy-light-01.png
 4xLSDIRplusN/lctyhijk-pris%ctydecoy-plate-01.png
 4xLSDIRplusN/lctyhijk-pris%ctydecoy-plate-02.png
 4xLSDIRplusN/lctyhijk-pris%ctydecoy-plate-03.png
@@ -4542,7 +4409,6 @@
 4xLSDIRplusN/lctypatk-tfrag%ctyport-mine-top.png
 4xLSDIRplusN/lctypatk-tfrag%dax-missile-body-01.png
 4xLSDIRplusN/lctypatk-tfrag%dax-missile-body-02.png
-4xLSDIRplusN/lctypatk-tfrag%dax-missile-engine-glow.png
 4xLSDIRplusN/lctypatk-tfrag%dax-missile-fin-02.png
 4xLSDIRplusN/lctypatk-tfrag%dax-missile-tip-01.png
 4xLSDIRplusN/lctypatk-tfrag%prt-min-metal-01.png
@@ -4598,7 +4464,6 @@
 4xLSDIRplusN/ldamklev-pris%klever-mustache.png
 4xLSDIRplusN/ldampksm-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/ldamsig-pris2%sig-skirts-02.png
-4xLSDIRplusN/ldamsig-pris2%vin-teeth-01.png
 4xLSDIRplusN/ldax-pris%bam-hairhilite.png
 4xLSDIRplusN/ldax-pris%daxter-eyelid.png
 4xLSDIRplusN/ldesgcst-pris%bam-hairhilite.png
@@ -4614,9 +4479,7 @@
 4xLSDIRplusN/ldesgcst-pris%jakchires-chestplate.png
 4xLSDIRplusN/ldesgcst-pris%jakchires-glovetop.png
 4xLSDIRplusN/ldesgcst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ldesgcst-pris%jakchires-teeth.png
 4xLSDIRplusN/ldesgcst-pris2%sig-skirts-02.png
-4xLSDIRplusN/ldesgcst-pris2%vin-teeth-01.png
 4xLSDIRplusN/ldmpckgn-pris%jakc-wristband-a2.png
 4xLSDIRplusN/ldmpckgn-pris%jakchires-brownstrap.png
 4xLSDIRplusN/ldmpckgn-pris%jakchires-precarmor-01.png
@@ -4992,8 +4855,6 @@
 4xLSDIRplusN/lfacout-vis-tfrag%facb-bigpipe-01.png
 4xLSDIRplusN/lfacout-vis-tfrag%facb_temp_dark.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-arches-01.png
-4xLSDIRplusN/lfacrm1-tfrag%lfacrm-blue-light-01.png
-4xLSDIRplusN/lfacrm1-tfrag%lfacrm-blue-light-02.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-box-01.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-brace-pipe-01.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-chrome-pipe-01.png
@@ -5019,7 +4880,6 @@
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-plate-04.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-plate-05-bridge.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-plate-06.png
-4xLSDIRplusN/lfacrm1-tfrag%lfacrm-red-light-01.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-rivet-01.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-rivet-02.png
 4xLSDIRplusN/lfacrm1-tfrag%lfacrm-rivet-metal-01.png
@@ -5090,7 +4950,6 @@
 4xLSDIRplusN/lformach-vis-pris%spawner-spike-01.png
 4xLSDIRplusN/lformach-vis-pris%spawner-spike-02.png
 4xLSDIRplusN/lformach-vis-pris%turret-controls.png
-4xLSDIRplusN/lformach-vis-pris%turret-light.png
 4xLSDIRplusN/lformach-vis-pris%turret-metal-2.png
 4xLSDIRplusN/lformach-vis-pris%turret-metal-red.png
 4xLSDIRplusN/lformach-vis-pris%turret-metal.png
@@ -5109,7 +4968,6 @@
 4xLSDIRplusN/lforplnt-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/lforplnt-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/lforplnt-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/lforplnt-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/lforplnt-vis-pris%mh-plant-head.png
 4xLSDIRplusN/lforplnt-vis-pris%mh-plant-legs.png
 4xLSDIRplusN/lgunnorm-pris%bomb-target-01.png
@@ -5149,7 +5007,6 @@
 4xLSDIRplusN/ljakc-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljakc-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljakc-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljakc-pris%jakchires-teeth.png
 4xLSDIRplusN/ljakcklv-pris%bam-hairhilite.png
 4xLSDIRplusN/ljakcklv-pris%jakc-armor.png
 4xLSDIRplusN/ljakcklv-pris%jakc-chestplate-straps.png
@@ -5162,7 +5019,6 @@
 4xLSDIRplusN/ljakcklv-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljakcklv-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljakcklv-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljakcklv-pris%jakchires-teeth.png
 4xLSDIRplusN/ljakcklv-pris%klever-earcup.png
 4xLSDIRplusN/ljakcklv-pris%klever-mustache.png
 4xLSDIRplusN/ljakklev-pris%bam-hairhilite.png
@@ -5181,10 +5037,8 @@
 4xLSDIRplusN/ljakndax-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljakndax-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljakndax-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljakndax-pris%jakchires-teeth.png
 4xLSDIRplusN/ljaksig-pris%bam-hairhilite.png
 4xLSDIRplusN/ljaksig-pris2%sig-skirts-02.png
-4xLSDIRplusN/ljaksig-pris2%vin-teeth-01.png
 4xLSDIRplusN/ljinx-minimap%hud-jinx-head.png
 4xLSDIRplusN/ljinx-pris%citfat-hairflat.png
 4xLSDIRplusN/ljinx-pris%citn-1-pants.png
@@ -5209,7 +5063,6 @@
 4xLSDIRplusN/ljkcdmkl-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljkcdmkl-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljkcdmkl-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljkcdmkl-pris%jakchires-teeth.png
 4xLSDIRplusN/ljkcdmkl-pris%klever-earcup.png
 4xLSDIRplusN/ljkcdmkl-pris%klever-mustache.png
 4xLSDIRplusN/ljkdmpk-pris%bam-hairhilite.png
@@ -5224,7 +5077,6 @@
 4xLSDIRplusN/ljkdmpk-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljkdmpk-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljkdmpk-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljkdmpk-pris%jakchires-teeth.png
 4xLSDIRplusN/ljkdxvin-pris%bam-hairhilite.png
 4xLSDIRplusN/ljkdxvin-pris%daxter-eyelid.png
 4xLSDIRplusN/ljkdxvin-pris%jakc-armor.png
@@ -5238,7 +5090,6 @@
 4xLSDIRplusN/ljkdxvin-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljkdxvin-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljkdxvin-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljkdxvin-pris%jakchires-teeth.png
 4xLSDIRplusN/ljkfeet-pris%bam-hairhilite.png
 4xLSDIRplusN/ljkfeet-pris%jak-orig-arm-formorph.png
 4xLSDIRplusN/ljkfeet-pris%jak-orig-finger-formorph.png
@@ -5254,7 +5105,6 @@
 4xLSDIRplusN/ljkfeet-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljkfeet-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljkfeet-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljkfeet-pris%jakchires-teeth.png
 4xLSDIRplusN/ljndklev-pris%bam-hairhilite.png
 4xLSDIRplusN/ljndklev-pris%daxter-eyelid.png
 4xLSDIRplusN/ljndklev-pris%jakc-armor.png
@@ -5268,7 +5118,6 @@
 4xLSDIRplusN/ljndklev-pris%jakchires-chestplate.png
 4xLSDIRplusN/ljndklev-pris%jakchires-glovetop.png
 4xLSDIRplusN/ljndklev-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ljndklev-pris%jakchires-teeth.png
 4xLSDIRplusN/ljndklev-pris%klever-earcup.png
 4xLSDIRplusN/ljndklev-pris%klever-mustache.png
 4xLSDIRplusN/lkeira-pris%bam-hairhilite.png
@@ -5302,11 +5151,9 @@
 4xLSDIRplusN/lnstcst-pris%jakchires-chestplate.png
 4xLSDIRplusN/lnstcst-pris%jakchires-glovetop.png
 4xLSDIRplusN/lnstcst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/lnstcst-pris%jakchires-teeth.png
 4xLSDIRplusN/lnstcst-pris%vehicle-tread-01.png
 4xLSDIRplusN/lnstcst-pris%vehicle-wheel-01.png
 4xLSDIRplusN/lnstcst-pris2%sig-skirts-02.png
-4xLSDIRplusN/lnstcst-pris2%vin-teeth-01.png
 4xLSDIRplusN/lnstcst-water%desert-nest-egg-piping.png
 4xLSDIRplusN/lnstcst-water%nst-spiderweb.png
 4xLSDIRplusN/lnstoba-vis-pris%mhbat-hose.png
@@ -5357,7 +5204,6 @@
 4xLSDIRplusN/loutro2-pris%prec-tess-shirtstraps.png
 4xLSDIRplusN/loutro2-pris%prec-veger-sleeve.png
 4xLSDIRplusN/loutro2-pris2%sig-skirts-02.png
-4xLSDIRplusN/loutro2-pris2%vin-teeth-01.png
 4xLSDIRplusN/loutro3-pris%bam-hairhilite.png
 4xLSDIRplusN/lpatkcs-minimap%hud-dax-missle-meter-01.png
 4xLSDIRplusN/lpatkcs-minimap%hud-dax-missle-meter-02.png
@@ -5415,7 +5261,6 @@
 4xLSDIRplusN/lpattack-vis-pris%vehicle-wheel-01.png
 4xLSDIRplusN/lpattack-vis-tfrag%rub-cement-broken-end.png
 4xLSDIRplusN/lpattack-vis-tfrag%rub-elec-switch-blue-paint-01.png
-4xLSDIRplusN/lpattack-vis-tfrag%rub-elec-switch-light-on-orange.png
 4xLSDIRplusN/lpattack-vis-tfrag%rub-elec-switch-panel-01.png
 4xLSDIRplusN/lpattack-vis-tfrag%rub-elec-switch-pole-01.png
 4xLSDIRplusN/lpattack-vis-tfrag%rub-wall-gen-03.png
@@ -5438,7 +5283,6 @@
 4xLSDIRplusN/lsamos-pris2%samos-log-03.png
 4xLSDIRplusN/lseemwca-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/lsig-pris2%sig-skirts-02.png
-4xLSDIRplusN/lsig-pris2%vin-teeth-01.png
 4xLSDIRplusN/lsigjakc-pris%bam-hairhilite.png
 4xLSDIRplusN/lsigjakc-pris%jakc-armor.png
 4xLSDIRplusN/lsigjakc-pris%jakc-chestplate-straps.png
@@ -5451,20 +5295,16 @@
 4xLSDIRplusN/lsigjakc-pris%jakchires-chestplate.png
 4xLSDIRplusN/lsigjakc-pris%jakchires-glovetop.png
 4xLSDIRplusN/lsigjakc-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/lsigjakc-pris%jakchires-teeth.png
 4xLSDIRplusN/lsigjakc-pris2%sig-skirts-02.png
-4xLSDIRplusN/lsigjakc-pris2%vin-teeth-01.png
 4xLSDIRplusN/lsigklv-pris%bam-hairhilite.png
 4xLSDIRplusN/lsigklv-pris%klever-earcup.png
 4xLSDIRplusN/lsigklv-pris%klever-mustache.png
 4xLSDIRplusN/lsigklv-pris2%sig-skirts-02.png
-4xLSDIRplusN/lsigklv-pris2%vin-teeth-01.png
 4xLSDIRplusN/lsnkwhls-pris%vehicle-snake-tread-02.png
 4xLSDIRplusN/lsnkwhls-pris%vehicle-wheel-01.png
 4xLSDIRplusN/ltnfxhip-pris2%bam-hairhilite.png
 4xLSDIRplusN/ltnfxhip-pris2%torn-belt.png
 4xLSDIRplusN/ltnfxhip-pris2%torn-belt2.png
-4xLSDIRplusN/ltnfxhip-pris2%torn-footleather.png
 4xLSDIRplusN/ltnfxhip-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/ltnfxhip-pris2%torn-gunbarrel.png
 4xLSDIRplusN/ltnfxhip-pris2%torn-handle-01.png
@@ -5479,7 +5319,6 @@
 4xLSDIRplusN/ltnjxhip-pris2%bam-hairhilite.png
 4xLSDIRplusN/ltnjxhip-pris2%torn-belt.png
 4xLSDIRplusN/ltnjxhip-pris2%torn-belt2.png
-4xLSDIRplusN/ltnjxhip-pris2%torn-footleather.png
 4xLSDIRplusN/ltnjxhip-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/ltnjxhip-pris2%torn-gunbarrel.png
 4xLSDIRplusN/ltnjxhip-pris2%torn-handle-01.png
@@ -5492,7 +5331,6 @@
 4xLSDIRplusN/ltorn-pris2%bam-hairhilite.png
 4xLSDIRplusN/ltorn-pris2%torn-belt.png
 4xLSDIRplusN/ltorn-pris2%torn-belt2.png
-4xLSDIRplusN/ltorn-pris2%torn-footleather.png
 4xLSDIRplusN/ltorn-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/ltorn-pris2%torn-gunbarrel.png
 4xLSDIRplusN/ltorn-pris2%torn-handle-01.png
@@ -5501,7 +5339,6 @@
 4xLSDIRplusN/ltornjnx-pris2%bam-hairhilite.png
 4xLSDIRplusN/ltornjnx-pris2%torn-belt.png
 4xLSDIRplusN/ltornjnx-pris2%torn-belt2.png
-4xLSDIRplusN/ltornjnx-pris2%torn-footleather.png
 4xLSDIRplusN/ltornjnx-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/ltornjnx-pris2%torn-gunbarrel.png
 4xLSDIRplusN/ltornjnx-pris2%torn-handle-01.png
@@ -5513,7 +5350,6 @@
 4xLSDIRplusN/ltornsam-pris2%samos-log-03.png
 4xLSDIRplusN/ltornsam-pris2%torn-belt.png
 4xLSDIRplusN/ltornsam-pris2%torn-belt2.png
-4xLSDIRplusN/ltornsam-pris2%torn-footleather.png
 4xLSDIRplusN/ltornsam-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/ltornsam-pris2%torn-gunbarrel.png
 4xLSDIRplusN/ltornsam-pris2%torn-handle-01.png
@@ -5564,11 +5400,9 @@
 4xLSDIRplusN/ltowerb-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/ltowerb-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/ltowerb-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/ltowerb-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/ltowerb-vis-pris%jets01.png
 4xLSDIRplusN/ltowerb-vis-pris%lightCase01.png
 4xLSDIRplusN/ltowerb-vis-pris2%sig-skirts-02.png
-4xLSDIRplusN/ltowerb-vis-pris2%vin-teeth-01.png
 4xLSDIRplusN/ltowerb-vis-tfrag%mhcity-base-ground.png
 4xLSDIRplusN/ltowerb-vis-tfrag%mhcity-basebone.png
 4xLSDIRplusN/ltowerb-vis-tfrag%mhcity-baserock.png
@@ -5591,7 +5425,6 @@
 4xLSDIRplusN/lvincst-pris%jakchires-chestplate.png
 4xLSDIRplusN/lvincst-pris%jakchires-glovetop.png
 4xLSDIRplusN/lvincst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/lvincst-pris%jakchires-teeth.png
 4xLSDIRplusN/lwassig-minimap%map-nst-lower.png
 4xLSDIRplusN/lwassig-pris%sig-skirts-02.png
 4xLSDIRplusN/lwassig-pris%sig2-gem-01.png
@@ -5612,7 +5445,6 @@
 4xLSDIRplusN/lwstdpck-pris%jakchires-chestplate.png
 4xLSDIRplusN/lwstdpck-pris%jakchires-glovetop.png
 4xLSDIRplusN/lwstdpck-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/lwstdpck-pris%jakchires-teeth.png
 4xLSDIRplusN/mhcitya-minimap%map-ctyporta.png
 4xLSDIRplusN/mhcitya-vis-pris%mhcity-basebone.png
 4xLSDIRplusN/mhcitya-vis-pris%mhcity-de-door-glow-01.png
@@ -5699,7 +5531,6 @@
 4xLSDIRplusN/mhctycst-pris%jakchires-chestplate.png
 4xLSDIRplusN/mhctycst-pris%jakchires-glovetop.png
 4xLSDIRplusN/mhctycst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/mhctycst-pris%jakchires-teeth.png
 4xLSDIRplusN/mhctycst-pris%mhcity-grunt-egg-horns-01.png
 4xLSDIRplusN/mhctycst-pris%mhcity-grunt-egg-metal-01.png
 4xLSDIRplusN/minea-vis-pris%bam-hairhilite.png
@@ -5715,7 +5546,6 @@
 4xLSDIRplusN/minea-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/minea-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/minea-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/minea-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/minea-vis-pris%minc-door-metal-01.png
 4xLSDIRplusN/minea-vis-pris%minc-rust-01.png
 4xLSDIRplusN/minea-vis-pris%minc-rust-02.png
@@ -5918,8 +5748,6 @@
 4xLSDIRplusN/minec-vis-shrub%minc-blue-yel-paint-safe-rust04.png
 4xLSDIRplusN/minec-vis-shrub%minc-falngplat-lorez.png
 4xLSDIRplusN/minec-vis-shrub%minc-grass-ill-01.png
-4xLSDIRplusN/minec-vis-shrub%minc-light-gray.png
-4xLSDIRplusN/minec-vis-shrub%minc-light-red.png
 4xLSDIRplusN/minec-vis-shrub%minc-light.png
 4xLSDIRplusN/minec-vis-shrub%minc-metal-grate-01.png
 4xLSDIRplusN/minec-vis-shrub%minc-plate-01.png
@@ -6001,7 +5829,6 @@
 4xLSDIRplusN/mined-pris%jakchires-chestplate.png
 4xLSDIRplusN/mined-pris%jakchires-glovetop.png
 4xLSDIRplusN/mined-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/mined-pris%jakchires-teeth.png
 4xLSDIRplusN/mined-pris%minc-blue-paint-01.png
 4xLSDIRplusN/mined-pris%minc-blue-paint-rust01.png
 4xLSDIRplusN/mined-pris%minc-blue-paint-rust04.png
@@ -6012,7 +5839,6 @@
 4xLSDIRplusN/mined-pris%minc-door-metal-05.png
 4xLSDIRplusN/mined-pris%minc-door-metal-06.png
 4xLSDIRplusN/mined-pris%minc-door-metal-center.png
-4xLSDIRplusN/mined-pris%minc-light-red.png
 4xLSDIRplusN/mined-pris%minc-reflector.png
 4xLSDIRplusN/mined-pris%minc-rust-01.png
 4xLSDIRplusN/mined-pris%minc-rust-bars-01.png
@@ -6099,7 +5925,6 @@
 4xLSDIRplusN/minee-pris%jakchires-chestplate.png
 4xLSDIRplusN/minee-pris%jakchires-glovetop.png
 4xLSDIRplusN/minee-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/minee-pris%jakchires-teeth.png
 4xLSDIRplusN/minee-shrub%sewer-pipe-small-01.png
 4xLSDIRplusN/minee-tfrag%sewer-block-01.png
 4xLSDIRplusN/minee-tfrag%sewer-brick-block-01.png
@@ -6132,7 +5957,6 @@
 4xLSDIRplusN/museum-pris%jakchires-chestplate.png
 4xLSDIRplusN/museum-pris%jakchires-glovetop.png
 4xLSDIRplusN/museum-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/museum-pris%jakchires-teeth.png
 4xLSDIRplusN/museum-pris%klever-earcup.png
 4xLSDIRplusN/museum-pris%klever-mustache.png
 4xLSDIRplusN/museum-pris2%bam-hairhilite.png
@@ -6142,7 +5966,6 @@
 4xLSDIRplusN/museum-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/museum-pris2%torn-belt.png
 4xLSDIRplusN/museum-pris2%torn-belt2.png
-4xLSDIRplusN/museum-pris2%torn-footleather.png
 4xLSDIRplusN/museum-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/museum-pris2%torn-gunbarrel.png
 4xLSDIRplusN/museum-pris2%torn-handle-01.png
@@ -6165,7 +5988,6 @@
 4xLSDIRplusN/museum2-pris2%veger-coatclips.png
 4xLSDIRplusN/museum2-pris2%veger-hair.png
 4xLSDIRplusN/museum2-pris2%veger-scarf.png
-4xLSDIRplusN/museum2-pris2%vin-teeth-01.png
 4xLSDIRplusN/museum3-pris%bam-hairhilite.png
 4xLSDIRplusN/museum3-pris%cguardred-armshield.png
 4xLSDIRplusN/museum3-pris%cguardred-backmetal.png
@@ -6194,7 +6016,6 @@
 4xLSDIRplusN/museum3-pris%cguardred-shoemetal.png
 4xLSDIRplusN/museum3-pris%cguardred-shouldershield.png
 4xLSDIRplusN/museum3-pris%cguardred-sleeve.png
-4xLSDIRplusN/museum3-pris%cguardred-teeth.png
 4xLSDIRplusN/museum3-pris%daxter-eyelid.png
 4xLSDIRplusN/museum3-pris%kor-bag1.png
 4xLSDIRplusN/museum3-pris%kor-bag2.png
@@ -6239,7 +6060,6 @@
 4xLSDIRplusN/museum3-pris%samosyoung-pants.png
 4xLSDIRplusN/museum3-pris%samosyoung-shirt.png
 4xLSDIRplusN/museum3-pris%samosyoung-vest.png
-4xLSDIRplusN/museum3-pris%vin-teeth-01.png
 4xLSDIRplusN/museum3-pris2%bam-hairhilite.png
 4xLSDIRplusN/museum3-pris2%samos-eyelid.png
 4xLSDIRplusN/museum3-pris2%samos-lens.png
@@ -6294,7 +6114,6 @@
 4xLSDIRplusN/museum3b-pris%errol-sleeve-lfttop.png
 4xLSDIRplusN/museum3b-pris%errol-sleeve-rttop.png
 4xLSDIRplusN/museum3b-pris%errol-sleeve.png
-4xLSDIRplusN/museum3b-pris%errol-teeth.png
 4xLSDIRplusN/museum3b-pris%errol-wristband.png
 4xLSDIRplusN/museum3b-pris%kid-medallion.png
 4xLSDIRplusN/museum3b-pris%krew-arm.png
@@ -6314,7 +6133,6 @@
 4xLSDIRplusN/museum3b-pris%krew-jewe-smaller.png
 4xLSDIRplusN/museum3b-pris%krew-lamp.png
 4xLSDIRplusN/museum3b-pris%krew-leatherplain.png
-4xLSDIRplusN/museum3b-pris%krew-light.png
 4xLSDIRplusN/museum3b-pris%krew-loop.png
 4xLSDIRplusN/museum3b-pris%krew-loop2.png
 4xLSDIRplusN/museum3b-pris%krew-metalattachment.png
@@ -6355,7 +6173,6 @@
 4xLSDIRplusN/museum3b-pris%vin-shoe-01.png
 4xLSDIRplusN/museum3b-pris%vin-shoe-02.png
 4xLSDIRplusN/museum3b-pris%vin-suspendercenter.png
-4xLSDIRplusN/museum3b-pris%vin-teeth-01.png
 4xLSDIRplusN/museum3b-pris%vin-waistband.png
 4xLSDIRplusN/museum3b-pris2%bam-hairhilite.png
 4xLSDIRplusN/museum3b-pris2%baron-armor.png
@@ -6408,14 +6225,12 @@
 4xLSDIRplusN/museum3b-pris2%brut-lens.png
 4xLSDIRplusN/museum3b-pris2%brut-metalrim.png
 4xLSDIRplusN/museum3b-pris2%brut-shirt.png
-4xLSDIRplusN/museum3b-pris2%brut-teeth.png
 4xLSDIRplusN/museum3b-pris2%brut-ties.png
 4xLSDIRplusN/museum3b-pris2%brut-toenails.png
 4xLSDIRplusN/museum4-pris%assis-brownstrapas.png
 4xLSDIRplusN/museum4-pris%assis-glove.png
 4xLSDIRplusN/museum4-pris%assis-lens.png
 4xLSDIRplusN/museum4-pris%bam-hairhilite.png
-4xLSDIRplusN/museum4-pris%billy-flesh.png
 4xLSDIRplusN/museum4-pris%billy-hair.png
 4xLSDIRplusN/museum4-pris%billy-hat.png
 4xLSDIRplusN/museum4-pris%billy-jug.png
@@ -6429,7 +6244,6 @@
 4xLSDIRplusN/museum4-pris%bluesage-copperfixture.png
 4xLSDIRplusN/museum4-pris%bluesage-copperwire.png
 4xLSDIRplusN/museum4-pris%bluesage-eyelid.png
-4xLSDIRplusN/museum4-pris%bluesage-flesh.png
 4xLSDIRplusN/museum4-pris%bluesage-greenwire.png
 4xLSDIRplusN/museum4-pris%bluesage-helmetwires.png
 4xLSDIRplusN/museum4-pris%bluesage-helmetwires2.png
@@ -6457,7 +6271,6 @@
 4xLSDIRplusN/museum4-pris%evilbro-brownleather.png
 4xLSDIRplusN/museum4-pris%evilbro-chin.png
 4xLSDIRplusN/museum4-pris%evilbro-eyelid.png
-4xLSDIRplusN/museum4-pris%evilbro-flesh.png
 4xLSDIRplusN/museum4-pris%evilbro-hair-01.png
 4xLSDIRplusN/museum4-pris%evilbro-mecharm-01.png
 4xLSDIRplusN/museum4-pris%evilbro-mecharm-02.png
@@ -6504,7 +6317,6 @@
 4xLSDIRplusN/museum4-pris%fman-beard-03.png
 4xLSDIRplusN/museum4-pris%fman-belt.png
 4xLSDIRplusN/museum4-pris%fman-eyelid.png
-4xLSDIRplusN/museum4-pris%fman-flesh.png
 4xLSDIRplusN/museum4-pris%fman-metal.png
 4xLSDIRplusN/museum4-pris%fman-sharktooth.png
 4xLSDIRplusN/museum4-pris%fman-shirt.png
@@ -6551,7 +6363,6 @@
 4xLSDIRplusN/museum4-pris%hudax-cotton-32x32.png
 4xLSDIRplusN/museum4-pris%hudax-cotton-gather.png
 4xLSDIRplusN/museum4-pris%hudax-eyelid.png
-4xLSDIRplusN/museum4-pris%hudax-flesh.png
 4xLSDIRplusN/museum4-pris%hudax-hair.png
 4xLSDIRplusN/museum4-pris%hudax-leather-01.png
 4xLSDIRplusN/museum4-pris%hudax-leather-02.png
@@ -6563,7 +6374,6 @@
 4xLSDIRplusN/museum4-pris%hudax-vestedge.png
 4xLSDIRplusN/museum4-pris%hudax-wrap.png
 4xLSDIRplusN/museum4-pris%mayor-eyelid.png
-4xLSDIRplusN/museum4-pris%mayor-flesh.png
 4xLSDIRplusN/museum4-pris%mayor-hair-01.png
 4xLSDIRplusN/museum4-pris%mayor-hair-02.png
 4xLSDIRplusN/museum4-pris%mayor-hair-03.png
@@ -6639,7 +6449,6 @@
 4xLSDIRplusN/museum4-pris%ogre-wristband.png
 4xLSDIRplusN/museum4-pris%p-white.png
 4xLSDIRplusN/museum4-pris%redsage-dial.png
-4xLSDIRplusN/museum4-pris%redsage-flesh.png
 4xLSDIRplusN/museum4-pris%redsage-lense.png
 4xLSDIRplusN/museum4-pris%redsage-multitile.png
 4xLSDIRplusN/museum4-pris%redsage-multitileglow.png
@@ -6657,8 +6466,6 @@
 4xLSDIRplusN/museum4-pris%sculptor-scarf.png
 4xLSDIRplusN/museum4-pris%sculptor-screw.png
 4xLSDIRplusN/museum4-pris%sculptor-shirt.png
-4xLSDIRplusN/museum4-pris%sculptor-teeth-02.png
-4xLSDIRplusN/museum4-pris%sculptor-teeth.png
 4xLSDIRplusN/museum4-pris%sculptor-vestbottom.png
 4xLSDIRplusN/museum4-pris%sculptor-visor.png
 4xLSDIRplusN/museum4-pris%vest-01.png
@@ -6668,7 +6475,6 @@
 4xLSDIRplusN/museum4-pris%yelsage-beard.png
 4xLSDIRplusN/museum4-pris%yelsage-boltstrip.png
 4xLSDIRplusN/museum4-pris%yelsage-eyelid.png
-4xLSDIRplusN/museum4-pris%yelsage-flesh.png
 4xLSDIRplusN/museum4-pris%yelsage-handlewrap.png
 4xLSDIRplusN/museum4-pris%yelsage-headpipe-01.png
 4xLSDIRplusN/museum4-pris%yelsage-helmet.png
@@ -6684,7 +6490,6 @@
 4xLSDIRplusN/museum4-pris%yelsage-ring.png
 4xLSDIRplusN/museum4-pris%yelsage-smallplainmetal.png
 4xLSDIRplusN/museum4-pris%yelsage-staffmetal-01.png
-4xLSDIRplusN/museum4-pris%yelsage-teeth.png
 4xLSDIRplusN/museum4-pris%yelsage-yellowlens.png
 4xLSDIRplusN/museum4-pris2%bam-hairhilite.png
 4xLSDIRplusN/museum4-pris2%jak-orig-arm.png
@@ -6707,7 +6512,6 @@
 4xLSDIRplusN/museum4-pris2%jak-orig-pants.png
 4xLSDIRplusN/museum4-pris2%jak-orig-skirt.png
 4xLSDIRplusN/museum4-pris2%jak-orig-strap.png
-4xLSDIRplusN/museum4-pris2%jak-orig-teeth.png
 4xLSDIRplusN/museum4-pris2%jak-orig-wraps.png
 4xLSDIRplusN/museum4-tfrag%assis-flesh4x4.png
 4xLSDIRplusN/museum4-tfrag%blady-armband.png
@@ -6786,7 +6590,6 @@
 4xLSDIRplusN/oasiscst-pris%jakchires-chestplate.png
 4xLSDIRplusN/oasiscst-pris%jakchires-glovetop.png
 4xLSDIRplusN/oasiscst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/oasiscst-pris%jakchires-teeth.png
 4xLSDIRplusN/oasiscst-pris%kid-medallion.png
 4xLSDIRplusN/oasiscst-pris%vehicle-wheel-01.png
 4xLSDIRplusN/oasiscst-pris2%bam-hairhilite.png
@@ -6803,7 +6606,6 @@
 4xLSDIRplusN/onintent-pris%jakchires-chestplate.png
 4xLSDIRplusN/onintent-pris%jakchires-glovetop.png
 4xLSDIRplusN/onintent-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/onintent-pris%jakchires-teeth.png
 4xLSDIRplusN/onintent-pris2%bam-hairhilite.png
 4xLSDIRplusN/onintent-pris2%samos-eyelid.png
 4xLSDIRplusN/onintent-pris2%samos-lens.png
@@ -6880,7 +6682,6 @@
 4xLSDIRplusN/outcast3-pris%bam-hairhilite.png
 4xLSDIRplusN/outcast3-pris%torn-belt.png
 4xLSDIRplusN/outcast3-pris%torn-belt2.png
-4xLSDIRplusN/outcast3-pris%torn-footleather.png
 4xLSDIRplusN/outcast3-pris%torn-gunbarrel-02.png
 4xLSDIRplusN/outcast3-pris%torn-gunbarrel.png
 4xLSDIRplusN/outcast3-pris%torn-handle-01.png
@@ -6898,7 +6699,6 @@
 4xLSDIRplusN/outrocst-pris%jakchires-chestplate.png
 4xLSDIRplusN/outrocst-pris%jakchires-glovetop.png
 4xLSDIRplusN/outrocst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/outrocst-pris%jakchires-teeth.png
 4xLSDIRplusN/outrocst-pris%klever-earcup.png
 4xLSDIRplusN/outrocst-pris%klever-mustache.png
 4xLSDIRplusN/outrocst-pris2%bam-hairhilite.png
@@ -6956,7 +6756,6 @@
 4xLSDIRplusN/precura-minimap%hud-progress-meter-arrow-02.png
 4xLSDIRplusN/precura-vis-shrub%precur-nail-01.png
 4xLSDIRplusN/precura-vis-shrub%precur-tube-joint-01.png
-4xLSDIRplusN/precura-vis-tfrag%precur-blue-light-02.png
 4xLSDIRplusN/precura-vis-tfrag%precur-bomb-light.png
 4xLSDIRplusN/precura-vis-tfrag%precur-floor-base-01.png
 4xLSDIRplusN/precura-vis-tfrag%precur-floor-plate-02.png
@@ -6972,7 +6771,6 @@
 4xLSDIRplusN/precura-vis-tfrag%precur-wall-groove-01.png
 4xLSDIRplusN/precurb-vis-shrub%precur-nail-01.png
 4xLSDIRplusN/precurb-vis-shrub%precur-tube-joint-01.png
-4xLSDIRplusN/precurb-vis-tfrag%precur-blue-light-02.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-floor-base-01.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-floor-plate-02.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-generator-crystal-01.png
@@ -6981,14 +6779,12 @@
 4xLSDIRplusN/precurb-vis-tfrag%precur-plate-plain-01.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-platform-plate.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-small-plate-edge.png
-4xLSDIRplusN/precurb-vis-tfrag%precur-switch-light.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-tube-joint-01.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-tubes-segment-01.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-tubes-small-01.png
 4xLSDIRplusN/precurb-vis-tfrag%precur-wall-groove-01.png
 4xLSDIRplusN/precurc-vis-shrub%precur-nail-01.png
 4xLSDIRplusN/precurc-vis-shrub%precur-tube-joint-01.png
-4xLSDIRplusN/precurc-vis-tfrag%precur-blue-light-02.png
 4xLSDIRplusN/precurc-vis-tfrag%precur-floor-base-01.png
 4xLSDIRplusN/precurc-vis-tfrag%precur-floor-plate-02.png
 4xLSDIRplusN/precurc-vis-tfrag%precur-light-green-big.png
@@ -7018,7 +6814,6 @@
 4xLSDIRplusN/precurd-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/precurd-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/precurd-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/precurd-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/precurd-vis-pris%terraformer-bodyside-bottom.png
 4xLSDIRplusN/precurd-vis-pris%terraformer-bodyside-top.png
 4xLSDIRplusN/precurd-vis-pris%terraformer-metal-05.png
@@ -7043,7 +6838,6 @@
 4xLSDIRplusN/precurd-vis-shrub%precur-tube-joint-01.png
 4xLSDIRplusN/precurd-vis-shrub%precur-tubes-small-01.png
 4xLSDIRplusN/precurd-vis-shrub%precur-wall-groove-01.png
-4xLSDIRplusN/precurd-vis-tfrag%precur-blue-light-02.png
 4xLSDIRplusN/precurd-vis-tfrag%precur-floor-base-01.png
 4xLSDIRplusN/precurd-vis-tfrag%precur-floor-plate-02.png
 4xLSDIRplusN/precurd-vis-tfrag%precur-light-green-big.png
@@ -7233,7 +7027,6 @@
 4xLSDIRplusN/raila-pris%rail-trim-01.png
 4xLSDIRplusN/raila-shrub%rail-base-dark-01.png
 4xLSDIRplusN/raila-shrub%rail-env-wall-01.png
-4xLSDIRplusN/raila-shrub%rail-light-blue.png
 4xLSDIRplusN/raila-shrub%rail-pipe-03.png
 4xLSDIRplusN/raila-shrub%rail-rider-decal-01.png
 4xLSDIRplusN/raila-shrub%vehicle-body-panel-01.png
@@ -7266,26 +7059,17 @@
 4xLSDIRplusN/railb-tfrag%rail-cord-01.png
 4xLSDIRplusN/railb-tfrag%rail-edge-01.png
 4xLSDIRplusN/railb-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/railb-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/railb-tfrag%rail-light-blue.png
-4xLSDIRplusN/railb-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/railb-tfrag%rail-light-yellow.png
 4xLSDIRplusN/railb-tfrag%rail-pipe-01.png
 4xLSDIRplusN/railb-tfrag%rail-pipe-02.png
 4xLSDIRplusN/railb-tfrag%rail-pipe-03.png
 4xLSDIRplusN/railb-tfrag%rail-trim-01.png
 4xLSDIRplusN/railb2-tfrag%comb-temp-dark.png
 4xLSDIRplusN/railb2-tfrag%comb-temp-glass.png
-4xLSDIRplusN/railb2-tfrag%comb-yell-light.png
 4xLSDIRplusN/railb2-tfrag%rail-base-dark-01.png
 4xLSDIRplusN/railb2-tfrag%rail-base-mid-01.png
 4xLSDIRplusN/railb2-tfrag%rail-cord-01.png
 4xLSDIRplusN/railb2-tfrag%rail-edge-01.png
 4xLSDIRplusN/railb2-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/railb2-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/railb2-tfrag%rail-light-blue.png
-4xLSDIRplusN/railb2-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/railb2-tfrag%rail-light-yellow.png
 4xLSDIRplusN/railb2-tfrag%rail-pipe-01.png
 4xLSDIRplusN/railb2-tfrag%rail-pipe-02.png
 4xLSDIRplusN/railb2-tfrag%rail-pipe-03.png
@@ -7298,10 +7082,6 @@
 4xLSDIRplusN/railc-tfrag%rail-cord-01.png
 4xLSDIRplusN/railc-tfrag%rail-edge-01.png
 4xLSDIRplusN/railc-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/railc-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/railc-tfrag%rail-light-blue.png
-4xLSDIRplusN/railc-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/railc-tfrag%rail-light-yellow.png
 4xLSDIRplusN/railc-tfrag%rail-pipe-01.png
 4xLSDIRplusN/railc-tfrag%rail-pipe-02.png
 4xLSDIRplusN/railc-tfrag%rail-pipe-03.png
@@ -7321,7 +7101,6 @@
 4xLSDIRplusN/railcst-pris%jakchires-chestplate.png
 4xLSDIRplusN/railcst-pris%jakchires-glovetop.png
 4xLSDIRplusN/railcst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/railcst-pris%jakchires-teeth.png
 4xLSDIRplusN/railcst-pris%prec-controller-black.png
 4xLSDIRplusN/railcst-pris%prec-controller-but.png
 4xLSDIRplusN/railcst-pris%prec-controller-but2.png
@@ -7346,10 +7125,8 @@
 4xLSDIRplusN/railcst-pris2%veger-scarf.png
 4xLSDIRplusN/railcst-shrub%rail-base-dark-01.png
 4xLSDIRplusN/railcst-shrub%rail-env-wall-01.png
-4xLSDIRplusN/railcst-shrub%rail-light-blue.png
 4xLSDIRplusN/railcst-shrub%rail-pipe-03.png
 4xLSDIRplusN/railcst-shrub%rail-rider-decal-01.png
-4xLSDIRplusN/railcst-tfrag%cmn-precursor-blue-glow.png
 4xLSDIRplusN/railcst-tfrag%cmn-precursor-plainstripe.png
 4xLSDIRplusN/railcst-tfrag%cmn-precursor-plat-lod03.png
 4xLSDIRplusN/railcst-tfrag%cmn-precursor-stonehenge-side.png
@@ -7366,10 +7143,6 @@
 4xLSDIRplusN/raild-tfrag%rail-cord-01.png
 4xLSDIRplusN/raild-tfrag%rail-edge-01.png
 4xLSDIRplusN/raild-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/raild-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/raild-tfrag%rail-light-blue.png
-4xLSDIRplusN/raild-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/raild-tfrag%rail-light-yellow.png
 4xLSDIRplusN/raild-tfrag%rail-pipe-01.png
 4xLSDIRplusN/raild-tfrag%rail-pipe-02.png
 4xLSDIRplusN/raild-tfrag%rail-pipe-03.png
@@ -7383,10 +7156,6 @@
 4xLSDIRplusN/raile-tfrag%rail-cord-01.png
 4xLSDIRplusN/raile-tfrag%rail-edge-01.png
 4xLSDIRplusN/raile-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/raile-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/raile-tfrag%rail-light-blue.png
-4xLSDIRplusN/raile-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/raile-tfrag%rail-light-yellow.png
 4xLSDIRplusN/raile-tfrag%rail-pipe-01.png
 4xLSDIRplusN/raile-tfrag%rail-pipe-02.png
 4xLSDIRplusN/raile-tfrag%rail-pipe-03.png
@@ -7401,10 +7170,6 @@
 4xLSDIRplusN/railf-tfrag%rail-cord-01.png
 4xLSDIRplusN/railf-tfrag%rail-edge-01.png
 4xLSDIRplusN/railf-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/railf-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/railf-tfrag%rail-light-blue.png
-4xLSDIRplusN/railf-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/railf-tfrag%rail-light-yellow.png
 4xLSDIRplusN/railf-tfrag%rail-pipe-01.png
 4xLSDIRplusN/railf-tfrag%rail-pipe-02.png
 4xLSDIRplusN/railf-tfrag%rail-pipe-03.png
@@ -7419,12 +7184,6 @@
 4xLSDIRplusN/railx-tfrag%rail-env-ground-01.png
 4xLSDIRplusN/railx-tfrag%rail-env-wall-01.png
 4xLSDIRplusN/railx-tfrag%rail-grate-01.png
-4xLSDIRplusN/railx-tfrag%rail-light-blue-small-2.png
-4xLSDIRplusN/railx-tfrag%rail-light-blue-small-3.png
-4xLSDIRplusN/railx-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/railx-tfrag%rail-light-blue.png
-4xLSDIRplusN/railx-tfrag%rail-light-yellow-small.png
-4xLSDIRplusN/railx-tfrag%rail-light-yellow.png
 4xLSDIRplusN/railx-tfrag%rail-monitor-screen-01.png
 4xLSDIRplusN/railx-tfrag%rail-monitor-screen-02.png
 4xLSDIRplusN/railx-tfrag%rail-pipe-01.png
@@ -7573,7 +7332,6 @@
 4xLSDIRplusN/rublcst-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/rublcst-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/rublcst-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/rublcst-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/rublcst-vis-pris%kid-medallion.png
 4xLSDIRplusN/rublcst-vis-pris%rhino-horn-02.png
 4xLSDIRplusN/rublcst-vis-pris%vehicle-wheel-01.png
@@ -7583,7 +7341,6 @@
 4xLSDIRplusN/rublcst-vis-pris2%veger-scarf.png
 4xLSDIRplusN/rublcst-vis-shrub%rail-base-dark-01.png
 4xLSDIRplusN/rublcst-vis-shrub%rail-env-wall-01.png
-4xLSDIRplusN/rublcst-vis-shrub%rail-light-blue.png
 4xLSDIRplusN/rublcst-vis-shrub%rail-pipe-03.png
 4xLSDIRplusN/rublcst-vis-shrub%rail-rider-decal-01.png
 4xLSDIRplusN/rublcst-vis-shrub%rub-greyblue-plain-lowres.png
@@ -7595,9 +7352,6 @@
 4xLSDIRplusN/rublcst-vis-tfrag%rail-cord-01.png
 4xLSDIRplusN/rublcst-vis-tfrag%rail-edge-01.png
 4xLSDIRplusN/rublcst-vis-tfrag%rail-env-wall-01.png
-4xLSDIRplusN/rublcst-vis-tfrag%rail-light-blue-small.png
-4xLSDIRplusN/rublcst-vis-tfrag%rail-light-blue.png
-4xLSDIRplusN/rublcst-vis-tfrag%rail-light-yellow-small.png
 4xLSDIRplusN/rublcst-vis-tfrag%rail-pipe-01.png
 4xLSDIRplusN/rublcst-vis-tfrag%rail-pipe-02.png
 4xLSDIRplusN/rublcst-vis-tfrag%rail-pipe-03.png
@@ -7643,7 +7397,6 @@
 4xLSDIRplusN/sewa-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/sewa-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/sewa-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/sewa-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/sewa-vis-pris%roboguard-headshield.png
 4xLSDIRplusN/sewa-vis-pris%saberfish-nail-01.png
 4xLSDIRplusN/sewa-vis-pris%saberfish-skin-01.png
@@ -8448,7 +8201,6 @@
 4xLSDIRplusN/slumbset-pris%jakchires-chestplate.png
 4xLSDIRplusN/slumbset-pris%jakchires-glovetop.png
 4xLSDIRplusN/slumbset-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/slumbset-pris%jakchires-teeth.png
 4xLSDIRplusN/stadium-vis-alpha%stdm-grass-fringe.png
 4xLSDIRplusN/stadium-vis-pris%bam-hairhilite.png
 4xLSDIRplusN/stadium-vis-pris%daxter-eyelid.png
@@ -8479,7 +8231,6 @@
 4xLSDIRplusN/stadium-vis-tfrag%stdm-flowerbed-small.png
 4xLSDIRplusN/stadium-vis-tfrag%stdm-gar-girder-02.png
 4xLSDIRplusN/stadium-vis-tfrag%stdm-lg-stone-trim-01.png
-4xLSDIRplusN/stadium-vis-tfrag%stdm-light-fix-a.png
 4xLSDIRplusN/stadium-vis-tfrag%stdm-marble-floor-01.png
 4xLSDIRplusN/stadium-vis-tfrag%stdm-metal-01.png
 4xLSDIRplusN/stadium-vis-tfrag%stdm-metal-rim-01.png
@@ -8534,7 +8285,6 @@
 4xLSDIRplusN/stadiumb-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/stadiumb-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/stadiumb-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/stadiumb-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/stadiumb-vis-shrub%rub-coil-support.png
 4xLSDIRplusN/stadiumb-vis-shrub%rub-greyblue-plain-lowres.png
 4xLSDIRplusN/stadiumb-vis-shrub%rub-overlay-bullethole-a.png
@@ -8584,7 +8334,6 @@
 4xLSDIRplusN/templea-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/templea-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/templea-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/templea-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/templea-vis-pris%kid-medallion.png
 4xLSDIRplusN/templea-vis-pris%pre-lens-01.png
 4xLSDIRplusN/templea-vis-pris%pre-lens-glass01.png
@@ -8804,7 +8553,6 @@
 4xLSDIRplusN/towercst-pris%jakchires-chestplate.png
 4xLSDIRplusN/towercst-pris%jakchires-glovetop.png
 4xLSDIRplusN/towercst-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/towercst-pris%jakchires-teeth.png
 4xLSDIRplusN/towercst-pris%jets01.png
 4xLSDIRplusN/towercst-pris%lightCase01.png
 4xLSDIRplusN/towercst-pris%mhcity-eggskin.png
@@ -8815,13 +8563,11 @@
 4xLSDIRplusN/towercst-pris2%sig-skirts-02.png
 4xLSDIRplusN/towercst-pris2%torn-belt.png
 4xLSDIRplusN/towercst-pris2%torn-belt2.png
-4xLSDIRplusN/towercst-pris2%torn-footleather.png
 4xLSDIRplusN/towercst-pris2%torn-gunbarrel-02.png
 4xLSDIRplusN/towercst-pris2%torn-gunbarrel.png
 4xLSDIRplusN/towercst-pris2%torn-handle-01.png
 4xLSDIRplusN/towercst-pris2%torn-metal2.png
 4xLSDIRplusN/towercst-pris2%torn-shoe-02.png
-4xLSDIRplusN/towercst-pris2%vin-teeth-01.png
 4xLSDIRplusN/towercst-tfrag%mhcity-skin-ground-01.png
 4xLSDIRplusN/towercst-tfrag%rail-env-wall-01.png
 4xLSDIRplusN/towercst-tfrag%tow-base-ground.png
@@ -8832,7 +8578,6 @@
 4xLSDIRplusN/vinroom-vis-tfrag%strip-vin-pipe-01.png
 4xLSDIRplusN/vinroom-vis-tfrag%strip-vin-rim-02.png
 4xLSDIRplusN/vinroom-vis-tfrag%vin-black.png
-4xLSDIRplusN/vinroom-vis-tfrag%vin-blue-light.png
 4xLSDIRplusN/vinroom-vis-tfrag%vin-control-panel-01.png
 4xLSDIRplusN/vinroom-vis-tfrag%vin-control-panel-02.png
 4xLSDIRplusN/vinroom-vis-tfrag%vin-floor-01.png
@@ -8938,7 +8683,6 @@
 4xLSDIRplusN/volcanox-pris%jakchires-chestplate.png
 4xLSDIRplusN/volcanox-pris%jakchires-glovetop.png
 4xLSDIRplusN/volcanox-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/volcanox-pris%jakchires-teeth.png
 4xLSDIRplusN/volcanox-pris%monk-mummy-arm.png
 4xLSDIRplusN/volcanox-pris%monk-mummy-boot.png
 4xLSDIRplusN/volcanox-pris%monk-mummy-boottoe.png
@@ -8976,7 +8720,6 @@
 4xLSDIRplusN/warpcast-pris%jakchires-chestplate.png
 4xLSDIRplusN/warpcast-pris%jakchires-glovetop.png
 4xLSDIRplusN/warpcast-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/warpcast-pris%jakchires-teeth.png
 4xLSDIRplusN/wasall-minimap%hud-rhino-turbometer.png
 4xLSDIRplusN/wasall-pris%rhino-horn-01.png
 4xLSDIRplusN/wasall-pris%rhino-horn-02.png
@@ -9057,7 +8800,6 @@
 4xLSDIRplusN/wascast-pris%jakchires-chestplate.png
 4xLSDIRplusN/wascast-pris%jakchires-glovetop.png
 4xLSDIRplusN/wascast-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/wascast-pris%jakchires-teeth.png
 4xLSDIRplusN/wascast-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/waschase-minimap%hud-kanga-lizard.png
 4xLSDIRplusN/wascitya-vis-shrub%wascity-ditch-wall-top-to-ground.png
@@ -9191,7 +8933,6 @@
 4xLSDIRplusN/wasdoors-vis-pris%jakchires-chestplate.png
 4xLSDIRplusN/wasdoors-vis-pris%jakchires-glovetop.png
 4xLSDIRplusN/wasdoors-vis-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/wasdoors-vis-pris%jakchires-teeth.png
 4xLSDIRplusN/wasdoors-vis-pris%vehicle-wheel-01.png
 4xLSDIRplusN/wasdoors-vis-tfrag%wascity-cement-road.png
 4xLSDIRplusN/wasdoors-vis-tfrag%wascity-ditch-wall-top-to-ground.png
@@ -9299,7 +9040,6 @@
 4xLSDIRplusN/wasseem-pris%jakchires-chestplate.png
 4xLSDIRplusN/wasseem-pris%jakchires-glovetop.png
 4xLSDIRplusN/wasseem-pris%jakchires-precarmor-01.png
-4xLSDIRplusN/wasseem-pris%jakchires-teeth.png
 4xLSDIRplusN/wasseem-pris%seem-precmetal-edge.png
 4xLSDIRplusN/wasseem-pris2%seem-precmetal-edge.png
 4xLSDIRplusN/wasseem-sprite%dp-text-01.png
@@ -9577,7 +9317,6 @@
 4xLSDIRplusN/waswide-vis-pris%wstlanderchic-bootleg.png
 4xLSDIRplusN/waswide-vis-pris%wstlanderchic-corset.png
 4xLSDIRplusN/waswide-vis-pris%wstlanderchic-eye.png
-4xLSDIRplusN/waswide-vis-pris%wstlanderchic-flesh.png
 4xLSDIRplusN/waswide-vis-pris%wstlanderchic-hair.png
 4xLSDIRplusN/waswide-vis-pris%wstlanderchic-hairtop.png
 4xLSDIRplusN/waswide-vis-pris%wstlanderchic-legwrap2.png
