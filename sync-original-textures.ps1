@@ -126,7 +126,7 @@ function Sync-ExistingTexturesWithOptions {
 
 	foreach ($model_dir in $model_dirs) {
 		$current_model = $model_dir.Name
-		$texture_files = Get-ChildItem -LiteralPath $model_dir.FullName -File -ErrorAction Stop
+		$texture_files = Get-ChildItem -LiteralPath $model_dir.FullName -Filter '*__*.png' -File -ErrorAction Stop
 
 		foreach ($texture_file in $texture_files) {
 			$texture_name = ($texture_file.BaseName -split '__')[1]
