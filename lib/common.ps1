@@ -5,6 +5,21 @@ $ProjectDir = Split-Path $PSScriptRoot -Parent
 
 <#
 .SYNOPSIS
+Gets the directory where upscale models are downloaded to for usage.
+Also contains `mirrors.json` which defines the models and their mirrors.
+#>
+function Get-ModelsDir {
+	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
+	param()
+
+	$dir = Join-Path $ProjectDir 'models/'
+	Initialize-Directory $dir
+	$dir
+}
+
+<#
+.SYNOPSIS
 Gets the parent directory where all texture files (and the texture manifest) are placed.
 #>
 function Get-TexturesDir {

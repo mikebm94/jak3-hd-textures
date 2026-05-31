@@ -1,16 +1,40 @@
 {
-	"DefaultModel": "4xLSDIRplusN",
+	"DefaultWorkflow": "Main",
+
+	"Workflows": [
+		{
+			"Name": "Main",
+			"Description": "Basic upcale (DAT2 model). No padding. Suitable for most textures.",
+			"Chain": "Basic-PyTorch",
+			"InputOverrides": [
+				{
+					"Description": "Load Model (PyTorch) -> Model",
+					"ID": "#a63005ef-c63f-46b0-85ad-703c7f76c1ea:0",
+					"Value": "models/4x-PBRify_UpscalerV4.safetensors",
+					"IsRelativePath": true
+				}
+			]
+		}
+	],
+
+	"Chains": [
+		{
+			"Name": "Basic-PyTorch",
+			"LoadDirectoryInputID": "#8c220f63-a16a-4447-a0ed-dd675a63ad4f:0",
+			"SaveDirectoryInputID": "#766e5eeb-0500-44b0-a8f0-4ad217b01648:1"
+		}
+	],
 
 	"TextureGroups": [
 		{
 			"Name": "Manually Upscaled",
-			"Model": "manual",
+			"Workflow": "manual",
 			"TextureNames": []
 		},
 
 		{
 			"Name": "Not Upscaled (Misc Textures)",
-			"Model": "none",
+			"Workflow": "none",
 			"TextureNames": [
 				"artifact-blue-glow-01",
 				"billy-flesh",
@@ -140,7 +164,7 @@
 
 		{
 			"Name": "Not Upscaled (HUD Textures)",
-			"Model": "none",
+			"Workflow": "none",
 			"TextureNames": [
 				"arena-01",
 				"arena-02",
@@ -511,7 +535,7 @@
 
 		{
 			"Name": "Not Upscaled (Eye Textures)",
-			"Model": "none",
+			"Workflow": "none",
 			"TextureNames": [
 				"ashelin-eye",
 				"ashelin-lo-eye",
@@ -615,7 +639,7 @@
 
 		{
 			"Name": "Not Upscaled (Sky Textures)",
-			"Model": "none",
+			"Workflow": "none",
 			"TextureNames": [
 				"big-cloud",
 				"dust-cloud",
@@ -628,7 +652,7 @@
 
 		{
 			"Name": "Not Upscaled (Animated Textures)",
-			"Model": "none",
+			"Workflow": "none",
 			"TextureNames": [
 				"jakc-arm",
 				"jakc-eyebrow",

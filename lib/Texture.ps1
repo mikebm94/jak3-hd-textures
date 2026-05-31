@@ -3,9 +3,9 @@ using namespace System.IO
 
 # Handles copying and de-duplication for textures found in the game files.
 class Texture {
-	# The name of the model used to upscale this texture.
+	# The name of the workflow used to upscale this texture.
 	# Leave empty if the texture is a search result.
-	[string] $UpscaleModel
+	[string] $UpscaleWorkflow
 
 	# All files found under this textures name.
 	[List[FileInfo]] $Files
@@ -14,11 +14,11 @@ class Texture {
     [HashSet[string]] $Hashes
 
 
-    Texture([FileInfo] $File, [string] $UpscaleModel) {
+    Texture([FileInfo] $File, [string] $UpscaleWorkflow) {
 		$this.Files = [List[FileInfo]]::new()
         $this.Hashes = [HashSet[string]]::new()
 		$this.AddFile($File)
-		$this.UpscaleModel = $UpscaleModel
+		$this.UpscaleWorkflow = $UpscaleWorkflow
     }
 
 	# Adds a file that was found under this textures name, computes its hash and stores it.
@@ -31,8 +31,8 @@ class Texture {
 	# Returns the resulting texture filepaths relative to the destination directory.
 	# If the texture is a search result, only the files actually copied are returned.
 	[string[]] CopyTo([string] $DestinationDir, [bool] $WhatIfPreference) {
-		if (-not [string]::IsNullOrEmpty($this.UpscaleModel)) {
-			$DestinationDir = Join-Path $DestinationDir $this.UpscaleModel
+		if (-not [string]::IsNullOrEmpty($this.UpscaleWorkflow)) {
+			$DestinationDir = Join-Path $DestinationDir $this.UpscaleWorkflow
 		}
 
 		Initialize-Directory $DestinationDir -WhatIf:$WhatIfPreference
@@ -58,8 +58,8 @@ class Texture {
 				}
 			}
 
-			if (-not [string]::IsNullOrEmpty($this.UpscaleModel)) {
-				"$($this.UpscaleModel)/${new_filename}"
+			if (-not [string]::IsNullOrEmpty($this.UpscaleWorkflow)) {
+				"$($this.UpscaleWorkflow)/${new_filename}"
 			}
 			elseif ($was_copied) {
 				$new_filename

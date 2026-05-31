@@ -9,12 +9,12 @@ Finds and copies the original Jak 3 game textures needed for upscaling to `textu
 Make sure you've decompiled the Jak 3 ISO using the OpenGOAL launcher or CLI.
 
 The file `upscale-options.json` is used to exclude certain textures from being copied and upscaled
-(such as animated textures), and to specify which upscale model to use for certain textures.
-Textures can also be marked to be manually upscaled instead of using an AI model.
+(such as animated textures), and to specify which upscale workflow to use for certain textures.
+Textures can also be marked to be manually upscaled instead of using an AI-based workflow.
 These are copied to `textures/original/manual/`.
 
 Re-run this script after making changes to the upscale options file. It will copy any newly included textures,
-delete ones that are newly excluded, and move textures accordingly if an upscale model has been changed.
+delete ones that are newly excluded, and move textures accordingly if an upscale workflow has been changed.
 
 A manifest of all textures in `textures/original/` will be written to `textures/manifest.txt`.
 This makes it easy to spot changes to the texture pack using git.
@@ -27,12 +27,12 @@ to be copied and upscaled once by placing a single copy in the `_all` texture di
 Some textures have the same names but different file hashes, these will not be de-duplicated just to be safe.
 See: https://github.com/open-goal/jak-project/pull/3234
 
-Textures will be grouped in directories named after their respective upscale model.
+Textures will be grouped in directories named after their respective upscale workflow.
 The directory structure will be flattened within these directories since batch upscaling doesn't support recursion.
 This is done by encoding the heirarchy within the filenames themselves, with `__` representing a path separator.
 
 For example: Texture `<Jak 3 Texture Path>/arenacst-pris/bam-hairhilite.png` will be copied to
-`textures/original/<Upscale Model>/arenacst-pris__bam-hairhilite.png`.
+`textures/original/<Upscale Workflow>/arenacst-pris__bam-hairhilite.png`.
 #>
 
 
@@ -122,11 +122,11 @@ function Sync-ExistingTexturesWithOptions {
 
 	$files_to_delete = [List[FileInfo]]::new()
 	$files_to_move = [List[Tuple[FileInfo, string]]]::new() # Source, Destination
-	$model_dirs = Get-ChildItem -LiteralPath $Path -Directory -ErrorAction Stop
+	$workflow_dirs = Get-ChildItem -LiteralPath $Path -Directory -ErrorAction Stop
 
-	foreach ($model_dir in $model_dirs) {
-		$current_model = $model_dir.Name
-		$texture_files = Get-ChildItem -LiteralPath $model_dir.FullName -Filter '*__*.png' -File -ErrorAction Stop
+	foreach ($workflow_dir in $workflow_dirs) {
+		$current_workflow = $workflow_dir.Name
+		$texture_files = Get-ChildItem -LiteralPath $workflow_dir.FullName -Filter '*__*.png' -File -ErrorAction Stop
 
 		foreach ($texture_file in $texture_files) {
 			$texture_name = ($texture_file.BaseName -split '__')[1]
@@ -136,17 +136,17 @@ function Sync-ExistingTexturesWithOptions {
 				continue
 			}
 
-			$new_model = $Options.TextureModels[$texture_name]
+			$new_workflow = $Options.TextureWorkflowMap[$texture_name]
 
-			if ($null -eq $new_model) {
-				$new_model = $Options.DefaultModel
+			if ($null -eq $new_workflow) {
+				$new_workflow = $Options.DefaultWorkflow
 			}
 
-			if ($new_model -eq 'none') {
+			if ($new_workflow -eq 'none') {
 				$null = $files_to_delete.Add($texture_file)
 			}
-			elseif ($new_model -ne $current_model) {
-				$dest_dir = Join-Path $Path $new_model
+			elseif ($new_workflow -ne $current_workflow) {
+				$dest_dir = Join-Path $Path $new_workflow
 				Initialize-Directory $dest_dir
 				$null = $files_to_move.Add([Tuple]::Create($texture_file, (Join-Path $dest_dir $texture_file.Name)))
 			}
@@ -164,7 +164,7 @@ function Sync-ExistingTexturesWithOptions {
 	}
 
 	if ($files_to_move.Count -gt 0) {
-		Write-Host "Moving $($files_to_move.Count) texture(s) with changed upscale models ..."
+		Write-Host "Moving $($files_to_move.Count) texture(s) with changed upscale workflows ..."
 
 		foreach ($src_dest in $files_to_move) {
 			if ($PSCmdlet.ShouldProcess("Item: $($src_dest.Item1) Destination: $($src_dest.Item2)", 'Move File')) {
@@ -174,10 +174,10 @@ function Sync-ExistingTexturesWithOptions {
 	}
 
 	# Remove empty directories.
-	foreach ($model_dir in $model_dirs) {
-		if (-not [Enumerable]::Any($model_dir.EnumerateFileSystemInfos())) {
-			if ($PSCmdlet.ShouldProcess($model_dir, 'Remove Directory')) {
-				$model_dir.Delete()
+	foreach ($workflow_dir in $workflow_dirs) {
+		if (-not [Enumerable]::Any($workflow_dir.EnumerateFileSystemInfos())) {
+			if ($PSCmdlet.ShouldProcess($workflow_dir, 'Remove Directory')) {
+				$workflow_dir.Delete()
 			}
 		}
 	}
@@ -205,7 +205,7 @@ function Copy-OriginalTextures {
 		[string]
 		$DestinationDir,
 
-		# The upscale options configuring which textures get copied and what models to use.
+		# The upscale options configuring which textures get copied and what workflows to use.
 		[Parameter(Mandatory, Position = 2)]
 		[UpscaleOptions]
 		$Options
@@ -224,14 +224,14 @@ function Copy-OriginalTextures {
 			continue
 		}
 
-		$model = $Options.TextureModels[$name]
+		$workflow = $Options.TextureWorkflowMap[$name]
 
-		if ($null -eq $model) {
-			$model = $Options.DefaultModel
+		if ($null -eq $workflow) {
+			$workflow = $Options.DefaultWorkflow
 		}
 		
-		if ($model -ne 'none') {
-			$textures_by_name[$name] = [Texture]::new($file, $model)
+		if ($workflow -ne 'none') {
+			$textures_by_name[$name] = [Texture]::new($file, $workflow)
 		}
 	}
 

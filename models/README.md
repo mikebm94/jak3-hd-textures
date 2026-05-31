@@ -1,0 +1,8 @@
+Upscale models needed by the project are defined in `mirrors.json`.
+`ModelName` is used as the models filename, and `Mirrors` contains the url(s) where the model can be downloaded when running `get-upscale-models.ps1`.
+
+More upscale models can be found at https://openmodeldb.info/
+
+# Attributions
+
+"[PBRify_UpscalerV4](https://github.com/Kim2091/Kim2091-Models/releases/tag/4x-PBRify_UpscalerV4)" by [Kim2091](https://github.com/Kim2091) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

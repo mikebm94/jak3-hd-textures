@@ -1,34 +1,34 @@
 using namespace System.Collections.Generic
 using namespace System.IO
 
-# Options configuring which textures get upscaled and which models to use.
+# Options configuring which textures get upscaled and which workflows to use.
 class UpscaleOptions {
-	# The upscale model to use on textures unless otherwise specified.
-	[string] $DefaultModel
+	# The upscale workflow to use on textures unless otherwise specified.
+	[string] $DefaultWorkflow
 
-	# Maps texture names to their respective upscale models.
+	# Maps texture names to their respective upscale workflow names.
 	# Special values:
 	#	'none' - Texture will not be copied and upscaled.
 	#	'manual' - Texture will be copied, but will be upscaled by hand.
-	[Dictionary[string, string]] $TextureModels
+	[Dictionary[string, string]] $TextureWorkflowMap
 
 	UpscaleOptions([string] $Json) {
 		$raw_options = $Json | ConvertFrom-Json
 
-		$this.DefaultModel = $raw_options.DefaultModel
-		if (-not (IsValidFilename $this.DefaultModel)) {
-			throw 'DefaultModel must not be empty or contain invalid filename characters.'
+		$this.DefaultWorkflow = $raw_options.DefaultWorkflow
+		if (-not (IsValidFilename $this.DefaultWorkflow)) {
+			throw 'DefaultWorkflow must not be empty or contain invalid filename characters.'
 		}
 
-		$this.TextureModels = [Dictionary[string, string]]::new()
+		$this.TextureWorkflowMap = [Dictionary[string, string]]::new()
 
 		foreach ($group in $raw_options.TextureGroups) {
-			if (-not (IsValidFilename $group.Model)) {
-				throw "Texture group '$($group.Name)': 'Model' must not be empty or contain invalid filename characters."
+			if (-not (IsValidFilename $group.Workflow)) {
+				throw "Texture group '$($group.Name)': 'Workflow' must not be empty or contain invalid filename characters."
 			}
 
 			foreach ($texture_name in $group.TextureNames) {
-				$this.TextureModels[$texture_name] = $group.Model
+				$this.TextureWorkflowMap[$texture_name] = $group.Workflow
 			}
 		}
 	}
@@ -37,7 +37,7 @@ class UpscaleOptions {
 
 <#
 .SYNOPSIS
-Reads the options configuring what textures get upscaled and which models to use.
+Reads the options configuring what textures get upscaled and which workflows to use.
 #>
 function Read-UpscaleOptions {
 	[CmdletBinding()]
