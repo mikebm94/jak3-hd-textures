@@ -24,6 +24,8 @@ $model_mirrors =
 	Get-Content -LiteralPath $model_mirrors_path -Raw -ErrorAction Stop |
 	ConvertFrom-Json -ErrorAction Stop
 
+$ProgressPreference = 'SilentlyContinue'
+
 foreach ($model in $model_mirrors) {
 	$out_file = Join-Path $models_dir $model.ModelName
 
