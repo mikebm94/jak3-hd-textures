@@ -44,7 +44,7 @@ foreach ($model in $model_mirrors) {
 
 			$out_file_hash = (Get-FileHash -LiteralPath $out_file -Algorithm SHA1).Hash
 			if ($out_file_hash -ne $model.HashSHA1) {
-				Write-Warning "${mirror}: Invalid SHA1 file hash."
+				Write-Warning "${mirror}: Invalid SHA1 file hash '${out_file_hash}'."
 				$null = Remove-Item -LiteralPath $out_file -ErrorAction Stop
 				continue
 			}
