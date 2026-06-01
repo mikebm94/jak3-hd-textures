@@ -37,7 +37,7 @@ foreach ($model in $model_mirrors) {
 	foreach ($mirror in $model.Mirrors) {
 		try {
 			if ($PSCmdlet.ShouldProcess("(From: ${mirror}, To: ${out_file})", 'Download File')) {
-				$null = Invoke-RestMethod -Uri $mirror -OutFile $out_file -UseBasicParsing -ErrorAction Stop
+				$null = Invoke-RestMethod -Uri $mirror -OutFile $out_file -Method Get -UseBasicParsing -ErrorAction Stop
 			}
 
 			Write-Host "${mirror}: Success."
