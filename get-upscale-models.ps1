@@ -45,7 +45,7 @@ foreach ($model in $model_mirrors) {
 			break
 		}
 		catch {
-			Write-Host "${mirror}: $($_.Exception.Message)"
+			Write-Warning "${mirror}: $($_.Exception.Message)"
 		}
 	}
 
