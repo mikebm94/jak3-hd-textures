@@ -30,7 +30,20 @@ foreach ($model in $model_mirrors) {
 	$out_file = Join-Path $models_dir $model.ModelName
 
 	if (Test-Path -LiteralPath $out_file -PathType Leaf) {
-		continue
+		$out_file_hash = (Get-FileHash -LiteralPath $out_file -Algorithm SHA1).Hash
+
+		if ($out_file_hash -eq $model.HashSHA1) {
+			continue
+		}
+		
+		Write-Warning "Upscale model '$($model.ModelName)' has incorrect SHA1 file hash (${out_file_hash}). Re-downloading ..."
+
+		try {
+			$null = Remove-Item -LiteralPath $out_file -ErrorAction Stop
+		}
+		catch {
+			throw "Could not delete bad model file: $($_.Exception.Message)"
+		}
 	}
 
 	Write-Host "Downloading upscale model '$($model.ModelName)' ..."
@@ -45,7 +58,7 @@ foreach ($model in $model_mirrors) {
 			$out_file_hash = (Get-FileHash -LiteralPath $out_file -Algorithm SHA1).Hash
 			if ($out_file_hash -ne $model.HashSHA1) {
 				Write-Warning "${mirror}: Invalid SHA1 file hash '${out_file_hash}'."
-				$null = Remove-Item -LiteralPath $out_file -ErrorAction Stop
+				$null = Remove-Item -LiteralPath $out_file -ErrorAction SilentlyContinue
 				continue
 			}
 
