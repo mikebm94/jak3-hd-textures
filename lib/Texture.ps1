@@ -14,39 +14,39 @@ class Texture {
     [HashSet[string]] $Hashes
 
 
-    Texture([FileInfo] $File, [string] $UpscaleWorkflow) {
+    Texture([FileInfo] $file, [string] $upscale_workflow) {
 		$this.Files = [List[FileInfo]]::new()
         $this.Hashes = [HashSet[string]]::new()
-		$this.AddFile($File)
-		$this.UpscaleWorkflow = $UpscaleWorkflow
+		$this.AddFile($file)
+		$this.UpscaleWorkflow = $upscale_workflow
     }
 
 	# Adds a file that was found under this textures name, computes its hash and stores it.
-	[void] AddFile([FileInfo] $File) {
-		$this.Files.Add($File)
-		$this.Hashes.Add((Get-FileHash -LiteralPath $File.FullName -Algorithm SHA1).Hash)
+	[void] AddFile([FileInfo] $file) {
+		$this.Files.Add($file)
+		$this.Hashes.Add((Get-FileHash -LiteralPath $file.FullName -Algorithm SHA1).Hash)
 	}
 
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) to the destination directory.
 	# Returns the resulting texture filepaths relative to the destination directory.
 	# If the texture is a search result, only the files actually copied are returned.
-	[string[]] CopyTo([string] $DestinationDir, [bool] $WhatIfPreference) {
+	[string[]] CopyTo([string] $dest_dir, [bool] $what_if_preference) {
 		if (-not [string]::IsNullOrEmpty($this.UpscaleWorkflow)) {
-			$DestinationDir = Join-Path $DestinationDir $this.UpscaleWorkflow
+			$dest_dir = Join-Path $dest_dir $this.UpscaleWorkflow
 		}
 
-		Initialize-Directory $DestinationDir -WhatIf:$WhatIfPreference
+		Initialize-Directory $dest_dir -WhatIf:$what_if_preference
 
 		$should_deduplicate = ($this.Hashes.Count -le 1) -and ($this.Files.Count -gt 1)
 
 		$filepaths = foreach ($file in $this.Files) {
 			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
 			$new_filename = "${subdir_name}__$($file.Name)"
-			$dest_path = Join-Path $DestinationDir $new_filename
+			$dest_path = Join-Path $dest_dir $new_filename
 			$was_copied = $false
 
 			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
-				if ($WhatIfPreference) {
+				if ($what_if_preference) {
 					Write-Host (
 						'What If: Performing the operation "Copy File" on target "Item: {0} Destination: {1}".' `
 						-f $file.FullName, $dest_path

@@ -12,8 +12,8 @@ class UpscaleOptions {
 	#	'manual' - Texture will be copied, but will be upscaled by hand.
 	[Dictionary[string, string]] $TextureWorkflowMap
 
-	UpscaleOptions([string] $Json) {
-		$raw_options = $Json | ConvertFrom-Json
+	UpscaleOptions([string] $json) {
+		$raw_options = $json | ConvertFrom-Json
 
 		$this.DefaultWorkflow = $raw_options.DefaultWorkflow
 		if (-not (IsValidFilename $this.DefaultWorkflow)) {
