@@ -27,13 +27,15 @@
 
 	"TextureGroups": [
 		{
-			"Name": "Manually Upscaled",
+			"Name": "ManualUpscale",
+			"Description": "Textures that will be upscaled by hand.",
 			"Workflow": "manual",
 			"TextureNames": []
 		},
 
 		{
-			"Name": "Not Upscaled (Misc Textures)",
+			"Name": "Misc",
+			"Description": "Miscellaneous textures that don't make sense to upscale.",
 			"Workflow": "none",
 			"TextureNames": [
 				"artifact-blue-glow-01",
@@ -163,7 +165,8 @@
 		},
 
 		{
-			"Name": "Not Upscaled (HUD Textures)",
+			"Name": "HUD",
+			"Description": "HUD/UI textures that will not be upscaled.",
 			"Workflow": "none",
 			"TextureNames": [
 				"arena-01",
@@ -534,7 +537,8 @@
 		},
 
 		{
-			"Name": "Not Upscaled (Eye Textures)",
+			"Name": "Eye",
+			"Description": "Eye textures that should not be upscaled per OpenGOAL documentation.",
 			"Workflow": "none",
 			"TextureNames": [
 				"ashelin-eye",
@@ -638,7 +642,8 @@
 		},
 
 		{
-			"Name": "Not Upscaled (Sky Textures)",
+			"Name": "Sky",
+			"Description": "Sky textures that should not be upscaled per OpenGOAL documentation.",
 			"Workflow": "none",
 			"TextureNames": [
 				"big-cloud",
@@ -651,7 +656,8 @@
 		},
 
 		{
-			"Name": "Not Upscaled (Animated Textures)",
+			"Name": "Animated",
+			"Description": "Animated textures that should not be upscaled per OpenGOAL documentation.",
 			"Workflow": "none",
 			"TextureNames": [
 				"jakc-arm",
