@@ -1,4 +1,4 @@
-Upscale models needed by the project are defined in `mirrors.json`. `ModelName` is used as the models filename, and `Mirrors` contains the url(s) where the model can be downloaded when running `get-upscale-models.ps1`. `HashSHA1` is the SHA1 hash of the model file, used to verify it's contents after downloading (obtain using `Get-FileHash <model-file> -Algorithm SHA1`)
+Upscale models needed by the project are defined in `upscale-models.json`. `ModelName` is used as the models filename, and `Mirrors` contains the url(s) where the model can be downloaded when running `get-upscale-models.ps1`. `HashSHA1` is the SHA1 hash of the model file, used to verify it's contents after downloading (obtain using `Get-FileHash <model-file> -Algorithm SHA1`)
 
 More upscale models can be found at https://openmodeldb.info/
 

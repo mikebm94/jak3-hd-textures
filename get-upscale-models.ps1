@@ -3,7 +3,7 @@
 <#
 .SYNOPSIS
 Downloads the models needed for upscaling textures.
-Mirrors for the models are defined in `models/mirrors.json`.
+Mirrors for the models are defined in `upscale-models.json`.
 #>
 
 
@@ -14,19 +14,19 @@ param()
 
 
 $models_dir = Get-ModelsDir
-$model_mirrors_path = Join-Path $models_dir 'mirrors.json'
+$model_list_path = Join-Path $ProjectDir 'upscale-models.json'
 
-if (-not (Test-Path -LiteralPath $model_mirrors_path -PathType Leaf)) {
-	throw "Could not find upscale model download mirrors: File '${model_mirrors_path}' does not exist."
+if (-not (Test-Path -LiteralPath $model_list_path -PathType Leaf)) {
+	throw "Could not find upscale model download mirrors: File '${model_list_path}' does not exist."
 }
 
-$model_mirrors =
-	Get-Content -LiteralPath $model_mirrors_path -Raw -ErrorAction Stop |
+$model_list =
+	Get-Content -LiteralPath $model_list_path -Raw -ErrorAction Stop |
 	ConvertFrom-Json -ErrorAction Stop
 
 $ProgressPreference = 'SilentlyContinue'
 
-foreach ($model in $model_mirrors) {
+foreach ($model in $model_list) {
 	$out_file = Join-Path $models_dir $model.ModelName
 
 	if (Test-Path -LiteralPath $out_file -PathType Leaf) {

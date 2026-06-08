@@ -6,7 +6,6 @@ $ProjectDir = Split-Path $PSScriptRoot -Parent
 <#
 .SYNOPSIS
 Gets the directory where upscale models are downloaded to for usage.
-Also contains `mirrors.json` which defines the models and their mirrors.
 #>
 function Get-ModelsDir {
 	[CmdletBinding(SupportsShouldProcess)]

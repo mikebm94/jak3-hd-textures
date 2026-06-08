@@ -1,7 +1,6 @@
 TODO.txt
 log.txt
 models/*
-!models/mirrors.json
 !models/README.md
 package/custom_assets/
 textures/original/
