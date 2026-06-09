@@ -7,24 +7,22 @@ class UpscaleOptions {
 	[string] $DefaultWorkflow
 
 	# Maps texture names to their respective upscale workflow names.
-	# Special values:
-	#	'none' - Texture will not be copied and upscaled.
-	#	'manual' - Texture will be copied, but will be upscaled by hand.
+	# Value is null/empty if the texture is excluded from upscaling.
 	[Dictionary[string, string]] $TextureWorkflowMap
 
 	UpscaleOptions([string] $json) {
 		$raw_options = $json | ConvertFrom-Json
 
 		$this.DefaultWorkflow = $raw_options.DefaultWorkflow
-		if (-not (IsValidFilename $this.DefaultWorkflow)) {
-			throw 'DefaultWorkflow must not be empty or contain invalid filename characters.'
+		if (-not [string]::IsNullOrEmpty($this.DefaultWorkflow) -and -not (IsValidFilename $this.DefaultWorkflow)) {
+			throw 'DefaultWorkflow must not be whitespace or contain invalid filename characters.'
 		}
 
 		$this.TextureWorkflowMap = [Dictionary[string, string]]::new()
 
 		foreach ($group in $raw_options.TextureGroups) {
-			if (-not (IsValidFilename $group.Workflow)) {
-				throw "Texture group '$($group.Name)': 'Workflow' must not be empty or contain invalid filename characters."
+			if (-not [string]::IsNullOrEmpty($group.Workflow) -and -not (IsValidFilename $group.Workflow)) {
+				throw "Texture group '$($group.Name)': 'Workflow' must not be whitespace or contain invalid filename characters."
 			}
 
 			foreach ($texture_name in $group.TextureNames) {

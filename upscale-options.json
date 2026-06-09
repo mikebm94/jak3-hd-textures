@@ -3,6 +3,13 @@
 
 	"Workflows": [
 		{
+			"Name": "Manual",
+			"Description": "Textures upscaled by hand (dummy workflow, no chains are run.)",
+			"Chain": null,
+			"InputOverrides": null
+		},
+
+		{
 			"Name": "Main",
 			"Description": "Basic upcale (DAT2 model). No padding. Suitable for most textures.",
 			"Chain": "Basic-PyTorch",
@@ -29,14 +36,14 @@
 		{
 			"Name": "ManualUpscale",
 			"Description": "Textures that will be upscaled by hand.",
-			"Workflow": "manual",
+			"Workflow": "Manual",
 			"TextureNames": []
 		},
 
 		{
 			"Name": "Misc",
 			"Description": "Miscellaneous textures that don't make sense to upscale.",
-			"Workflow": "none",
+			"Workflow": null,
 			"TextureNames": [
 				"artifact-blue-glow-01",
 				"billy-flesh",
@@ -167,7 +174,7 @@
 		{
 			"Name": "HUD",
 			"Description": "HUD/UI textures that will not be upscaled.",
-			"Workflow": "none",
+			"Workflow": null,
 			"TextureNames": [
 				"arena-01",
 				"arena-02",
@@ -539,7 +546,7 @@
 		{
 			"Name": "Eye",
 			"Description": "Eye textures that should not be upscaled per OpenGOAL documentation.",
-			"Workflow": "none",
+			"Workflow": null,
 			"TextureNames": [
 				"ashelin-eye",
 				"ashelin-lo-eye",
@@ -644,7 +651,7 @@
 		{
 			"Name": "Sky",
 			"Description": "Sky textures that should not be upscaled per OpenGOAL documentation.",
-			"Workflow": "none",
+			"Workflow": null,
 			"TextureNames": [
 				"big-cloud",
 				"dust-cloud",
@@ -658,7 +665,7 @@
 		{
 			"Name": "Animated",
 			"Description": "Animated textures that should not be upscaled per OpenGOAL documentation.",
-			"Workflow": "none",
+			"Workflow": null,
 			"TextureNames": [
 				"jakc-arm",
 				"jakc-eyebrow",

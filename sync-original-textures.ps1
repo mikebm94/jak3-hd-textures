@@ -138,11 +138,11 @@ function Sync-ExistingTexturesWithOptions {
 
 			$new_workflow = $Options.TextureWorkflowMap[$texture_name]
 
-			if ($null -eq $new_workflow) {
+			if (-not $Options.TextureWorkflowMap.ContainsKey($texture_name)) {
 				$new_workflow = $Options.DefaultWorkflow
 			}
 
-			if ($new_workflow -eq 'none') {
+			if ([string]::IsNullOrEmpty($new_workflow)) {
 				$null = $files_to_delete.Add($texture_file)
 			}
 			elseif ($new_workflow -ne $current_workflow) {
@@ -226,11 +226,11 @@ function Copy-OriginalTextures {
 
 		$workflow = $Options.TextureWorkflowMap[$name]
 
-		if ($null -eq $workflow) {
+		if (-not $Options.TextureWorkflowMap.ContainsKey($name)) {
 			$workflow = $Options.DefaultWorkflow
 		}
 		
-		if ($workflow -ne 'none') {
+		if (-not [string]::IsNullOrEmpty($workflow)) {
 			$textures_by_name[$name] = [Texture]::new($file, $workflow)
 		}
 	}
