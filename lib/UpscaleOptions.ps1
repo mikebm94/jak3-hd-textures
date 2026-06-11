@@ -148,6 +148,10 @@ class UpscaleOptions {
 			throw "In 'Workflows': 'Name' must not be empty."
 		}
 
+		if (-not (IsValidFilename $name)) {
+			throw "In Workflow '${name}': Workflow name must contain only characters safe for filenames."
+		}
+
 		if ($this.Workflows.ContainsKey($name)) {
 			throw "In Workflow '${name}': A Workflow named '${name}' already exists."
 		}
