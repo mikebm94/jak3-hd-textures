@@ -41,7 +41,7 @@ class Texture {
 
 		$filepaths = foreach ($file in $this.Files) {
 			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
-			$new_filename = "${subdir_name}__$($file.Name)"
+			$new_filename = "${subdir_name}__$( $file.Name )"
 			$dest_path = Join-Path $dest_dir $new_filename
 			$was_copied = $false
 
@@ -59,7 +59,7 @@ class Texture {
 			}
 
 			if (-not [string]::IsNullOrEmpty($this.WorkflowName)) {
-				"$($this.WorkflowName)/${new_filename}"
+				"$( $this.WorkflowName )/${new_filename}"
 			}
 			elseif ($was_copied) {
 				$new_filename

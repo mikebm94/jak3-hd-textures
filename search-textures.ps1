@@ -199,7 +199,7 @@ function Write-TextureList {
 		$texture_name = ($file.BaseName -split '__')[1]
 
 		if ([string]::IsNullOrWhiteSpace($texture_name)) {
-			Write-Warning "Texture file has invalid filename: '$($file.FullName)'"
+			Write-Warning "Texture file has invalid filename: '$( $file.FullName )'"
 			continue
 		}
 

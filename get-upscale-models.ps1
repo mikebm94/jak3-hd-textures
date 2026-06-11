@@ -36,17 +36,17 @@ foreach ($model in $model_list) {
 			continue
 		}
 		
-		Write-Warning "Upscale model '$($model.ModelName)' has incorrect SHA1 file hash (${out_file_hash}). Re-downloading ..."
+		Write-Warning "Upscale model '$( $model.ModelName )' has incorrect SHA1 file hash (${out_file_hash}). Re-downloading ..."
 
 		try {
 			$null = Remove-Item -LiteralPath $out_file -ErrorAction Stop
 		}
 		catch {
-			throw "Could not delete bad model file: $($_.Exception.Message)"
+			throw "Could not delete bad model file: $( $_.Exception.Message )"
 		}
 	}
 
-	Write-Host "Downloading upscale model '$($model.ModelName)' ..."
+	Write-Host "Downloading upscale model '$( $model.ModelName )' ..."
 	$download_success = $false
 
 	foreach ($mirror in $model.Mirrors) {
@@ -67,7 +67,7 @@ foreach ($model in $model_list) {
 			break
 		}
 		catch {
-			Write-Warning "${mirror}: $($_.Exception.Message)"
+			Write-Warning "${mirror}: $( $_.Exception.Message )"
 		}
 	}
 

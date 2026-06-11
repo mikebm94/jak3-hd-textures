@@ -92,7 +92,7 @@ function Main {
 	$texture_paths = @( Copy-OriginalTextures $src_dir $dest_dir $upscale_options )
 	
 	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
-	Write-Host "Writing texture manifest (total textures: $($texture_paths.Count)) ..."
+	Write-Host "Writing texture manifest (total textures: $( $texture_paths.Count )) ..."
 
 	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
 	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
@@ -132,7 +132,7 @@ function Sync-ExistingTexturesWithOptions {
 			$texture_name = ($texture_file.BaseName -split '__')[1]
 
 			if ([string]::IsNullOrWhiteSpace($texture_name)) {
-				Write-Warning "Encountered unknown texture file: $($texture_file.FullName)"
+				Write-Warning "Encountered unknown texture file: $( $texture_file.FullName )"
 				continue
 			}
 
@@ -154,7 +154,7 @@ function Sync-ExistingTexturesWithOptions {
 	}
 
 	if ($files_to_delete.Count -gt 0) {
-		Write-Host "Removing $($files_to_delete.Count) texture(s) excluded from upscaling ..."
+		Write-Host "Removing $( $files_to_delete.Count ) texture(s) excluded from upscaling ..."
 
 		foreach ($file in $files_to_delete) {
 			if ($PSCmdlet.ShouldProcess($file, 'Remove File')) {
@@ -164,10 +164,10 @@ function Sync-ExistingTexturesWithOptions {
 	}
 
 	if ($files_to_move.Count -gt 0) {
-		Write-Host "Moving $($files_to_move.Count) texture(s) with changed upscale workflows ..."
+		Write-Host "Moving $( $files_to_move.Count ) texture(s) with changed upscale workflows ..."
 
 		foreach ($src_dest in $files_to_move) {
-			if ($PSCmdlet.ShouldProcess("Item: $($src_dest.Item1) Destination: $($src_dest.Item2)", 'Move File')) {
+			if ($PSCmdlet.ShouldProcess("Item: $( $src_dest.Item1 ) Destination: $( $src_dest.Item2 )", 'Move File')) {
 				$src_dest.Item1.MoveTo($src_dest.Item2)
 			}
 		}
