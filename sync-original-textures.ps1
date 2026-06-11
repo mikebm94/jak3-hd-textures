@@ -125,7 +125,7 @@ function Sync-ExistingTexturesWithOptions {
 	$workflow_dirs = Get-ChildItem -LiteralPath $Path -Directory -ErrorAction Stop
 
 	foreach ($workflow_dir in $workflow_dirs) {
-		$current_workflow = $workflow_dir.Name
+		$current_workflow = $Options.Workflows[$workflow_dir.Name]
 		$texture_files = Get-ChildItem -LiteralPath $workflow_dir.FullName -Filter '*__*.png' -File -ErrorAction Stop
 
 		foreach ($texture_file in $texture_files) {
@@ -136,17 +136,17 @@ function Sync-ExistingTexturesWithOptions {
 				continue
 			}
 
-			$new_workflow = $Options.TextureWorkflowMap[$texture_name]
+			$new_workflow = $Options.TextureGroupMap[$texture_name].Workflow
 
-			if (-not $Options.TextureWorkflowMap.ContainsKey($texture_name)) {
+			if (-not $Options.TextureGroupMap.ContainsKey($texture_name)) {
 				$new_workflow = $Options.DefaultWorkflow
 			}
 
-			if ([string]::IsNullOrEmpty($new_workflow)) {
+			if ($null -eq $new_workflow) {
 				$null = $files_to_delete.Add($texture_file)
 			}
 			elseif ($new_workflow -ne $current_workflow) {
-				$dest_dir = Join-Path $Path $new_workflow
+				$dest_dir = Join-Path $Path $new_workflow.Name
 				Initialize-Directory $dest_dir
 				$null = $files_to_move.Add([Tuple]::Create($texture_file, (Join-Path $dest_dir $texture_file.Name)))
 			}
@@ -224,14 +224,14 @@ function Copy-OriginalTextures {
 			continue
 		}
 
-		$workflow = $Options.TextureWorkflowMap[$name]
+		$workflow = $Options.TextureGroupMap[$name].Workflow
 
-		if (-not $Options.TextureWorkflowMap.ContainsKey($name)) {
+		if (-not $Options.TextureGroupMap.ContainsKey($name)) {
 			$workflow = $Options.DefaultWorkflow
 		}
 		
-		if (-not [string]::IsNullOrEmpty($workflow)) {
-			$textures_by_name[$name] = [Texture]::new($file, $workflow)
+		if ($null -ne $workflow) {
+			$textures_by_name[$name] = [Texture]::new($file, $workflow.Name)
 		}
 	}
 

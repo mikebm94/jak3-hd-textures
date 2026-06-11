@@ -5,7 +5,7 @@ using namespace System.IO
 class Texture {
 	# The name of the workflow used to upscale this texture.
 	# Leave empty if the texture is a search result.
-	[string] $UpscaleWorkflow
+	[string] $WorkflowName
 
 	# All files found under this textures name.
 	[List[FileInfo]] $Files
@@ -14,11 +14,11 @@ class Texture {
     [HashSet[string]] $Hashes
 
 
-    Texture([FileInfo] $file, [string] $upscale_workflow) {
+    Texture([FileInfo] $file, [string] $workflow_name) {
 		$this.Files = [List[FileInfo]]::new()
         $this.Hashes = [HashSet[string]]::new()
 		$this.AddFile($file)
-		$this.UpscaleWorkflow = $upscale_workflow
+		$this.WorkflowName = $workflow_name
     }
 
 	# Adds a file that was found under this textures name, computes its hash and stores it.
@@ -31,8 +31,8 @@ class Texture {
 	# Returns the resulting texture filepaths relative to the destination directory.
 	# If the texture is a search result, only the files actually copied are returned.
 	[string[]] CopyTo([string] $dest_dir, [bool] $what_if_preference) {
-		if (-not [string]::IsNullOrEmpty($this.UpscaleWorkflow)) {
-			$dest_dir = Join-Path $dest_dir $this.UpscaleWorkflow
+		if (-not [string]::IsNullOrEmpty($this.WorkflowName)) {
+			$dest_dir = Join-Path $dest_dir $this.WorkflowName
 		}
 
 		Initialize-Directory $dest_dir -WhatIf:$what_if_preference
@@ -58,8 +58,8 @@ class Texture {
 				}
 			}
 
-			if (-not [string]::IsNullOrEmpty($this.UpscaleWorkflow)) {
-				"$($this.UpscaleWorkflow)/${new_filename}"
+			if (-not [string]::IsNullOrEmpty($this.WorkflowName)) {
+				"$($this.WorkflowName)/${new_filename}"
 			}
 			elseif ($was_copied) {
 				$new_filename
