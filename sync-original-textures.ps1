@@ -126,13 +126,13 @@ function Sync-ExistingTexturesWithOptions {
 
 	foreach ($workflow_dir in $workflow_dirs) {
 		$current_workflow = $Options.Workflows[$workflow_dir.Name]
-		$texture_files = Get-ChildItem -LiteralPath $workflow_dir.FullName -Filter '*__*.png' -File -ErrorAction Stop
+		$texture_files = Get-ChildItem -LiteralPath $workflow_dir.FullName -Filter '*.png' -File -ErrorAction Stop
 
 		foreach ($texture_file in $texture_files) {
-			$texture_name = ($texture_file.BaseName -split '__')[1]
+			$texture_name = (Split-TextureFileName $texture_file).Name
 
-			if ([string]::IsNullOrWhiteSpace($texture_name)) {
-				Write-Warning "Encountered unknown texture file: $( $texture_file.FullName )"
+			# Unknown texture
+			if ($null -eq $texture_name) {
 				continue
 			}
 
