@@ -211,30 +211,9 @@ function Search-Textures {
 			# It's not in the right group.
 			continue
 		}
-		
-		$is_match = ($Filters.Count -eq 0) -and ($Patterns.Count -eq 0)
 
-		# Then match against wildcard patterns because it's faster than regex.
-		if (-not $is_match) {
-			foreach ($filter in $Filters) {
-				if ($texture_name -like $filter) {
-					$is_match = $true
-					break
-				}
-			}
-		}
-
-		# Finally do regex pattern matching.
-		if (-not $is_match) {
-			foreach ($pattern in $Patterns) {
-				if ($texture_name -match $pattern) {
-					$is_match = $true
-					break
-				}
-			}
-		}
-
-		if (-not $is_match) {
+		if (-not (Test-TextureName $texture_name)) {
+			# It's name doesn't match any of the wildcard/regex patterns.
 			continue
 		}
 
@@ -261,6 +240,33 @@ function Search-Textures {
 	Write-Host "Textures matched     : ${files_matched}"
 	Write-Host "Textures copied      : ${files_copied}"
 	Write-Host "Results copied to    : ${ResultsDir}"
+}
+
+
+<#
+.SYNOPSIS
+Checks if a texture's name matches any of the patterns in the `Filters` and `Patterns` parameters.
+#>
+function Test-TextureName([string] $TextureName) {
+	if (($Filters.Count -eq 0) -and ($Patterns.Count -eq 0)) {
+		return $true
+	}
+
+	# Match against wildcard patterns first because it's faster than regex.
+	foreach ($filter in $Filters) {
+		if ($TextureName -like $filter) {
+			return $true
+		}
+	}
+
+	# Match against regex patterns.
+	foreach ($pattern in $Patterns) {
+		if ($TextureName -match $pattern) {
+			return $true
+		}
+	}
+
+	$false
 }
 
 
