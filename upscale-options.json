@@ -56,15 +56,20 @@
 				"citichic-flesh",
 				"citn-allbuckel",
 				"citwide-crimson-light",
+				"city-bluelight",
 				"city-farm-lamp",
+				"city-greenlight",
 				"city-ind-buldge-light-self-illuminated-01",
 				"city-ind-buldge-light-self-illuminated-02",
 				"city-ind-buldge-light-self-illuminated-03",
 				"city-ind-redlight",
+				"city-lamp-bluelight",
 				"city-light-yellow",
 				"city-red-light-monster",
+				"city-redlight",
 				"city-slum-litwindow",
 				"city-yellow-light-monster",
+				"city-yellowlight",
 				"citywide-stadium-lightbank",
 				"cmn-precursor-blue-glow",
 				"comb-redmarker",
@@ -143,6 +148,7 @@
 				"rub-lamp-light-01",
 				"sculptor-teeth",
 				"sculptor-teeth-02",
+				"searchlight-envmap",
 				"seem-teeth",
 				"sewer-hall-light-01",
 				"sewer-light-flourescent-01",
@@ -156,6 +162,7 @@
 				"spydroid-light-small-red",
 				"stdm-light-fix-a",
 				"talkbox-light-02",
+				"terraformer-bluelight",
 				"tess-teeth",
 				"torn-footleather",
 				"torn-teeth-01",
@@ -169,7 +176,7 @@
 				"wstlanderchic-flesh",
 				"yelsage-flesh",
 				"yelsage-teeth"
-			]
+				]
 		},
 
 		{
