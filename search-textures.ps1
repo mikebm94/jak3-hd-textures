@@ -10,10 +10,13 @@ Searches for matching files in the Jak 3 textures, or creates a list of texture 
 The script is meant to aid in creating texture groups in `upscale-options.json`, or to help visually inspect
 the textures already in a group. The matching textures are copied to `textures/search-results/`.
 
-There are three ways to search for textures, which can be combined with eachother:
-	Matching texture names against wildcard patterns passed to the `-Filters` parameter.
-	Matching texture names against regular expression patterns passed to the `-Patterns` parameter.
-	Using one of the (mutually-exclusive) texture group related parameters: `-InGroups`, `-IsGrouped`, `-NotGrouped`
+The primary (but optional) method of searching is by texture name using:
+	Wildcard patterns using `-Filters`.
+	Regular expression patterns using `-Patterns`.
+
+Only one of the patterns in either of those parameters needs to match to return the result.
+Results can be further refined by:
+	Filtering by texture group using `-InGroups`, `-IsGrouped` or `-NotGrouped` (mutually exclusive).
 
 You can delete any files you don't want to include in the final texture list from `textures/search-results/`.
 Passing the `-WriteTextureList` parameter writes a sorted list of the unique texture names
