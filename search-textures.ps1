@@ -217,26 +217,25 @@ function Main {
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
 
-	# Check if any search criteria was provided.
-	if (-not $WriteTextureList) {
-		$any_criteria =
-			($Filters.Count -gt 0) -or ($Patterns.Count -gt 0) -or
-			($InGroups.Count -gt 0) -or $IsGrouped -or $NotGrouped -or
-			$Width -or $Height
-
-		if (-not $any_criteria) {
-			throw (
-				"No search criteria provided. Please pass at least one of the following parameters: " +
-			    "-Filters, -Patterns, -InGroups, -IsGrouped, -NotGrouped, -Width, -Height"
-			)
-		}
-	}
-
 	$upscale_options = Read-UpscaleOptions
 	$results_dir = Get-SearchResultsDir
 
 	if ($WriteTextureList) {
 		Write-TextureList -ResultsDir $results_dir -UpscaleOptions $upscale_options
+		return
+	}
+
+	if ($Clean) {
+		Clear-Directory $results_dir
+	}
+
+	$any_criteria =
+		($Filters.Count -gt 0) -or ($Patterns.Count -gt 0) -or
+		($InGroups.Count -gt 0) -or $IsGrouped -or $NotGrouped -or
+		$Width -or $Height
+
+	if (-not $any_criteria) {
+		Write-Host "No search criteria provided."
 		return
 	}
 
@@ -260,10 +259,6 @@ function Main {
 	Write-Host "OpenGOAL installation directory: ${OpenGoalDir}"
 
 	$search_dir = Find-GameTexturesDir -OpenGoalDir $OpenGoalDir
-
-	if ($Clean) {
-		Clear-Directory $results_dir
-	}
 
 	$search_params = @{
 		SearchDir = $search_dir
