@@ -17,6 +17,7 @@ The primary (but optional) method of searching is by texture name using:
 Only one of the patterns in either of those parameters needs to match to return the result.
 Results can be further refined by:
 	Filtering by texture group using `-InGroups`, `-IsGrouped` or `-NotGrouped` (mutually exclusive).
+	Filtering by texture dimensions using `-Width` and/or `-Height`.
 
 You can delete any files you don't want to include in the final texture list from `textures/search-results/`.
 Passing the `-WriteTextureList` parameter writes a sorted list of the unique texture names
@@ -36,7 +37,7 @@ https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions
 PS> ./search-textures.ps1 -Filters '*iris*', '*pupil*' -Patterns '\beye(?!brow)(?!lid)' -NotGrouped
 
 .EXAMPLE
-PS> ./search-textures.ps1 -InGroups 'Eye' -Clean
+PS> ./search-textures.ps1 -InGroups 'Eye' -Width '>64' -Clean
 
 .EXAMPLE
 PS> ./search-textures.ps1 -WriteTextureList -MergeWithGroup 'Eye'
@@ -45,6 +46,7 @@ PS> ./search-textures.ps1 -WriteTextureList -MergeWithGroup 'Eye'
 
 using namespace System.Diagnostics.CodeAnalysis
 using namespace System.Collections.Generic
+using namespace System.IO
 
 [CmdletBinding(SupportsShouldProcess, DefaultParameterSetName = 'Search')]
 param(
@@ -91,6 +93,38 @@ param(
 	[switch]
 	$NotGrouped,
 
+	# Filters results by texture width in pixels, either by exact width or by comparison.
+	# To filter by comparison, use one of these operators before the width:
+	#     '<'  (less than)
+	#     '<=' (less than or equal)
+	#     '>'  (greater than)
+	#     '>=' (greater than or equal)
+	#
+	# Example: '<=128'
+	[Parameter(ParameterSetName = 'Search')]
+	[Parameter(ParameterSetName = 'SearchInGroups')]
+	[Parameter(ParameterSetName = 'SearchIsGrouped')]
+	[Parameter(ParameterSetName = 'SearchNotGrouped')]
+	[ValidatePattern('^(<|<=|>=|>)?\d+$')]
+	[string]
+	$Width,
+
+	# Filters results by texture height in pixels, either by exact height or by comparison.
+	# To filter by comparison, use one of these operators before the height:
+	#     '<'  (less than)
+	#     '<=' (less than or equal)
+	#     '>'  (greater than)
+	#     '>=' (greater than or equal)
+	#
+	# Example: '<=128'
+	[Parameter(ParameterSetName = 'Search')]
+	[Parameter(ParameterSetName = 'SearchInGroups')]
+	[Parameter(ParameterSetName = 'SearchIsGrouped')]
+	[Parameter(ParameterSetName = 'SearchNotGrouped')]
+	[ValidatePattern('^(<|<=|>=|>)?\d+$')]
+	[string]
+	$Height,
+
 	# Deletes all files in `textures/search-results/` before performing the search.
 	[Parameter(ParameterSetName = 'Search')]
 	[Parameter(ParameterSetName = 'SearchInGroups')]
@@ -114,6 +148,71 @@ param(
 . (Join-Path $PSScriptRoot 'lib/UpscaleOptions.ps1')
 
 
+# Maps to comparison operators in the `Width` and `Height` parameters.
+# Used when comparing texture dimensions.
+enum Comparison {
+	None
+	Equals
+	Less
+	LessOrEqual
+	Greater
+	GreaterOrEqual
+}
+
+
+# Parses the `Width` and `Height` parameters into an object used to filter textures by their dimensions.
+class DimensionFilter {
+	[int] $Width = 0
+	[int] $Height = 0
+	[Comparison] $WidthComparison = [Comparison]::None
+	[Comparison] $HeightComparison = [Comparison]::None
+
+
+	DimensionFilter([string] $width_filter, [string] $height_filter) {
+		$op_map = @{
+			'' = [Comparison]::Equals
+			'<' = [Comparison]::Less
+			'<=' = [Comparison]::LessOrEqual
+			'>' = [Comparison]::Greater
+			'>=' = [Comparison]::GreaterOrEqual
+		}
+
+		$this.Width = [int]($width_filter -replace '^[<>][=]?')
+		$this.Height = [int]($height_filter -replace '^[<>][=]?')
+
+		if ($width_filter) {
+			$this.WidthComparison = $op_map[$width_filter -replace '\d+$']
+		}
+		if ($height_filter) {
+			$this.HeightComparison = $op_map[$height_filter -replace '\d+$']
+		}
+	}
+
+
+	[bool] CheckDimensions([int] $texture_width, [int] $texture_height) {
+		$width_matches = switch ($this.WidthComparison) {
+			([Comparison]::Equals)         { $texture_width -eq $this.Width; break }
+			([Comparison]::Less)           { $texture_width -lt $this.Width; break }
+			([Comparison]::LessOrEqual)    { $texture_width -le $this.Width; break }
+			([Comparison]::Greater)        { $texture_width -gt $this.Width; break }
+			([Comparison]::GreaterOrEqual) { $texture_width -ge $this.Width; break }
+			default { $true }
+		}
+
+		$height_matches = switch ($this.HeightComparison) {
+			([Comparison]::Equals)         { $texture_height -eq $this.Height; break }
+			([Comparison]::Less)           { $texture_height -lt $this.Height; break }
+			([Comparison]::LessOrEqual)    { $texture_height -le $this.Height; break }
+			([Comparison]::Greater)        { $texture_height -gt $this.Height; break }
+			([Comparison]::GreaterOrEqual) { $texture_height -ge $this.Height; break }
+			default { $true }
+		}
+
+		return ($width_matches -and $height_matches)
+	}
+}
+
+
 function Main {
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
@@ -121,16 +220,14 @@ function Main {
 	# Check if any search criteria was provided.
 	if (-not $WriteTextureList) {
 		$any_criteria =
-			($Filters.Count -gt 0) -or
-			($Patterns.Count -gt 0) -or
-			($InGroups.Count -gt 0) -or
-			$IsGrouped -or
-			$NotGrouped
+			($Filters.Count -gt 0) -or ($Patterns.Count -gt 0) -or
+			($InGroups.Count -gt 0) -or $IsGrouped -or $NotGrouped -or
+			$Width -or $Height
 
 		if (-not $any_criteria) {
 			throw (
 				"No search criteria provided. Please pass at least one of the following parameters: " +
-			    "-Filters, -Patterns, -InGroups, -IsGrouped, -NotGrouped"
+			    "-Filters, -Patterns, -InGroups, -IsGrouped, -NotGrouped, -Width, -Height"
 			)
 		}
 	}
@@ -168,7 +265,14 @@ function Main {
 		Clear-Directory $results_dir
 	}
 
-	Search-Textures -SearchDir $search_dir -ResultsDir $results_dir -UpscaleOptions $upscale_options
+	$search_params = @{
+		SearchDir = $search_dir
+		ResultsDir = $results_dir
+		UpscaleOptions = $upscale_options
+		DimensionFilter = if ($Width -or $Height) { [DimensionFilter]::new($Width, $Height) }
+	}
+
+	Search-Textures @search_params
 }
 
 
@@ -186,7 +290,10 @@ function Search-Textures {
 
 		[Parameter(Mandatory)]
 		[UpscaleOptions]
-		$UpscaleOptions
+		$UpscaleOptions,
+
+		[DimensionFilter]
+		$DimensionFilter
 	)
 
 	Write-Host "Searching textures in '${SearchDir}' ..."
@@ -201,7 +308,7 @@ function Search-Textures {
 	foreach ($texture_file in $texture_files) {
 		$texture_name = $texture_file.BaseName
 
-		# First do group-related filtering before checking the various filters and patterns.
+		# First do group-related filtering before checking the various filters, patterns and dimensions.
 		if (($NotGrouped -and $null -ne $UpscaleOptions.TextureGroupMap[$texture_name])) {
 			# It's in a group when it shouldn't be.
 			continue
@@ -215,8 +322,13 @@ function Search-Textures {
 			continue
 		}
 
+		# Then check if the name matches any one of the wildcard/regex patterns.
 		if (-not (Test-TextureName $texture_name)) {
-			# It's name doesn't match any of the wildcard/regex patterns.
+			continue
+		}
+
+		# Finally, the most expensive check, checking if the dimensions match the width and/or height filters.
+		if ($DimensionFilter -and -not (Test-TextureDimensions $texture_file.FullName $DimensionFilter)) {
 			continue
 		}
 
@@ -270,6 +382,68 @@ function Test-TextureName([string] $TextureName) {
 	}
 
 	$false
+}
+
+
+<#
+.SYNOPSIS
+Checks if a texture file matches the dimensions set by the `Width` and/or `Height` parameters.
+
+.NOTES
+.NET has built-in ways to do this in `System.Drawing` but requires loading the entire texture into memory
+and is almost 5x slower on my system.
+
+We only need to read the first 24 bytes to get the width and height:
+	First 8 bytes: Standard PNG file header
+	Next 8 bytes: Length of the image header (always 13) followed by the text 'IHDR'.
+	Next 8 bytes: The width followed by the height.
+#>
+function Test-TextureDimensions([string] $texture_path, [DimensionFilter] $filter) {
+	[FileStream] $fstream = $null
+
+	try {
+		[FileStream] $fstream = [FileStream]::new(
+			$texture_path,
+			[FileMode]::Open,
+			[FileAccess]::Read,
+			[FileShare]::ReadWrite, # Fuck it, other processes can have it open for writing.
+			0,                      # Disable buffering, it's faster when only reading the first few bytes.
+			$false                  # Synchronous I/O.
+		)
+
+		$bytes_to_read = 24
+		$buffer = [byte[]]::new($bytes_to_read)
+		$bytes_read = $fstream.Read($buffer, 0, $bytes_to_read)
+
+		if ($bytes_read -lt $bytes_to_read) {
+			throw "File ended unexpectedly."
+		}
+
+		# Why bother checking the header here, we don't verify textures are valid PNGs anywhere else.
+		# Worse case scenario, we get a crazy width/height and it doesn't match the filter.
+
+		$width_offset = 16
+		$height_offset = 20
+
+		if ([BitConverter]::IsLittleEndian) {
+			# PNGs are in big-endian (network byte order), so reverse the order of the width and height bytes.
+			[Array]::Reverse($buffer, $width_offset, 4)
+			[Array]::Reverse($buffer, $height_offset, 4)
+		}
+
+		$texture_width = [BitConverter]::ToInt32($buffer, $width_offset)
+		$texture_height = [BitConverter]::ToInt32($buffer, $height_offset)
+
+		return $filter.CheckDimensions($texture_width, $texture_height)
+	}
+	catch {
+		Write-Warning "Could not check dimensions of texture: ${texture_path}: $( $_.Exception.Message )"
+	}
+	finally {
+		if ($null -ne $fstream) {
+			$fstream.Dispose()
+		}
+	}
 }
 
 
