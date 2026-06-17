@@ -326,7 +326,7 @@ function Search-Textures {
 
 	foreach ($result in $results.Values) {
 		$files_matched += $result.Files.Count
-		$files_copied += $result.CopyTo($ResultsDir, $WhatIfPreference).Count
+		$files_copied += $result.CopyTo($ResultsDir, $WhatIfPreference)
 	}
 
 	Write-Host "Unique texture names : ${unique_names}"

@@ -89,21 +89,8 @@ function Main {
 	}
 	
 	$src_dir = Find-GameTexturesDir $OpenGoalDir
-	$texture_paths = @( Copy-OriginalTextures $src_dir $dest_dir $upscale_options )
-	
-	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
-	Write-Host "Writing texture manifest (total textures: $( $texture_paths.Count )) ..."
-
-	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
-	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
-
-	# Use .NET directly to write without a BOM, since Windows PowerShell saves with BOMs
-	# and PowerShell (Core) does not, causing git to falsely see the file as modified.
-	[File]::WriteAllText(
-		$manifest_path,
-		[string]::Join([Environment]::NewLine, $texture_paths),
-		[UTF8Encoding]::new($false)
-	)
+	Copy-OriginalTextures $src_dir $dest_dir $upscale_options
+	Write-TextureManifest $dest_dir
 }
 
 function Sync-ExistingTexturesWithOptions {
@@ -186,14 +173,10 @@ function Sync-ExistingTexturesWithOptions {
 <#
 .SYNOPSIS
 Copies the original Jak 3 game textures according to the upscale options.
-
-.OUTPUTS
-Returns all texture filepaths relative to `textures/original/` for writing to the manifest.
 #>
 function Copy-OriginalTextures {
 	[SuppressMessageAttribute('PSShouldProcess', '')]
 	[CmdletBinding(SupportsShouldProcess)]
-	[OutputType([string])]
 	param(
 		# The path to the extracted Jak 3 textures directory.
 		[Parameter(Mandatory, Position = 0)]
@@ -236,9 +219,55 @@ function Copy-OriginalTextures {
 	}
 
 	Write-Host "Copying game textures to '${DestinationDir}' ..."
+	$textures_copied = 0
 
 	foreach ($texture in $textures_by_name.Values) {
-		$texture.CopyTo($DestinationDir, $WhatIfPreference)
+		$textures_copied += $texture.CopyTo($DestinationDir, $WhatIfPreference)
+	}
+
+	Write-Host "Copied ${textures_copied} new texture(s)."
+}
+
+
+<#
+.SYNOPSIS
+Writes a list of all texture file paths relative to `textures/original/` to `textures/manifest.txt`.
+Used to track changes to how/which textures are processed.
+#>
+function Write-TextureManifest {
+	[CmdletBinding(SupportsShouldProcess)]
+	param(
+		[Parameter(Mandatory, Position = 0)]
+		[string]
+		$OriginalTexturesDir
+	)
+
+	$gci_params = @{
+		LiteralPath = $OriginalTexturesDir
+		Filter = '*__*.png'
+		File = $true
+		Recurse = $true
+		ErrorAction = 'Stop'
+	}
+	$texture_files = Get-ChildItem @gci_params
+	$texture_paths = foreach ($file in $texture_files) {
+		"$( $file.Directory.BaseName )/$( $file.Name )"
+	}
+
+	# Faster than Sort-Object and maintains the same order regardless of PS version and culture/locale.
+	[Array]::Sort($texture_paths, [StringComparer]::Ordinal)
+
+	Write-Host "Writing texture manifest (total textures: $( $texture_paths.Count )) ..."
+	$manifest_path = Join-Path (Get-TexturesDir) 'manifest.txt'
+
+	if ($PSCmdlet.ShouldProcess($manifest_path, 'Write file')) {
+		# Use .NET directly to write without a BOM, since Windows PowerShell saves with BOMs
+		# and PowerShell (Core) does not, causing git to falsely see the file as modified.
+		[File]::WriteAllText(
+			$manifest_path,
+			[string]::Join([Environment]::NewLine, $texture_paths),
+			[UTF8Encoding]::new($false)
+		)
 	}
 }
 

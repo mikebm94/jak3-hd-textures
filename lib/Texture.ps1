@@ -28,9 +28,8 @@ class Texture {
 	}
 
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) to the destination directory.
-	# Returns the resulting texture filepaths relative to the destination directory.
-	# If the texture is a search result, only the files actually copied are returned.
-	[string[]] CopyTo([string] $dest_dir, [bool] $what_if_preference) {
+	# Returns the number of texture files actually copied.
+	[int] CopyTo([string] $dest_dir, [bool] $what_if_preference) {
 		if (-not [string]::IsNullOrEmpty($this.WorkflowName)) {
 			$dest_dir = Join-Path $dest_dir $this.WorkflowName
 		}
@@ -38,12 +37,12 @@ class Texture {
 		Initialize-Directory $dest_dir -WhatIf:$what_if_preference
 
 		$should_deduplicate = ($this.Hashes.Count -le 1) -and ($this.Files.Count -gt 1)
+		$textures_copied = 0
 
-		$filepaths = foreach ($file in $this.Files) {
+		foreach ($file in $this.Files) {
 			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
 			$new_filename = "${subdir_name}__$( $file.Name )"
 			$dest_path = Join-Path $dest_dir $new_filename
-			$was_copied = $false
 
 			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
 				if ($what_if_preference) {
@@ -54,20 +53,13 @@ class Texture {
 				}
 				else {
 					$null = $file.CopyTo($dest_path)
-					$was_copied = $true
+					$textures_copied += 1
 				}
-			}
-
-			if (-not [string]::IsNullOrEmpty($this.WorkflowName)) {
-				"$( $this.WorkflowName )/${new_filename}"
-			}
-			elseif ($was_copied) {
-				$new_filename
 			}
 
 			if ($should_deduplicate) { break }
 		}
 
-		return $filepaths
+		return $textures_copied
 	}
 }
