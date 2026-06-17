@@ -223,7 +223,6 @@ Main/_all__city-ind-panels-scorched-03.png
 Main/_all__city-ind-stain-01.png
 Main/_all__city-ind-stain-02.png
 Main/_all__city-ind-support-base.png
-Main/_all__city-ind-ventglow.png
 Main/_all__city-ind-wall-01.png
 Main/_all__city-ind-wall-02.png
 Main/_all__city-ind-wall-03.png
@@ -520,7 +519,6 @@ Main/_all__des-wasmetal25.png
 Main/_all__desw-hardplate-edge-01.png
 Main/_all__desw-tubes-segment-02.png
 Main/_all__desw-tubes-small-01.png
-Main/_all__dk-eco-vent-glow-01.png
 Main/_all__dk-eco-vent-side-01.png
 Main/_all__dk-maker-idol-collar-01.png
 Main/_all__dk-maker-idol-collar-02.png
@@ -3093,7 +3091,6 @@ Main/deshover-sprite__holostatic-01.png
 Main/deshover-sprite__holostatic-02.png
 Main/deshover-sprite__holostatic-03.png
 Main/deshover-sprite__holostatic-04.png
-Main/deshover-tfrag__comm-centre-glow-02.png
 Main/deshover-tfrag__comm-hose-01.png
 Main/deshover-tfrag__comm-metal-01.png
 Main/deshover-tfrag__comm-metal-02.png
@@ -3322,7 +3319,6 @@ Main/deswalk-vis-tfrag__desw-skirt-02.png
 Main/deswalk-vis-tfrag__desw-tentacle-01.png
 Main/deswalk-vis-tfrag__desw-tubes-bundle-01-hitweak.png
 Main/deswalk-vis-tfrag__desw-tubes-segment-01.png
-Main/deswalk-vis-tfrag__desw-wall-glow-02.png
 Main/deswalk-vis-tfrag__desw-wall-light-01.png
 Main/deswalk-vis-tfrag__desw-wall-light-02.png
 Main/deswalk-vis-tfrag__desw-wall-light-03.png
@@ -3363,7 +3359,6 @@ Main/factorya-shrub__facc-metal-panel-09.png
 Main/factorya-sprite__fan-blade.png
 Main/factoryb-vis-pris__bam-hairhilite.png
 Main/factoryb-vis-pris__daxter-eyelid.png
-Main/factoryb-vis-pris__fac-target-redglow-01.png
 Main/factoryb-vis-pris__jakc-armor.png
 Main/factoryb-vis-pris__jakc-chestplate-straps.png
 Main/factoryb-vis-pris__jakc-scarf.png
@@ -3999,7 +3994,6 @@ Main/intpalrf-tfrag__tpal-wind-fram-01.png
 Main/intpalrf-tfrag__tpal-wind-glass-01.png
 Main/intpalrf-tfrag__troof-beam01.png
 Main/intpalrf-tfrag__troof-shield-02.png
-Main/intpfall-sprite__edgeglow.png
 Main/intpfall-sprite__enemy-tracer.png
 Main/intpfall-sprite__palcab-blue-rotaters.png
 Main/intpfall-sprite__seagull-wing.png
@@ -4279,7 +4273,6 @@ Main/lctydest-tfrag__mhcity-grunt-egg-03.png
 Main/lctydest-tfrag__mhcity-grunt-egg-gem-01.png
 Main/lctydest-tfrag__mhcity-grunt-egg-rim-01.png
 Main/lctydest-tfrag__mhcity-mektunnel.png
-Main/lctyhijk-pris__ctydecoy-glow-02.png
 Main/lctyhijk-pris__ctydecoy-plate-01.png
 Main/lctyhijk-pris__ctydecoy-plate-02.png
 Main/lctyhijk-pris__ctydecoy-plate-03.png
@@ -4319,7 +4312,6 @@ Main/lctyprot-pris__kg-rob-trans-thruster-01.png
 Main/lctyprot-pris__kg-rob-trans-thruster-02.png
 Main/lctyprot-pris__kg-rob-trans-thruster-03.png
 Main/lctyprot-pris__kg-rob-trans-thruster-04.png
-Main/lctyprot-pris__kg-rob-trans-thruster-glow-01.png
 Main/lctyprot-sprite__kg-rob-target-01.png
 Main/lctyprot-water__kg-rob-trans-tank-01.png
 Main/lctysnpr-pris__inner.png
@@ -4343,7 +4335,6 @@ Main/lctysnpr-tfrag__snip-trt-metal-06.png
 Main/lctysnpr-tfrag__snip-trt-metal-07.png
 Main/lctysnpr-tfrag__snip-trt-metal-08.png
 Main/lctysnpr-tfrag__snip-trt-metal-bolt.png
-Main/lctysnpr-tfrag__sniper-core-glow-01.png
 Main/lctysnpr-water__sniper-core-glass-01.png
 Main/ldamklev-pris__bam-hairhilite.png
 Main/ldamklev-pris__klever-earcup.png
@@ -4372,7 +4363,6 @@ Main/ldmpckgn-pris__jakchires-precarmor-01.png
 Main/level-default-minimap__checkpoint.png
 Main/level-default-pris__bam-hairhilite.png
 Main/level-default-pris__bam-leather-belt.png
-Main/level-default-pris__board-blueglow.png
 Main/level-default-pris__board-edge.png
 Main/level-default-pris__board-fins-bottom.png
 Main/level-default-pris__board-fins.png
@@ -4463,8 +4453,6 @@ Main/level-default-sprite__explosion-edge.png
 Main/level-default-sprite__explosion-nebula.png
 Main/level-default-sprite__flame01.png
 Main/level-default-sprite__footprntr.png
-Main/level-default-sprite__glow-hotdot.png
-Main/level-default-sprite__glow-soft.png
 Main/level-default-sprite__glow.png
 Main/level-default-sprite__green-lightning.png
 Main/level-default-sprite__gun-blue-beam.png
@@ -4561,7 +4549,6 @@ Main/level-default-sprite__static1.png
 Main/level-default-sprite__static2.png
 Main/level-default-sprite__suckpart.png
 Main/level-default-sprite__tinyspeck.png
-Main/level-default-sprite__topglow.png
 Main/level-default-sprite__vol-light.png
 Main/level-default-sprite__water-drops.png
 Main/level-default-sprite__water-radiate.png
@@ -5253,8 +5240,6 @@ Main/lwstdpck-pris__jakchires-chestplate.png
 Main/lwstdpck-pris__jakchires-glovetop.png
 Main/lwstdpck-pris__jakchires-precarmor-01.png
 Main/mhcitya-vis-pris__mhcity-basebone.png
-Main/mhcitya-vis-pris__mhcity-de-door-glow-01.png
-Main/mhcitya-vis-pris__mhcity-de-door-glow-off.png
 Main/mhcitya-vis-pris__mhcity-de-door-skin-01.png
 Main/mhcitya-vis-pris__mhcity-de-door-skin-02.png
 Main/mhcitya-vis-pris__mhcity-eggskin.png
@@ -6276,7 +6261,6 @@ Main/museum4-pris__p-white.png
 Main/museum4-pris__redsage-dial.png
 Main/museum4-pris__redsage-lense.png
 Main/museum4-pris__redsage-multitile.png
-Main/museum4-pris__redsage-multitileglow.png
 Main/museum4-pris__redsage-squaretile.png
 Main/museum4-pris__sculptor-belt.png
 Main/museum4-pris__sculptor-eyelid.png
@@ -7992,7 +7976,6 @@ Main/templea-vis-pris__tpl-door-edge-01.png
 Main/templea-vis-pris__tpl-door-face-01.png
 Main/templea-vis-pris__tpl-door-round-01.png
 Main/templea-vis-pris__tpl-symbl-yellow-01.png
-Main/templea-vis-pris__tpl-symbl-yellow-glow-01.png
 Main/templea-vis-shrub__temple_flag03.png
 Main/templea-vis-shrub__temple_sandstone_ground01.png
 Main/templea-vis-tfrag__common_sandstone_base01.png
@@ -8022,7 +8005,6 @@ Main/templea-vis-tfrag__temple_sandstone_taper01.png
 Main/templea-vis-tfrag__temple_sandstone_trim02.png
 Main/templea-vis-tfrag__templea_sandstone01.png
 Main/templea-vis-tfrag__templea_sandstone_brick01.png
-Main/templea-vis-tfrag__tpl-symbl-yellow-glow-01.png
 Main/templea-vis-tfrag__warpgate-precursormetal.png
 Main/templea-vis-water__environment-lightjak.png
 Main/templeb-vis-pris__rail-env-wall-01.png
@@ -8067,7 +8049,6 @@ Main/templeb-vis-tfrag__temple_sandstone_stepside01.png
 Main/templeb-vis-tfrag__temple_sandstone_taper01.png
 Main/templeb-vis-tfrag__temple_sandstone_trim02.png
 Main/templeb-vis-tfrag__templea_sandstone_brick01.png
-Main/templeb-vis-tfrag__tpl-symbl-yellow-glow-01.png
 Main/templeb-vis-tfrag__warpgate-precursormetal.png
 Main/templec-sprite__token-purple.png
 Main/templec-sprite__token-white.png
@@ -8099,9 +8080,7 @@ Main/templec-vis-tfrag__temple_sandstone_trim02.png
 Main/templec-vis-tfrag__templea_sandstone01.png
 Main/templec-vis-tfrag__templea_sandstone_brick01.png
 Main/templec-vis-water__tpl-symbl-violet-01.png
-Main/templec-vis-water__tpl-symbl-violet-glow-01.png
 Main/templec-vis-water__tpl-symbl-yellow-01.png
-Main/templec-vis-water__tpl-symbl-yellow-glow-01.png
 Main/templed-vis-pris2__seem-precmetal-edge.png
 Main/templed-vis-shrub__temple_sandstone_ground01.png
 Main/templed-vis-tfrag__comb-crct-medium.png
@@ -8524,7 +8503,6 @@ Main/wascityb-vis-tfrag__wascityskeet-clay-silver.png
 Main/wascityb-vis-tfrag__wascityskeet-clay.png
 Main/wascityb-vis-water__common-water-canal.png
 Main/wasdefen-pris__dm-missle-body.png
-Main/wasdefen-pris__dm-missle-tip-glow-01.png
 Main/wasdefen-pris__dm-missle-tip.png
 Main/wasdefen-pris__dm-missle-tubes.png
 Main/wasdefen-pris__dp-robot-cable-01.png
