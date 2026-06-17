@@ -385,7 +385,7 @@ function Test-TextureDimensions([string] $texture_path, [DimensionFilter] $filte
 			[FileMode]::Open,
 			[FileAccess]::Read,
 			[FileShare]::ReadWrite, # Fuck it, other processes can have it open for writing.
-			0,                      # Disable buffering, it's faster when only reading the first few bytes.
+			1,                      # Disable buffering, it's faster when only reading the first few bytes.
 			$false                  # Synchronous I/O.
 		)
 
