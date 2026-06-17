@@ -14,6 +14,17 @@ class Chain {
 	# The input override ID for the 'Directory' input of the 'Save Images' node.
 	# Used by workflows to point it's chain to the correct texture output directory.
 	[string] $SaveDirectoryInputID
+
+
+	[FileInfo] GetFile() {
+		$file = [FileInfo]::new((Join-Path (Get-ChainsDir) "$( $this.Name ).chn"))
+
+		if (-not $file.Exists()) {
+			throw "File for chain '$( $this.Name )' does not exist: $( $file.FullName )"
+		}
+
+		return $file
+	}
 }
 
 
@@ -55,6 +66,43 @@ class Workflow {
 
 	# The inputs to override when running the chain.
 	[InputOverride[]] $InputOverrides
+
+
+	# Gets the directory where original textures are stored for this workflow.
+	[string] GetOriginalTexturesDir([bool] $what_if_preference) {
+		$dir = Join-Path (Get-OriginalTexturesDir -WhatIf:$what_if_preference) $this.Name
+		Initialize-Directory $dir -WhatIf:$what_if_preference
+		return $dir
+	}
+
+	# Gets the directory where the final, upscaled & optimized textures are stored for this workflow.
+	[string] GetUpscaledTexturesDir([bool] $what_if_preference) {
+		$dir = Join-Path (Get-UpscaledTexturesDir -WhatIf:$what_if_preference) $this.Name
+		Initialize-Directory $dir -WhatIf:$what_if_preference
+		return $dir
+	}
+
+	# Gets the directory where files (original/upscaled textures, input overrides)
+	# are staged when executing this workflow.
+	[string] GetBuildDir([bool] $what_if_preference) {
+		$dir = Join-Path (Get-WorkflowsBuildDir -WhatIf:$what_if_preference) $this.Name
+		Initialize-Directory $dir -WhatIf:$what_if_preference
+		return $dir
+	}
+
+	# Gets the directory where input (original) textures are staged when executing this workflow.
+	[string] GetBuildInputDir([bool] $what_if_preference) {
+		$dir = Join-Path $this.GetBuildDir($what_if_preference) 'in/'
+		Initialize-Directory $dir -WhatIf:$what_if_preference
+		return $dir
+	}
+
+	# Gets the directory where output (upscaled/optimized) textures are staged when executing this workflow.
+	[string] GetBuildOutputDir([bool] $what_if_preference) {
+		$dir = Join-Path $this.GetBuildDir($what_if_preference) 'out/'
+		Initialize-Directory $dir -WhatIf:$what_if_preference
+		return $dir
+	}
 }
 
 

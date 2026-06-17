@@ -1,5 +1,6 @@
 TODO.txt
 log.txt
+build/
 models/*
 !models/README.md
 package/custom_assets/

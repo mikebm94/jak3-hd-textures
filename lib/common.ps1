@@ -5,6 +5,64 @@ $ProjectDir = Split-Path $PSScriptRoot -Parent
 
 <#
 .SYNOPSIS
+Gets the directory where build artifacts and temporary files are placed
+when upscaling textures and building the texture pack archive.
+#>
+function Get-BuildDir {
+	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
+	param()
+
+	$dir = Join-Path $ProjectDir 'build/'
+	Initialize-Directory $dir
+	$dir
+}
+
+<#
+.SYNOPSIS
+Gets the directory where the final output files are placed for archival when building the texture pack archive.
+#>
+function Get-PackageBuildDir {
+	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
+	param()
+
+	$dir = Join-Path (Get-BuildDir) 'package/'
+	Initialize-Directory $dir
+	$dir
+}
+
+<#
+.SYNOPSIS
+Gets the directory where the necessary original textures and input-override files
+are placed when running the upscale workflows.
+#>
+function Get-WorkflowsBuildDir {
+	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
+	param()
+
+	$dir = Join-Path (Get-BuildDir) 'workflows/'
+	Initialize-Directory $dir
+	$dir
+}
+
+<#
+.SYNOPSIS
+Gets the directory where chaiNNer chain files are placed for use in upscale workflows.
+#>
+function Get-ChainsDir {
+	[CmdletBinding(SupportsShouldProcess)]
+	[OutputType([string])]
+	param()
+
+	$dir = Join-Path $ProjectDir 'chains/'
+	Initialize-Directory $dir
+	$dir
+}
+
+<#
+.SYNOPSIS
 Gets the directory where upscale models are downloaded to for usage.
 #>
 function Get-ModelsDir {
