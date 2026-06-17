@@ -131,7 +131,6 @@ Main/_all__citwide-crimson-tube.png
 Main/_all__citwide-crimson-wall-plain.png
 Main/_all__city-base-vent-01.png
 Main/_all__city-bigpipe-ring-02.png
-Main/_all__city-bluelight.png
 Main/_all__city-dirtywood.png
 Main/_all__city-farm-aquaduct-glass-01.png
 Main/_all__city-farm-aquaduct-glass-02.png
@@ -1544,7 +1543,6 @@ Main/_all__screen-12.png
 Main/_all__screen-13.png
 Main/_all__screen-14.png
 Main/_all__screen-15.png
-Main/_all__searchlight-envmap.png
 Main/_all__seat01.png
 Main/_all__seem-arm.png
 Main/_all__seem-bootbottom.png
@@ -1776,7 +1774,6 @@ Main/_all__temple_sandstone_trim01.png
 Main/_all__temple_sandstone_wall01.png
 Main/_all__tentacle-01.png
 Main/_all__tentacle-02.png
-Main/_all__terraformer-bluelight.png
 Main/_all__terraformer-bodytopplain.png
 Main/_all__terraformer-bodytopstrans.png
 Main/_all__terraformer-cockpit.png
@@ -1968,13 +1965,6 @@ Main/_all__vola-rock-top.png
 Main/_all__vola-shrub-leaf.png
 Main/_all__vola-small-rock-sides.png
 Main/_all__vola-vine.png
-Main/_all__wang_0.png
-Main/_all__wang_1.png
-Main/_all__wang_2.png
-Main/_all__wang_3.png
-Main/_all__wang_4.png
-Main/_all__wang_black.png
-Main/_all__wang_mip.png
 Main/_all__war-teeth.png
 Main/_all__warpgate-circuitpattern2.png
 Main/_all__warpgate-post-01.png
@@ -2412,7 +2402,6 @@ Main/ctygenb-vis-tfrag__city-door-03.png
 Main/ctygenb-vis-tfrag__city-endblocks.png
 Main/ctygenb-vis-tfrag__city-hole-edge-01.png
 Main/ctygenb-vis-tfrag__city-ind-buldge-light-01.png
-Main/ctygenb-vis-tfrag__city-lamp-bluelight.png
 Main/ctygenb-vis-tfrag__city-lurkermetal-01.png
 Main/ctygenb-vis-tfrag__city-metal-canal-smalltop.png
 Main/ctygenb-vis-tfrag__city-metal-canal.png
@@ -2576,7 +2565,6 @@ Main/ctyport-vis-shrub__city-port-stain-01.png
 Main/ctyport-vis-shrub__city-port-stain-02.png
 Main/ctyport-vis-shrub__city-port-tbolt.png
 Main/ctyport-vis-shrub__city-port-wallbase.png
-Main/ctyport-vis-tfrag__city-greenlight.png
 Main/ctyport-vis-tfrag__city-greenlight2.png
 Main/ctyport-vis-tfrag__city-port-barge-glass.png
 Main/ctyport-vis-tfrag__city-port-barge-grating.png
@@ -2637,9 +2625,7 @@ Main/ctyport-vis-tfrag__city-port-ventbase-01.png
 Main/ctyport-vis-tfrag__city-port-wall-metal-01.png
 Main/ctyport-vis-tfrag__city-port-wallbase.png
 Main/ctyport-vis-tfrag__city-railing.png
-Main/ctyport-vis-tfrag__city-redlight.png
 Main/ctyport-vis-tfrag__city-roofmetal.png
-Main/ctyport-vis-tfrag__city-yellowlight.png
 Main/ctyport-vis-tfrag__citywide-palace-tower-side.png
 Main/ctyport-vis-tfrag__hip-tmetfloor04.png
 Main/ctyport-vis-tfrag__hip-tmetring02.png
