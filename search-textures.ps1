@@ -167,21 +167,25 @@ class DimensionFilter {
 		}
 
 		if ($width_filter -match '^\d+-\d+$') {
+			# Filter by range.
 			$this.Widths = $width_filter -split '-'
 			[Array]::Sort($this.Widths)
 			$this.CheckWidth = { param([int]$a, [int[]]$b) ($a -ge $b[0]) -and ($a -le $b[1]) }
 		}
 		elseif ($width_filter) {
+			# Filter by comparison.
 			$this.Widths = $width_filter -replace '^[<>]=?'
 			$this.CheckWidth = $op_map[$width_filter -replace '\d+$']
 		}
 
 		if ($height_filter -match '^\d+-\d+$') {
+			# Filter by range.
 			$this.Heights = $height_filter -split '-'
 			[Array]::Sort($this.Heights)
 			$this.CheckHeight = { param([int]$a, [int[]]$b) ($a -ge $b[0]) -and ($a -le $b[1]) }
 		}
 		elseif ($height_filter) {
+			# Filter by comparison.
 			$this.Heights = $height_filter -replace '^[<>]=?'
 			$this.CheckHeight = $op_map[$height_filter -replace '\d+$']
 		}
