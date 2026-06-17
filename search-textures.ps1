@@ -93,35 +93,37 @@ param(
 	[switch]
 	$NotGrouped,
 
-	# Filters results by texture width in pixels, either by exact width or by comparison.
+	# Filters results by texture width in pixels by exact width, by comparison, or by a range (inclusive).
 	# To filter by comparison, use one of these operators before the width:
 	#     '<'  (less than)
 	#     '<=' (less than or equal)
 	#     '>'  (greater than)
 	#     '>=' (greater than or equal)
+	# To filter by a range, use a dash between the two widths.
 	#
-	# Example: '<=128'
+	# Example: '<=128' or '32-64'
 	[Parameter(ParameterSetName = 'Search')]
 	[Parameter(ParameterSetName = 'SearchInGroups')]
 	[Parameter(ParameterSetName = 'SearchIsGrouped')]
 	[Parameter(ParameterSetName = 'SearchNotGrouped')]
-	[ValidatePattern('^(<|<=|>=|>)?\d+$')]
+	[ValidatePattern('^(<|<=|>=|>)?\d+$|^\d+-\d+$')]
 	[string]
 	$Width,
 
-	# Filters results by texture height in pixels, either by exact height or by comparison.
+	# Filters results by texture height in pixels by exact height, by comparison, or by a range (inclusive).
 	# To filter by comparison, use one of these operators before the height:
 	#     '<'  (less than)
 	#     '<=' (less than or equal)
 	#     '>'  (greater than)
 	#     '>=' (greater than or equal)
+	# To filter by a range, use a dash between the two heights.
 	#
-	# Example: '<=128'
+	# Example: '<=128' or '32-64'
 	[Parameter(ParameterSetName = 'Search')]
 	[Parameter(ParameterSetName = 'SearchInGroups')]
 	[Parameter(ParameterSetName = 'SearchIsGrouped')]
 	[Parameter(ParameterSetName = 'SearchNotGrouped')]
-	[ValidatePattern('^(<|<=|>=|>)?\d+$')]
+	[ValidatePattern('^(<|<=|>=|>)?\d+$|^\d+-\d+$')]
 	[string]
 	$Height,
 
@@ -150,35 +152,45 @@ param(
 
 # Parses the `Width` and `Height` parameters into an object used to filter textures by their dimensions.
 class DimensionFilter {
-	[int] $Width = 0
-	[int] $Height = 0
+	[int[]] $Widths
+	[int[]] $Heights
 	[scriptblock] $CheckWidth = { $true }
 	[scriptblock] $CheckHeight = { $true }
 
 	DimensionFilter([string] $width_filter, [string] $height_filter) {
 		$op_map = @{
-			''   = { param([int]$a, [int]$b) $a -eq $b }
-			'<'  = { param([int]$a, [int]$b) $a -lt $b }
-			'<=' = { param([int]$a, [int]$b) $a -le $b }
-			'>'  = { param([int]$a, [int]$b) $a -gt $b }
-			'>=' = { param([int]$a, [int]$b) $a -ge $b }
+			''   = { param([int]$a, [int[]]$b) $a -eq $b[0] }
+			'<'  = { param([int]$a, [int[]]$b) $a -lt $b[0] }
+			'<=' = { param([int]$a, [int[]]$b) $a -le $b[0] }
+			'>'  = { param([int]$a, [int[]]$b) $a -gt $b[0] }
+			'>=' = { param([int]$a, [int[]]$b) $a -ge $b[0] }
 		}
 
-		$this.Width = [int]($width_filter -replace '^[<>][=]?')
-		$this.Height = [int]($height_filter -replace '^[<>][=]?')
-
-		if ($width_filter) {
+		if ($width_filter -match '^\d+-\d+$') {
+			$this.Widths = $width_filter -split '-'
+			[Array]::Sort($this.Widths)
+			$this.CheckWidth = { param([int]$a, [int[]]$b) ($a -ge $b[0]) -and ($a -le $b[1]) }
+		}
+		elseif ($width_filter) {
+			$this.Widths = $width_filter -replace '^[<>]=?'
 			$this.CheckWidth = $op_map[$width_filter -replace '\d+$']
 		}
-		if ($height_filter) {
+
+		if ($height_filter -match '^\d+-\d+$') {
+			$this.Heights = $height_filter -split '-'
+			[Array]::Sort($this.Heights)
+			$this.CheckHeight = { param([int]$a, [int[]]$b) ($a -ge $b[0]) -and ($a -le $b[1]) }
+		}
+		elseif ($height_filter) {
+			$this.Heights = $height_filter -replace '^[<>]=?'
 			$this.CheckHeight = $op_map[$height_filter -replace '\d+$']
 		}
 	}
 
 	[bool] CheckDimensions([int] $texture_width, [int] $texture_height) {
 		return (
-			(& $this.CheckWidth $texture_width $this.Width) -and
-			(& $this.CheckHeight $texture_height $this.Height)
+			(& $this.CheckWidth $texture_width $this.Widths) -and
+			(& $this.CheckHeight $texture_height $this.Heights)
 		)
 	}
 }
