@@ -148,67 +148,38 @@ param(
 . (Join-Path $PSScriptRoot 'lib/UpscaleOptions.ps1')
 
 
-# Maps to comparison operators in the `Width` and `Height` parameters.
-# Used when comparing texture dimensions.
-enum Comparison {
-	None
-	Equals
-	Less
-	LessOrEqual
-	Greater
-	GreaterOrEqual
-}
-
-
 # Parses the `Width` and `Height` parameters into an object used to filter textures by their dimensions.
 class DimensionFilter {
 	[int] $Width = 0
 	[int] $Height = 0
-	[Comparison] $WidthComparison = [Comparison]::None
-	[Comparison] $HeightComparison = [Comparison]::None
-
+	[scriptblock] $CheckWidth = { $true }
+	[scriptblock] $CheckHeight = { $true }
 
 	DimensionFilter([string] $width_filter, [string] $height_filter) {
 		$op_map = @{
-			'' = [Comparison]::Equals
-			'<' = [Comparison]::Less
-			'<=' = [Comparison]::LessOrEqual
-			'>' = [Comparison]::Greater
-			'>=' = [Comparison]::GreaterOrEqual
+			''   = { param([int]$a, [int]$b) $a -eq $b }
+			'<'  = { param([int]$a, [int]$b) $a -lt $b }
+			'<=' = { param([int]$a, [int]$b) $a -le $b }
+			'>'  = { param([int]$a, [int]$b) $a -gt $b }
+			'>=' = { param([int]$a, [int]$b) $a -ge $b }
 		}
 
 		$this.Width = [int]($width_filter -replace '^[<>][=]?')
 		$this.Height = [int]($height_filter -replace '^[<>][=]?')
 
 		if ($width_filter) {
-			$this.WidthComparison = $op_map[$width_filter -replace '\d+$']
+			$this.CheckWidth = $op_map[$width_filter -replace '\d+$']
 		}
 		if ($height_filter) {
-			$this.HeightComparison = $op_map[$height_filter -replace '\d+$']
+			$this.CheckHeight = $op_map[$height_filter -replace '\d+$']
 		}
 	}
 
-
 	[bool] CheckDimensions([int] $texture_width, [int] $texture_height) {
-		$width_matches = switch ($this.WidthComparison) {
-			([Comparison]::Equals)         { $texture_width -eq $this.Width; break }
-			([Comparison]::Less)           { $texture_width -lt $this.Width; break }
-			([Comparison]::LessOrEqual)    { $texture_width -le $this.Width; break }
-			([Comparison]::Greater)        { $texture_width -gt $this.Width; break }
-			([Comparison]::GreaterOrEqual) { $texture_width -ge $this.Width; break }
-			default { $true }
-		}
-
-		$height_matches = switch ($this.HeightComparison) {
-			([Comparison]::Equals)         { $texture_height -eq $this.Height; break }
-			([Comparison]::Less)           { $texture_height -lt $this.Height; break }
-			([Comparison]::LessOrEqual)    { $texture_height -le $this.Height; break }
-			([Comparison]::Greater)        { $texture_height -gt $this.Height; break }
-			([Comparison]::GreaterOrEqual) { $texture_height -ge $this.Height; break }
-			default { $true }
-		}
-
-		return ($width_matches -and $height_matches)
+		return (
+			(& $this.CheckWidth $texture_width $this.Width) -and
+			(& $this.CheckHeight $texture_height $this.Height)
+		)
 	}
 }
 
