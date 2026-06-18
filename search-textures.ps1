@@ -381,12 +381,12 @@ We only need to read the first 24 bytes to get the width and height:
 	Next 8 bytes: Length of the image header (always 13) followed by the text 'IHDR'.
 	Next 8 bytes: The width followed by the height.
 #>
-function Test-TextureDimensions([string] $texture_path, [DimensionFilter] $filter) {
+function Test-TextureDimensions([string] $TexturePath, [DimensionFilter] $Filter) {
 	[FileStream] $fstream = $null
 
 	try {
 		[FileStream] $fstream = [FileStream]::new(
-			$texture_path,
+			$TexturePath,
 			[FileMode]::Open,
 			[FileAccess]::Read,
 			[FileShare]::ReadWrite, # Fuck it, other processes can have it open for writing.
@@ -417,7 +417,7 @@ function Test-TextureDimensions([string] $texture_path, [DimensionFilter] $filte
 		$texture_width = [BitConverter]::ToInt32($buffer, $width_offset)
 		$texture_height = [BitConverter]::ToInt32($buffer, $height_offset)
 
-		return $filter.CheckDimensions($texture_width, $texture_height)
+		return $Filter.CheckDimensions($texture_width, $texture_height)
 	}
 	catch {
 		Write-Warning "Could not check dimensions of texture: ${texture_path}: $( $_.Exception.Message )"
