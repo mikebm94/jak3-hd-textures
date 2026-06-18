@@ -287,7 +287,7 @@ Deletes all items in a directory but leaves the directory itself.
 function Clear-Directory {
 	[CmdletBinding(SupportsShouldProcess)]
 	param(
-		[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+		[Parameter(Mandatory, Position = 0)]
 		[string[]]
 		$Path,
 
@@ -296,22 +296,20 @@ function Clear-Directory {
 		$Exclude
 	)
 
-	process {
-		foreach ($path_to_clean in $Path) {
-			if (-not (Test-Path -LiteralPath $path_to_clean -PathType Container)) {
-				continue
-			}
+	foreach ($path_to_clean in $Path) {
+		if (-not (Test-Path -LiteralPath $path_to_clean -PathType Container)) {
+			continue
+		}
 
-			Write-Host "Cleaning directory '${path_to_clean}' ..."
+		Write-Host "Cleaning directory '${path_to_clean}' ..."
 
-			[string[]] $children = @(
-				Get-ChildItem -LiteralPath $Path -Exclude $Exclude -ErrorAction Stop |
-				Select-Object -ExpandProperty FullName -ErrorAction Stop
-			)
+		[string[]] $children = @(
+			Get-ChildItem -LiteralPath $Path -Exclude $Exclude -ErrorAction Stop |
+			Select-Object -ExpandProperty FullName -ErrorAction Stop
+		)
 
-			if ($children.Count -gt 0) {
-				$null = Remove-Item -LiteralPath $children -Recurse -Force -ErrorAction Stop
-			}
+		if ($children.Count -gt 0) {
+			$null = Remove-Item -LiteralPath $children -Recurse -Force -ErrorAction Stop
 		}
 	}
 }
