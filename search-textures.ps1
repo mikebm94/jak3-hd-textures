@@ -311,8 +311,11 @@ function Search-Textures {
 		}
 
 		# Finally, the most expensive check, checking if the dimensions match the width and/or height filters.
-		if ($DimensionFilter -and -not (Test-TextureDimensions $texture_file.FullName $DimensionFilter)) {
-			continue
+		if ($DimensionFilter) {
+			$texture_size = Get-TextureSize $texture_file.FullName
+			if (-not $DimensionFilter.CheckDimensions($texture_size.Width, $texture_size.Height)) {
+				continue
+			}
 		}
 
 		# Store the result.
@@ -365,68 +368,6 @@ function Test-TextureName([string] $TextureName) {
 	}
 
 	$false
-}
-
-
-<#
-.SYNOPSIS
-Checks if a texture file matches the dimensions set by the `Width` and/or `Height` parameters.
-
-.NOTES
-.NET has built-in ways to do this in `System.Drawing` but requires loading the entire texture into memory
-and is almost 5x slower on my system.
-
-We only need to read the first 24 bytes to get the width and height:
-	First 8 bytes: Standard PNG file header
-	Next 8 bytes: Length of the image header (always 13) followed by the text 'IHDR'.
-	Next 8 bytes: The width followed by the height.
-#>
-function Test-TextureDimensions([string] $TexturePath, [DimensionFilter] $Filter) {
-	[FileStream] $fstream = $null
-
-	try {
-		[FileStream] $fstream = [FileStream]::new(
-			$TexturePath,
-			[FileMode]::Open,
-			[FileAccess]::Read,
-			[FileShare]::ReadWrite, # Fuck it, other processes can have it open for writing.
-			1,                      # Disable buffering, it's faster when only reading the first few bytes.
-			$false                  # Synchronous I/O.
-		)
-
-		$bytes_to_read = 24
-		$buffer = [byte[]]::new($bytes_to_read)
-		$bytes_read = $fstream.Read($buffer, 0, $bytes_to_read)
-
-		if ($bytes_read -lt $bytes_to_read) {
-			throw "File ended unexpectedly."
-		}
-
-		# Why bother checking the header here, we don't verify textures are valid PNGs anywhere else.
-		# Worse case scenario, we get a crazy width/height and it doesn't match the filter.
-
-		$width_offset = 16
-		$height_offset = 20
-
-		if ([BitConverter]::IsLittleEndian) {
-			# PNGs are in big-endian (network byte order), so reverse the order of the width and height bytes.
-			[Array]::Reverse($buffer, $width_offset, 4)
-			[Array]::Reverse($buffer, $height_offset, 4)
-		}
-
-		$texture_width = [BitConverter]::ToInt32($buffer, $width_offset)
-		$texture_height = [BitConverter]::ToInt32($buffer, $height_offset)
-
-		return $Filter.CheckDimensions($texture_width, $texture_height)
-	}
-	catch {
-		Write-Warning "Could not check dimensions of texture: ${texture_path}: $( $_.Exception.Message )"
-	}
-	finally {
-		if ($null -ne $fstream) {
-			$fstream.Dispose()
-		}
-	}
 }
 
 

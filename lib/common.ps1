@@ -358,3 +358,68 @@ function IsValidFilename([string] $Name) {
 
 	$true
 }
+
+
+<#
+.SYNOPSIS
+Gets the width and height in pixels of a PNG texture file.
+
+.OUTPUTS
+Returns a `System.Drawing.Size` struct containing the width and height.
+
+.NOTES
+.NET has built-in ways to do this in `System.Drawing` but requires loading the entire texture into memory
+and is almost 5x slower on my system.
+
+We only need to read the first 24 bytes to get the width and height:
+	First 8 bytes: Standard PNG file header
+	Next 8 bytes: Length of the image header (always 13) followed by the text 'IHDR'.
+	Next 8 bytes: The width followed by the height.
+#>
+function Get-TextureSize([string] $TexturePath) {
+	[FileStream] $fstream = $null
+
+	try {
+		[FileStream] $fstream = [FileStream]::new(
+			$TexturePath,
+			[FileMode]::Open,
+			[FileAccess]::Read,
+			[FileShare]::ReadWrite, # Fuck it, other processes can have it open for writing.
+			1,                      # Disable buffering, it's faster when only reading the first few bytes.
+			$false                  # Synchronous I/O.
+		)
+
+		$bytes_to_read = 24
+		$buffer = [byte[]]::new($bytes_to_read)
+		$bytes_read = $fstream.Read($buffer, 0, $bytes_to_read)
+
+		if ($bytes_read -lt $bytes_to_read) {
+			throw "File ended unexpectedly."
+		}
+
+		# Why bother checking the header here, we don't verify textures are valid PNGs anywhere else.
+		# Worse case scenario, we get a crazy width/height and it doesn't match the filter.
+
+		$width_offset = 16
+		$height_offset = 20
+
+		if ([BitConverter]::IsLittleEndian) {
+			# PNGs are in big-endian (network byte order), so reverse the order of the width and height bytes.
+			[Array]::Reverse($buffer, $width_offset, 4)
+			[Array]::Reverse($buffer, $height_offset, 4)
+		}
+
+		[System.Drawing.Size]::new(
+			[BitConverter]::ToInt32($buffer, $width_offset),
+			[BitConverter]::ToInt32($buffer, $height_offset)
+		)
+	}
+	catch {
+		Write-Warning "Could not check dimensions of texture: ${texture_path}: $( $_.Exception.Message )"
+	}
+	finally {
+		if ($null -ne $fstream) {
+			$fstream.Dispose()
+		}
+	}
+}
