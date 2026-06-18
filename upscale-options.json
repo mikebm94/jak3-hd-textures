@@ -578,6 +578,15 @@
 		},
 
 		{
+			"Name": "BadResults",
+			"Description": "Textures that produce bad results when upscaled.",
+			"Workflow": null,
+			"TextureNames": [
+				"cguardgame-shouldershield"
+			]
+		},
+
+		{
 			"Name": "Eye",
 			"Description": "Eye textures that should not be upscaled per OpenGOAL documentation.",
 			"Workflow": null,

@@ -113,7 +113,6 @@ Main/_all__cguardgame-jacketstrap.png
 Main/_all__cguardgame-metalered-01.png
 Main/_all__cguardgame-metallight-02.png
 Main/_all__cguardgame-metallight-plain.png
-Main/_all__cguardgame-shouldershield.png
 Main/_all__cguardgame-sleeve.png
 Main/_all__cipher-drum-02.png
 Main/_all__cipher-drum-03.png
