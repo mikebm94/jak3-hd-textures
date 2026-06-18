@@ -359,14 +359,7 @@ function Split-TextureFileName {
 .SYNOPSIS
 Checks if a string is suitable as a filename.
 #>
-function IsValidFilename {
-	[OutputType([bool])]
-	param(
-		[Parameter(Position = 0)]
-		[string]
-		$Name
-	)
-
+function IsValidFilename([string] $Name) {
 	if ([string]::IsNullOrWhiteSpace($Name) -or $Name.IndexOfAny([Path]::GetInvalidFileNameChars()) -ne -1) {
 		return $false
 	}
