@@ -21,12 +21,14 @@ class Texture {
 		$this.WorkflowName = $workflow_name
     }
 
+
 	# Adds a file that was found under this textures name, computes its hash and stores it.
 	[void] AddFile([FileInfo] $file) {
 		$this.Files.Add($file)
 		$this.Hashes.Add((Get-FileHash -LiteralPath $file.FullName -Algorithm SHA1).Hash)
 	}
 
+	
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) to the destination directory.
 	# Returns the number of texture files actually copied.
 	[int] CopyTo([string] $dest_dir, [bool] $what_if_preference) {

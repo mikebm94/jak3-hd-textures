@@ -18,6 +18,7 @@ function Get-BuildDir {
 	$dir
 }
 
+
 <#
 .SYNOPSIS
 Gets the directory where the final output files are placed for archival when building the texture pack archive.
@@ -31,6 +32,7 @@ function Get-PackageBuildDir {
 	Initialize-Directory $dir
 	$dir
 }
+
 
 <#
 .SYNOPSIS
@@ -47,6 +49,7 @@ function Get-WorkflowsBuildDir {
 	$dir
 }
 
+
 <#
 .SYNOPSIS
 Gets the directory where chaiNNer chain files are placed for use in upscale workflows.
@@ -60,6 +63,7 @@ function Get-ChainsDir {
 	Initialize-Directory $dir
 	$dir
 }
+
 
 <#
 .SYNOPSIS
@@ -75,6 +79,7 @@ function Get-ModelsDir {
 	$dir
 }
 
+
 <#
 .SYNOPSIS
 Gets the parent directory where all texture files (and the texture manifest) are placed.
@@ -88,6 +93,7 @@ function Get-TexturesDir {
 	Initialize-Directory $dir
 	$dir
 }
+
 
 <#
 .SYNOPSIS
@@ -103,6 +109,7 @@ function Get-OriginalTexturesDir {
 	$dir
 }
 
+
 <#
 .SYNOPSIS
 Gets the directory where the upscaled textures are saved to.
@@ -116,6 +123,7 @@ function Get-UpscaledTexturesDir {
 	Initialize-Directory $dir
 	$dir
 }
+
 
 <#
 .SYNOPSIS
@@ -131,6 +139,7 @@ function Get-SearchResultsDir {
 	Initialize-Directory $dir
 	$dir
 }
+
 
 <#
 .SYNOPSIS
@@ -170,6 +179,7 @@ function Find-OpenGoalInstallDir {
 	throw 'Failed to find OpenGOAL directory.'
 }
 
+
 <#
 .SYNOPSIS
 Finds the directory where OpenGOAL places textures extracted from the Jak 3 ISO.
@@ -197,6 +207,7 @@ function Find-GameTexturesDir {
 	throw 'Failed to find Jak 3 game textures in OpenGOAL directory.'
 }
 
+
 <#
 .SYNOPSIS
 Verifies a directory exists and creates it if it doesn't.
@@ -214,6 +225,7 @@ function Initialize-Directory {
 		$null = New-Item $Path -ItemType Directory -ErrorAction Stop
 	}
 }
+
 
 <#
 .SYNOPSIS
@@ -251,6 +263,7 @@ function Clear-Directory {
 	}
 }
 
+
 <#
 .SYNOPSIS
 Gets the sub-directory and name components of a texture filename.
@@ -287,6 +300,7 @@ function Split-TextureFileName {
 		Name = $components[1]
 	}
 }
+
 
 <#
 .SYNOPSIS

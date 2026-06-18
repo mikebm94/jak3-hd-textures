@@ -36,7 +36,10 @@ foreach ($model in $model_list) {
 			continue
 		}
 		
-		Write-Warning "Upscale model '$( $model.ModelName )' has incorrect SHA1 file hash (${out_file_hash}). Re-downloading ..."
+		Write-Warning (
+			"Upscale model '$( $model.ModelName )' has incorrect " +
+			"SHA1 file hash (${out_file_hash}). Re-downloading ..."
+		)
 
 		try {
 			$null = Remove-Item -LiteralPath $out_file -ErrorAction Stop

@@ -93,6 +93,7 @@ function Main {
 	Write-TextureManifest $dest_dir
 }
 
+
 function Sync-ExistingTexturesWithOptions {
 	[CmdletBinding(SupportsShouldProcess)]
 	param(
@@ -169,6 +170,7 @@ function Sync-ExistingTexturesWithOptions {
 		}
 	}
 }
+
 
 <#
 .SYNOPSIS
