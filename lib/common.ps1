@@ -328,17 +328,11 @@ is encoded into filenames using the format "{subdir}__{name}.png" when they are 
 Outputs a `hashtable` with a `SubDirectory` item containing the textures sub-directory name,
 and a `Name` item containing the textures filename without the file extension.
 If the filename is not in the correct format, nothing is returned and a warning is emmitted.
-#>
-function Split-TextureFileName {
-	[CmdletBinding()]
-	[OutputType([hashtable])]
-	param(
-		# The FileInfo object for the texture file.
-		[Parameter(Mandatory, Position = 0)]
-		[FileInfo]
-		$TextureFile
-	)
 
+.PARAMETER TextureFile
+The FileInfo object for the texture file.
+#>
+function Split-TextureFileName ([FileInfo] $TextureFile) {
 	$components = $TextureFile.BaseName -split '__'
 	
 	if ([string]::IsNullOrWhiteSpace($components[0]) -or [string]::IsNullOrWhiteSpace($components[1])) {
