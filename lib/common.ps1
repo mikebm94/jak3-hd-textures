@@ -143,27 +143,77 @@ function Get-SearchResultsDir {
 
 <#
 .SYNOPSIS
+Finds the directory where textures extracted from the Jak 3 ISO are found.
+
+.DESCRIPTION
+Finds the directory where textures extracted from the Jak 3 ISO are found.
+
+Allows providing an OpenGOAL installation path, a custom path containing the textures,
+or if neither are provided, automatically searching for an OpenGOAL installation path.
+The automatic search first checks environment variables, then a list of common locations.
+
+Supported environment variables for setting OpenGOAL/custom directory:
+	OPENGOAL_DIR - To set the OpenGOAL installation path (takes priority).
+	JAK3_TEX_DIR - To set a custom directory containing the textures.
+#>
+function Find-ExtractedTexturesDir {
+	[CmdletBinding()]
+	[OutputType([string])]
+	param(
+		[string]
+		$OpenGoalDir,
+
+		[string]
+		$Jak3TexDir
+	)
+
+	if ($OpenGoalDir -or ($Env:OPENGOAL_DIR -and -not $Jak3TexDir)) {
+		if (-not $OpenGoalDir) {
+			$OpenGoalDir = $Env:OPENGOAL_DIR
+		}
+
+		if (Test-Path -LiteralPath $OpenGoalDir -PathType Container) {
+			Write-Host "Using OpenGOAL installation path: ${OpenGoalDir}"
+			return Find-OpenGoalTexturesDir $OpenGoalDir
+		}
+
+		throw "The set OpenGOAL installation path does not exist: ${OpenGoalDir}"
+	}
+	elseif ($Jak3TexDir -or $Env:JAK3_TEX_DIR) {
+		if (-not $Jak3TexDir) {
+			$Jak3TexDir = $Env:JAK3_TEX_DIR
+		}
+
+		if (Test-Path -LiteralPath $Jak3TexDir -PathType Container) {
+			Write-Host "Using custom Jak 3 textures path: ${Jak3TexDir}"
+			return $Jak3TexDir
+		}
+
+		throw "The set Jak 3 textures path does not exist: ${Jak3TexDir}"
+	}
+
+	$OpenGoalDir = Find-OpenGoalInstallDir
+	Write-Host "Using OpenGOAL installation path: ${OpenGoalDir}"
+	return Find-OpenGoalTexturesDir $OpenGoalDir
+}
+
+
+
+
+<#
+.SYNOPSIS
 Finds the OpenGOAL installation directory.
 
-The environment variable `OPENGOAL_DIR` is checked first.
-If it isn't set, OpenGOAL will be searched for, in order, at the following locations:
-	C:\Users\<username>\AppData\Local\Programs\OpenGOAL
-	C:\ProgramData\OpenGOAL
+.DESCRIPTION
+Attempts to find the OpenGOAL installation directory at the following locations (in order):
+	Windows
+		C:\Users\<username>\AppData\Local\Programs\OpenGOAL
+		C:\ProgramData\OpenGOAL
 #>
 function Find-OpenGoalInstallDir {
 	[CmdletBinding()]
 	[OutputType([string])]
 	param()
-
-	if (Test-Path -LiteralPath 'Env:OPENGOAL_DIR') {
-		$opengoal_dir = $env:OPENGOAL_DIR
-
-		if (Test-Path -LiteralPath $opengoal_dir -PathType Container) {
-			return $opengoal_dir
-		}
-		
-		throw "OpenGOAL directory '${opengoal_dir}' (set by OPENGOAL_DIR environment variable) does not exist."
-	}
 
 	$search_paths = @(
 		(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
@@ -176,7 +226,10 @@ function Find-OpenGoalInstallDir {
 		}
 	}
 
-	throw 'Failed to find OpenGOAL directory.'
+	throw (
+		'Failed to find extracted Jak 3 textures: ' +
+		'No paths were set, and no OpenGOAL installation could be found.'
+	)
 }
 
 
@@ -184,7 +237,7 @@ function Find-OpenGoalInstallDir {
 .SYNOPSIS
 Finds the directory where OpenGOAL places textures extracted from the Jak 3 ISO.
 #>
-function Find-GameTexturesDir {
+function Find-OpenGoalTexturesDir {
 	[CmdletBinding()]
 	[OutputType([string])]
 	param(
@@ -204,7 +257,7 @@ function Find-GameTexturesDir {
 		}
 	}
 
-	throw 'Failed to find Jak 3 game textures in OpenGOAL directory.'
+	throw 'Failed to find Jak 3 game textures in OpenGOAL installation path.'
 }
 
 

@@ -135,14 +135,27 @@ param(
 	[switch]
 	$Clean,
 
-	# The path to the OpenGOAL installation directory. If not supplied, the environment variable `OPENGOAL_DIR`
-	# will be checked. If it isn't set, OpenGOAL will be searched for in common locations.
+	# The path to an OpenGOAL installation directory. Used to find textures extracted from the Jak 3 ISO.
+	#
+	# If neither `-OpenGoalDir` nor `-Jak3TexDir` are set, first the environment variable `OPENGOAL_DIR`
+	# is checked, then `JAK3_TEX_DIR`, then an automatic search for an OpenGOAL installation is performed.
 	[Parameter(ParameterSetName = 'Search')]
 	[Parameter(ParameterSetName = 'SearchInGroups')]
 	[Parameter(ParameterSetName = 'SearchIsGrouped')]
 	[Parameter(ParameterSetName = 'SearchNotGrouped')]
 	[string]
-	$OpenGoalDir
+	$OpenGoalDir,
+
+	# The path to the textures extracted from the Jak 3 ISO.
+	#
+	# If neither `-OpenGoalDir` nor `-Jak3TexDir` are set, first the environment variable `OPENGOAL_DIR`
+	# is checked, then `JAK3_TEX_DIR`, then an automatic search for an OpenGOAL installation is performed.
+	[Parameter(ParameterSetName = 'Search')]
+	[Parameter(ParameterSetName = 'SearchInGroups')]
+	[Parameter(ParameterSetName = 'SearchIsGrouped')]
+	[Parameter(ParameterSetName = 'SearchNotGrouped')]
+	[string]
+	$Jak3TexDir
 )
 
 . (Join-Path $PSScriptRoot 'lib/common.ps1')
@@ -233,19 +246,7 @@ function Main {
 		}
 	}
 
-	if ([string]::IsNullOrEmpty($OpenGoalDir)) {
-		$OpenGoalDir = Find-OpenGoalInstallDir
-	}
-	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
-		throw "OpenGOAL directory '${OpenGoalDir}' (passed via -OpenGoalDir) does not exist."
-	}
-	else {
-		$OpenGoalDir = Resolve-Path -LiteralPath $OpenGoalDir
-	}
-
-	Write-Host "OpenGOAL installation directory: ${OpenGoalDir}"
-
-	$search_dir = Find-GameTexturesDir -OpenGoalDir $OpenGoalDir
+	$search_dir = Find-ExtractedTexturesDir -OpenGoalDir $OpenGoalDir -Jak3TexDir $Jak3TexDir
 
 	$search_params = @{
 		SearchDir = $search_dir

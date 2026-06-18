@@ -6,7 +6,7 @@ Finds and copies the original Jak 3 game textures needed for upscaling to `textu
 
 .DESCRIPTION
 Finds and copies the original Jak 3 game textures needed for upscaling to `textures/original/`.
-Make sure you've decompiled the Jak 3 ISO using the OpenGOAL launcher or CLI.
+If using OpenGOAL, make sure you've decompiled the Jak 3 ISO using the OpenGOAL launcher or CLI.
 
 The file `upscale-options.json` is used to exclude certain textures from being copied and upscaled
 (such as animated textures), and to specify which upscale workflow to use for certain textures.
@@ -44,10 +44,19 @@ using namespace System.Text
 
 [CmdletBinding(SupportsShouldProcess)]
 param(
-	# The path to the OpenGOAL installation directory. If not supplied, the environment variable `OPENGOAL_DIR`
-	# will be checked. If it isn't set, OpenGOAL will be searched for in common locations.
+	# The path to an OpenGOAL installation directory. Used to find textures extracted from the Jak 3 ISO.
+	#
+	# If neither `-OpenGoalDir` nor `-Jak3TexDir` are set, first the environment variable `OPENGOAL_DIR`
+	# is checked, then `JAK3_TEX_DIR`, then an automatic search for an OpenGOAL installation is performed.
 	[string]
 	$OpenGoalDir,
+
+	# The path to the textures extracted from the Jak 3 ISO.
+	#
+	# If neither `-OpenGoalDir` nor `-Jak3TexDir` are set, first the environment variable `OPENGOAL_DIR`
+	# is checked, then `JAK3_TEX_DIR`, then an automatic search for an OpenGOAL installation is performed.
+	[string]
+	$Jak3TexDir,
 
 	# If specified, deletes all existing textures in `textures/original/` and re-obtains them.
 	# Otherwise, existing textures will be synced to match any changes to the upscale settings
@@ -65,18 +74,6 @@ function Main {
 	[SuppressMessageAttribute('PSShouldProcess', '')]
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
-	
-	if ([string]::IsNullOrEmpty($OpenGoalDir)) {
-		$OpenGoalDir = Find-OpenGoalInstallDir
-	}
-	elseif (-not (Test-Path -LiteralPath $OpenGoalDir -PathType Container)) {
-		throw "OpenGOAL directory '${OpenGoalDir}' (passed via -OpenGoalDir) does not exist."
-	}
-	else {
-		$OpenGoalDir = Resolve-Path -LiteralPath $OpenGoalDir
-	}
-
-	Write-Host "OpenGOAL installation directory: ${OpenGoalDir}"
 
 	$dest_dir = Get-OriginalTexturesDir
 	$upscale_options = Read-UpscaleOptions
@@ -88,7 +85,7 @@ function Main {
 		Sync-ExistingTexturesWithOptions $dest_dir $upscale_options
 	}
 	
-	$src_dir = Find-GameTexturesDir $OpenGoalDir
+	$src_dir = Find-ExtractedTexturesDir -OpenGoalDir $OpenGoalDir -Jak3TexDir $Jak3TexDir
 	Copy-OriginalTextures $src_dir $dest_dir $upscale_options
 	Write-TextureManifest $dest_dir
 }
