@@ -32,7 +32,7 @@ class Texture {
 	# Copies all occurences of this texture (or only one if it can be de-duplicated) to the destination directory.
 	# Returns the number of texture files actually copied.
 	[int] CopyTo([string] $dest_dir, [bool] $what_if_preference) {
-		if (-not [string]::IsNullOrEmpty($this.WorkflowName)) {
+		if ($this.WorkflowName) {
 			$dest_dir = Join-Path $dest_dir $this.WorkflowName
 		}
 

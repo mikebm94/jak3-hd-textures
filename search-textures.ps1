@@ -388,7 +388,7 @@ function Write-TextureList {
 
 	[TextureGroup] $target_group = $null
 
-	if (-not [string]::IsNullOrEmpty($MergeWithGroup)) {
+	if ($MergeWithGroup) {
 		$target_group = $UpscaleOptions.TextureGroups[$MergeWithGroup]
 
 		if ($null -eq $target_group) {

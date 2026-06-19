@@ -150,7 +150,7 @@ class UpscaleOptions {
 			$this.AddWorkflow($workflow.Name, $workflow.Chain, $workflow.InputOverrides)
 		}
 
-		if (-not [string]::IsNullOrEmpty($raw_options.DefaultWorkflow)) {
+		if ($raw_options.DefaultWorkflow) {
 			$default_workflow = $this.Workflows[$raw_options.DefaultWorkflow]
 
 			if ($null -eq $default_workflow) {
@@ -206,7 +206,7 @@ class UpscaleOptions {
 
 		[Chain]$chain = $null
 
-		if (-not [string]::IsNullOrEmpty($chain_name)) {
+		if ($chain_name) {
 			$chain = $this.Chains[$chain_name]
 
 			if ($null -eq $chain) {
@@ -239,7 +239,7 @@ class UpscaleOptions {
 
 		[Workflow]$workflow = $null
 
-		if (-not [string]::IsNullOrEmpty($workflow_name)) {
+		if ($workflow_name) {
 			$workflow = $this.Workflows[$workflow_name]
 
 			if ($null -eq $workflow) {
