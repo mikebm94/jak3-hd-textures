@@ -292,7 +292,7 @@ function Search-Textures {
 		$texture_name = $texture_file.BaseName
 
 		# First do group-related filtering before checking the various filters, patterns and dimensions.
-		if (($NotGrouped -and $null -ne $UpscaleOptions.TextureGroupMap[$texture_name])) {
+		if ($NotGrouped -and $null -ne $UpscaleOptions.TextureGroupMap[$texture_name]) {
 			# It's in a group when it shouldn't be.
 			continue
 		}
