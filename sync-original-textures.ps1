@@ -100,7 +100,7 @@ function Sync-ExistingTexturesWithOptions {
 
 		[Parameter(Mandatory, Position = 1)]
 		[UpscaleOptions]
-		$Options
+		$UpscaleOptions
 	)
 
 	Write-Host "Syncing existing original textures with upscale options ..."
@@ -110,7 +110,7 @@ function Sync-ExistingTexturesWithOptions {
 	$workflow_dirs = Get-ChildItem -LiteralPath $Path -Directory -ErrorAction Stop
 
 	foreach ($workflow_dir in $workflow_dirs) {
-		$current_workflow = $Options.Workflows[$workflow_dir.Name]
+		$current_workflow = $UpscaleOptions.Workflows[$workflow_dir.Name]
 		$texture_files = Get-ChildItem -LiteralPath $workflow_dir.FullName -Filter '*.png' -File -ErrorAction Stop
 
 		foreach ($texture_file in $texture_files) {
@@ -121,10 +121,10 @@ function Sync-ExistingTexturesWithOptions {
 				continue
 			}
 
-			$new_workflow = $Options.TextureGroupMap[$texture_name].Workflow
+			$new_workflow = $UpscaleOptions.TextureGroupMap[$texture_name].Workflow
 
-			if (-not $Options.TextureGroupMap.ContainsKey($texture_name)) {
-				$new_workflow = $Options.DefaultWorkflow
+			if (-not $UpscaleOptions.TextureGroupMap.ContainsKey($texture_name)) {
+				$new_workflow = $UpscaleOptions.DefaultWorkflow
 			}
 
 			if ($null -eq $new_workflow) {
@@ -190,7 +190,7 @@ function Copy-OriginalTextures {
 		# The upscale options configuring which textures get copied and what workflows to use.
 		[Parameter(Mandatory, Position = 2)]
 		[UpscaleOptions]
-		$Options
+		$UpscaleOptions
 	)
 
 	Write-Host "Indexing game textures in '${SourceDir}' ..."
@@ -206,10 +206,10 @@ function Copy-OriginalTextures {
 			continue
 		}
 
-		$workflow = $Options.TextureGroupMap[$name].Workflow
+		$workflow = $UpscaleOptions.TextureGroupMap[$name].Workflow
 
-		if (-not $Options.TextureGroupMap.ContainsKey($name)) {
-			$workflow = $Options.DefaultWorkflow
+		if (-not $UpscaleOptions.TextureGroupMap.ContainsKey($name)) {
+			$workflow = $UpscaleOptions.DefaultWorkflow
 		}
 		
 		if ($null -ne $workflow) {
