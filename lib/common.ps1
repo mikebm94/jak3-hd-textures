@@ -332,7 +332,7 @@ If the filename is not in the correct format, nothing is returned and a warning 
 .PARAMETER TextureFile
 The FileInfo object for the texture file.
 #>
-function Split-TextureFileName ([FileInfo] $TextureFile) {
+function Split-TextureFileName([FileInfo] $TextureFile) {
 	$components = $TextureFile.BaseName -split '__'
 	
 	if ([string]::IsNullOrWhiteSpace($components[0]) -or [string]::IsNullOrWhiteSpace($components[1])) {
