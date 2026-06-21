@@ -135,12 +135,17 @@ class UpscaleOptions {
 	# The upscale workflow to use on textures unless otherwise specified.
 	[Workflow] $DefaultWorkflow = $null
 
+	# If enabled, emits a warning when a texture added to a group was previously assigned to another group.
+	[bool] $WarnOnGroupReassignment = $false
+
 	# Maps texture names to their respective texture groups.
 	[Dictionary[string, TextureGroup]] $TextureGroupMap = [Dictionary[string, TextureGroup]]::new()
 
 
 	UpscaleOptions([string] $json) {
 		$raw_options = $json | ConvertFrom-Json -ErrorAction Stop
+
+		$this.WarnOnGroupReassignment = $raw_options.WarnOnGroupReassignment
 
 		foreach ($chain in $raw_options.Chains) {
 			$this.AddChain($chain.Name, $chain.LoadDirectoryInputID, $chain.SaveDirectoryInputID)
@@ -257,7 +262,7 @@ class UpscaleOptions {
 
 		foreach ($texture_name in $texture_names) {
 			$existing_group = $this.TextureGroupMap[$texture_name]
-			if ($null -ne $existing_group) {
+			if ($this.WarnOnGroupReassignment -and $null -ne $existing_group) {
 				Write-Warning (
 					"In TextureGroup '${name}': Texture '${texture_name}' " +
 					"was previously assigned to group '$( $existing_group.Name )'."
