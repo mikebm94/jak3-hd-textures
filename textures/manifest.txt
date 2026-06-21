@@ -574,9 +574,6 @@ Main/_all__ecocreature-insidemouth.png
 Main/_all__ecocreature-joint.png
 Main/_all__ecocreature-palm.png
 Main/_all__ecocreature-teeth.png
-Main/_all__environment-darkprec.png
-Main/_all__environment-oldmetal.png
-Main/_all__environment-precur-level.png
 Main/_all__errocyber-eyelid.png
 Main/_all__errocyber-faceflesh.png
 Main/_all__errolcyber-bighand-01.png
@@ -1105,7 +1102,6 @@ Main/_all__mhcity-puffer-top-01.png
 Main/_all__mhcity-skin-ground-to-floor-01.png
 Main/_all__mhcity-tower-door-frame-01.png
 Main/_all__mhcity-vein-01.png
-Main/_all__min-env-mar-01.png
 Main/_all__minb-brok-edge-02.png
 Main/_all__minb-brok-floor.png
 Main/_all__minb-rock01.png
@@ -1199,7 +1195,6 @@ Main/_all__monk-uppertorso-01.png
 Main/_all__monk-waistwrap.png
 Main/_all__monk-wristwrap.png
 Main/_all__moter01.png
-Main/_all__mtn-environment-front-backup.png
 Main/_all__neo-wasp-base.png
 Main/_all__neo-wasp-body.png
 Main/_all__neo-wasp-brown.png
@@ -1281,7 +1276,6 @@ Main/_all__palcab-lorez-metal03.png
 Main/_all__palcab-lorez-plates-red-stripe01.png
 Main/_all__palcab-lorez-plates01.png
 Main/_all__palcab-lowres-background-crater-01.png
-Main/_all__palcab-lowres-background-crater-bottom-enviro.png
 Main/_all__palcab-lowres-background-crater-rim.png
 Main/_all__palcab-lowres-background-desert-01.png
 Main/_all__palcab-lowres-background-desert-to-shore.png
@@ -1326,7 +1320,6 @@ Main/_all__pecker-wingtop.png
 Main/_all__pecker-yellowfur.png
 Main/_all__pipe01.png
 Main/_all__post01.png
-Main/_all__prebot-envmap.png
 Main/_all__prec-dumb-helmet.png
 Main/_all__prec-dumb-pants.png
 Main/_all__prec-dumb-shirt.png
@@ -1448,7 +1441,6 @@ Main/_all__rail-car-vent-01.png
 Main/_all__rail-chair-01.png
 Main/_all__rail-dash-01.png
 Main/_all__rail-detail-01.png
-Main/_all__rail-env-car-01.png
 Main/_all__rail-fit-01.png
 Main/_all__rail-gray-metal-01.png
 Main/_all__rail-patch-01.png
@@ -2134,7 +2126,6 @@ Main/citycast-pris__jakchires-brownstrap.png
 Main/citycast-pris__jakchires-chestplate.png
 Main/citycast-pris__jakchires-glovetop.png
 Main/citycast-pris__jakchires-precarmor-01.png
-Main/comba-alpha__comb-env2.png
 Main/comba-alpha__comb-grate.png
 Main/comba-pris__bam-hairhilite.png
 Main/comba-pris__daxter-eyelid.png
@@ -2153,12 +2144,10 @@ Main/comba-pris__kid-medallion.png
 Main/comba-pris__rail-base-mid-01.png
 Main/comba-pris__rail-cord-01.png
 Main/comba-pris__rail-edge-01.png
-Main/comba-pris__rail-env-wall-01.png
 Main/comba-pris__rail-pipe-01.png
 Main/comba-pris__rail-pipe-03.png
 Main/comba-pris__rail-trim-01.png
 Main/comba-shrub__rail-base-dark-01.png
-Main/comba-shrub__rail-env-wall-01.png
 Main/comba-shrub__rail-pipe-03.png
 Main/comba-shrub__rail-rider-decal-01.png
 Main/comba-shrub__vehicle-body-panel-01.png
@@ -2177,8 +2166,6 @@ Main/comba-shrub__vehicle-snake-tank-01.png
 Main/comba-shrub__vehicle-snake-tank-02.png
 Main/comba-tfrag__comb-comb-tile.png
 Main/comba-tfrag__comb-crct-medium.png
-Main/comba-tfrag__comb-env.png
-Main/comba-tfrag__comb-env2.png
 Main/comba-tfrag__comb-grate.png
 Main/comba-tfrag__comb-pipe.png
 Main/comba-tfrag__comb-pipe1.png
@@ -2209,7 +2196,6 @@ Main/combc-tfrag__rail-base-dark-01.png
 Main/combc-tfrag__rail-base-mid-01.png
 Main/combc-tfrag__rail-cord-01.png
 Main/combc-tfrag__rail-edge-01.png
-Main/combc-tfrag__rail-env-wall-01.png
 Main/combc-tfrag__rail-pipe-01.png
 Main/combc-tfrag__rail-pipe-02.png
 Main/combc-tfrag__rail-pipe-03.png
@@ -2220,13 +2206,11 @@ Main/combd-tfrag__rail-base-dark-01.png
 Main/combd-tfrag__rail-base-mid-01.png
 Main/combd-tfrag__rail-cord-01.png
 Main/combd-tfrag__rail-edge-01.png
-Main/combd-tfrag__rail-env-wall-01.png
 Main/combd-tfrag__rail-pipe-01.png
 Main/combd-tfrag__rail-pipe-02.png
 Main/combd-tfrag__rail-pipe-03.png
 Main/combd-tfrag__rail-tread-01.png
 Main/combd-tfrag__rail-trim-01.png
-Main/combe-tfrag__comb-env2.png
 Main/combe-tfrag__comb-pipe2.png
 Main/combe-tfrag__comb-temp-dark.png
 Main/combe-tfrag__comb-temp-glass.png
@@ -2234,7 +2218,6 @@ Main/combe-tfrag__rail-base-dark-01.png
 Main/combe-tfrag__rail-base-mid-01.png
 Main/combe-tfrag__rail-cord-01.png
 Main/combe-tfrag__rail-edge-01.png
-Main/combe-tfrag__rail-env-wall-01.png
 Main/combe-tfrag__rail-pipe-01.png
 Main/combe-tfrag__rail-pipe-02.png
 Main/combe-tfrag__rail-pipe-03.png
@@ -2242,8 +2225,6 @@ Main/combe-tfrag__rail-trim-01.png
 Main/combn-alpha__comb-grate.png
 Main/combn-tfrag__comb-comb-tile.png
 Main/combn-tfrag__comb-crct-medium.png
-Main/combn-tfrag__comb-env.png
-Main/combn-tfrag__comb-env2.png
 Main/combn-tfrag__comb-pipe.png
 Main/combn-tfrag__comb-pipe1.png
 Main/combn-tfrag__comb-pipe2.png
@@ -2290,11 +2271,9 @@ Main/combx-tfrag__comb-pipe2.png
 Main/combx-tfrag__comb-plate-02.png
 Main/combx-tfrag__comb-temp-dark.png
 Main/combx-tfrag__comb-temp-glass.png
-Main/combx-tfrag__rail-env-wall-01.png
 Main/combx-tfrag__tpl-door-face-01.png
 Main/common__autoeye-lid.png
 Main/common__lens-highlight.png
-Main/common__skull-gem-env.png
 Main/ctycara-pris__carbdash01.png
 Main/ctycara-pris__carbside01.png
 Main/ctycara-pris__carbwing01.png
@@ -3309,8 +3288,6 @@ Main/deswalk-vis-tfrag__desw-wall-light-03.png
 Main/deswalk-vis-tfrag__desw-wall-pucker-01.png
 Main/deswalk-vis-tfrag__desw-wall-tube-01-hitweak.png
 Main/deswalk-vis-tfrag__desw-wall-tube-01.png
-Main/environment-generic__environment-ocean.png
-Main/environment-generic__pal-environment-front.png
 Main/environment-generic__war-armor-weathered.png
 Main/factorya-pris__bam-hairhilite.png
 Main/factorya-pris__cguard1-backmetal.png
@@ -3602,7 +3579,6 @@ Main/freecast-pris2__veger-coatclips.png
 Main/freecast-pris2__veger-hair.png
 Main/freecast-pris2__veger-scarf.png
 Main/freecast-pris__bam-hairhilite.png
-Main/freecast-pris__environment-title.png
 Main/freecast-pris__jakc-armor.png
 Main/freehq-pris2__bam-hairhilite.png
 Main/freehq-pris2__torn-belt.png
@@ -3637,7 +3613,6 @@ Main/freehq-sprite__vinroom-tv-radar.png
 Main/freehq-sprite__yavin.png
 Main/freehq-tfrag__freehg-display01.png
 Main/freehq-tfrag__freehq-corrosive-metal-01.png
-Main/freehq-tfrag__freehq-env.png
 Main/freehq-tfrag__freehq-floor-tile-set01.png
 Main/freehq-tfrag__freehq-floor-tile-set02.png
 Main/freehq-tfrag__freehq-floor-walk-set01.png
@@ -3713,7 +3688,6 @@ Main/gungame-sprite__kg-targ-bit-02.png
 Main/gungame-sprite__kg-targ-bit-03.png
 Main/gungame-sprite__kg-targ-bit-04.png
 Main/gungame-vis-pris2__bam-hairhilite.png
-Main/gungame-vis-pris2__environment-title.png
 Main/gungame-vis-pris2__gun-blue-mag.png
 Main/gungame-vis-pris2__gun-dark-mag.png
 Main/gungame-vis-pris2__gun-red-mag.png
@@ -3856,7 +3830,6 @@ Main/hiphog-vis-tfrag__hip-crate-body.png
 Main/hiphog-vis-tfrag__hip-curtain.png
 Main/hiphog-vis-tfrag__hip-daxter-portrate04.png
 Main/hiphog-vis-tfrag__hip-daxter-portrate06.png
-Main/hiphog-vis-tfrag__hip-environment.png
 Main/hiphog-vis-tfrag__hip-glass-shard-01.png
 Main/hiphog-vis-tfrag__hip-gun-barrel-01.png
 Main/hiphog-vis-tfrag__hip-gun-barrel-alt.png
@@ -4353,7 +4326,6 @@ Main/level-default-pris__board-iris-bottom.png
 Main/level-default-pris__board-iris.png
 Main/level-default-pris__board-main-bottom.png
 Main/level-default-pris__board-main.png
-Main/level-default-pris__environment-title.png
 Main/level-default-pris__gun-blue-mag.png
 Main/level-default-pris__gun-dark-mag.png
 Main/level-default-pris__gun-red-mag.png
@@ -4404,7 +4376,6 @@ Main/level-default-pris__talkbox-body-08.png
 Main/level-default-pris__talkbox-grill-01.png
 Main/level-default-pris__talkbox-light-01.png
 Main/level-default-pris__talkbox-orange-01.png
-Main/level-default-shrub__environment-title.png
 Main/level-default-shrub__loadsave-01.png
 Main/level-default-shrub__loadsave-02.png
 Main/level-default-shrub__loadsave-03.png
@@ -4551,13 +4522,9 @@ Main/level-default-tfrag__life-crate-bolt.png
 Main/level-default-tfrag__life-crate-plain.png
 Main/level-default-tfrag__life-crate.png
 Main/level-default-tfrag__skull-gem-alpha-03.png
-Main/level-default-warp__environment-ice.png
-Main/level-default-warp__shield-env-uvscroll.png
 Main/level-default-water__blue-beam-dest.png
 Main/level-default-water__blue-needle.png
 Main/level-default-water__com-rod-01.png
-Main/level-default-water__environment-lightjak-wing.png
-Main/level-default-water__environment-lightjak.png
 Main/level-default-water__lightning-beam-01.png
 Main/level-default-water__lightning-beam-02.png
 Main/level-default-water__loadsave-frame.png
@@ -5164,7 +5131,6 @@ Main/ltowcity-tfrag__t-palshaft-pil-01.png
 Main/ltowcity-tfrag__t-palshaft-plate01.png
 Main/ltowcity-tfrag__t-palshaft-roof-01.png
 Main/ltowcity-tfrag__tcab-beam01.png
-Main/ltowera-vis-tfrag__rail-env-wall-01.png
 Main/ltowera-vis-tfrag__tow-base-ground.png
 Main/ltowerb-vis-pris2__sig-skirts-02.png
 Main/ltowerb-vis-pris__bam-hairhilite.png
@@ -5673,7 +5639,6 @@ Main/mined-tfrag__minc-safe-plate-01.png
 Main/mined-tfrag__minc-safe-plate-02.png
 Main/mined-tfrag__minc-stone01.png
 Main/mined-tfrag__minc-train-pipe-gen-01.png
-Main/mined-tfrag__mined-pillar-env.png
 Main/mined-tfrag__mined_red_cgtd.png
 Main/mined-tfrag__mined_redbrake.png
 Main/mined-tfrag__mined_rostone-01.png
@@ -6223,7 +6188,6 @@ Main/museum4-pris__ogre-bluefur.png
 Main/museum4-pris__ogre-bolt.png
 Main/museum4-pris__ogre-brownleather.png
 Main/museum4-pris__ogre-claw.png
-Main/museum4-pris__ogre-envmap.png
 Main/museum4-pris__ogre-furlong.png
 Main/museum4-pris__ogre-furtrans.png
 Main/museum4-pris__ogre-furtrans2.png
@@ -6342,7 +6306,6 @@ Main/nstb-vis-pris__nestb-mektunnel.png
 Main/nstb-vis-pris__nsta-goo-base.png
 Main/nstb-vis-shrub__nst-egg-bulb-01.png
 Main/nstb-vis-tfrag__nstab-mekbrain-plain.png
-Main/nstb-vis-water__environment-nstb-water.png
 Main/nstb-vis-water__nstb-water.png
 Main/oasiscst-pris2__bam-hairhilite.png
 Main/oasiscst-pris__bam-hairhilite.png
@@ -6618,19 +6581,15 @@ Main/precurd-vis-tfrag__precur-tube-joint-01.png
 Main/precurd-vis-tfrag__precur-tubes-segment-01.png
 Main/precurd-vis-tfrag__precur-tubes-small-01.png
 Main/precurd-vis-tfrag__precur-wall-groove-01.png
-Main/precurd-vis-water__environment-lightjak.png
 Main/programmer__checker.png
 Main/programmer__colorbars13.png
-Main/raila-alpha__comb-env2.png
 Main/raila-pris__rail-base-mid-01.png
 Main/raila-pris__rail-cord-01.png
 Main/raila-pris__rail-edge-01.png
-Main/raila-pris__rail-env-wall-01.png
 Main/raila-pris__rail-pipe-01.png
 Main/raila-pris__rail-pipe-03.png
 Main/raila-pris__rail-trim-01.png
 Main/raila-shrub__rail-base-dark-01.png
-Main/raila-shrub__rail-env-wall-01.png
 Main/raila-shrub__rail-pipe-03.png
 Main/raila-shrub__rail-rider-decal-01.png
 Main/raila-shrub__vehicle-body-panel-01.png
@@ -6653,7 +6612,6 @@ Main/raila-tfrag__rail-edge-01.png
 Main/raila-tfrag__rail-pipe-01.png
 Main/raila-tfrag__rail-pipe-02.png
 Main/raila-tfrag__rail-pipe-03.png
-Main/railb-tfrag__comb-env2.png
 Main/railb-tfrag__comb-pipe2.png
 Main/railb-tfrag__comb-ring.png
 Main/railb-tfrag__comb-temp-dark.png
@@ -6662,7 +6620,6 @@ Main/railb-tfrag__rail-base-dark-01.png
 Main/railb-tfrag__rail-base-mid-01.png
 Main/railb-tfrag__rail-cord-01.png
 Main/railb-tfrag__rail-edge-01.png
-Main/railb-tfrag__rail-env-wall-01.png
 Main/railb-tfrag__rail-pipe-01.png
 Main/railb-tfrag__rail-pipe-02.png
 Main/railb-tfrag__rail-pipe-03.png
@@ -6673,7 +6630,6 @@ Main/railb2-tfrag__rail-base-dark-01.png
 Main/railb2-tfrag__rail-base-mid-01.png
 Main/railb2-tfrag__rail-cord-01.png
 Main/railb2-tfrag__rail-edge-01.png
-Main/railb2-tfrag__rail-env-wall-01.png
 Main/railb2-tfrag__rail-pipe-01.png
 Main/railb2-tfrag__rail-pipe-02.png
 Main/railb2-tfrag__rail-pipe-03.png
@@ -6685,7 +6641,6 @@ Main/railc-tfrag__rail-base-dark-01.png
 Main/railc-tfrag__rail-base-mid-01.png
 Main/railc-tfrag__rail-cord-01.png
 Main/railc-tfrag__rail-edge-01.png
-Main/railc-tfrag__rail-env-wall-01.png
 Main/railc-tfrag__rail-pipe-01.png
 Main/railc-tfrag__rail-pipe-02.png
 Main/railc-tfrag__rail-pipe-03.png
@@ -6728,7 +6683,6 @@ Main/railcst-pris__torn-gunbarrel-02.png
 Main/railcst-pris__torn-gunbarrel.png
 Main/railcst-pris__torn-handle-01.png
 Main/railcst-shrub__rail-base-dark-01.png
-Main/railcst-shrub__rail-env-wall-01.png
 Main/railcst-shrub__rail-pipe-03.png
 Main/railcst-shrub__rail-rider-decal-01.png
 Main/railcst-tfrag__cmn-precursor-plainstripe.png
@@ -6746,7 +6700,6 @@ Main/raild-tfrag__rail-base-dark-01.png
 Main/raild-tfrag__rail-base-mid-01.png
 Main/raild-tfrag__rail-cord-01.png
 Main/raild-tfrag__rail-edge-01.png
-Main/raild-tfrag__rail-env-wall-01.png
 Main/raild-tfrag__rail-pipe-01.png
 Main/raild-tfrag__rail-pipe-02.png
 Main/raild-tfrag__rail-pipe-03.png
@@ -6759,12 +6712,10 @@ Main/raile-tfrag__rail-base-dark-01.png
 Main/raile-tfrag__rail-base-mid-01.png
 Main/raile-tfrag__rail-cord-01.png
 Main/raile-tfrag__rail-edge-01.png
-Main/raile-tfrag__rail-env-wall-01.png
 Main/raile-tfrag__rail-pipe-01.png
 Main/raile-tfrag__rail-pipe-02.png
 Main/raile-tfrag__rail-pipe-03.png
 Main/raile-tfrag__rail-trim-01.png
-Main/railf-tfrag__comb-env2.png
 Main/railf-tfrag__comb-pipe2.png
 Main/railf-tfrag__comb-ring.png
 Main/railf-tfrag__comb-temp-dark.png
@@ -6773,7 +6724,6 @@ Main/railf-tfrag__rail-base-dark-01.png
 Main/railf-tfrag__rail-base-mid-01.png
 Main/railf-tfrag__rail-cord-01.png
 Main/railf-tfrag__rail-edge-01.png
-Main/railf-tfrag__rail-env-wall-01.png
 Main/railf-tfrag__rail-pipe-01.png
 Main/railf-tfrag__rail-pipe-02.png
 Main/railf-tfrag__rail-pipe-03.png
@@ -6785,8 +6735,6 @@ Main/railx-tfrag__rail-comb-01.png
 Main/railx-tfrag__rail-comb-02.png
 Main/railx-tfrag__rail-cord-01.png
 Main/railx-tfrag__rail-edge-01.png
-Main/railx-tfrag__rail-env-ground-01.png
-Main/railx-tfrag__rail-env-wall-01.png
 Main/railx-tfrag__rail-grate-01.png
 Main/railx-tfrag__rail-monitor-screen-01.png
 Main/railx-tfrag__rail-monitor-screen-02.png
@@ -6944,7 +6892,6 @@ Main/rublcst-vis-pris__kid-medallion.png
 Main/rublcst-vis-pris__rhino-horn-02.png
 Main/rublcst-vis-pris__vehicle-wheel-01.png
 Main/rublcst-vis-shrub__rail-base-dark-01.png
-Main/rublcst-vis-shrub__rail-env-wall-01.png
 Main/rublcst-vis-shrub__rail-pipe-03.png
 Main/rublcst-vis-shrub__rail-rider-decal-01.png
 Main/rublcst-vis-shrub__rub-greyblue-plain-lowres.png
@@ -6955,7 +6902,6 @@ Main/rublcst-vis-tfrag__rail-base-dark-01.png
 Main/rublcst-vis-tfrag__rail-base-mid-01.png
 Main/rublcst-vis-tfrag__rail-cord-01.png
 Main/rublcst-vis-tfrag__rail-edge-01.png
-Main/rublcst-vis-tfrag__rail-env-wall-01.png
 Main/rublcst-vis-tfrag__rail-pipe-01.png
 Main/rublcst-vis-tfrag__rail-pipe-02.png
 Main/rublcst-vis-tfrag__rail-pipe-03.png
@@ -7931,7 +7877,6 @@ Main/templea-vis-pris2__spider-emblem.png
 Main/templea-vis-pris2__spider-leg.png
 Main/templea-vis-pris2__spider-tusk.png
 Main/templea-vis-pris__bam-hairhilite.png
-Main/templea-vis-pris__comb-env2.png
 Main/templea-vis-pris__daxter-eyelid.png
 Main/templea-vis-pris__jakc-armor.png
 Main/templea-vis-pris__jakc-chestplate-straps.png
@@ -7964,7 +7909,6 @@ Main/templea-vis-shrub__temple_sandstone_ground01.png
 Main/templea-vis-tfrag__common_sandstone_base01.png
 Main/templea-vis-tfrag__common_sandstone_ground01.png
 Main/templea-vis-tfrag__common_sandstone_taper01.png
-Main/templea-vis-tfrag__rail-env-wall-01.png
 Main/templea-vis-tfrag__temple_metal01.png
 Main/templea-vis-tfrag__temple_metal02.png
 Main/templea-vis-tfrag__temple_pre-01.png
@@ -7989,8 +7933,6 @@ Main/templea-vis-tfrag__temple_sandstone_trim02.png
 Main/templea-vis-tfrag__templea_sandstone01.png
 Main/templea-vis-tfrag__templea_sandstone_brick01.png
 Main/templea-vis-tfrag__warpgate-precursormetal.png
-Main/templea-vis-water__environment-lightjak.png
-Main/templeb-vis-pris__rail-env-wall-01.png
 Main/templeb-vis-pris__temple_metal02.png
 Main/templeb-vis-pris__temple_pre-01.png
 Main/templeb-vis-pris__temple_pre-03.png
@@ -8007,7 +7949,6 @@ Main/templeb-vis-shrub__temple-candle-wick.png
 Main/templeb-vis-tfrag__common_sandstone_base01.png
 Main/templeb-vis-tfrag__common_sandstone_ground01.png
 Main/templeb-vis-tfrag__common_sandstone_taper01.png
-Main/templeb-vis-tfrag__rail-env-wall-01.png
 Main/templeb-vis-tfrag__temple-candle-side.png
 Main/templeb-vis-tfrag__temple-candle-top.png
 Main/templeb-vis-tfrag__temple-candle-wax-top.png
@@ -8040,7 +7981,6 @@ Main/templec-vis-pris__temple_flag02.png
 Main/templec-vis-tfrag__common_sandstone_base01.png
 Main/templec-vis-tfrag__common_sandstone_ground01.png
 Main/templec-vis-tfrag__common_sandstone_taper01.png
-Main/templec-vis-tfrag__rail-env-wall-01.png
 Main/templec-vis-tfrag__temple-box-brown.png
 Main/templec-vis-tfrag__temple-wall-01.png
 Main/templec-vis-tfrag__temple_metal01.png
@@ -8074,7 +8014,6 @@ Main/templed-vis-tfrag__comb-temp-glass.png
 Main/templed-vis-tfrag__common_sandstone_base01.png
 Main/templed-vis-tfrag__common_sandstone_ground01.png
 Main/templed-vis-tfrag__common_sandstone_taper01.png
-Main/templed-vis-tfrag__rail-env-wall-01.png
 Main/templed-vis-tfrag__temple-celing-01.png
 Main/templed-vis-tfrag__temple_metal01.png
 Main/templed-vis-tfrag__temple_metal02.png
@@ -8111,7 +8050,6 @@ Main/templex-vis-shrub__for-shrub-grass.png
 Main/templex-vis-shrub__temple_leaf01.png
 Main/templex-vis-shrub__temple_leaf02.png
 Main/templex-vis-shrub__temple_sandstone_ground01.png
-Main/templex-vis-tfrag__rail-env-wall-01.png
 Main/templex-vis-tfrag__temple_metal01.png
 Main/templex-vis-tfrag__temple_metal02.png
 Main/templex-vis-tfrag__temple_pre-01.png
@@ -8132,7 +8070,6 @@ Main/title-pris__logo-black.png
 Main/title-pris__logo-circuit.png
 Main/title-pris__logo-jak.png
 Main/towerb-vis-tfrag__mhcity-wall-tentacle-02.png
-Main/towerb-vis-tfrag__rail-env-wall-01.png
 Main/towerb-vis-tfrag__tow-base-ground.png
 Main/towerb-vis-tfrag__tow-bridge-source.png
 Main/towerc-pris__bam-hairhilite.png
@@ -8167,7 +8104,6 @@ Main/towercst-pris__mhcity-grunt-egg-horns-01.png
 Main/towercst-pris__mhcity-tower-door-metal-01.png
 Main/towercst-pris__mhcity-wall-tentacle-01.png
 Main/towercst-tfrag__mhcity-skin-ground-01.png
-Main/towercst-tfrag__rail-env-wall-01.png
 Main/towercst-tfrag__tow-base-ground.png
 Main/vinroom-sprite__piss-puddle.png
 Main/vinroom-sprite__vinroom-tv-morgan.png
@@ -8247,7 +8183,6 @@ Main/volcanoa-vis-tfrag__minc-platfrom-metal-01.png
 Main/volcanoa-vis-tfrag__vol-bark-burnt-hole.png
 Main/volcanoa-vis-tfrag__vol-bark.png
 Main/volcanoa-vis-tfrag__vol-bushbase-01.png
-Main/volcanoa-vis-tfrag__vol-dk-sat-environment-map.png
 Main/volcanoa-vis-tfrag__vol-dpipe-02.png
 Main/volcanoa-vis-tfrag__vol-plat-top.png
 Main/volcanoa-vis-tfrag__vol-plate-01.png
@@ -8822,7 +8757,6 @@ Main/wasstadb-tfrag__dummy-blade-01.png
 Main/wasstadb-tfrag__dummy-blade-handle-01.png
 Main/wasstadb-tfrag__dummy-blade-long-01.png
 Main/wasstadb-tfrag__dummy-chestplate-01.png
-Main/wasstadb-tfrag__dummy-env-01.png
 Main/wasstadb-tfrag__dummy-faceplate-01.png
 Main/wasstadb-tfrag__dummy-red-01.png
 Main/wasstadb-tfrag__dummy-stripe-pole-01.png
