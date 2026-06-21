@@ -621,7 +621,8 @@
 			"Description": "Textures that produce bad results when upscaled.",
 			"Workflow": null,
 			"TextureNames": [
-				"cguardgame-shouldershield"
+				"cguardgame-shouldershield",
+				"darkguard-shouldershield"
 			]
 		},
 

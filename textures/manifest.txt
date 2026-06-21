@@ -413,7 +413,6 @@ Main/_all__dark-crystal-pickup-03.png
 Main/_all__darkguard-armshield.png
 Main/_all__darkguard-headshield.png
 Main/_all__darkguard-scarf.png
-Main/_all__darkguard-shouldershield.png
 Main/_all__dash01.png
 Main/_all__daxter-furhilite.png
 Main/_all__daxter-orange.png
