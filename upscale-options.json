@@ -1,6 +1,6 @@
 {
 	"DefaultWorkflow": "Main",
-	"WarnOnGroupReassignment": true,
+	"WarnOnGroupReassignment": false,
 
 	"Workflows": [
 		{
