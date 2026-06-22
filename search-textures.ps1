@@ -10,14 +10,15 @@ Searches for matching files in the Jak 3 textures, or creates a list of texture 
 The script is meant to aid in creating texture groups in `upscale-options.json`, or to help visually inspect
 the textures already in a group. The matching textures are copied to `textures/search-results/`.
 
-The primary (but optional) method of searching is by texture name using:
-	Wildcard patterns using `-Filters`.
-	Regular expression patterns using `-Patterns`.
+There are numerous methods of searching for textures, which can be combined:
+	By texture name using `-Filters` (wildcards) and/or `-Patterns` (regex).
+		(Only one of the filters or patterns needs to match.)
+	By texture subdirectory name using `-SubdirFilters` (wildcards) and/or `-SubdirPatterns` (regex).
+		(Only one of the filters or patterns needs to match.)
+	By texture group using `-InGroups`, `-IsGrouped` or `-NotGrouped` (mutually exclusive).
+	By texture dimensions using `-Width` and/or `-Height`.
 
-Only one of the patterns in either of those parameters needs to match to return the result.
-Results can be further refined by:
-	Filtering by texture group using `-InGroups`, `-IsGrouped` or `-NotGrouped` (mutually exclusive).
-	Filtering by texture dimensions using `-Width` and/or `-Height`.
+All methods used must match to return a result.
 
 You can delete any files you don't want to include in the final texture list from `textures/search-results/`.
 Passing the `-WriteTextureList` parameter writes a sorted list of the unique texture names
@@ -27,10 +28,10 @@ Pass `-CombineWithGroup <group name>` to merge the texture names from an existin
 with the names in the search results when writing the texture list. 
 
 .NOTES
-For help with syntax for the `-Filters` parameter, see:
+For help with syntax for the `-Filters` or `-SubdirFilters` parameters, see:
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_wildcards
 
-For help with syntax for the `-Patterns` parameter, see:
+For help with syntax for the `-Patterns` or `-SubdirPatterns` parameters, see:
 https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions
 
 .EXAMPLE
@@ -77,6 +78,22 @@ param(
 	[Parameter(ParameterSetName = 'SearchNotGrouped')]
 	[string[]]
 	$Patterns,
+
+	# The wildcard patterns to match against texture subdirectory names (<level name>[-category]).
+	[Parameter(ParameterSetName = 'Search')]
+	[Parameter(ParameterSetName = 'SearchInGroups')]
+	[Parameter(ParameterSetName = 'SearchIsGrouped')]
+	[Parameter(ParameterSetName = 'SearchNotGrouped')]
+	[string[]]
+	$SubdirFilters,
+
+	# The regex patterns to match against texture subdirectory names (<level name>[-category]).
+	[Parameter(ParameterSetName = 'Search')]
+	[Parameter(ParameterSetName = 'SearchInGroups')]
+	[Parameter(ParameterSetName = 'SearchIsGrouped')]
+	[Parameter(ParameterSetName = 'SearchNotGrouped')]
+	[string[]]
+	$SubdirPatterns,
 
 	# Excludes textures that don't belong to any of the provided texture groups.
 	[Parameter(ParameterSetName = 'SearchInGroups', Mandatory)]
@@ -240,6 +257,7 @@ function Main {
 
 	$any_criteria =
 		($Filters.Count -gt 0) -or ($Patterns.Count -gt 0) -or
+		($SubdirFilters.Count -gt 0) -or ($SubdirPatterns.Count -gt 0) -or
 		($InGroups.Count -gt 0) -or $IsGrouped -or $NotGrouped -or
 		$Width -or $Height
 
@@ -302,16 +320,20 @@ function Search-Textures {
 
 	# Get results.
 	foreach ($texture_file in $texture_files) {
+		$subdir_name = $texture_file.Directory.BaseName
 		$texture_name = $texture_file.BaseName
 
 		if (-not $IncludeNotUpscaled) {
 			# Searching in the copied original textures, where the file heirarchy is embedded in the filenames.
-			$texture_name = (Split-TextureFileName $texture_file).Name
+			$split_filename = Split-TextureFileName $texture_file
 
-			# Unknown texture
-			if ($null -eq $texture_name) {
+			if ($null -eq $split_filename) {
+				# Unknown texture
 				continue
 			}
+
+			$subdir_name = $split_filename.SubDirectory
+			$texture_name = $split_filename.Name
 		}
 
 		# First do group-related filtering before checking the various filters, patterns and dimensions.
@@ -328,8 +350,11 @@ function Search-Textures {
 			continue
 		}
 
-		# Then check if the name matches any one of the wildcard/regex patterns.
-		if (-not (Test-TextureName $texture_name)) {
+		# Then check if the texture name and/or subdirectory name matches any one of the wildcard/regex patterns.
+		if (-not (Test-Patterns $subdir_name -Filters $SubdirFilters -Patterns $SubdirPatterns)) {
+			continue
+		}
+		elseif (-not (Test-Patterns $texture_name -Filters $Filters -Patterns $Patterns)) {
 			continue
 		}
 
@@ -369,23 +394,23 @@ function Search-Textures {
 
 <#
 .SYNOPSIS
-Checks if a texture's name matches any of the patterns in the `Filters` and `Patterns` parameters.
+Checks if a texture's name or subdirectory name matches any of the given patterns.
 #>
-function Test-TextureName([string] $TextureName) {
+function Test-Patterns([string] $Name, [string[]] $Filters, [string[]] $Patterns) {
 	if (($Filters.Count -eq 0) -and ($Patterns.Count -eq 0)) {
 		return $true
 	}
 
 	# Match against wildcard patterns first because it's faster than regex.
 	foreach ($filter in $Filters) {
-		if ($TextureName -like $filter) {
+		if ($Name -like $filter) {
 			return $true
 		}
 	}
 
 	# Match against regex patterns.
 	foreach ($pattern in $Patterns) {
-		if ($TextureName -match $pattern) {
+		if ($Name -match $pattern) {
 			return $true
 		}
 	}
