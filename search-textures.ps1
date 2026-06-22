@@ -274,16 +274,10 @@ function Main {
 	}
 
 	$search_params = @{
+		SearchDir = Find-ExtractedTexturesDir -OpenGoalDir $OpenGoalDir -Jak3TexDir $Jak3TexDir
 		ResultsDir = $results_dir
 		UpscaleOptions = $upscale_options
 		DimensionFilter = if ($Width -or $Height) { [DimensionFilter]::new($Width, $Height) }
-	}
-
-	if ($IncludeNotUpscaled) {
-		$search_params.SearchDir = Find-ExtractedTexturesDir -OpenGoalDir $OpenGoalDir -Jak3TexDir $Jak3TexDir
-	}
-	else {
-		$search_params.SearchDir = Get-OriginalTexturesDir
 	}
 
 	Search-Textures @search_params
@@ -313,6 +307,7 @@ function Search-Textures {
 	Write-Host "Searching textures in '${SearchDir}' ..."
 
 	$texture_files = Get-ChildItem -LiteralPath $SearchDir -Filter '*.png' -File -Recurse -ErrorAction Stop
+	$min_size = $UpscaleOptions.MinimumTextureSize
 
 	# Use `Texture` objects grouped by texture name to de-duplicate the results using their file hashes.
 	# Also handles encoding the sub-directory into the filenames when copying to the result directory.
@@ -322,30 +317,28 @@ function Search-Textures {
 	foreach ($texture_file in $texture_files) {
 		$subdir_name = $texture_file.Directory.BaseName
 		$texture_name = $texture_file.BaseName
+		$texture_group = $UpscaleOptions.TextureGroupMap[$texture_name]
+		$texture_workflow = if ($texture_group) {
+			$texture_group.Workflow
+		} else {
+			$UpscaleOptions.DefaultWorkflow
+		}
 
-		if (-not $IncludeNotUpscaled) {
-			# Searching in the copied original textures, where the file heirarchy is embedded in the filenames.
-			$split_filename = Split-TextureFileName $texture_file
-
-			if ($null -eq $split_filename) {
-				# Unknown texture
-				continue
-			}
-
-			$subdir_name = $split_filename.SubDirectory
-			$texture_name = $split_filename.Name
+		if ($texture_group -and -not $IncludeNotUpscaled -and $null -eq $texture_workflow) {
+			# Upscaling is explicitly disabled for this texture, and -IncludeNotUpscaled wasn't passed.
+			continue
 		}
 
 		# First do group-related filtering before checking the various filters, patterns and dimensions.
-		if ($NotGrouped -and $null -ne $UpscaleOptions.TextureGroupMap[$texture_name]) {
+		if ($NotGrouped -and $null -ne $texture_group) {
 			# It's in a group when it shouldn't be.
 			continue
 		}
-		elseif ($IsGrouped -and $null -eq $UpscaleOptions.TextureGroupMap[$texture_name]) {
+		elseif ($IsGrouped -and $null -eq $texture_group) {
 			# It's not in a group when it should be.
 			continue
 		}
-		elseif ($InGroups -and -not $InGroups.Contains($UpscaleOptions.TextureGroupMap[$texture_name].Name)) {
+		elseif ($InGroups -and -not $InGroups.Contains($texture_group.Name)) {
 			# It's not in the right group.
 			continue
 		}
@@ -358,10 +351,19 @@ function Search-Textures {
 			continue
 		}
 
-		# Finally, the most expensive check, checking if the dimensions match the width and/or height filters.
-		if ($DimensionFilter) {
+		# Finally, the most expensive check, checking the dimensions.
+		if (-not $IncludeNotUpscaled -or $DimensionFilter) {
 			$size = Get-TextureSize $texture_file.FullName
-			if (-not $DimensionFilter.CheckDimensions($size.Width, $size.Height)) {
+
+			if (-not $IncludeNotUpscaled -and $min_size -gt 0) {
+				if ($size.Width -lt $min_size -or $size.Height -lt $min_size) {
+					# Upscaling is implicitly disabled because it's smaller than the `MinimumTextureSize`
+					# set in `upscale-options.json`, and -IncludeNotUpscaled wasn't passed.
+					continue
+				}
+			}
+			if ($DimensionFilter -and -not $DimensionFilter.CheckDimensions($size.Width, $size.Height)) {
+				# Doesn't match the `-Width` or `-Height` filters.
 				continue
 			}
 		}

@@ -42,18 +42,8 @@ class Texture {
 		$textures_copied = 0
 
 		foreach ($file in $this.Files) {
-			$split_filename = Split-TextureFileName $file
-
-			$new_filename = if ($split_filename) {
-				# Texture is a search result found in `textures/original/`,
-				# the subdirectory is already in the filename.
-				$file.Name
-			} elseif ($should_deduplicate) {
-				"_all__$( $file.Name )"
-			} else {
-				"$( $file.Directory.BaseName )__$( $file.Name )"
-			}
-
+			$subdir_name = if ($should_deduplicate) { '_all' } else { $file.Directory.BaseName }
+			$new_filename = "${subdir_name}__$( $file.Name )"
 			$dest_path = Join-Path $dest_dir $new_filename
 
 			if (-not (Test-Path -LiteralPath $dest_path -PathType Leaf)) {
