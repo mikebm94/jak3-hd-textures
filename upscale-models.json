@@ -1,9 +1,9 @@
 [
-	{
-		"ModelName": "4x-PBRify_UpscalerV4.safetensors",
-		"HashSHA1": "D267FD6C87CB269A428B90C3F3712C020EB96A08",
-		"Mirrors": [
-			"https://github.com/Kim2091/Kim2091-Models/releases/download/4x-PBRify_UpscalerV4/4x-PBRify_UpscalerV4.safetensors"
-		]
-	}
+  {
+    "ModelName": "4x-PBRify_UpscalerV4.safetensors",
+    "HashSHA1": "D267FD6C87CB269A428B90C3F3712C020EB96A08",
+    "Mirrors": [
+      "https://github.com/Kim2091/Kim2091-Models/releases/download/4x-PBRify_UpscalerV4/4x-PBRify_UpscalerV4.safetensors"
+    ]
+  }
 ]
