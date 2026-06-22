@@ -336,7 +336,6 @@ function Split-TextureFileName([FileInfo] $TextureFile) {
 	$components = $TextureFile.BaseName -split '__'
 	
 	if ([string]::IsNullOrWhiteSpace($components[0]) -or [string]::IsNullOrWhiteSpace($components[1])) {
-		Write-Warning "Encountered unknown texture file: $( $TextureFile.FullName )"
 		return $null
 	}
 
