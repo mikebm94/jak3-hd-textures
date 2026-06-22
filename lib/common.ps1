@@ -327,7 +327,7 @@ is encoded into filenames using the format "{subdir}__{name}.png" when they are 
 .OUTPUTS
 Outputs a `hashtable` with a `SubDirectory` item containing the textures sub-directory name,
 and a `Name` item containing the textures filename without the file extension.
-If the filename is not in the correct format, nothing is returned and a warning is emmitted.
+If the filename is not in the correct format, nothing is returned.
 
 .PARAMETER TextureFile
 The FileInfo object for the texture file.
