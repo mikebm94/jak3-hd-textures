@@ -80,6 +80,17 @@ param(
 
 	# Excludes textures that don't belong to any of the provided texture groups.
 	[Parameter(ParameterSetName = 'SearchInGroups', Mandatory)]
+	[ArgumentCompleter({
+		param($cmd_name, $param_name, $word, $cmd_ast, $fake_bound_params)
+
+		$upscale_opts_path = Join-Path $PSScriptRoot 'upscale-options.json'
+		$upscale_opts =
+			Get-Content -LiteralPath $upscale_opts_path -Raw -ErrorAction SilentlyContinue |
+			ConvertFrom-Json -ErrorAction SilentlyContinue
+		$upscale_opts.TextureGroups |
+			Select-Object -ExpandProperty Name -ErrorAction SilentlyContinue |
+			Where-Object { $_ -like "${word}*" }
+	})]
 	[string[]]
 	$InGroups,
 
