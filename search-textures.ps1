@@ -127,6 +127,15 @@ param(
 	[string]
 	$Height,
 
+	# Includes search results that don't meet the minimum texture size set by `MinimumTextureSize`
+	# in `upscale-options.json`. The `-Width` and `-Height` parameters will still apply.
+	[Parameter(ParameterSetName = 'Search')]
+	[Parameter(ParameterSetName = 'SearchInGroups')]
+	[Parameter(ParameterSetName = 'SearchIsGrouped')]
+	[Parameter(ParameterSetName = 'SearchNotGrouped')]
+	[switch]
+	$IncludeUndersized,
+
 	# Deletes all files in `textures/search-results/` before performing the search.
 	[Parameter(ParameterSetName = 'Search')]
 	[Parameter(ParameterSetName = 'SearchInGroups')]
@@ -282,6 +291,7 @@ function Search-Textures {
 	Write-Host "Searching textures in '${SearchDir}' ..."
 
 	$texture_files = Get-ChildItem -LiteralPath $SearchDir -Filter '*.png' -File -Recurse -ErrorAction Stop
+	$min_texture_size = $UpscaleOptions.MinimumTextureSize
 
 	# Use `Texture` objects grouped by texture name to de-duplicate the results using their file hashes.
 	# Also handles encoding the sub-directory into the filenames when copying to the result directory.
@@ -312,8 +322,15 @@ function Search-Textures {
 
 		# Finally, the most expensive check, checking if the dimensions match the width and/or height filters.
 		if ($DimensionFilter) {
-			$texture_size = Get-TextureSize $texture_file.FullName
-			if (-not $DimensionFilter.CheckDimensions($texture_size.Width, $texture_size.Height)) {
+			$size = Get-TextureSize $texture_file.FullName
+
+			if ($min_texture_size -gt 0 -and -not $IncludeUndersized) {
+				if ($size.Width -lt $min_texture_size -or $size.Height -lt $min_texture_size) {
+					continue
+				}
+			}
+
+			if (-not $DimensionFilter.CheckDimensions($size.Width, $size.Height)) {
 				continue
 			}
 		}

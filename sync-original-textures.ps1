@@ -108,6 +108,7 @@ function Sync-ExistingTexturesWithOptions {
 	$files_to_delete = [List[FileInfo]]::new()
 	$files_to_move = [List[Tuple[FileInfo, string]]]::new() # Source, Destination
 	$workflow_dirs = Get-ChildItem -LiteralPath $Path -Directory -ErrorAction Stop
+	$min_texture_size = $UpscaleOptions.MinimumTextureSize
 
 	foreach ($workflow_dir in $workflow_dirs) {
 		$current_workflow = $UpscaleOptions.Workflows[$workflow_dir.Name]
@@ -121,6 +122,17 @@ function Sync-ExistingTexturesWithOptions {
 				continue
 			}
 
+			# Check if the minimum texture width/height requirement has changed.
+			if ($min_texture_size -gt 0) {
+				$size = Get-TextureSize $texture_file.FullName
+
+				if ($size.Width -lt $min_texture_size -or $size.Height -lt $min_texture_size) {
+					$null = $files_to_delete.Add($texture_file)
+					continue
+				}
+			}
+
+			# Check if the assigned workflow has changed.
 			$new_workflow = $UpscaleOptions.TextureGroupMap[$texture_name].Workflow
 
 			if (-not $UpscaleOptions.TextureGroupMap.ContainsKey($texture_name)) {
@@ -197,8 +209,17 @@ function Copy-OriginalTextures {
 
 	$texture_files = Get-ChildItem -LiteralPath $SourceDir -Filter '*.png' -File -Recurse -ErrorAction Stop
 	$textures_by_name = [Dictionary[string, Texture]]::new()
+	$min_texture_size = $UpscaleOptions.MinimumTextureSize
 
 	foreach ($file in $texture_files) {
+		if ($min_texture_size -gt 0) {
+			$size = Get-TextureSize $file.FullName
+
+			if ($size.Width -lt $min_texture_size -or $size.Height -lt $min_texture_size) {
+				continue
+			}
+		}
+
 		$name = $file.BaseName
 
 		if ($textures_by_name.ContainsKey($name)) {

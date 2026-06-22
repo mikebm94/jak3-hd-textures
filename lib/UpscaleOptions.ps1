@@ -138,6 +138,9 @@ class UpscaleOptions {
 	# If enabled, emits a warning when a texture added to a group was previously assigned to another group.
 	[bool] $WarnOnGroupReassignment = $false
 
+	# The minimum width x height in pixels a texture must be to be including in upscaling.
+	[int] $MinimumTextureSize = 0
+
 	# Maps texture names to their respective texture groups.
 	[Dictionary[string, TextureGroup]] $TextureGroupMap = [Dictionary[string, TextureGroup]]::new()
 
@@ -163,6 +166,16 @@ class UpscaleOptions {
 			}
 
 			$this.DefaultWorkflow = $default_workflow
+		}
+
+		if ($raw_options.MinimumTextureSize) {
+			[int] $min_size = 0
+
+			if (-not [int]::TryParse($raw_options.MinimumTextureSize, [ref]$min_size)) {
+				throw "'MinimumTextureSize' must be a valid integer."
+			}
+
+			$this.MinimumTextureSize = $min_size
 		}
 
 		foreach ($group in $raw_options.TextureGroups) {
