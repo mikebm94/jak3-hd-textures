@@ -2,13 +2,13 @@
 
 <#
 .SYNOPSIS
-Searches for matching files in the Jak 3 textures, or creates a list of texture names from the search results.
+Searches for matching files in the Jak 3 textures.
 
 .DESCRIPTION
-Searches for matching files in the Jak 3 textures, or creates a list of texture names from the search results.
+Searches for matching files in the Jak 3 textures.
 
-The script is meant to aid in creating texture groups in `upscale-options.json`, or to help visually inspect
-the textures already in a group. The matching textures are copied to `textures/search-results/`.
+The script is meant to aid in creating/updating texture groups in `upscale-options.json`, or to help visually
+inspect the textures already in a group. The matching textures are copied to `textures/search-results/`.
 
 There are numerous methods of searching for textures, which can be combined:
 	By texture name using `-Filters` (wildcards) and/or `-Patterns` (regex).
@@ -20,14 +20,12 @@ There are numerous methods of searching for textures, which can be combined:
 
 All methods used must match to return a result.
 
-You can delete any files you don't want to include in the final texture list from `textures/search-results/`.
-Passing the `-WriteTextureList` parameter writes a sorted list of the unique texture names
-to `textures/search-results/texture-list.json`.
-
-Pass `-CombineWithGroup <group name>` to merge the texture names from an existing texture group
-with the names in the search results when writing the texture list. 
+You can delete any files you don't want to include in the final texture list from `textures/search-results/`,
+or move/copy the files you want to include in the list to another directory.
 
 .NOTES
+For help with creating a texture list used to create/update texture groups, run: ./write-texture-list.ps1 -?
+
 For help with syntax for the `-Filters` or `-SubdirFilters` parameters, see:
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_wildcards
 
@@ -39,9 +37,6 @@ PS> ./search-textures.ps1 -Filters '*iris*', '*pupil*' -Patterns '\beye(?!brow)(
 
 .EXAMPLE
 PS> ./search-textures.ps1 -InGroups 'Eye' -Width '>64' -Clean
-
-.EXAMPLE
-PS> ./search-textures.ps1 -WriteTextureList -MergeWithGroup 'Eye'
 #>
 
 
@@ -51,18 +46,6 @@ using namespace System.IO
 
 [CmdletBinding(SupportsShouldProcess, DefaultParameterSetName = 'Search')]
 param(
-	# Generates a list of all unique texture names of the texture files in `textures/search-results/`
-	# and writes them to `textures/search-results/texture-list.json`.
-	[Parameter(ParameterSetName = 'WriteTextureList', Mandatory)]
-	[switch]
-	$WriteTextureList,
-
-	# When writing the texture list, combines it with the list of textures in the specified texture group.
-	# Use when adding the list to a texture group instead of creating a new group.
-	[Parameter(ParameterSetName = 'WriteTextureList')]
-	[string]
-	$MergeWithGroup,
-
 	# The wildcard patterns to match against texture names. (Do not include the file extension.)
 	[Parameter(ParameterSetName = 'Search')]
 	[Parameter(ParameterSetName = 'SearchInGroups')]
@@ -240,16 +223,12 @@ class DimensionFilter {
 
 
 function Main {
+	[SuppressMessageAttribute('PSShouldProcess', '')]
 	[CmdletBinding(SupportsShouldProcess)]
 	param()
 
 	$upscale_options = Read-UpscaleOptions
 	$results_dir = Get-SearchResultsDir
-
-	if ($WriteTextureList) {
-		Write-TextureList -ResultsDir $results_dir -UpscaleOptions $upscale_options
-		return
-	}
 
 	if ($Clean) {
 		Clear-Directory $results_dir
@@ -418,56 +397,6 @@ function Test-Patterns([string] $Name, [string[]] $Filters, [string[]] $Patterns
 	}
 
 	$false
-}
-
-
-function Write-TextureList {
-	[CmdletBinding(SupportsShouldProcess)]
-	param(
-		[Parameter(Mandatory)]
-		[string]
-		$ResultsDir,
-
-		[Parameter(Mandatory)]
-		[UpscaleOptions]
-		$UpscaleOptions
-	)
-
-	$list_path = Join-Path $ResultsDir 'texture-list.json'
-	Write-Host "Writing texture list to '${list_path}' ..."
-
-	[TextureGroup] $target_group = $null
-
-	if ($MergeWithGroup) {
-		$target_group = $UpscaleOptions.TextureGroups[$MergeWithGroup]
-
-		if ($null -eq $target_group) {
-			throw "Could not combine list with TextureGroup '${MergeWithGroup}': The group does not exist."
-		}
-	}
-
-	$results = Get-ChildItem -LiteralPath $ResultsDir -Filter '*.png' -File -ErrorAction Stop
-	$texture_names = [HashSet[string]]::new()
-
-	foreach ($result in $results) {
-		$texture_name = (Split-TextureFileName $result).Name
-
-		if ($null -eq $texture_name) {
-			# Unknown texture
-			continue
-		}
-
-		$null = $texture_names.Add($texture_name)
-	}
-
-	foreach ($texture_name in $target_group.TextureNames) {
-		$null = $texture_names.Add($texture_name)
-	}
-
-	$texture_names |
-		Sort-Object -ErrorAction Stop |
-		ConvertTo-Json -ErrorAction Stop |
-		Set-Content -LiteralPath $list_path -ErrorAction Stop
 }
 
 
