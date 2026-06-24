@@ -3,6 +3,18 @@ using namespace System.IO
 $ProjectDir = Split-Path $PSScriptRoot -Parent
 
 
+# Represents a texture's dimensions in pixels. Returned by `Get-TextureSize`.
+class Size {
+	[int] $Width
+	[int] $Height
+
+	Size([int] $w, [int] $h) {
+		$this.Width = $w
+		$this.Height = $h
+	}
+}
+
+
 <#
 .SYNOPSIS
 Gets the directory where build artifacts and temporary files are placed
@@ -364,7 +376,7 @@ function IsValidFilename([string] $Name) {
 Gets the width and height in pixels of a PNG texture file.
 
 .OUTPUTS
-Returns a `System.Drawing.Size` struct containing the width and height.
+Returns a `Size` object containing the width and height.
 
 .NOTES
 .NET has built-in ways to do this in `System.Drawing` but requires loading the entire texture into memory
@@ -408,7 +420,7 @@ function Get-TextureSize([string] $TexturePath) {
 			[Array]::Reverse($buffer, $height_offset, 4)
 		}
 
-		[System.Drawing.Size]::new(
+		[Size]::new(
 			[BitConverter]::ToInt32($buffer, $width_offset),
 			[BitConverter]::ToInt32($buffer, $height_offset)
 		)
