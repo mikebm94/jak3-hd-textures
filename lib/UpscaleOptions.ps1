@@ -16,14 +16,14 @@ class Chain {
 	[string] $SaveDirectoryInputID
 
 
-	[FileInfo] GetFile() {
-		$file = [FileInfo]::new((Join-Path (Get-ChainsDir) "$( $this.Name ).chn"))
+	[string] GetPath() {
+		$chain_path = Join-Path (Get-ChainsDir) "$( $this.Name ).chn"
 
-		if (-not $file.Exists()) {
-			throw "File for chain '$( $this.Name )' does not exist: $( $file.FullName )"
+		if (-not (Test-Path -LiteralPath $chain_path -PathType Leaf)) {
+			throw "Chain file does not exist: ${chain_path}"
 		}
 
-		return $file
+		return $chain_path
 	}
 }
 
