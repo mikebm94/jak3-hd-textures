@@ -2,6 +2,16 @@ using namespace System.IO
 
 $ProjectDir = Split-Path $PSScriptRoot -Parent
 
+# Paths used to automatically detect a required resource.
+# Used as a fallback when a resource isn't provided or found via environment variable.
+$AutoDetectPaths = @{
+	# OpenGOAL installation directory.
+	'OpenGOAL' = @(
+		(Join-Path $Env:LOCALAPPDATA 'Programs/OpenGOAL/'),
+		'C:/ProgramData/OpenGOAL/'
+	)
+}
+
 
 # Represents a texture's dimensions in pixels. Returned by `Get-TextureSize`.
 class Size {
@@ -227,12 +237,7 @@ function Find-OpenGoalInstallDir {
 	[OutputType([string])]
 	param()
 
-	$search_paths = @(
-		(Join-Path $env:LOCALAPPDATA 'Programs/OpenGOAL/'),
-		'C:/ProgramData/OpenGOAL/'
-	)
-
-	foreach ($search_path in $search_paths) {
+	foreach ($search_path in $AutoDetectPaths['OpenGOAL']) {
 		if (Test-Path -LiteralPath $search_path -PathType Container) {
 			return $search_path
 		}
