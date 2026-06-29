@@ -14,12 +14,12 @@
     {
       "Name": "Main",
       "Description": "Basic upcale (DAT2 model). No padding. Suitable for most textures.",
-      "Chain": "Basic-PyTorch",
+      "Chain": "Basic-ONNX",
       "InputOverrides": [
         {
-          "Description": "Load Model (PyTorch) -> Model",
-          "ID": "#a63005ef-c63f-46b0-85ad-703c7f76c1ea:0",
-          "Value": "models/4x-PBRify_UpscalerV4.safetensors",
+          "Description": "Load Model (ONNX) -> Model",
+          "ID": "#018e96a0-db16-4bf8-a761-4dfd793822e6:0",
+          "Value": "models/4x-PBRify_UpscalerV4.onnx",
           "IsRelativePath": true,
           "PathMustExist": true
         }
