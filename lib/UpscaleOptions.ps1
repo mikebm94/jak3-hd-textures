@@ -158,29 +158,6 @@ class UpscaleOptions {
 
 		$this.WarnOnGroupReassignment = $raw_options.WarnOnGroupReassignment
 
-		foreach ($chain in $raw_options.Chains) {
-			$this.AddChain(
-				$chain.Name,
-				$chain.LoadDirectoryInputID,
-				$chain.SaveDirectoryInputID,
-				$chain.Inputs
-			)
-		}
-
-		foreach ($workflow in $raw_options.Workflows) {
-			$this.AddWorkflow($workflow.Name, $workflow.Chain, $workflow.InputOverrides)
-		}
-
-		if ($raw_options.DefaultWorkflow) {
-			$default_workflow = $this.Workflows[$raw_options.DefaultWorkflow]
-
-			if ($null -eq $default_workflow) {
-				throw "'DefaultWorkflow': Workflow '$( $raw_options.DefaultWorkflow )' does not exist."
-			}
-
-			$this.DefaultWorkflow = $default_workflow
-		}
-
 		if ($raw_options.MinimumTextureSize) {
 			[int] $min_size = 0
 
@@ -189,6 +166,23 @@ class UpscaleOptions {
 			}
 
 			$this.MinimumTextureSize = $min_size
+		}
+
+		foreach ($chain in $raw_options.Chains) {
+			$this.AddChain($chain.Name, $chain.LoadDirectoryInputID, $chain.SaveDirectoryInputID, $chain.Inputs)
+		}
+
+		foreach ($workflow in $raw_options.Workflows) {
+			$this.AddWorkflow($workflow.Name, $workflow.Chain, $workflow.InputOverrides)
+		}
+
+		if ($raw_options.DefaultWorkflow) {
+			$default_workflow = $this.Workflows[$raw_options.DefaultWorkflow]
+			if ($null -eq $default_workflow) {
+				throw "'DefaultWorkflow': Workflow '$( $raw_options.DefaultWorkflow )' does not exist."
+			}
+
+			$this.DefaultWorkflow = $default_workflow
 		}
 
 		foreach ($group in $raw_options.TextureGroups) {
@@ -201,16 +195,13 @@ class UpscaleOptions {
 		if ([string]::IsNullOrWhiteSpace($name)) {
 			throw "In 'Chains': 'Name' must not be empty."
 		}
-
-		if ([string]::IsNullOrWhiteSpace($load_dir_id)) {
+		elseif ([string]::IsNullOrWhiteSpace($load_dir_id)) {
 			throw "In chain '${name}': 'LoadDirectoryInputID' must not be empty."
 		}
-
-		if ([string]::IsNullOrWhiteSpace($save_dir_id)) {
+		elseif ([string]::IsNullOrWhiteSpace($save_dir_id)) {
 			throw "In chain '${name}': 'SaveDirectoryInputID' must not be empty."
 		}
-
-		if ($this.Chains.ContainsKey($name)) {
+		elseif ($this.Chains.ContainsKey($name)) {
 			throw "In chain '${name}': A chain named '${name}' already exists."
 		}
 
@@ -238,12 +229,10 @@ class UpscaleOptions {
 		if ([string]::IsNullOrWhiteSpace($name)) {
 			throw "In 'Workflows': 'Name' must not be empty."
 		}
-
-		if (-not (IsValidFilename $name)) {
+		elseif (-not (IsValidFilename $name)) {
 			throw "In Workflow '${name}': Workflow name must contain only characters safe for filenames."
 		}
-
-		if ($this.Workflows.ContainsKey($name)) {
+		elseif ($this.Workflows.ContainsKey($name)) {
 			throw "In Workflow '${name}': A Workflow named '${name}' already exists."
 		}
 
@@ -287,30 +276,24 @@ class UpscaleOptions {
 		if ([string]::IsNullOrWhiteSpace($name)) {
 			throw "In 'TextureGroups': 'Name' must not be empty."
 		}
-
-		if ($this.TextureGroups.ContainsKey($name)) {
+		elseif ($this.TextureGroups.ContainsKey($name)) {
 			throw "In TextureGroup '${name}': A TextureGroup named '${name}' already exists."
-		}
-
-		[Workflow]$workflow = $null
-
-		if ($workflow_name) {
-			$workflow = $this.Workflows[$workflow_name]
-
-			if ($null -eq $workflow) {
-				throw "In TextureGroup '${name}': A Workflow named '${workflow_name}' does not exist."
-			}
 		}
 
 		$group = [TextureGroup]@{
 			Name = $name
-			Workflow = $workflow
 			TextureNames = $texture_names
 		}
 
-		$this.TextureGroups[$name] = $group
+		if ($workflow_name) {
+			$group.workflow = $this.Workflows[$workflow_name]
 
-		foreach ($texture_name in $texture_names) {
+			if ($null -eq $group.workflow) {
+				throw "In TextureGroup '${name}': A Workflow named '${workflow_name}' does not exist."
+			}
+		}
+
+		foreach ($texture_name in $group.TextureNames) {
 			$existing_group = $this.TextureGroupMap[$texture_name]
 			if ($this.WarnOnGroupReassignment -and $null -ne $existing_group) {
 				Write-Warning (
@@ -321,6 +304,8 @@ class UpscaleOptions {
 
 			$this.TextureGroupMap[$texture_name] = $group
 		}
+
+		$this.TextureGroups[$name] = $group
 	}
 }
 
