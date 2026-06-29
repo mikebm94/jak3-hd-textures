@@ -29,6 +29,18 @@
 
   "Chains": [
     {
+      "Name": "Basic-NCNN",
+      "LoadDirectoryInputID": "#8c220f63-a16a-4447-a0ed-dd675a63ad4f:0",
+      "SaveDirectoryInputID": "#766e5eeb-0500-44b0-a8f0-4ad217b01648:1"
+    },
+
+    {
+      "Name": "Basic-ONNX",
+      "LoadDirectoryInputID": "#8c220f63-a16a-4447-a0ed-dd675a63ad4f:0",
+      "SaveDirectoryInputID": "#766e5eeb-0500-44b0-a8f0-4ad217b01648:1"
+    },
+
+    {
       "Name": "Basic-PyTorch",
       "LoadDirectoryInputID": "#8c220f63-a16a-4447-a0ed-dd675a63ad4f:0",
       "SaveDirectoryInputID": "#766e5eeb-0500-44b0-a8f0-4ad217b01648:1"
