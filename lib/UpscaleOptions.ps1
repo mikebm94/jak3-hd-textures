@@ -2,6 +2,24 @@ using namespace System.Collections.Generic
 using namespace System.IO
 
 
+# An input within a chaiNNer chain that can be overridden by workflows.
+class ChainInput {
+	# The name used to refer to the input when defining overrides in workflows.
+	[string] $Name
+
+	# The override ID. Can be obtained in chaiNNer by right-clicking and selecting 'Copy Input Override Id'.
+	[string] $ID
+	
+	# If the input's value type is a path, set to true to specify that the path is relative to the
+	# project directory and should be resolved to an absolute path before passing to chaiNNer.
+	# Useful for specifying model paths (e.g. 'models/4x-PBRify_UpscalerV4.onnx')
+	[bool] $IsRelativePath = $false
+
+	# If the input's value type is a path, throw an error if it doesn't exist before attempting to run the chain.
+	[bool] $PathMustExist = $false
+}
+
+
 # A chaiNNer chain used in workflows to upscale textures.
 class Chain {
 	# The name of the chain (basename of the chain file.)
@@ -14,6 +32,9 @@ class Chain {
 	# The input override ID for the 'Directory' input of the 'Save Images' node.
 	# Used by workflows to point it's chain to the correct texture output directory.
 	[string] $SaveDirectoryInputID
+
+	# The inputs that can be overriden by workflows when running the chain.
+	[Dictionary[string, ChainInput]] $Inputs = [Dictionary[string, ChainInput]]::new()
 
 
 	[string] GetPath() {
@@ -31,24 +52,11 @@ class Chain {
 # Overrides a node's input within a chain.
 # Used by workflows to supply upscale model filepaths or change some other input data.
 class InputOverride {
-	# Describes the input being overridden, such as the node and input name.
-	# Used in error messages. Example: 'Load Model (PyTorch) -> Model'
-	[string] $Description
-
-	# The ID of the node's input.
-	# Obtained in chaiNNer by right-clicking the input and clicking 'Copy Input Override Id'.
-	[string] $ID
+	# The chain input to override.
+	[ChainInput] $ChainInput
 
 	# The value to provide when overriding the input.
 	[string] $Value
-
-	# If the value is a path, set to true to specify that the path is relative to the project directory
-	# and should be resolved to an absolute path before passing to chaiNNer.
-	# Useful for specifying model paths (e.g. 'models/4x-PBRify_UpscalerV4.safetensors')
-	[bool] $IsRelativePath = $false
-
-	# If the value is a path, throw an error if it doesn't exist before attempting to run the chain.
-	[bool] $PathMustExist = $false
 }
 
 
@@ -151,7 +159,12 @@ class UpscaleOptions {
 		$this.WarnOnGroupReassignment = $raw_options.WarnOnGroupReassignment
 
 		foreach ($chain in $raw_options.Chains) {
-			$this.AddChain($chain.Name, $chain.LoadDirectoryInputID, $chain.SaveDirectoryInputID)
+			$this.AddChain(
+				$chain.Name,
+				$chain.LoadDirectoryInputID,
+				$chain.SaveDirectoryInputID,
+				$chain.Inputs
+			)
 		}
 
 		foreach ($workflow in $raw_options.Workflows) {
@@ -184,16 +197,16 @@ class UpscaleOptions {
 	}
 
 
-	[void] AddChain([string] $name, [string] $load_dir_input_id, [string] $save_dir_input_id) {
+	[void] AddChain([string] $name, [string] $load_dir_id, [string] $save_dir_id, [ChainInput[]] $chain_inputs) {
 		if ([string]::IsNullOrWhiteSpace($name)) {
 			throw "In 'Chains': 'Name' must not be empty."
 		}
 
-		if ([string]::IsNullOrWhiteSpace($load_dir_input_id)) {
+		if ([string]::IsNullOrWhiteSpace($load_dir_id)) {
 			throw "In chain '${name}': 'LoadDirectoryInputID' must not be empty."
 		}
 
-		if ([string]::IsNullOrWhiteSpace($save_dir_input_id)) {
+		if ([string]::IsNullOrWhiteSpace($save_dir_id)) {
 			throw "In chain '${name}': 'SaveDirectoryInputID' must not be empty."
 		}
 
@@ -201,15 +214,27 @@ class UpscaleOptions {
 			throw "In chain '${name}': A chain named '${name}' already exists."
 		}
 
-		$this.Chains[$name] = [Chain]@{
-			Name = $name
-			LoadDirectoryInputID = $load_dir_input_id
-			SaveDirectoryInputID = $save_dir_input_id
+		$chain = [Chain]::new()
+		$chain.Name = $name
+		$chain.LoadDirectoryInputID = $load_dir_id
+		$chain.SaveDirectoryInputID = $save_dir_id
+
+		foreach ($chain_input in $chain_inputs) {
+			if ([string]::IsNullOrWhiteSpace($chain_input.Name)) {
+				throw "In chain '${name}': In 'Inputs': 'Name' must not be empty."
+			}
+			elseif ([string]::IsNullOrWhiteSpace($chain_input.ID)) {
+				throw "In chain '${name}': Input '$( $chain_input.Name )': 'ID' must not be empty."
+			}
+
+			$chain.Inputs[$chain_input.Name] = $chain_input
 		}
+
+		$this.Chains[$name] = $chain
 	}
 
 
-	[void] AddWorkflow([string] $name, [string] $chain_name, [InputOverride[]] $input_overrides) {
+	[void] AddWorkflow([string] $name, [string] $chain_name, [object[]] $input_overrides) {
 		if ([string]::IsNullOrWhiteSpace($name)) {
 			throw "In 'Workflows': 'Name' must not be empty."
 		}
@@ -232,17 +257,29 @@ class UpscaleOptions {
 			}
 		}
 
-		foreach ($input_override in $input_overrides) {
-			if ([string]::IsNullOrWhiteSpace($input_override.ID)) {
-				throw "In Workflow '${name}': In 'InputOverrides': 'ID' must not be empty."
+		$workflow = [Workflow]@{
+			Name = $name
+			Chain = $chain
+		}
+
+		$workflow.InputOverrides = foreach ($override in $input_overrides) {
+			if ([string]::IsNullOrWhiteSpace($override.Name)) {
+				throw "In Workflow '${name}': In 'InputOverrides': 'Name' must not be empty."
+			}
+			elseif (-not $chain.Inputs.ContainsKey($override.Name)) {
+				throw (
+					"In Workflow '${name}': Cannot override input '$( $override.Name )' " +
+					"on chain '${chain_name}': Input does not exist."
+				)
+			}
+
+			[InputOverride]@{
+				ChainInput = $chain.Inputs[$override.Name]
+				Value = $override.Value
 			}
 		}
 
-		$this.Workflows[$name] = [Workflow]@{
-			Name = $name
-			Chain = $chain
-			InputOverrides = $input_overrides
-		}
+		$this.Workflows[$name] = $workflow
 	}
 
 
